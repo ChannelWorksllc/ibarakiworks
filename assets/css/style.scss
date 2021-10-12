@@ -1,0 +1,79 @@
+@import "resets/normalize" , "resets/reset_local" , "resets/typography";
+
+// min-width
+$breakpoint-up: (
+  'min-1': 'screen and (min-width: 980px)',
+  'min-2': 'screen and (min-width: 1025px)',
+  'min-3': 'screen and (min-width: 1281px)',
+  'min-4': 'screen and (min-width: 1367px)',
+  'min-5': 'screen and (min-width: 1441px)',
+  'min-6': 'screen and (min-width: 1537px)',
+  'min-7': 'screen and (min-width: 1601px)',
+  'min-8': 'screen and (min-width: 1921px)',
+) !default;
+
+// max-width
+$breakpoint-down: (
+  'max-1': 'screen and (max-width: 1024px)',
+  'max-2': 'screen and (max-width: 1280px)',
+  'max-3': 'screen and (max-width: 1366px)',
+  'max-4': 'screen and (max-width: 1440px)',
+  'max-5': 'screen and (max-width: 1536px)',
+  'max-6': 'screen and (max-width: 1600px)',
+  'max-7': 'screen and (max-width: 1920px)',
+) !default;
+
+// mix-width
+$breakpoint-mix: (
+  'mix-1': 'screen and (min-width: 980px) and (max-width: 1023px)',
+  'mix-2': 'screen and (min-width: 1024px) and (max-width: 1279px)',
+  'mix-3': 'screen and (min-width: 1280px) and (max-width: 1365px)',
+  'mix-4': 'screen and (min-width: 1366px) and (max-width: 1439px)',
+  'mix-5': 'screen and (min-width: 1440px) and (max-width: 1535px)',
+  'mix-6': 'screen and (min-width: 1536px) and (max-width: 1599px)',
+) !default;
+
+// @mixinの定義
+@mixin min($breakpoint: min-1) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin max($breakpoint: max-1) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mix($breakpoint: mix-1) {
+  @media #{map-get($breakpoint-mix, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin basefont(){
+  font-family: '';
+}
+
+// @mediaの用法
+// #xxx {
+//    @include min(min-1) { 最小値を表示。（変数）で設定値
+//  }
+//    @include max(max-1) { 最大値を表示。（変数）で設定値
+//  }
+//    @include min-max(mix-1) { 最大ー最大値を表示。（変数）で設定値
+//  }
+// }
+
+.resp_pc{
+  display: block;
+}
+
+.resp_sp{
+  display: none;
+}
+
+.cf{
+  clear: both;
+}
