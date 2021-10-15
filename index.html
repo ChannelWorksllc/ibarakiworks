@@ -230,8 +230,13 @@
         <div class="background-img">
           <img src="./assets/images/D15A5141.jpg" alt="D15A5141">
         </div>
-        <div id="recruit-decoration">
-          <img src="./assets/images/D15A5142.jpg" alt="D15A5142">
+        <div class="decoration">
+          <div class="decoration1">
+            <img src="./assets/images/D15A5142.jpg" alt="D15A5142">
+          </div>
+          <div class="dacoration2">
+            <img src="./assets/images/D15A5143.png" alt="D15A5143">
+          </div>
         </div>
       </article>
       <article id="search-box">
@@ -244,16 +249,20 @@
             <img src="./assets/images/D15A5628.jpg" alt="D15A5628">
           </div>
           <form action="">
-            <select name="area" id="area">
-              <option value="" disabled selected>就業希望地域</option>
-              <option value="sample1">sample1</option>
-              <option value="sample2">sample2</option>
-            </select>
-            <select name="occupation" id="occupation">
-              <option value="" disabled selected>希望・経験職種</option>
-              <option value="sample">sample1</option>
-              <option value="sample2">sample2</option>
-            </select>
+            <div class="select-wrap">
+              <select name="area" id="area">
+                <option value="" disabled selected>就業希望地域</option>
+                <option value="sample1">sample1</option>
+                <option value="sample2">sample2</option>
+              </select>
+            </div>
+            <div class="select-wrap">
+              <select name="occupation" id="occupation">
+                <option value="" disabled selected>希望・経験職種</option>
+                <option value="sample">sample1</option>
+                <option value="sample2">sample2</option>
+              </select>
+            </div>
             <input type="text" placeholder="その他ご要望">
             <input type="submit" name="submit" value="この内容で検索">
           </form>
@@ -261,19 +270,21 @@
       </article>
 
       <article id="consultation">
+        <article id="consultation-after">
         <div id="consultation-icon">
           <img src="./assets/images/icon4.png" alt="icon4">
         </div>
         <p>イバラキ・ハケンは未経験者のフォローに自信があります！<br>
           無料のスキルアップ支援や、手厚い業務サポート体制で、高い業務継続率を実現！<br>
           就業に不安のある方も、キャリアを活かして高収入を目指したい方も、まずご相談ください！</p>
-        <div id="consultation-link">
+        <article id="consultation-link">
           <a href="">イバラキ・ハケンの<br>
             人材サポートに相談</a>
-        </div>
+        </article>
+      </article>
       </article>
 
-      <article id="recruit-category">
+      <article class="category-link">
           <h3>求人カテゴリ</h3>
           <ul>
               <li><a href="">求人カテゴリリンク</a></li>
@@ -297,7 +308,7 @@
               <article class="contents-block">
                 <div class="contents-img">
                     <img src="./assets/images/78043530.jpg" alt="78043530">
-                    <p id="runking-number1">1</p>
+                    <p id="ranking-number1">1</p>
                 </div>
                 <article>
                   <p class="contents-tittle">求人タイトル。求人タイ<br>
@@ -308,7 +319,7 @@
               <article class="contents-block">
                 <div class="contents-img">
                     <img src="./assets/images/78043530.jpg" alt="78043530">
-                    <p id="runking-number2">2</p>
+                    <p id="ranking-number2">2</p>
                 </div>
                 <article>
                   <p class="contents-tittle">求人タイトル。求人タイ<br>
@@ -319,7 +330,7 @@
               <article class="contents-block">
                 <div class="contents-img">
                     <img src="./assets/images/78043530.jpg" alt="78043530">
-                    <p id="runking-number3">3</p>
+                    <p id="ranking-number3">3</p>
                 </div>
                 <article>
                   <p class="contents-tittle">求人タイトル。求人タイ<br>
@@ -330,7 +341,7 @@
               <article class="contents-block">
                 <div class="contents-img">
                     <img src="./assets/images/78043530.jpg" alt="78043530">
-                    <p id="runking-number4">4</p>
+                    <p id="ranking-number4">4</p>
                 </div>
                 <article>
                   <p class="contents-tittle">求人タイトル。求人タイ<br>
@@ -341,7 +352,7 @@
           </article>
       </article>
 
-      <article id="pickup-recruit">
+      <article class="pickup">
           <h4>ピックアップ求人</h4>
           <article class="pickup-box">
               <article class="pickup-block">
@@ -409,25 +420,32 @@
         <div class="background-img">
           <img src="./assets/images/D15A5074.jpg" alt="D15A5074">
         </div>
-        <div id="community-decoration">
-          <img src="./assets/images/D15A5142.jpg" alt="D15A5142">
+        <div class="decoration">
+          <div class="decoration1">
+            <img src="./assets/images/D15A5142.jpg" alt="D15A5142">
+          </div>
+          <div class="dacoration2">
+            <img src="./assets/images/D15A5143.png" alt="D15A5143">
+          </div>
         </div>
       </article>
-      <article id="community-tittle">
-        <p>求人とコミュニティで地域の”人”をつなげます。<br>
-          <span>地域のコミュニティはあなたの参加を待っています！</span></p>
-      </article>
-      <article id="community-contents">
-        <div>
-          <img src="./assets/images/pixta_55069062_XL.jpg" alt="pixta_55069062_XL">
-        </div>
-        <p>コミュニティに関するキャッチコピー。コミュニティに関する<br>
-          キャッチコピー。コミュニティに関するキャッチコピー。<br>
-          コミュニティに関するキャッチコピー。コミュニティに関する<br>
-          キャッチコピー。コミュニティに関するキャッチコピー。</p>
+      <article id="community-box">
+        <article id="community-tittle">
+          <p>求人とコミュニティで地域の”人”をつなげます。<br>
+            <span>地域のコミュニティはあなたの参加を待っています！</span></p>
+        </article>
+        <article id="community-contents">
+          <div>
+            <img src="./assets/images/pixta_55069062_XL.jpg" alt="pixta_55069062_XL">
+          </div>
+          <p>コミュニティに関するキャッチコピー。コミュニティに関する<br>
+            キャッチコピー。コミュニティに関するキャッチコピー。<br>
+            コミュニティに関するキャッチコピー。コミュニティに関する<br>
+            キャッチコピー。コミュニティに関するキャッチコピー。</p>
+        </article>
       </article>
 
-      <article id="category-link">
+      <article class="category-link">
           <h3>コミュニティカテゴリ</h3>
           <ul>
               <li><a href="">コミュニティカテゴリリンク</a></li>
@@ -437,7 +455,7 @@
               <li><a href="">コミュニティカテゴリリンク</a></li>
           </ul>
       </article>
-      <article id="pickup-community">
+      <article class="pickup">
           <h4>ピックアップコミュニティ</h4>
           <article class="pickup-box">
             <article class="pickup-block">
@@ -500,56 +518,78 @@
     </section>
 
     <section id="knowhow">
-      <article>
           <h4>新着求人ノウハウ</h4>
           <article id="knowhow-box">
               <article class="knowhow-block">
-                  <div  class="knowhow-img">
-                    <img src="./assets/images/48728556.jpg" alt="48728556">
-                  </div>
-                  <h5>ノウハウタイトル。ノウノウハウタイトル。ノウ</h5>
-                  <p>ノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウ</p>
+                <div  class="knowhow-img">
+                  <img src="./assets/images/48728556.jpg" alt="48728556">
+                </div>
+                <article>
+                  <h5>ノウハウタイトル。ノウ<br>
+                    ノウハウタイトル。ノウ</h5>
+                  <p>ノウハウ概要。ノウハウ概要。ノウ<br>
+                    ノウハウ概要。ノウハウ概要。ノウ</p>
+                </article>
               </article>
               <article class="knowhow-block">
                 <div  class="knowhow-img">
                   <img src="./assets/images/48728556.jpg" alt="48728556">
                 </div>
-                <h5>ノウハウタイトル。ノウノウハウタイトル。ノウ</h5>
-                <p>ノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウ</p>
+                <article>
+                  <h5>ノウハウタイトル。ノウ<br>
+                    ノウハウタイトル。ノウ</h5>
+                  <p>ノウハウ概要。ノウハウ概要。ノウ<br>
+                    ノウハウ概要。ノウハウ概要。ノウ</p>
+                </article>
               </article>
               <article class="knowhow-block">
                 <div  class="knowhow-img">
                   <img src="./assets/images/48728556.jpg" alt="48728556">
                 </div>
-                <h5>ノウハウタイトル。ノウノウハウタイトル。ノウ</h5>
-                <p>ノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウ</p>
+                <article>
+                  <h5>ノウハウタイトル。ノウ<br>
+                    ノウハウタイトル。ノウ</h5>
+                  <p>ノウハウ概要。ノウハウ概要。ノウ<br>
+                    ノウハウ概要。ノウハウ概要。ノウ</p>
+                </article>
               </article>
               <article class="knowhow-block">
                 <div  class="knowhow-img">
                   <img src="./assets/images/48728556.jpg" alt="48728556">
                 </div>
-                <h5>ノウハウタイトル。ノウノウハウタイトル。ノウ</h5>
-                <p>ノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウ</p>
+                <article>
+                  <h5>ノウハウタイトル。ノウ<br>
+                    ノウハウタイトル。ノウ</h5>
+                  <p>ノウハウ概要。ノウハウ概要。ノウ<br>
+                    ノウハウ概要。ノウハウ概要。ノウ</p>
+                </article>
               </article>
               <article class="knowhow-block">
                 <div  class="knowhow-img">
                   <img src="./assets/images/48728556.jpg" alt="48728556">
                 </div>
-                <h5>ノウハウタイトル。ノウノウハウタイトル。ノウ</h5>
-                <p>ノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウ</p>
+                <article>
+                  <h5>ノウハウタイトル。ノウ<br>
+                    ノウハウタイトル。ノウ</h5>
+                  <p>ノウハウ概要。ノウハウ概要。ノウ<br>
+                    ノウハウ概要。ノウハウ概要。ノウ</p>
+                </article>
               </article>
               <article class="knowhow-block">
                 <div  class="knowhow-img">
                   <img src="./assets/images/48728556.jpg" alt="48728556">
                 </div>
-                <h5>ノウハウタイトル。ノウノウハウタイトル。ノウ</h5>
-                <p>ノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウノウハウ概要。ノウハウ概要。ノウ</p>
+                <article>
+                  <h5>ノウハウタイトル。ノウ<br>
+                    ノウハウタイトル。ノウ</h5>
+                  <p>ノウハウ概要。ノウハウ概要。ノウ<br>
+                    ノウハウ概要。ノウハウ概要。ノウ</p>
+                </article>
               </article>
           </article>
           <div  class="viewmore">
             <a href="">≫ 求人ノウハウ一覧をみる</a>
           </div>
-      </article>
     </section>
   </div>
 </main>

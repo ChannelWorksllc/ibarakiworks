@@ -230,7 +230,6 @@ main .contents-block article {
 }
 
 main .contents-block article .contents-tittle {
-  font-size: 14px;
   font-weight: 600;
   padding-bottom: 10px;
 }
@@ -239,9 +238,6 @@ main #new {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 50px 27px 100px;
 }
 
@@ -284,8 +280,29 @@ main .background-img img {
   height: 100%;
 }
 
+main .decoration {
+  position: absolute;
+  top: 0;
+  width: 152px;
+  height: 100%;
+  overflow: hidden;
+}
+
+main .decoration .decoration1, main .decoration .dacoration2 {
+  position: absolute;
+}
+
+main .decoration .decoration1 img, main .decoration .dacoration2 img {
+  height: 100%;
+}
+
+main .decoration .decoration1 {
+  opacity: 0.7;
+}
+
 main #recruit {
   position: relative;
+  margin-bottom: 100px;
 }
 
 main #recruit #search-background {
@@ -293,15 +310,17 @@ main #recruit #search-background {
   height: 740px;
 }
 
-main #recruit #search-background #recruit-decoration {
-  position: absolute;
-  top: 0;
+main #recruit #search-background .decoration {
   left: 99px;
+}
+
+main #recruit #search-background .decoration .dacoration2 {
+  height: 740px;
 }
 
 main #recruit #search-box {
   position: absolute;
-  top: 25px;
+  top: 95px;
   left: 170px;
 }
 
@@ -315,7 +334,7 @@ main #recruit #search-box #search-tittle p {
 }
 
 main #recruit #search-box #search-tittle p span {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   display: inline-block;
   font-size: 40px;
 }
@@ -326,44 +345,444 @@ main #recruit #search-box #search-contents {
   display: flex;
 }
 
+main #recruit #search-box #search-contents div {
+  margin-right: 65px;
+}
+
 main #recruit #search-box #search-contents form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-footer {
+main #recruit #search-box #search-contents form select, main #recruit #search-box #search-contents form input {
+  width: 480px;
+  height: 70px;
+  color: #888888;
+  font-family: 'Klee One', cursive;
+  font-size: 20px;
+  padding-left: 30px;
+  border: 2px solid #a4a4a4;
+  border-radius: 10px;
+}
+
+main #recruit #search-box #search-contents form .select-wrap {
+  position: relative;
+}
+
+main #recruit #search-box #search-contents form .select-wrap::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 35px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 13px solid #888888;
+  pointer-events: none;
+}
+
+main #recruit #search-box #search-contents form .select-wrap select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+
+main #recruit #search-box #search-contents form input::-webkit-input-placeholder {
+  color: #888888;
+}
+
+main #recruit #search-box #search-contents form input:-ms-input-placeholder {
+  color: #888888;
+}
+
+main #recruit #search-box #search-contents form input::-ms-input-placeholder {
+  color: #888888;
+}
+
+main #recruit #search-box #search-contents form input::placeholder {
+  color: #888888;
+}
+
+main #recruit #search-box #search-contents form input[type="submit"] {
+  width: 480px;
+  height: 63.51px;
+  background-color: #657ccf;
+  color: #FFFFFF;
+  padding: 0;
+}
+
+main #recruit #consultation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 0 100px;
+}
+
+main #recruit #consultation #consultation-after {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 42px;
+}
+
+main #recruit #consultation #consultation-after::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-color: #c8c8c8;
+  height: 1px;
+  width: 1077.33px;
+}
+
+main #recruit #consultation p {
+  font-size: 20px;
+  white-space: nowrap;
+  padding-left: 30px;
+  padding-bottom: 5px;
+}
+
+main #recruit #consultation #consultation-link {
+  width: 274px;
+  height: 80px;
+  margin-bottom: 5px;
+  margin-left: 53px;
+  background-color: #9ed8a4;
+  border-radius: 15px;
+}
+
+main #recruit #consultation #consultation-link a {
+  position: relative;
+  display: inline-block;
   width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 15px 30px;
+  white-space: nowrap;
+}
+
+main #recruit #consultation #consultation-link a::after {
+  position: absolute;
+  content: "";
+  width: 39px;
+  height: 20px;
+  margin-left: 20px;
+  top: 30px;
+  border-bottom: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+  -webkit-transform: skew(35deg);
+          transform: skew(35deg);
+}
+
+main #recruit #recruit-ranking {
+  background-color: #f7f7f7;
+  padding: 105px 85px 0 85px;
+}
+
+main #recruit #recruit-ranking h3 {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+main #recruit #recruit-ranking .category-link li {
+  width: 16%;
+}
+
+main #recruit #recruit-ranking #ranking-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 30px 0 30px;
+}
+
+main #recruit #recruit-ranking #ranking-box .contents-block .contents-img {
+  position: relative;
+}
+
+main #recruit #recruit-ranking #ranking-box .contents-block .contents-img p {
+  position: absolute;
+  top: 0%;
+  right: 76px;
+  border: none 1px #000000;
+  padding: 2px 8px;
+  color: #FFFFFF;
+}
+
+main #recruit #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number1 {
+  background: #ac9600;
+}
+
+main #recruit #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number2 {
+  background: #9d9d9d;
+}
+
+main #recruit #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number3 {
+  background: #b28550;
+}
+
+main #recruit #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number4 {
+  background: #000000;
+}
+
+main #recruit #recruit-ranking #ranking-box .contents-block:last-of-type {
+  margin: 0;
+}
+
+main .category-link {
+  background-color: #f7f7f7;
+  padding: 85px 85px 0 85px;
+}
+
+main .category-link h3 {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+main .category-link ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px 30px 0 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .category-link ul li {
+  font-size: 16px;
+  line-height: 30px;
+  color: #003973;
+}
+
+main .pickup {
+  background-color: #f7f7f7;
+}
+
+main .pickup h4 {
+  font-size: 36px;
+  text-align: center;
+  padding: 98px 0 49px 0;
+}
+
+main .pickup .pickup-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 9px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .pickup .pickup-box .pickup-block {
+  width: 320px;
+}
+
+main .pickup .pickup-box .pickup-block h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+main .pickup .pickup-box .pickup-block p {
+  padding-top: 25px;
+}
+
+main .pickup .pickup-box .pickup-block .tagflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .pickup .pickup-box .pickup-block .tagflex li {
+  font-size: 12px;
+  padding: 25px 22px 0 0;
+}
+
+main .viewmore {
+  padding: 98px 0;
+  text-align: center;
+  color: #657ccf;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+main #community {
+  position: relative;
+}
+
+main #community #community-background {
+  position: relative;
+  height: 690px;
+  margin-bottom: 50px;
+}
+
+main #community #community-background .decoration {
+  right: 99px;
+}
+
+main #community #community-box {
+  position: absolute;
+  top: 103px;
+  left: 180px;
+}
+
+main #community #community-box #community-tittle {
+  margin-left: -10px;
+  margin-bottom: 72px;
+}
+
+main #community #community-box #community-tittle p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+main #community #community-box #community-tittle p span {
+  padding-bottom: 15px;
+  display: inline-block;
+  font-size: 40px;
+}
+
+main #community #community-box #community-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #community #community-box #community-contents p {
+  padding-left: 47px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+main #community .category-link li {
+  width: 20%;
+}
+
+main #knowhow {
+  margin-top: 100px;
+}
+
+main #knowhow h4 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 55px;
+}
+
+main #knowhow #knowhow-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main #knowhow #knowhow-box .knowhow-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  padding-bottom: 50px;
+}
+
+main #knowhow #knowhow-box .knowhow-block h5 {
+  font-size: 18px;
+}
+
+main #knowhow #knowhow-box .knowhow-block p {
+  font-size: 12px;
+}
+
+main #knowhow .viewmore {
+  padding-bottom: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 482px;
   color: #fff;
+  margin-top: 180px;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  height: 2px;
+  width: 1024px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #003973;
 }
 
 footer p {
-  font-size: 14px;
-  padding: 90px 0 30px 0;
+  padding: 85px 0 25px;
 }
 
 footer li {
-  padding-bottom: 17px;
+  padding-bottom: 15px;
 }
 
 footer #footer-container {
   margin: 0 20px;
+  height: 100%;
   background-color: #003973;
   position: relative;
 }
 
 footer #footer-container #arrow {
   background-color: #fff;
-  margin-top: 100px;
 }
 
 footer #footer-container #arrow img {
   position: absolute;
-  top: -8%;
+  top: -9.5%;
   right: 21px;
   width: 35px;
   height: 101px;
@@ -378,8 +797,8 @@ footer #footer-container #footer-flex {
           justify-content: space-between;
   margin: 0 20px;
   padding: 0 97px;
-  border-left: 8px solid #fff;
-  border-right: 8px solid #fff;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
 }
 
 footer #footer-container #footer-flex #flex1 {
@@ -399,7 +818,7 @@ footer #footer-container #footer-flex #flex1 #footer-logo {
 }
 
 footer #footer-container #footer-flex #flex1 p {
-  padding: 45px 0 0 0;
+  padding: 45px 0 0;
 }
 
 footer #footer-container #footer-flex #flex1 #address {
@@ -411,20 +830,15 @@ footer #footer-container #footer-flex .flex2 p {
   font-size: 18px;
 }
 
-footer #footer-container #footer-flex .flex2 li {
-  font-size: 14px;
-}
-
 footer #footer-container #footer-flex .flex2 #list li:nth-child(4) {
   padding: 15px 0;
 }
 
 footer #footer-container #copyright {
-  font-size: 14px;
   text-align: center;
   margin: 0 20px;
-  padding: 115px 0 28px 0;
-  border-left: 8px solid #fff;
-  border-right: 8px solid #fff;
+  padding: 73px 0 28px;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
 }
 /*# sourceMappingURL=style.css.map */
