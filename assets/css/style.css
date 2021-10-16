@@ -397,6 +397,7 @@ main #recruit #search-box #search-contents form .select-wrap select {
      -moz-appearance: none;
           appearance: none;
   position: relative;
+  cursor: pointer;
 }
 
 main #recruit #search-box #search-contents form input::-webkit-input-placeholder {
@@ -421,6 +422,7 @@ main #recruit #search-box #search-contents form input[type="submit"] {
   background-color: #657ccf;
   color: #FFFFFF;
   padding: 0;
+  cursor: pointer;
 }
 
 main #recruit #consultation {
@@ -497,6 +499,10 @@ main #recruit #consultation #consultation-link a::after {
           transform: skew(35deg);
 }
 
+main #recruit .category-link li {
+  width: 16%;
+}
+
 main #recruit #recruit-ranking {
   background-color: #f7f7f7;
   padding: 105px 85px 0 85px;
@@ -507,10 +513,6 @@ main #recruit #recruit-ranking h3 {
   text-align: center;
   padding-bottom: 13px;
   border-bottom: 1px solid #c8c8c8;
-}
-
-main #recruit #recruit-ranking .category-link li {
-  width: 16%;
 }
 
 main #recruit #recruit-ranking #ranking-box {
@@ -778,6 +780,7 @@ footer #footer-container {
 
 footer #footer-container #arrow {
   background-color: #fff;
+  cursor: pointer;
 }
 
 footer #footer-container #arrow img {

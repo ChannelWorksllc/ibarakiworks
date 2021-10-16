@@ -352,6 +352,7 @@ main {
             select {
               appearance: none;
               position: relative;
+              cursor : pointer;
             }
           }
           input {
@@ -364,6 +365,7 @@ main {
               background-color: #657ccf;
               color: #FFFFFF;
               padding: 0;
+              cursor : pointer;
             }
           }
         }
@@ -433,7 +435,13 @@ main {
         }
       }
     }
-    
+
+    .category-link {
+      li {
+        width: 16%;
+      }
+    }
+
     #recruit-ranking {
       background-color: $gray;
       padding: 105px 85px 0 85px;
@@ -443,12 +451,6 @@ main {
         text-align: center;
         padding-bottom: 13px;
         border-bottom: 1px solid #c8c8c8;;
-      }
-
-      .category-link {
-        li {
-          width: 16%;
-        }
       }
     
       #ranking-box {
@@ -678,6 +680,7 @@ footer {
 
     #arrow {
       background-color: #fff;
+      cursor : pointer;
       img {
         position: absolute;
         top: -9.5%;
