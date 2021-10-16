@@ -170,6 +170,57 @@ header {
 
     #mainvisual {
       display: flex;
+
+      #header-img1 {
+        animation: SlideIn1 1s;
+        animation-delay: 0.5s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+        @keyframes SlideIn1 {
+            0% {
+                opacity: 0;
+                transform: translateX(64px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+      }
+
+      #header-img2 {
+        animation: SlideIn2 1s;
+        animation-delay: 1s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+        @keyframes SlideIn2 {
+            0% {
+                opacity: 0;
+                transform: translateX(64px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+      }
+
+      #header-img3 {
+        animation: SlideIn3 1s;
+        animation-delay: 1.5s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+        @keyframes SlideIn3 {
+            0% {
+                opacity: 0;
+                transform: translateX(64px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+      }
     }
   }
 
@@ -212,6 +263,7 @@ main {
       
       .contents-tittle {
         font-weight: 600;
+        font-size: 14px;
         padding-bottom: 10px;
       }
     }
@@ -362,6 +414,7 @@ main {
             &[type="submit"] {
               width: 480px;
               height: 63.51px;
+              font-weight: 600;
               background-color: #657ccf;
               color: #FFFFFF;
               padding: 0;
@@ -376,6 +429,7 @@ main {
       display: flex;
       justify-content: center;
       margin: 50px 0 100px;
+      font-weight: 600;
 
       #consultation-after{
         position: relative;
@@ -448,6 +502,7 @@ main {
     
       h3 {
         font-size: 20px;
+        font-weight: 600;
         text-align: center;
         padding-bottom: 13px;
         border-bottom: 1px solid #c8c8c8;;
@@ -504,6 +559,7 @@ main {
   
     h3 {
       font-size: 20px;
+      font-weight: 600;
       text-align: center;
       padding-bottom: 13px;
       border-bottom: 1px solid #c8c8c8;;
@@ -518,7 +574,7 @@ main {
       li {
         font-size: 16px;
         line-height: 30px;
-        color: $navy;
+        color: #657ccf;
       }
     }
   }
@@ -528,6 +584,7 @@ main {
   
     h4 {
       font-size: 36px;
+      font-weight: 600;
       text-align: center;
       padding: 98px 0 49px 0;
     }
@@ -634,8 +691,13 @@ main {
         align-items: center;
         width: 30%;
         padding-bottom: 50px;
+        .knowhow-img {
+          margin-right: 25px;
+        }
         h5 {
           font-size: 18px;
+          font-weight: 600;
+          padding-bottom: 20px;
         }
         p {
           font-size: 12px;
@@ -720,6 +782,10 @@ footer {
           padding: 45px 0 0;
         }
 
+        #corporation {
+          font-weight: 600;
+        }
+
         #address {
           font-size: 12px;
           padding-top: 13px;
@@ -729,6 +795,7 @@ footer {
       .flex2 {
         p {
           font-size: 18px;
+          font-weight: 600;
         }
 
         #list {
@@ -741,6 +808,7 @@ footer {
 
     #copyright {
       text-align: center;
+      font-weight: 600;
       margin: 0 20px;
       padding: 73px 0 28px;
       border: {

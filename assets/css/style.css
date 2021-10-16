@@ -190,6 +190,114 @@ header #firstview #mainvisual {
   display: flex;
 }
 
+header #firstview #mainvisual #header-img1 {
+  -webkit-animation: SlideIn1 1s;
+          animation: SlideIn1 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes SlideIn1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(64px);
+            transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes SlideIn1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(64px);
+            transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+header #firstview #mainvisual #header-img2 {
+  -webkit-animation: SlideIn2 1s;
+          animation: SlideIn2 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes SlideIn2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(64px);
+            transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes SlideIn2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(64px);
+            transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+header #firstview #mainvisual #header-img3 {
+  -webkit-animation: SlideIn3 1s;
+          animation: SlideIn3 1s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes SlideIn3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(64px);
+            transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes SlideIn3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(64px);
+            transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 header h2 {
   position: absolute;
   bottom: 0;
@@ -231,6 +339,7 @@ main .contents-block article {
 
 main .contents-block article .contents-tittle {
   font-weight: 600;
+  font-size: 14px;
   padding-bottom: 10px;
 }
 
@@ -419,6 +528,7 @@ main #recruit #search-box #search-contents form input::placeholder {
 main #recruit #search-box #search-contents form input[type="submit"] {
   width: 480px;
   height: 63.51px;
+  font-weight: 600;
   background-color: #657ccf;
   color: #FFFFFF;
   padding: 0;
@@ -433,6 +543,7 @@ main #recruit #consultation {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 50px 0 100px;
+  font-weight: 600;
 }
 
 main #recruit #consultation #consultation-after {
@@ -510,6 +621,7 @@ main #recruit #recruit-ranking {
 
 main #recruit #recruit-ranking h3 {
   font-size: 20px;
+  font-weight: 600;
   text-align: center;
   padding-bottom: 13px;
   border-bottom: 1px solid #c8c8c8;
@@ -566,6 +678,7 @@ main .category-link {
 
 main .category-link h3 {
   font-size: 20px;
+  font-weight: 600;
   text-align: center;
   padding-bottom: 13px;
   border-bottom: 1px solid #c8c8c8;
@@ -586,7 +699,7 @@ main .category-link ul {
 main .category-link ul li {
   font-size: 16px;
   line-height: 30px;
-  color: #003973;
+  color: #657ccf;
 }
 
 main .pickup {
@@ -595,6 +708,7 @@ main .pickup {
 
 main .pickup h4 {
   font-size: 36px;
+  font-weight: 600;
   text-align: center;
   padding: 98px 0 49px 0;
 }
@@ -731,8 +845,14 @@ main #knowhow #knowhow-box .knowhow-block {
   padding-bottom: 50px;
 }
 
+main #knowhow #knowhow-box .knowhow-block .knowhow-img {
+  margin-right: 25px;
+}
+
 main #knowhow #knowhow-box .knowhow-block h5 {
   font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 20px;
 }
 
 main #knowhow #knowhow-box .knowhow-block p {
@@ -824,6 +944,10 @@ footer #footer-container #footer-flex #flex1 p {
   padding: 45px 0 0;
 }
 
+footer #footer-container #footer-flex #flex1 #corporation {
+  font-weight: 600;
+}
+
 footer #footer-container #footer-flex #flex1 #address {
   font-size: 12px;
   padding-top: 13px;
@@ -831,6 +955,7 @@ footer #footer-container #footer-flex #flex1 #address {
 
 footer #footer-container #footer-flex .flex2 p {
   font-size: 18px;
+  font-weight: 600;
 }
 
 footer #footer-container #footer-flex .flex2 #list li:nth-child(4) {
@@ -839,6 +964,7 @@ footer #footer-container #footer-flex .flex2 #list li:nth-child(4) {
 
 footer #footer-container #copyright {
   text-align: center;
+  font-weight: 600;
   margin: 0 20px;
   padding: 73px 0 28px;
   border-left: 10px solid #fff;
