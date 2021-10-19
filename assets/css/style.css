@@ -158,32 +158,6 @@ header #firstview #navigation nav #nav-menu .drop-display {
   display: none;
 }
 
-header #firstview #navigation #scroll-nav {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  padding-bottom: 70px;
-  z-index: 1;
-}
-
-header #firstview #navigation #scroll-nav a {
-  position: relative;
-  color: #003973;
-  padding-bottom: 70px;
-}
-
-header #firstview #navigation #scroll-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 1px;
-  height: 59px;
-  margin: auto;
-  background-color: #003973;
-}
-
 header #firstview #mainvisual {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,8 +292,33 @@ header #readcopy {
   background-color: rgba(255, 255, 255, 0.7);
   font-size: 24px;
   text-align: right;
-  padding: 50px;
+  padding: 60px;
   line-height: 1.28em;
+}
+
+header #scroll-nav {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  padding-bottom: 70px;
+}
+
+header #scroll-nav span {
+  position: relative;
+  color: #003973;
+  padding-bottom: 70px;
+}
+
+header #scroll-nav span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 59px;
+  margin: auto;
+  background-color: #003973;
 }
 
 main .contents-block {
@@ -343,6 +342,25 @@ main .contents-block article .contents-tittle {
   padding-bottom: 10px;
 }
 
+main h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #c8c8c8;
+  padding-bottom: 13px;
+}
+
+main h4 {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+
+main h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 main #new {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -356,14 +374,6 @@ main #new .new-category {
 
 main #new .new-category .new-icon {
   text-align: center;
-}
-
-main #new .new-category h3 {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 600;
-  border-bottom: 1px solid #c8c8c8;
-  padding-bottom: 13px;
 }
 
 main #new .new-category .new-contents {
@@ -546,7 +556,7 @@ main #recruit #consultation {
   font-weight: 600;
 }
 
-main #recruit #consultation #consultation-after {
+main #recruit #consultation #consultation-ba {
   position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -560,7 +570,7 @@ main #recruit #consultation #consultation-after {
   padding-bottom: 42px;
 }
 
-main #recruit #consultation #consultation-after::after {
+main #recruit #consultation #consultation-ba::after {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -616,15 +626,7 @@ main #recruit .category-link li {
 
 main #recruit #recruit-ranking {
   background-color: #f7f7f7;
-  padding: 105px 85px 0 85px;
-}
-
-main #recruit #recruit-ranking h3 {
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  padding-bottom: 13px;
-  border-bottom: 1px solid #c8c8c8;
+  padding: 105px 85px 0;
 }
 
 main #recruit #recruit-ranking #ranking-box {
@@ -646,7 +648,7 @@ main #recruit #recruit-ranking #ranking-box .contents-block .contents-img p {
   position: absolute;
   top: 0%;
   right: 76px;
-  border: none 1px #000000;
+  border: none;
   padding: 2px 8px;
   color: #FFFFFF;
 }
@@ -676,14 +678,6 @@ main .category-link {
   padding: 85px 85px 0 85px;
 }
 
-main .category-link h3 {
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  padding-bottom: 13px;
-  border-bottom: 1px solid #c8c8c8;
-}
-
 main .category-link ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,6 +692,7 @@ main .category-link ul {
 
 main .category-link ul li {
   font-size: 16px;
+  font-weight: 600;
   line-height: 30px;
   color: #657ccf;
 }
@@ -707,9 +702,6 @@ main .pickup {
 }
 
 main .pickup h4 {
-  font-size: 36px;
-  font-weight: 600;
-  text-align: center;
   padding: 98px 0 49px 0;
 }
 
@@ -725,11 +717,6 @@ main .pickup .pickup-box {
 
 main .pickup .pickup-box .pickup-block {
   width: 320px;
-}
-
-main .pickup .pickup-box .pickup-block h5 {
-  font-size: 18px;
-  font-weight: 600;
 }
 
 main .pickup .pickup-box .pickup-block p {
@@ -815,9 +802,6 @@ main #knowhow {
 }
 
 main #knowhow h4 {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 600;
   margin-bottom: 55px;
 }
 
@@ -850,8 +834,6 @@ main #knowhow #knowhow-box .knowhow-block .knowhow-img {
 }
 
 main #knowhow #knowhow-box .knowhow-block h5 {
-  font-size: 18px;
-  font-weight: 600;
   padding-bottom: 20px;
 }
 
