@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="./fav.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="./icon.png" />
   <title>茨城の派遣お仕事探しなら｜イバラキ・ハケン</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" media="only screen and (max-width: 979px)" href="./assets/css/respond.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -43,6 +44,11 @@
         </h1>
         <p id="ibaraki">求人情報とコミュニティで<br>
           「イバラキ」を盛り上げます</p>
+        <button class="resp_sp">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav>
           <ul id="nav-menu">
             <li class="nav-list">
@@ -246,7 +252,7 @@
             人材サポート力は茨城No1！まずはご相談ください。</p>
         </article>
         <article id="search-contents">
-          <div id="contents-img">
+          <div id="contents-img1">
             <img class="resp_pc" src="./assets/images/D15A5628.jpg" alt="D15A5628">
             <img class="resp_sp" src="./assets/images/D15A5614.jpg" alt="D15A5614">
           </div>
@@ -364,58 +370,68 @@
 
       <article class="pickup">
           <h4>ピックアップ求人</h4>
-          <article class="pickup-box">
-            <article class="pickup-block">
-              <div class="pickup-img">
-                <a href=""><img src="./assets/images/70185913.jpg" alt="70185913"></a>
-              </div>
-              <h5><a href="">求人タイトル。求人タイトル。求人タイトル。求人タイトル。</a></h5>
-              <p>求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキ</p>
-              <ul class="tagflex">
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-              </ul>
-            </article>
-            <article class="pickup-block">
-              <div class="pickup-img">
-                <a href=""><img src="./assets/images/70185913.jpg" alt="70185913"></a>
-              </div>
-              <h5><a href="">求人タイトル。求人タイトル。求人タイトル。求人タイトル。</a></h5>
-              <p>求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキ</p>
-              <ul class="tagflex">
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-              </ul>
-            </article>
-            <article class="pickup-block">
-              <div class="pickup-img">
-                <a href=""><img src="./assets/images/70185913.jpg" alt="70185913"></a>
-              </div>
-              <h5><a href="">求人タイトル。求人タイトル。求人タイトル。求人タイトル。</a></h5>
-              <p>求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキ</p>
-              <ul class="tagflex">
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-              </ul>
-            </article>
-            <article class="pickup-block">
-              <div class="pickup-img">
-                <a href=""><img src="./assets/images/70185913.jpg" alt="70185913"></a>
-              </div>
-              <h5><a href="">求人タイトル。求人タイトル。求人タイトル。求人タイトル。</a></h5>
-              <p>求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキ</p>
-              <ul class="tagflex">
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-              </ul>
+          <article class="swiper-container">
+            <article class="pickup-box swiper-wrapper">
+              <article class="pickup-block swiper-slide">
+                <div class="pickup-img">
+                  <a href=""><img src="./assets/images/70185913.jpg" alt="70185913"></a>
+                </div>
+                <article>
+                  <h5><a href="">求人タイトル。求人タイトル。求人タイトル。求人タイトル。</a></h5>
+                  <p>求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキ</p>
+                  <ul class="tagflex">
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                  </ul>
+                </article>
+              </article>
+              <article class="pickup-block swiper-slide">
+                <div class="pickup-img">
+                  <a href=""><img src="./assets/images/70185913.jpg" alt="70185913"></a>
+                </div>
+                <article>
+                  <h5><a href="">求人タイトル。求人タイトル。求人タイトル。求人タイトル。</a></h5>
+                  <p>求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキ</p>
+                  <ul class="tagflex">
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                  </ul>
+                </article>
+              </article>
+              <article class="pickup-block swiper-slide">
+                <div class="pickup-img">
+                  <a href=""><img src="./assets/images/70185913.jpg" alt="70185913"></a>
+                </div>
+                <article>
+                  <h5><a href="">求人タイトル。求人タイトル。求人タイトル。求人タイトル。</a></h5>
+                  <p>求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキ</p>
+                  <ul class="tagflex">
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                  </ul>
+                </article>
+              </article>
+              <article class="pickup-block swiper-slide">
+                <div class="pickup-img">
+                  <a href=""><img src="./assets/images/70185913.jpg" alt="70185913"></a>
+                </div>
+                <article>
+                  <h5><a href="">求人タイトル。求人タイトル。求人タイトル。求人タイトル。</a></h5>
+                  <p>求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキスト。求人概要テキ</p>
+                  <ul class="tagflex">
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                  </ul>
+                </article>
+              </article>
             </article>
           </article>
           <div class="viewmore">
@@ -441,16 +457,19 @@
       <article id="community-box">
         <article id="community-tittle">
           <p>求人とコミュニティで地域の”人”をつなげます。<br>
-            <span>地域のコミュニティはあなたの参加を待っています！</span></p>
+            <span>地域のコミュニティは<br class="resp_sp">あなたの参加を待っています！</span></p>
         </article>
         <article id="community-contents">
-          <div>
+          <div id="contents-img2">
             <img src="./assets/images/pixta_55069062_XL.jpg" alt="pixta_55069062_XL">
           </div>
-          <p>コミュニティに関するキャッチコピー。コミュニティに関する<br>
-            キャッチコピー。コミュニティに関するキャッチコピー。<br>
-            コミュニティに関するキャッチコピー。コミュニティに関する<br>
-            キャッチコピー。コミュニティに関するキャッチコピー。</p>
+          <p>コミュニティに関するキャッチコピー。<br class="resp_sp">
+            コミュニティに関する<br class="resp_pc">キャッチコピー。<br class="resp_sp">
+            コミュニティに関するキャッチコピー。<br>
+            コミュニティに関するキャッチコピー。<br class="resp_sp">
+            コミュニティに関する<br  class="resp_pc">キャッチコピー。<br class="resp_sp">
+            コミュニティに関するキャッチコピー。
+          </p>
         </article>
       </article>
 
@@ -462,62 +481,73 @@
               <li><a href="">コミュニティカテゴリリンク</a></li>
               <li><a href="">コミュニティカテゴリリンク</a></li>
               <li><a href="">コミュニティカテゴリリンク</a></li>
+              <li class="resp_sp"><a href="">コミュニティカテゴリリンク</a></li>
           </ul>
       </article>
       <article class="pickup">
           <h4>ピックアップコミュニティ</h4>
-          <article class="pickup-box">
-            <article class="pickup-block">
-              <div class="pickup-img">
-                <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
-              </div>
-              <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
-              <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
-              <ul class="tagflex">
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-              </ul>
-            </article>
-            <article class="pickup-block">
-              <div class="pickup-img">
-                <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
-              </div>
-              <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
-              <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
-              <ul class="tagflex">
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-              </ul>
-            </article>
-            <article class="pickup-block">
-              <div class="pickup-img">
-                <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
-              </div>
-              <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
-              <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
-              <ul class="tagflex">
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-              </ul>
-            </article>
-            <article class="pickup-block">
-              <div class="pickup-img">
-                <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
-              </div>
-              <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
-              <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
-              <ul class="tagflex">
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-                  <li><a href="">特徴タグ</a></li>
-              </ul>
+          <article class="swiper-container">
+            <article class="pickup-box  swiper-wrapper">
+              <article class="pickup-block swiper-slide">
+                <div class="pickup-img">
+                  <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
+                </div>
+                <article>
+                  <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
+                  <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
+                  <ul class="tagflex">
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                  </ul>
+                </article>
+              </article>
+              <article class="pickup-block swiper-slide">
+                <div class="pickup-img">
+                  <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
+                </div>
+                <article>
+                  <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
+                  <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
+                  <ul class="tagflex">
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                  </ul>
+                </article>
+              </article>
+              <article class="pickup-block swiper-slide">
+                <div class="pickup-img">
+                  <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
+                </div>
+                <article>
+                  <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
+                  <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
+                  <ul class="tagflex">
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                  </ul>
+                </article>
+              </article>
+              <article class="pickup-block swiper-slide">
+                <div class="pickup-img">
+                  <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
+                </div>
+                <article>
+                  <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
+                  <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
+                  <ul class="tagflex">
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                      <li><a href="">特徴タグ</a></li>
+                  </ul>
+                </article>
+              </article>
             </article>
           </article>
           <div class="viewmore">
@@ -616,16 +646,18 @@
         </h1>
         <p><a href="">≫ プライバシーポリシー</a></p>
         <p id="corporation">株式会社ライフ</p>
-        <p id="address">〒160 - 0023<br>  
+        <p id="address">〒160 - 0023<br class="resp_pc">  
           茨城県古河市旭町2-23-17 グランパレスA<br>
           TEL：0280-33-7480</p>
       </article>
       <article class="flex2">
         <p><a href="">派遣求人一覧</a></p>
-        <ul id="list">
+        <ul id="list1">
           <li><a href="">≫ 地域分類A</a></li>
           <li><a href="">≫ 地域分類B</a></li>
           <li><a href="">≫ 地域分類C</a></li>
+        </ul>
+        <ul id="list2">
           <li><a href="">≫ 職種カテゴリA</a></li>
           <li><a href="">≫ 職種カテゴリA</a></li>
           <li><a href="">≫ 職種カテゴリA</a></li>
@@ -633,7 +665,7 @@
       </article>
       <article class="flex2">
         <p><a href="">茨城のコミュニティ一覧</a></p>
-        <ul>
+        <ul id="list3">
           <li><a href="">≫ コミュニティカテゴリA</a></li>
           <li><a href="">≫ コミュニティカテゴリB</a></li>
           <li><a href="">≫ コミュニティカテゴリC</a></li>
@@ -642,7 +674,7 @@
       </article>
       <article class="flex2">
         <p><a href="">運営会社情報</a></p>
-        <ul>
+        <ul id="list4">
           <li><a href="">≫ 運営ポリシー</a></li>
           <li><a href="">≫ お仕事をお探しの方へ</a></li>
           <li><a href="">≫ 代表メッセージ</a></li>
@@ -650,7 +682,7 @@
       </article>
       <article class="flex2">
         <p><a href="">応募・お問い合わせ</a></p>
-        <ul>
+        <ul id="list5">
           <li><a href="">≫ 求人応募</a></li>
           <li><a href="">≫ 求人掲載依頼</a></li>
           <li><a href="">≫ コミュニティ問い合わせ</a></li>
@@ -666,6 +698,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="./assets/js/script.js" defer></script>
 </body>
 </html>

@@ -139,6 +139,36 @@ header #firstview #navigation #ibaraki {
   margin-top: 10px;
 }
 
+header #firstview #navigation button {
+  position: relative;
+  top: 30px;
+  width: 60px;
+}
+
+header #firstview #navigation button span {
+  display: inline-block;
+  position: absolute;
+  right: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #003973;
+}
+
+header #firstview #navigation button span:nth-of-type(1) {
+  top: 0;
+  width: 100%;
+}
+
+header #firstview #navigation button span:nth-of-type(2) {
+  top: 20px;
+  width: 70%;
+}
+
+header #firstview #navigation button span:nth-of-type(3) {
+  top: 40px;
+  width: 45%;
+}
+
 header #firstview #navigation nav {
   font-size: 16px;
   margin-top: 45px;
@@ -494,6 +524,7 @@ main #recruit #search-box #search-contents form select, main #recruit #search-bo
 
 main #recruit #search-box #search-contents form .select-wrap {
   position: relative;
+  border-radius: 10px;
 }
 
 main #recruit #search-box #search-contents form .select-wrap::after {
@@ -705,6 +736,11 @@ main .pickup h4 {
   padding: 98px 0 49px 0;
 }
 
+main .pickup .swiper-wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 main .pickup .pickup-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -717,19 +753,33 @@ main .pickup .pickup-box {
 
 main .pickup .pickup-box .pickup-block {
   width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-main .pickup .pickup-box .pickup-block p {
+main .pickup .pickup-box .pickup-block article {
+  width: 320px;
+}
+
+main .pickup .pickup-box .pickup-block article p {
   padding-top: 25px;
 }
 
-main .pickup .pickup-box .pickup-block .tagflex {
+main .pickup .pickup-box .pickup-block article .tagflex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .pickup .pickup-box .pickup-block .tagflex li {
+main .pickup .pickup-box .pickup-block article .tagflex li {
   font-size: 12px;
   padding: 25px 22px 0 0;
 }
@@ -848,7 +898,7 @@ main #knowhow .viewmore {
 footer {
   position: relative;
   width: 100%;
-  height: 482px;
+  height: 100%;
   color: #fff;
   margin-top: 180px;
 }
@@ -940,7 +990,7 @@ footer #footer-container #footer-flex .flex2 p {
   font-weight: 600;
 }
 
-footer #footer-container #footer-flex .flex2 #list li:nth-child(4) {
+footer #footer-container #footer-flex .flex2 #list2 {
   padding: 15px 0;
 }
 

@@ -121,6 +121,36 @@ header {
       #ibaraki {
         margin-top: 10px;
       }
+
+      button {
+        position: relative;
+        top: 30px;
+        width: 60px;
+
+        span {
+          display: inline-block;
+          position: absolute;
+          right: 14px;
+          height: 3px;
+          border-radius: 2px;
+          background: $navy;
+        }
+
+        span:nth-of-type(1) {
+          top: 0; 
+          width: 100%;
+        }
+
+        span:nth-of-type(2) {
+          top: 20px;
+          width: 70%;
+        }
+
+        span:nth-of-type(3) {
+          top: 40px;
+          width: 45%;
+        }
+      }
       
       nav {
         font-size: 16px;
@@ -398,6 +428,7 @@ main {
           }
           .select-wrap  {
             position: relative;
+            border-radius: 10px;
             &::after {
               content: "";
               width: 0;
@@ -578,7 +609,10 @@ main {
     h4 {
       padding: 98px 0 49px 0;
     }
-  
+    .swiper-wrapper {
+      box-sizing: border-box;
+    }
+    
     .pickup-box {
       display: flex;
       padding: 0 9px;
@@ -586,16 +620,23 @@ main {
   
       .pickup-block {
         width: 320px;
-        p {
-          padding-top: 25px;
-        }
-  
-        .tagflex {
-          display: flex;
-  
-          li {
-            font-size: 12px;
-            padding: 25px 22px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        article {
+          width: 320px;
+          p {
+            padding-top: 25px;
+          }
+    
+          .tagflex {
+            display: flex;
+    
+            li {
+              font-size: 12px;
+              padding: 25px 22px 0 0;
+            }
           }
         }
       }
@@ -693,7 +734,7 @@ main {
 footer {
   position: relative;
   width: 100%;
-  height: 482px;
+  height: 100%;
   color: #fff;
   margin-top: 180px;
   &::before {
@@ -731,7 +772,6 @@ footer {
         height: 101px;
       }
     }
-
 
     #footer-flex {
       display: flex;
@@ -778,10 +818,8 @@ footer {
           font-weight: 600;
         }
 
-        #list {
-          li:nth-child(4){
+        #list2 {
             padding: 15px 0;
-          }
         }
       }
     }
