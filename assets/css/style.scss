@@ -101,17 +101,29 @@ header {
 
   #firstview {
     display: flex;
-    height: 100%;
+    height: 100vh;
     position: relative;
 
     #navigation {
-      width: 340px;
+      width: 20%;
       text-align: center;
-      position: relative;
+      background-color: $gray;
 
       h1 {
         margin-top: 45px;
-        p {
+        display: flex;
+        flex-direction: column;
+
+        #header-logo {
+          width: 90%;
+          margin: 0 auto;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        #header-copy {
           color: $navy;
           font-size: 12px;
           padding-bottom: 5px;
@@ -154,7 +166,7 @@ header {
       
       nav {
         font-size: 16px;
-        margin-top: 45px;
+        margin-top: 40px;
         font-weight: 600;
 
         #nav-menu {
@@ -173,13 +185,26 @@ header {
     }
 
     #mainvisual {
+      width: 80%;
       display: flex;
+
+      #header-img1,#header-img2,#header-img3 {
+        width: 33.3%;
+
+        img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        }
+      }
 
       #header-img1 {
         animation: SlideIn1 1s;
         animation-delay: 0.5s;
         animation-fill-mode:forwards;
         opacity: 0;
+
         @keyframes SlideIn1 {
             0% {
                 opacity: 0;
@@ -197,6 +222,7 @@ header {
         animation-delay: 1s;
         animation-fill-mode:forwards;
         opacity: 0;
+
         @keyframes SlideIn2 {
             0% {
                 opacity: 0;
@@ -214,6 +240,7 @@ header {
         animation-delay: 1.5s;
         animation-fill-mode:forwards;
         opacity: 0;
+
         @keyframes SlideIn3 {
             0% {
                 opacity: 0;
@@ -232,30 +259,43 @@ header {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 350px;
+    height: 35%;
     background-color: rgba($color: #000000, $alpha: 0.2);
     color: #FFFFFF;
     font-size: 48px;
-    padding: 50px 60px;
     font-weight: 600;
+
+    span {
+      position: absolute;
+      top: 25%;
+      transform: translateY(-50%);
+      left: 5%;
+    }
   }
 
   #readcopy {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 175px;
+    height: 17.5%;
     background-color: rgba($color: #FFFFFF, $alpha: 0.7);
     font-size: 24px;
     text-align: right;
-    padding: 60px;
     line-height: 1.28em;
+
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5%;
+    }
   }
 
   #scroll-nav {
     position: absolute;
     bottom: 0;
     left: 10%;
+    transform: translateX(-50%);
     padding-bottom: 70px;
 
     span {
@@ -287,13 +327,18 @@ main {
     .contents-img {
       padding-right: 20px;
     }
-    article {
-      font-size: 12px;
-      
-      .contents-tittle {
-        font-weight: 600;
-        font-size: 14px;
+
+    p {
+      font-weight: 600;
+      font-size: 14px;
+
+      a {
+        display: inline-block;
         padding-bottom: 10px;
+      }
+
+      span {      
+        font-size: 12px;
       }
     }
   }
@@ -304,6 +349,8 @@ main {
     font-weight: 600;
     border-bottom: 1px solid $border;
     padding-bottom: 13px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   h4 {
@@ -343,6 +390,7 @@ main {
   .background-img {
     width: 100%;
     height: 100%;
+
     img {
       width: 100%;
       height: 100%;
@@ -358,6 +406,7 @@ main {
     
     .decoration1,.dacoration2 {
       position: absolute;
+
       img {
         height: 100%;
       }
@@ -369,14 +418,13 @@ main {
   }
   
   @mixin p {
-    p {
-      font-size: 22px;
-      font-weight: 600;
-      span {
-        padding-bottom: 15px;
-        display: inline-block;
-        font-size: 40px;
-      }
+    font-size: 22px;
+    font-weight: 600;
+
+    span {
+      padding-bottom: 15px;
+      display: inline-block;
+      font-size: 40px;
     }
   }
 
@@ -389,7 +437,8 @@ main {
       height: 740px;
 
       .decoration {
-        left: 99px;
+        left: 11%;
+        transform: translateX(-50%);
 
         .dacoration2 {
           height: 740px;
@@ -399,8 +448,9 @@ main {
 
     #search-box {
       position: absolute;
-      top: 95px;
-      left: 170px;
+      top: 4%;
+      left: 50%;
+      transform: translateX(-45%);
 
       #search-tittle {
         margin-bottom: 105px;
@@ -409,13 +459,16 @@ main {
 
       #search-contents {
         display: flex;
+
         div {
           margin-right: 65px;
         }
+
         form {
           display: flex;
           justify-content: space-between;
           flex-direction: column;
+
           select,input {
             width: 480px;
             height: 70px;
@@ -426,9 +479,11 @@ main {
             border: 2px solid #a4a4a4;
             border-radius: 10px;
           }
+
           .select-wrap  {
             position: relative;
             border-radius: 10px;
+
             &::after {
               content: "";
               width: 0;
@@ -442,16 +497,20 @@ main {
               border-top: 13px solid #888888;
               pointer-events: none;       
             }
+
             select {
               appearance: none;
               position: relative;
               cursor : pointer;
             }
           }
+
           input {
+
             &::placeholder {
               color: #888888;
             }
+
             &[type="submit"] {
               width: 480px;
               height: 63.51px;
@@ -478,6 +537,7 @@ main {
         justify-content: center;
         align-items: flex-end;
         padding-bottom: 42px;
+
         &::after {
           position: absolute;
           right: 0;
@@ -507,6 +567,7 @@ main {
         }
         background-color: #9ed8a4;
         border-radius: 15px;
+
         a {
           position: relative;
           display: inline-block;
@@ -516,6 +577,7 @@ main {
           font-size: 16px;
           padding: 15px 30px;
           white-space: nowrap;
+
           &::after {
             position: absolute;
             content: "";
@@ -532,6 +594,7 @@ main {
     }
 
     .category-link {
+
       li {
         width: 16%;
       }
@@ -543,6 +606,7 @@ main {
         
       #ranking-box {
         display: flex;
+        max-width: 1440px;
         margin: 0 auto;
         justify-content: space-between;
         padding: 30px 30px 0 30px;
@@ -589,9 +653,12 @@ main {
   .category-link {
     background-color: $gray;
     padding: 85px 85px 0 85px;
+
     ul {
       display: flex;
       flex-wrap: wrap;
+      max-width: 1440px;
+      margin: 0 auto;
       padding: 30px 30px 0 30px;
       justify-content: space-between;
   
@@ -606,9 +673,11 @@ main {
 
   .pickup {
     background-color: $gray;
+
     h4 {
       padding: 98px 0 49px 0;
     }
+
     .swiper-wrapper {
       box-sizing: border-box;
     }
@@ -616,6 +685,8 @@ main {
     .pickup-box {
       display: flex;
       padding: 0 9px;
+      max-width: 1440px;
+      margin: 0 auto;
       justify-content: space-between;
   
       .pickup-block {
@@ -624,8 +695,9 @@ main {
         flex-direction: column;
         align-items: center;
 
-        article {
+        .pickup-text {
           width: 320px;
+
           p {
             padding-top: 25px;
           }
@@ -667,8 +739,8 @@ main {
 
     #community-box {
       position: absolute;
-      top: 103px;
-      left: 180px;
+      top: 4%;
+      left: 11%;
 
       #community-tittle {
         margin: {
@@ -681,6 +753,7 @@ main {
       #community-contents {
         display: flex;
         align-items: center;
+
         p {
           padding-left: 47px;
           font-size: 18px;
@@ -690,6 +763,7 @@ main {
     }
 
     .category-link {
+      
       li {
         width: 20%;
       }
@@ -698,6 +772,7 @@ main {
 
   #knowhow {
     margin-top: 100px;
+
     h4 {
       margin-bottom: 55px;
     }
@@ -706,6 +781,8 @@ main {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      max-width: 1440px;
+      margin: 0 auto;
 
       .knowhow-block {
         display: flex;
@@ -717,14 +794,17 @@ main {
         .knowhow-img {
           margin-right: 25px;
         }
+
         h5 {
           padding-bottom: 20px;
         }
+
         p {
           font-size: 12px;
         }
       }
     }
+
     .viewmore {
       padding-bottom: 0;
     }
@@ -737,6 +817,7 @@ footer {
   height: 100%;
   color: #fff;
   margin-top: 180px;
+
   &::before {
     content: "";
     position: absolute;
@@ -751,6 +832,7 @@ footer {
   p {
     padding:85px 0 25px;
   }
+
   li {
     padding-bottom: 15px;
   }
@@ -764,6 +846,7 @@ footer {
     #arrow {
       background-color: #fff;
       cursor : pointer;
+
       img {
         position: absolute;
         top: -9.5%;
@@ -813,6 +896,7 @@ footer {
       }
 
       .flex2 {
+        
         p {
           font-size: 18px;
           font-weight: 600;

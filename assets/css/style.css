@@ -115,21 +115,37 @@ header #firstview {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
+  height: 100vh;
   position: relative;
 }
 
 header #firstview #navigation {
-  width: 340px;
+  width: 20%;
   text-align: center;
-  position: relative;
+  background-color: #f7f7f7;
 }
 
 header #firstview #navigation h1 {
   margin-top: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-header #firstview #navigation h1 p {
+header #firstview #navigation h1 #header-logo {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header #firstview #navigation h1 #header-logo img {
+  width: 100%;
+}
+
+header #firstview #navigation h1 #header-copy {
   color: #003973;
   font-size: 12px;
   padding-bottom: 5px;
@@ -171,7 +187,7 @@ header #firstview #navigation button span:nth-of-type(3) {
 
 header #firstview #navigation nav {
   font-size: 16px;
-  margin-top: 45px;
+  margin-top: 40px;
   font-weight: 600;
 }
 
@@ -189,9 +205,23 @@ header #firstview #navigation nav #nav-menu .drop-display {
 }
 
 header #firstview #mainvisual {
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+header #firstview #mainvisual #header-img1, header #firstview #mainvisual #header-img2, header #firstview #mainvisual #header-img3 {
+  width: 33.3%;
+}
+
+header #firstview #mainvisual #header-img1 img, header #firstview #mainvisual #header-img2 img, header #firstview #mainvisual #header-img3 img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 header #firstview #mainvisual #header-img1 {
@@ -306,30 +336,46 @@ header h2 {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 350px;
+  height: 35%;
   background-color: rgba(0, 0, 0, 0.2);
   color: #FFFFFF;
   font-size: 48px;
-  padding: 50px 60px;
   font-weight: 600;
+}
+
+header h2 span {
+  position: absolute;
+  top: 25%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 5%;
 }
 
 header #readcopy {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 175px;
+  height: 17.5%;
   background-color: rgba(255, 255, 255, 0.7);
   font-size: 24px;
   text-align: right;
-  padding: 60px;
   line-height: 1.28em;
+}
+
+header #readcopy span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 5%;
 }
 
 header #scroll-nav {
   position: absolute;
   bottom: 0;
   left: 10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding-bottom: 70px;
 }
 
@@ -362,14 +408,18 @@ main .contents-block .contents-img {
   padding-right: 20px;
 }
 
-main .contents-block article {
-  font-size: 12px;
-}
-
-main .contents-block article .contents-tittle {
+main .contents-block p {
   font-weight: 600;
   font-size: 14px;
+}
+
+main .contents-block p a {
+  display: inline-block;
   padding-bottom: 10px;
+}
+
+main .contents-block p span {
+  font-size: 12px;
 }
 
 main h3 {
@@ -378,6 +428,8 @@ main h3 {
   font-weight: 600;
   border-bottom: 1px solid #c8c8c8;
   padding-bottom: 13px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 main h4 {
@@ -460,7 +512,9 @@ main #recruit #search-background {
 }
 
 main #recruit #search-background .decoration {
-  left: 99px;
+  left: 11%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 main #recruit #search-background .decoration .dacoration2 {
@@ -469,20 +523,19 @@ main #recruit #search-background .decoration .dacoration2 {
 
 main #recruit #search-box {
   position: absolute;
-  top: 95px;
-  left: 170px;
+  top: 4%;
+  left: 50%;
+  -webkit-transform: translateX(-45%);
+          transform: translateX(-45%);
 }
 
 main #recruit #search-box #search-tittle {
   margin-bottom: 105px;
-}
-
-main #recruit #search-box #search-tittle p {
   font-size: 22px;
   font-weight: 600;
 }
 
-main #recruit #search-box #search-tittle p span {
+main #recruit #search-box #search-tittle span {
   padding-bottom: 15px;
   display: inline-block;
   font-size: 40px;
@@ -664,6 +717,7 @@ main #recruit #recruit-ranking #ranking-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1440px;
   margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -715,6 +769,8 @@ main .category-link ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 30px 30px 0 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -746,6 +802,8 @@ main .pickup .pickup-box {
   display: -ms-flexbox;
   display: flex;
   padding: 0 9px;
+  max-width: 1440px;
+  margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -765,21 +823,21 @@ main .pickup .pickup-box .pickup-block {
           align-items: center;
 }
 
-main .pickup .pickup-box .pickup-block article {
+main .pickup .pickup-box .pickup-block .pickup-text {
   width: 320px;
 }
 
-main .pickup .pickup-box .pickup-block article p {
+main .pickup .pickup-box .pickup-block .pickup-text p {
   padding-top: 25px;
 }
 
-main .pickup .pickup-box .pickup-block article .tagflex {
+main .pickup .pickup-box .pickup-block .pickup-text .tagflex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .pickup .pickup-box .pickup-block article .tagflex li {
+main .pickup .pickup-box .pickup-block .pickup-text .tagflex li {
   font-size: 12px;
   padding: 25px 22px 0 0;
 }
@@ -808,21 +866,18 @@ main #community #community-background .decoration {
 
 main #community #community-box {
   position: absolute;
-  top: 103px;
-  left: 180px;
+  top: 4%;
+  left: 11%;
 }
 
 main #community #community-box #community-tittle {
   margin-left: -10px;
   margin-bottom: 72px;
-}
-
-main #community #community-box #community-tittle p {
   font-size: 22px;
   font-weight: 600;
 }
 
-main #community #community-box #community-tittle p span {
+main #community #community-box #community-tittle span {
   padding-bottom: 15px;
   display: inline-block;
   font-size: 40px;
@@ -863,6 +918,8 @@ main #knowhow #knowhow-box {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 main #knowhow #knowhow-box .knowhow-block {

@@ -82,12 +82,13 @@ header #firstview #navigation {
 }
 
 header #firstview #navigation h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 0;
   margin-left: 20px;
   position: relative;
@@ -103,7 +104,7 @@ header #firstview #navigation h1 #header-icon img {
   height: 100%;
 }
 
-header #firstview #navigation h1 p {
+header #firstview #navigation h1 #header-copy {
   position: absolute;
   top: 20px;
   left: 42px;
@@ -135,6 +136,14 @@ header #firstview #mainvisual {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+header #firstview #mainvisual #header-img1, header #firstview #mainvisual #header-img2, header #firstview #mainvisual #header-img3 {
+  width: 33.3%;
+}
+
+header #firstview #mainvisual #header-img1 img, header #firstview #mainvisual #header-img2 img, header #firstview #mainvisual #header-img3 img {
+  height: 100%;
 }
 
 @-webkit-keyframes SlideIn1 {
