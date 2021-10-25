@@ -162,7 +162,6 @@ header #firstview #navigation button {
 }
 
 header #firstview #navigation button span {
-  display: inline-block;
   position: absolute;
   right: 14px;
   height: 3px;
@@ -404,6 +403,12 @@ main .contents-block {
   margin-right: 43px;
 }
 
+@media screen and (max-width: 1440px) {
+  main .contents-block {
+    margin-right: 14px;
+  }
+}
+
 main .contents-block .contents-img {
   padding-right: 20px;
 }
@@ -454,6 +459,12 @@ main #new .new-category {
   margin: 0 60px;
 }
 
+@media screen and (max-width: 1366px) {
+  main #new .new-category {
+    margin: 0 30px;
+  }
+}
+
 main #new .new-category .new-icon {
   text-align: center;
 }
@@ -462,6 +473,9 @@ main #new .new-category .new-contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 30px;
@@ -527,6 +541,14 @@ main #recruit #search-box {
   left: 50%;
   -webkit-transform: translateX(-45%);
           transform: translateX(-45%);
+}
+
+@media screen and (max-width: 1366px) {
+  main #recruit #search-box {
+    left: 5%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 main #recruit #search-box #search-tittle {
@@ -713,6 +735,12 @@ main #recruit #recruit-ranking {
   padding: 105px 85px 0;
 }
 
+@media screen and (max-width: 1366px) {
+  main #recruit #recruit-ranking {
+    padding: 105px 40px 0;
+  }
+}
+
 main #recruit #recruit-ranking #ranking-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -722,7 +750,7 @@ main #recruit #recruit-ranking #ranking-box {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 30px 0 30px;
+  padding: 30px 30px 0;
 }
 
 main #recruit #recruit-ranking #ranking-box .contents-block .contents-img {
@@ -760,7 +788,13 @@ main #recruit #recruit-ranking #ranking-box .contents-block:last-of-type {
 
 main .category-link {
   background-color: #f7f7f7;
-  padding: 85px 85px 0 85px;
+  padding: 85px 85px 0;
+}
+
+@media screen and (max-width: 1366px) {
+  main .category-link {
+    padding: 85px 45px 0;
+  }
 }
 
 main .category-link ul {
@@ -786,6 +820,12 @@ main .category-link ul li {
 
 main .pickup {
   background-color: #f7f7f7;
+}
+
+@media screen and (max-width: 1280px) {
+  main .pickup .swiper-container {
+    overflow: hidden;
+  }
 }
 
 main .pickup h4 {
@@ -823,8 +863,30 @@ main .pickup .pickup-box .pickup-block {
           align-items: center;
 }
 
+@media screen and (max-width: 1366px) {
+  main .pickup .pickup-box .pickup-block {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  main .pickup .pickup-box .pickup-block .pickup-img {
+    width: 100%;
+  }
+}
+
+main .pickup .pickup-box .pickup-block .pickup-img img {
+  width: 100%;
+}
+
 main .pickup .pickup-box .pickup-block .pickup-text {
   width: 320px;
+}
+
+@media screen and (max-width: 1366px) {
+  main .pickup .pickup-box .pickup-block .pickup-text {
+    width: 100%;
+  }
 }
 
 main .pickup .pickup-box .pickup-block .pickup-text p {
@@ -835,11 +897,19 @@ main .pickup .pickup-box .pickup-block .pickup-text .tagflex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 25px;
+}
+
+@media screen and (max-width: 1366px) {
+  main .pickup .pickup-box .pickup-block .pickup-text .tagflex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 main .pickup .pickup-box .pickup-block .pickup-text .tagflex li {
   font-size: 12px;
-  padding: 25px 22px 0 0;
+  padding-right: 22px;
 }
 
 main .viewmore {
@@ -868,6 +938,12 @@ main #community #community-box {
   position: absolute;
   top: 4%;
   left: 11%;
+}
+
+@media screen and (max-width: 1366px) {
+  main #community #community-box {
+    left: 5%;
+  }
 }
 
 main #community #community-box #community-tittle {
@@ -965,7 +1041,7 @@ footer::before {
   position: absolute;
   top: -30px;
   height: 2px;
-  width: 1024px;
+  width: 70%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -994,7 +1070,7 @@ footer #footer-container #arrow {
 
 footer #footer-container #arrow img {
   position: absolute;
-  top: -9.5%;
+  top: -9%;
   right: 21px;
   width: 35px;
   height: 101px;
@@ -1018,6 +1094,7 @@ footer #footer-container #footer-flex #flex1 {
 }
 
 footer #footer-container #footer-flex #flex1 #footer-icon {
+  display: block;
   width: 37px;
   height: 21px;
   margin-bottom: 15px;
@@ -1025,6 +1102,7 @@ footer #footer-container #footer-flex #flex1 #footer-icon {
 }
 
 footer #footer-container #footer-flex #flex1 #footer-logo {
+  display: block;
   width: 177px;
   height: 20px;
 }

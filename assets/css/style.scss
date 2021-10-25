@@ -82,7 +82,6 @@ $navy: #003973;
 $black: #4a4a4a;
 $border: #c8c8c8;
 
-
 body {
   font-family: 'Klee One', cursive;
   font-size: 14px;
@@ -140,7 +139,6 @@ header {
         width: 60px;
 
         span {
-          display: inline-block;
           position: absolute;
           right: 14px;
           height: 3px;
@@ -324,6 +322,10 @@ main {
     display: flex;
     margin-right: 43px;
 
+    @include max(max-4) {
+      margin-right: 14px;
+    }
+
     .contents-img {
       padding-right: 20px;
     }
@@ -371,12 +373,17 @@ main {
     .new-category {
       margin: 0 60px;
 
+      @include max(max-3) {
+        margin: 0 30px;
+      }
+
       .new-icon {
         text-align: center;
       }
 
       .new-contents {
         display: flex;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         margin-top: 30px;
 
@@ -451,6 +458,12 @@ main {
       top: 4%;
       left: 50%;
       transform: translateX(-45%);
+
+      @include max(max-3) {
+        left: 5%;
+        transform: translateX(0);
+      }
+
 
       #search-tittle {
         margin-bottom: 105px;
@@ -603,13 +616,17 @@ main {
     #recruit-ranking {
       background-color: $gray;
       padding: 105px 85px 0;
+
+      @include max(max-3) {
+        padding: 105px 40px 0;
+      }
         
       #ranking-box {
         display: flex;
         max-width: 1440px;
         margin: 0 auto;
         justify-content: space-between;
-        padding: 30px 30px 0 30px;
+        padding: 30px 30px 0;
     
         .contents-block {
     
@@ -652,7 +669,11 @@ main {
 
   .category-link {
     background-color: $gray;
-    padding: 85px 85px 0 85px;
+    padding: 85px 85px 0;
+
+    @include max(max-3) {
+      padding: 85px 45px 0;
+    }
 
     ul {
       display: flex;
@@ -674,6 +695,14 @@ main {
   .pickup {
     background-color: $gray;
 
+      .swiper-container {
+
+        @include max(max-2) {
+          overflow: hidden;
+        }
+      }
+
+
     h4 {
       padding: 98px 0 49px 0;
     }
@@ -688,26 +717,50 @@ main {
       max-width: 1440px;
       margin: 0 auto;
       justify-content: space-between;
-  
+
       .pickup-block {
         width: 320px;
         display: flex;
         flex-direction: column;
         align-items: center;
 
+        @include max(max-3) {
+          width: 20%;
+        }
+
+        .pickup-img {
+
+          @include max(max-3) {
+            width: 100%;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
         .pickup-text {
           width: 320px;
 
+          @include max(max-3) {
+            width: 100%;
+          }
+  
           p {
             padding-top: 25px;
           }
     
           .tagflex {
             display: flex;
+            padding-top: 25px;
+
+            @include max(max-3) {
+              flex-wrap: wrap;
+            }
     
             li {
               font-size: 12px;
-              padding: 25px 22px 0 0;
+              padding-right: 22px;
             }
           }
         }
@@ -741,6 +794,11 @@ main {
       position: absolute;
       top: 4%;
       left: 11%;
+
+      @include max(max-3) {
+        left: 5%;
+      }
+
 
       #community-tittle {
         margin: {
@@ -823,7 +881,7 @@ footer {
     position: absolute;
     top: -30px;
     height: 2px;
-    width: 1024px;
+    width: 70%;
     left: 50%;
     transform: translateX(-50%);
     background-color: $navy;
@@ -849,7 +907,7 @@ footer {
 
       img {
         position: absolute;
-        top: -9.5%;
+        top: -9%;
         right: 21px;
         width: 35px;
         height: 101px;
@@ -870,6 +928,7 @@ footer {
         padding-top: 50px;
 
         #footer-icon {
+          display: block;
           width: 37px;
           height: 21px;
           margin-bottom: 15px;
@@ -877,6 +936,7 @@ footer {
         }
 
         #footer-logo {
+          display: block;
           width: 177px;
           height: 20px;
         }
