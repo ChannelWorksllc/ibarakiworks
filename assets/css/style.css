@@ -397,10 +397,11 @@ header #scroll-nav span::after {
 }
 
 main .contents-block {
+  width: calc(100% / 2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 43px;
+  padding: 0 10px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -456,6 +457,7 @@ main #new {
 }
 
 main #new .new-category {
+  width: 50%;
   margin: 0 60px;
 }
 

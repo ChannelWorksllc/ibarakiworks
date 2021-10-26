@@ -319,8 +319,9 @@ header {
 main {
 
   .contents-block {
+    width: calc(100% / 2);
     display: flex;
-    margin-right: 43px;
+    padding: 0 10px;
 
     @include max(max-4) {
       margin-right: 14px;
@@ -371,6 +372,7 @@ main {
     margin: 50px 27px 100px;
 
     .new-category {
+      width: 50%;
       margin: 0 60px;
 
       @include max(max-3) {
