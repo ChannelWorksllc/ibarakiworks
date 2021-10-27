@@ -193,6 +193,7 @@ header {
 
       #header-img1,#header-img2,#header-img3 {
         width: 100%;
+        height: 33.3%;
       }
 
       #header-img1 {
@@ -241,7 +242,7 @@ header {
       font-size: 34px;
       line-height: 1.1;
       top: 105px;
-      left: 490px;
+      left: 70%;
 
       span {
         width: 30%;
@@ -277,7 +278,9 @@ main {
     margin: 50px 0 80px;
 
     .new-category {
-      margin:0 20px 50px;
+      width: 95%;
+      margin:0 auto;
+      margin-top: 50px;
 
       .new-contents {
 
@@ -311,11 +314,13 @@ main {
 
     #search-box {
       top: 1.5%;
+      left: 0;
       width: 100%;
 
       #search-tittle {
         margin-bottom: 42px;
         position: relative;
+        left: 5%;
         z-index: 24;
 
         p {
@@ -341,6 +346,7 @@ main {
         form {
           height: 360px;
           position: relative;
+          left: 5%;
           z-index: 2;
 
           .select-wrap {
@@ -391,14 +397,11 @@ main {
           }
         }
 
-        #consultation-link {
+        a {
           margin: 0 auto;
           width: 670px;
-
-          a {
           font-size: 24px;
           padding: 20px 80px
-          }
         }
       }
     }
@@ -417,6 +420,7 @@ main {
         display: block;
 
         .contents-block {
+          width: 100%;
           justify-content: space-around;
           align-items: center;
           margin-right: 0;
@@ -457,6 +461,14 @@ main {
 
       .pickup-box {
         padding: 0;
+
+        .pickup-img {
+          width: 320px;
+        }
+
+        .pickup-text {
+          width: 320px;
+        }
       }
     }
   }
@@ -526,6 +538,7 @@ main {
   #knowhow {
 
     #knowhow-box {
+      width: 90%;
 
       .knowhow-block {
         width: 50%;
@@ -535,7 +548,6 @@ main {
           height: 100px;
 
           img {
-            width: 100%;
             height: 100%;
           }
         }
@@ -574,6 +586,7 @@ footer {
   }
 
   #footer-container {
+    margin: 0 10px;
 
     #arrow {
 
@@ -584,6 +597,8 @@ footer {
 
     #footer-flex {
       display: block;
+      margin: 0 10px;
+      padding: 0 10px;
 
       #flex1 {
         display: flex;
@@ -661,7 +676,33 @@ footer {
     }
 
     #copyright {
+      margin: 0 10px;
       padding: 60px 0 28px;
     }
   }
+}
+
+@include max(max-1) {
+
+  body {
+    font-size: 7px;
+  }
+
+  header {
+
+    .container {
+
+      #firstview {
+
+        #navigation {
+
+          h1 {
+
+          }
+        }
+      }
+    }
+
+  }
+
 }

@@ -369,6 +369,12 @@ header #readcopy span {
   right: 5%;
 }
 
+@media screen and (max-width: 1280px) {
+  header #readcopy span {
+    right: 1%;
+  }
+}
+
 header #scroll-nav {
   position: absolute;
   bottom: 0;
@@ -404,12 +410,6 @@ main .contents-block {
   padding: 0 10px;
 }
 
-@media screen and (max-width: 1440px) {
-  main .contents-block {
-    margin-right: 14px;
-  }
-}
-
 main .contents-block .contents-img {
   padding-right: 20px;
 }
@@ -425,6 +425,7 @@ main .contents-block p a {
 }
 
 main .contents-block p span {
+  display: block;
   font-size: 12px;
 }
 
@@ -571,7 +572,7 @@ main #recruit #search-box #search-contents {
   display: flex;
 }
 
-main #recruit #search-box #search-contents div {
+main #recruit #search-box #search-contents #contents-img1 {
   margin-right: 65px;
 }
 
@@ -695,27 +696,22 @@ main #recruit #consultation p {
   padding-bottom: 5px;
 }
 
-main #recruit #consultation #consultation-link {
+main #recruit #consultation a {
   width: 274px;
   height: 80px;
   margin-bottom: 5px;
   margin-left: 53px;
   background-color: #9ed8a4;
   border-radius: 15px;
-}
-
-main #recruit #consultation #consultation-link a {
   position: relative;
   display: inline-block;
-  width: 100%;
-  height: 100%;
   color: #FFFFFF;
   font-size: 16px;
   padding: 15px 30px;
   white-space: nowrap;
 }
 
-main #recruit #consultation #consultation-link a::after {
+main #recruit #consultation a::after {
   position: absolute;
   content: "";
   width: 39px;
@@ -761,8 +757,8 @@ main #recruit #recruit-ranking #ranking-box .contents-block .contents-img {
 
 main #recruit #recruit-ranking #ranking-box .contents-block .contents-img p {
   position: absolute;
-  top: 0%;
-  right: 76px;
+  top: 0;
+  left: 0;
   border: none;
   padding: 2px 8px;
   color: #FFFFFF;
@@ -867,7 +863,7 @@ main .pickup .pickup-box .pickup-block {
 
 @media screen and (max-width: 1366px) {
   main .pickup .pickup-box .pickup-block {
-    width: 20%;
+    width: 23%;
   }
 }
 
@@ -1011,18 +1007,25 @@ main #knowhow #knowhow-box .knowhow-block {
       -ms-flex-align: center;
           align-items: center;
   width: 30%;
-  padding-bottom: 50px;
+  padding: 0 10px 50px;
 }
 
 main #knowhow #knowhow-box .knowhow-block .knowhow-img {
   margin-right: 25px;
 }
 
-main #knowhow #knowhow-box .knowhow-block h5 {
-  padding-bottom: 20px;
+main #knowhow #knowhow-box .knowhow-block p {
+  font-weight: 600;
+  font-size: 18px;
 }
 
-main #knowhow #knowhow-box .knowhow-block p {
+main #knowhow #knowhow-box .knowhow-block p a {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+main #knowhow #knowhow-box .knowhow-block p span {
+  display: block;
   font-size: 12px;
 }
 
