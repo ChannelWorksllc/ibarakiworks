@@ -361,6 +361,7 @@ header #readcopy {
 }
 
 header #readcopy span {
+  width: 60%;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);

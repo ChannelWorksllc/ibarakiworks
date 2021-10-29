@@ -122,8 +122,11 @@ $navy: #003973;
 $black: #4a4a4a;
 $border: #c8c8c8;
 
-.container {
-  padding: 0;
+body {
+
+  @include max(max-5) {
+    font-size: 10px;
+  }
 }
 
 header {
@@ -161,6 +164,10 @@ header {
           position: absolute;
           top: 20px;
           left: 42px;
+
+          @include max(max-5) {
+            font-size: 10px;
+          }
         }
 
         #header-logo {
@@ -179,6 +186,31 @@ header {
         position: absolute;
         top: 60px;
         margin-left: 20px;
+
+        @include max(max-5) {
+          font-size: 13px;
+        }
+
+        @include max(max-1) {
+          font-size: 11px;
+        }
+      }
+
+      button {
+
+        @include max(max-5) {
+          top: 40px;
+          width: 30px;          
+        }
+
+        span:nth-of-type(2) {
+          top: 10px;
+        }
+
+        span:nth-of-type(3) {
+          top: 20px;
+        }
+
       }
 
       nav {
@@ -244,6 +276,14 @@ header {
       top: 105px;
       left: 70%;
 
+      @include max(max-5) {
+        font-size: 25px;
+      }
+
+      @include max(max-1) {
+        font-size: 17px;
+      }
+
       span {
         width: 30%;
         top: 5%;
@@ -256,13 +296,36 @@ header {
       height: 19%;
       font-size: 18px;
 
+      @include max(max-5) {
+        font-size: 13px;
+      }
+
+      @include max(max-1) {
+        font-size: 10px;
+      }
+
       span {
         top: 25%;
+
+        @include max(max-5) {
+          width: 90%;
+          top: 15%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
 
     #scroll-nav {
       left: 50%;
+
+      @include max(max-5) {
+        padding-bottom: 50px;
+      }
+
+      @include max(max-1) {
+        padding-bottom: 30px;
+      }
     }
   }
 }
@@ -271,6 +334,16 @@ main {
 
   h3 {
     font-size: 24px;
+    
+    @include max(max-5) {
+      width: 90%;
+    }
+  }
+
+  h4 {
+    @include max(max-5) {
+      font-size: 26px;
+    }
   }
 
   #new {
@@ -289,20 +362,42 @@ main {
           margin-right: 0;
           justify-content: center;
 
+          @include max(max-5) {
+            width: 100%;
+            margin-bottom: 10px;
+            align-items: center;
+          }
+
           p {
             font-size: 16px;
+
+            @include max(max-5) {
+              font-size: 14px;
+            }
           }
 
           span {
             font-size: 14px;
+
+            @include max(max-5) {
+              font-size: 12px;
+            }
           }
         }
 
         .block-right {
           margin-bottom: 30px;
+
+          @include max(max-5) {
+            margin-bottom: 0;
+          }
         }
       }
     }
+  }
+
+  .decoration {
+    width: 15%;
   }
 
   #recruit {
@@ -310,6 +405,10 @@ main {
 
     #search-background {
       height: 645px;
+
+      @include max(max-5) {
+        height: 480px;
+      }
     }
 
     #search-box {
@@ -322,16 +421,21 @@ main {
         position: relative;
         left: 5%;
         z-index: 24;
+        font-size: 18px;
 
-        p {
-          font-size: 18px;
+        @include max(max-5) {
+          font-size: 12px;
+        }
 
-          span {
-            font-size: 28px;
+        span {
+          font-size: 28px;
+
+          @include max(max-5) {
+            font-size: 20px;
           }
         }
       }
-
+    
       #search-contents {
         position: relative;
 
@@ -341,6 +445,11 @@ main {
           right: 0;
           margin-right: 0;
           z-index: 1;
+
+          @include max(max-5) {
+            width: 270px;
+            top: -75px;
+          }
         }
 
         form {
@@ -349,14 +458,52 @@ main {
           left: 5%;
           z-index: 2;
 
+          @include max(max-5) {
+            height: 270px;
+          }
+
           .select-wrap {
             width: 480px;
             background-color: #FFFFFF;
+
+            @include max(max-5) {
+              width: 240px;
+              height: 50px;
+              &::after {
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 10px solid #888888;
+              }
+
+              select {
+                width: 240px;
+                height: 50px;
+                font-size: 13px;
+                padding-left: 15px;
+              }
+            }
           }
 
           input[type="text"] {
             background-color: #FFFFFF;
+
+
+            @include max(max-5) {
+              width: 240px;
+              height: 50px;
+              font-size: 13px;
+              padding-left: 15px;
+            }
           } 
+
+          input[type="submit"] {
+
+            @include max(max-5) {
+              width: 240px;
+              height: 50px;
+              font-size: 13px;
+            }
+          }
         }
       }
     }
@@ -369,6 +516,11 @@ main {
         flex-wrap: wrap;
         align-items: center;
 
+        @include max(max-5) {
+          justify-content: space-between;
+
+        }
+
         &::before {
           position: absolute;
           right: 0;
@@ -376,7 +528,7 @@ main {
           content: "";
           background-color: $border;
           height: 1px;
-          width: 485px;
+          width: 70%;
         }
 
         &::after {
@@ -395,13 +547,27 @@ main {
             left: 20px;
             bottom: 40px;
           }
+          
+          @include max(max-5) {
+            width: 80%;
+          }
         }
 
         a {
           margin: 0 auto;
           width: 670px;
           font-size: 24px;
-          padding: 20px 80px
+          padding: 20px 80px;
+
+          @include max(max-5) {
+            width: 272px;
+            font-size: 14px;
+            padding: 20px 40px;
+
+            br {
+              display: block;
+            }
+          }
         }
       }
     }
@@ -416,8 +582,16 @@ main {
     #recruit-ranking {
       padding-top: 50px;
 
+      @include max(max-5) {
+        padding: 0;
+      }
+
       #ranking-box {
         display: block;
+
+        @include max(max-5) {
+          padding: 30px 0 0;
+        }
 
         .contents-block {
           width: 100%;
@@ -431,6 +605,10 @@ main {
             height: 120px;
             padding: 0;
 
+            @include max(max-5) {
+              height: auto;
+            }
+
             img {
               width: 100%;
               height: 100%;
@@ -439,14 +617,29 @@ main {
             p {
               padding: 15px 20.8px;
               right: 70px;
+
+              @include max(max-5) {
+                right: unset;
+                padding: 2px 8px;
+                font-size: 16px;
+              }
             }
           }
 
           p {
             font-size: 20px;
 
+            @include max(max-5) {
+              font-size: 18px;
+              padding-left: 10px;
+            }
+
             span {
               font-size: 18px;
+
+              @include max(max-5) {
+                font-size: 16px;
+              }  
             }
           }
         }
@@ -464,10 +657,30 @@ main {
 
         .pickup-img {
           width: 320px;
+
+          @include max(max-5) {
+            width: 98%;
+          }
         }
 
         .pickup-text {
           width: 320px;
+
+          @include max(max-5) {
+            width: 98%;
+          }
+
+          h5 {
+            @include max(max-5) {
+              font-size: 16px;
+            }
+          }
+
+          p,.tagflex {
+            @include max(max-5) {
+              padding-top: 15px;
+            }
+          }
         }
       }
     }
@@ -486,19 +699,37 @@ main {
 
     #community-background {
       height: 546px;
+
+      @include max(max-5) {
+        height: 360px;
+      }
+
+      .decoration {
+        right: 10%;
+      }
     }
 
     #community-box {
       top: 70px;
       left: 35px;
 
+      @include max(max-5) {
+        top: 40px;
+      }
+
       #community-tittle {
+        font-size: 18px;
 
-        p {
-          font-size: 18px;
+        @include max(max-5) {
+          font-size: 12px;
+          margin-bottom: 26px;
+        }
 
-          span {
-            font-size: 28px;
+        span {
+          font-size: 28px;
+
+          @include max(max-5) {
+            font-size: 20px;
           }
         }
       }
@@ -513,6 +744,12 @@ main {
           width: 510px;
           height: 245px;
 
+          @include max(max-5) {
+            left: -93px;
+            width: 270px;
+            height: 140px;
+          }
+
           img {
             width: 100%;
             height: 100%;
@@ -523,6 +760,11 @@ main {
           font-size: 16px;
           padding-left: 420px;
           line-height: 1.5;
+
+          @include max(max-5) {
+            font-size: 10px;
+            padding-left: 190px;
+          }
         }
       }
     }
@@ -542,6 +784,11 @@ main {
 
       .knowhow-block {
         width: 50%;
+        padding-bottom: 25px;
+
+        @include max(max-5) {
+          width: 100%;
+        }
 
         .knowhow-img {
           width: 100px;
@@ -552,17 +799,20 @@ main {
           }
         }
 
-        h5 {
-          font-size: 16px;
-          padding-bottom: 10px;
-        }
-
         p {
-          font-size: 11px;
+
+          a {
+            font-size: 16px;
+            padding-bottom: 10px;
+          }
+
+          span {
+            font-size: 11px;
+          }
         }
       }
     }
-    
+
     .viewmore {
       padding: 50px;
       padding-bottom: 0;
@@ -571,15 +821,15 @@ main {
 
   .viewmore {
     padding: 90px;
+
+    @include max(max-5) {
+      font-size: 16px;
+    }
   }
 }
 
 footer {
   height: 100%;
-
-  &::before{
-    width: 500px;
-  }
 
   p {
     padding-top: 30px;
@@ -678,29 +928,6 @@ footer {
     #copyright {
       margin: 0 10px;
       padding: 60px 0 28px;
-    }
-  }
-}
-
-@include max(max-1) {
-
-  body {
-    font-size: 7px;
-  }
-
-  header {
-
-    .container {
-
-      #firstview {
-
-        #navigation {
-
-          h1{
-
-          }
-        }
-      }
     }
   }
 }
