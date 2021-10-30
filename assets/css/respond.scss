@@ -204,11 +204,15 @@ header {
         }
 
         span:nth-of-type(2) {
-          top: 10px;
+          @include max(max-5) {
+            top: 10px;
+          }
         }
 
         span:nth-of-type(3) {
-          top: 20px;
+          @include max(max-5) {
+            top: 20px;
+          }
         }
 
       }
@@ -305,13 +309,13 @@ header {
       }
 
       span {
-        top: 25%;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
 
         @include max(max-5) {
           width: 90%;
           top: 15%;
-          left: 50%;
-          transform: translateX(-50%);
         }
       }
     }
@@ -331,18 +335,20 @@ header {
 }
 
 main {
+  overflow: hidden;
 
   h3 {
     font-size: 24px;
     
     @include max(max-5) {
       width: 90%;
+      font-size: 15px;
     }
   }
 
   h4 {
     @include max(max-5) {
-      font-size: 26px;
+      font-size: 23px;
     }
   }
 
@@ -397,7 +403,11 @@ main {
   }
 
   .decoration {
-    width: 15%;
+    width: 132px;
+
+    @include max(max-5) {
+      width: 20%;
+    }
   }
 
   #recruit {
@@ -407,7 +417,7 @@ main {
       height: 645px;
 
       @include max(max-5) {
-        height: 480px;
+        height: 520px;
       }
     }
 
@@ -427,11 +437,20 @@ main {
           font-size: 12px;
         }
 
+        @include max(max-1) {
+          font-size: 10px;
+        }
+
         span {
           font-size: 28px;
 
           @include max(max-5) {
             font-size: 20px;
+          }
+
+          @include max(max-1) {
+            font-size: 16px;
+            padding-bottom: 5px;
           }
         }
       }
@@ -516,7 +535,7 @@ main {
         flex-wrap: wrap;
         align-items: center;
 
-        @include max(max-5) {
+        @include max(max-8) {
           justify-content: space-between;
 
         }
@@ -536,7 +555,10 @@ main {
         }
 
         #consultation-icon {
-          padding-bottom: 40px;
+          padding: {
+            left: 0;
+            bottom: 40px;
+          } 
         }
 
         p {
@@ -548,7 +570,7 @@ main {
             bottom: 40px;
           }
           
-          @include max(max-5) {
+          @include max(max-8) {
             width: 80%;
           }
         }
@@ -559,7 +581,7 @@ main {
           font-size: 24px;
           padding: 20px 80px;
 
-          @include max(max-5) {
+          @include max(max-8) {
             width: 272px;
             font-size: 14px;
             padding: 20px 40px;
@@ -574,22 +596,39 @@ main {
 
     .category-link {
 
-      li {
-        width: 30%;
+      ul {
+
+        @include max(max-8) {
+          padding: 25px 0 0 0;
+        }
+
+        li {
+          width: 30%;
+
+          @include max(max-8) {
+            font-size: 10px;
+            padding-bottom: 5px;
+          }
+
+          @include max(max-4) {
+            font-size: 10px;
+            width: 50%;
+          }
+        }
       }
     }
 
     #recruit-ranking {
       padding-top: 50px;
 
-      @include max(max-5) {
-        padding: 0;
+      @include max(max-8) {
+        padding: 50px 0 0;
       }
 
       #ranking-box {
         display: block;
 
-        @include max(max-5) {
+        @include max(max-8) {
           padding: 30px 0 0;
         }
 
@@ -605,7 +644,7 @@ main {
             height: 120px;
             padding: 0;
 
-            @include max(max-5) {
+            @include max(max-8) {
               height: auto;
             }
 
@@ -618,7 +657,7 @@ main {
               padding: 15px 20.8px;
               right: 70px;
 
-              @include max(max-5) {
+              @include max(max-8) {
                 right: unset;
                 padding: 2px 8px;
                 font-size: 16px;
@@ -629,17 +668,25 @@ main {
           p {
             font-size: 20px;
 
-            @include max(max-5) {
+            @include max(max-8) {
               font-size: 18px;
               padding-left: 10px;
+            }
+
+            @include max(max-1) {
+              font-size: 16px;
             }
 
             span {
               font-size: 18px;
 
-              @include max(max-5) {
+              @include max(max-8) {
                 font-size: 16px;
               }  
+
+              @include max(max-1) {
+                font-size: 14px;
+              }
             }
           }
         }
@@ -658,7 +705,7 @@ main {
         .pickup-img {
           width: 320px;
 
-          @include max(max-5) {
+          @include max(max-8) {
             width: 98%;
           }
         }
@@ -666,19 +713,25 @@ main {
         .pickup-text {
           width: 320px;
 
-          @include max(max-5) {
+          @include max(max-8) {
             width: 98%;
           }
 
           h5 {
-            @include max(max-5) {
+            @include max(max-8) {
               font-size: 16px;
             }
           }
 
           p,.tagflex {
-            @include max(max-5) {
+            @include max(max-8) {
               padding-top: 15px;
+            }
+            
+            li {
+              @include max(max-8) {
+              font-size: 10px;
+              }
             }
           }
         }
@@ -725,11 +778,20 @@ main {
           margin-bottom: 26px;
         }
 
+        @include max(max-1) {
+          font-size: 10px;
+        }
+
         span {
           font-size: 28px;
 
           @include max(max-5) {
             font-size: 20px;
+          }
+
+          @include max(max-1) {
+            font-size: 16px;
+            padding-bottom: 5px;
           }
         }
       }
@@ -771,8 +833,29 @@ main {
 
     .category-link {
 
-      li {
-        width: 50%;
+      ul {
+        @include max(max-5) {
+          padding: 25px 0 0 0;
+        }
+
+        @include max(max-1) {
+          flex-wrap: nowrap;
+          flex-direction: column;
+        }
+
+        li {
+          width: 50%;
+
+          @include max(max-5) {
+            font-size: 10px;
+            padding-bottom: 5px;
+          }
+          
+          @include max(max-1) {
+            font-size: 10px;
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -825,11 +908,22 @@ main {
     @include max(max-5) {
       font-size: 16px;
     }
+
+    @include max(max-1) {
+      font-size: 14px;
+      padding: 50px 0;
+    }
   }
 }
 
 footer {
   height: 100%;
+
+  &::before {
+    @include max(max-1) {
+      top: -21px;
+    }
+  }
 
   p {
     padding-top: 30px;
@@ -841,14 +935,34 @@ footer {
     #arrow {
 
       img {
-        top: -4.5%;
+        top: -5%;
+        right: 11px;
+
+        @include max(max-5) {
+          top: -5.2%;
+          right: 4px;
+        }
+
+        @include max(max-1) {
+          top: -3%;
+          right: 4px;
+          width: 22px;
+          height: 66px;
+        }
       }
     }
 
     #footer-flex {
       display: block;
       margin: 0 10px;
-      padding: 0 10px;
+      padding: 0 88px;
+
+      @include max(max-5) {
+      margin: 0 5px;  
+      padding: 0 19px;
+      border-left: 5px solid #fff;
+      border-right: 5px solid #fff;
+      }
 
       #flex1 {
         display: flex;
@@ -859,30 +973,104 @@ footer {
 
         h1 {
           width: 50%;
+
+          @include max(max-5) {
+            padding-top: 15px;
+          }
+
+          @include max(max-1) {
+            padding-top: 25px;
+          }
+  
+          #footer-icon {
+          @include max(max-5) {
+            width: 27px;
+            height: 15px;
+            margin: 0 60px;
+            padding: 0;
+          }
+
+          @include max(max-1) {
+            width: 20px;
+            height: 10px;
+            margin: 0 50px;          
+          }
+
+            img {
+              @include max(max-5) {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+
+          #footer-logo {
+            @include max(max-5) {
+              width: 150px;
+              padding-top: 10px;
+            }
+
+            @include max(max-1) {
+              width: 112px;
+              padding-top: 7px;
+            }
+
+            img {
+              @include max(max-5) {
+                width: 100%;
+              }
+            }
+          }
         }
 
         p {
           padding-top: 40px;
           width: 50%;
+
+          @include max(max-5) {
+            font-size: 11px;
+
+            br {
+              display: block;
+            }
+          }
         }
 
         #corporation {
           width: 30%;
+
+          @include max(max-5) {
+            font-size: 10px;
+          }
         }
       
         #address {
           padding-top: 42px;
           width: 70%;
+
+          @include max(max-5) {
+            font-size: 10px;
+          }
         }
       }
 
       .flex2 {
+
+        p {
+          @include max(max-5) {
+            font-size: 12px;
+          }          
+        }
 
         #list1 {
           display: flex;
 
           li {
             width: 25%;
+
+            @include max(max-5) {
+              font-size: 10px;
+            }          
           }
         }
 
@@ -892,6 +1080,10 @@ footer {
 
           li {
             width: 30%;
+
+            @include max(max-5) {
+              font-size: 10px;
+            }          
           }
         }
 
@@ -901,16 +1093,27 @@ footer {
 
           li {
             width: 50%;
+
+            @include max(max-5) {
+              font-size: 10px;
+            }          
           }
         }
+
         #list4 {
           display: flex;
+          flex-wrap: wrap;
 
           li {
             padding-right: 50px;
             &:last-child {
               padding-right: 0;
             }
+
+            @include max(max-5) {
+              font-size: 10px;
+              padding-right: 20px;
+            }          
 
           }
         }
@@ -920,6 +1123,11 @@ footer {
 
           li {
             padding-right: 60px;
+
+            @include max(max-5) {
+              font-size: 10px;
+              padding-right: 20px;
+            }
           }
         }
       }
@@ -928,6 +1136,13 @@ footer {
     #copyright {
       margin: 0 10px;
       padding: 60px 0 28px;
+      
+      @include max(max-5) {
+        font-size: 10px;
+        margin: 0 5px;
+        border-left: 5px solid #fff;
+        border-right: 5px solid #fff;
+      }
     }
   }
 }

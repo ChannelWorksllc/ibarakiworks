@@ -508,9 +508,12 @@ main .decoration {
 
 main .decoration .decoration1, main .decoration .dacoration2 {
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 main .decoration .decoration1 img, main .decoration .dacoration2 img {
+  width: 100%;
   height: 100%;
 }
 
@@ -529,7 +532,7 @@ main #recruit #search-background {
 }
 
 main #recruit #search-background .decoration {
-  left: 11%;
+  left: 15%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -554,6 +557,12 @@ main #recruit #search-box {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  main #recruit #search-box {
+    left: 2%;
+  }
+}
+
 main #recruit #search-box #search-tittle {
   margin-bottom: 105px;
   font-size: 22px;
@@ -570,10 +579,23 @@ main #recruit #search-box #search-contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #recruit #search-box #search-contents #contents-img1 {
   margin-right: 65px;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruit #search-box #search-contents #contents-img1 {
+    width: 400px;
+  }
+}
+
+main #recruit #search-box #search-contents #contents-img1 img {
+  width: 100%;
 }
 
 main #recruit #search-box #search-contents form {
@@ -589,9 +611,16 @@ main #recruit #search-box #search-contents form {
           flex-direction: column;
 }
 
+@media screen and (max-width: 1024px) {
+  main #recruit #search-box #search-contents form {
+    height: 330px;
+  }
+}
+
 main #recruit #search-box #search-contents form select, main #recruit #search-box #search-contents form input {
   width: 480px;
   height: 70px;
+  background-color: #FFFFFF;
   color: #888888;
   font-family: 'Klee One', cursive;
   font-size: 20px;
@@ -686,17 +715,33 @@ main #recruit #consultation #consultation-ba::after {
   content: "";
   background-color: #c8c8c8;
   height: 1px;
-  width: 1077.33px;
+  width: 90%;
 }
 
-main #recruit #consultation p {
+@media screen and (max-width: 1024px) {
+  main #recruit #consultation #consultation-ba #consultation-icon {
+    padding-left: 15px;
+  }
+}
+
+main #recruit #consultation #consultation-ba p {
   font-size: 20px;
   white-space: nowrap;
   padding-left: 30px;
   padding-bottom: 5px;
 }
 
-main #recruit #consultation a {
+@media screen and (max-width: 1024px) {
+  main #recruit #consultation #consultation-ba p {
+    white-space: normal;
+    width: 555px;
+  }
+  main #recruit #consultation #consultation-ba p br {
+    display: none;
+  }
+}
+
+main #recruit #consultation #consultation-ba a {
   width: 274px;
   height: 80px;
   margin-bottom: 5px;
@@ -711,7 +756,13 @@ main #recruit #consultation a {
   white-space: nowrap;
 }
 
-main #recruit #consultation a::after {
+@media screen and (max-width: 1024px) {
+  main #recruit #consultation #consultation-ba a {
+    margin-left: 15px;
+  }
+}
+
+main #recruit #consultation #consultation-ba a::after {
   position: absolute;
   content: "";
   width: 39px;
@@ -726,6 +777,12 @@ main #recruit #consultation a::after {
 
 main #recruit .category-link li {
   width: 16%;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruit .category-link li {
+    width: 22%;
+  }
 }
 
 main #recruit #recruit-ranking {
@@ -749,6 +806,12 @@ main #recruit #recruit-ranking #ranking-box {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 30px 30px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruit #recruit-ranking #ranking-box {
+    padding: 30px 20px 0;
+  }
 }
 
 main #recruit #recruit-ranking #ranking-box .contents-block .contents-img {
@@ -814,6 +877,7 @@ main .category-link ul li {
   font-weight: 600;
   line-height: 30px;
   color: #657ccf;
+  text-align: center;
 }
 
 main .pickup {
@@ -941,6 +1005,12 @@ main #community #community-box {
 @media screen and (max-width: 1366px) {
   main #community #community-box {
     left: 5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main #community #community-box {
+    left: 2%;
   }
 }
 
@@ -1079,6 +1149,12 @@ footer #footer-container #arrow img {
   right: 21px;
   width: 35px;
   height: 101px;
+}
+
+@media screen and (max-width: 1024px) {
+  footer #footer-container #arrow img {
+    top: -7.8%;
+  }
 }
 
 footer #footer-container #footer-flex {
