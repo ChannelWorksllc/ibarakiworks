@@ -27,4 +27,9 @@ $(function() {
             } 
         } 
     });
-}); 
+});
+
+//SPハンバーガーメニュー//
+$(document).ready(function() {
+    $('.drawer').drawer();
+});

@@ -161,20 +161,20 @@ header {
         }
       }
       
-      nav {
+      .drawer-nav {
         font-size: 16px;
         margin-top: 40px;
         font-weight: 600;
 
-        #nav-menu {
+        .drawer-menu {
           display: inline-block;
           text-align: left;
 
-          .nav-list {
+          .drawer-dropdown {
             line-height: 3em;
           }
         
-          .drop-display {
+          .drawer-dropdown-menu {
             display: none;
           }
         }
@@ -463,7 +463,7 @@ main {
       position: absolute;
       top: 4%;
       left: 50%;
-      transform: translateX(-45%);
+      transform: translateX(-50%);
 
       @include max(max-3) {
         left: 5%;
@@ -481,17 +481,20 @@ main {
 
       #search-contents {
         display: flex;
-        align-items: center;
+
+        @include max(max-1) {
+          align-items: center;
+        }
 
         #contents-img1 {
           margin-right: 65px;
 
           @include max(max-1) {
             width: 400px;
-          }
 
-          img {
-            width: 100%;
+            img {
+              width: 100%;
+            }
           }
         }
 
