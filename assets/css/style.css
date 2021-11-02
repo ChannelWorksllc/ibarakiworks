@@ -154,35 +154,6 @@ header #firstview #navigation #ibaraki {
   margin-top: 10px;
 }
 
-header #firstview #navigation button {
-  position: relative;
-  top: 30px;
-  width: 60px;
-}
-
-header #firstview #navigation button span {
-  position: absolute;
-  right: 14px;
-  height: 3px;
-  border-radius: 2px;
-  background: #003973;
-}
-
-header #firstview #navigation button span:nth-of-type(1) {
-  top: 0;
-  width: 100%;
-}
-
-header #firstview #navigation button span:nth-of-type(2) {
-  top: 20px;
-  width: 70%;
-}
-
-header #firstview #navigation button span:nth-of-type(3) {
-  top: 40px;
-  width: 45%;
-}
-
 header #firstview #navigation .drawer-nav {
   font-size: 16px;
   margin-top: 40px;
@@ -198,7 +169,7 @@ header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown {
   line-height: 3em;
 }
 
-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown-menu {
+header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .drawer-dropdown-menu {
   display: none;
 }
 

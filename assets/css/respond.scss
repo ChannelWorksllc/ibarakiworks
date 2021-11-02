@@ -129,6 +129,158 @@ body {
   }
 }
 
+
+//ハンバーガーメニュー開いた時
+.drawer-open {
+
+  header {
+
+    #firstview {
+
+      #navigation {
+
+        .toggle-btn {
+
+          span:nth-of-type(1) {
+            animation: active-btn-bar1 .75s forwards;
+  
+            @keyframes active-btn-bar1 {
+              0% {
+                transform: translateY(0) rotate(0);
+              }
+              50% {
+                transform: translateY(20px) rotate(0);
+              }
+              100% {
+                transform: translateY(20px) rotate(45deg);
+              }
+            }
+          }
+  
+          span:nth-of-type(2) {
+            opacity: 0;
+          }
+  
+          span:nth-of-type(3) {
+            animation: active-btn-bar03 .75s forwards;
+  
+            @keyframes active-btn-bar03 {
+              0% {
+                transform: translateY(0) rotate(0);
+              }
+              50% {
+                transform: translateY(-20px) rotate(0);
+              }
+              100% {
+                width: 100%;
+                transform: translateY(-20px) rotate(-45deg);
+              }
+            }
+          }
+        }
+
+        .drawer-nav {
+          width: 100%;
+          height: 100vh;
+          margin-top: 100px;
+          background: $gray;
+          padding: 25px;
+
+          .drawer-menu {
+            width: 100%;
+
+            .drawer-dropdown {
+              border-bottom: 1px solid $border;
+
+              .drawer-menu-item {
+                display: block;
+                position: relative;
+                color: $black;
+                font-size: 14px;
+                padding: 1em;
+
+                &:hover {
+                  text-decoration: none;
+                }
+
+                .drawer-caret {
+                  display: block;
+                  width: 20px;
+                  height: 20px;
+                  position: absolute;
+                  right: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  border: none;
+
+                  &::before,&::after {
+                    display: block;
+                    content: '';
+                    background-color: $black;
+                    border-radius: 2px;
+                    position: absolute;
+                    width: 20px;
+                    height: 1px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                  }
+
+                  &::before {
+                    transform: translateY(-50%) rotate(90deg);
+                    transition: 0.25s;
+                  }
+
+                  &::after {
+                    transform: scale(1, 1);
+                    transition: 0.25s;
+                    transition-delay: 0.25s;
+                  }
+                }
+              }
+            }
+            
+            .open {
+
+              .drawer-menu-item {
+                
+                .drawer-caret {
+
+                  &::before {
+                    transform: rotate(0);
+                    transition-delay: 0.25s;
+                  }
+
+                  &::after {
+                    transform: scale(0);
+                    transition: 0.25s;
+                  }
+                }
+              }
+
+              .drawer-dropdown-menu {
+                display: block;
+                background: $gray;
+                padding:  0 1em 25px;
+
+                &-item {
+                  display: unset;
+                  color: $black;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .drawer-overlay {
+    background-color: transparent;
+  }
+}
+
 header {
   
   #firstview {
@@ -196,19 +348,70 @@ header {
         }
       }
 
-      button {
+      .toggle-btn {
+        position: relative;
+        top: 30px;
+        width: 60px;
+
         @include max(max-5) {
           top: 40px;
           width: 30px;          
         }
 
+        span {
+          position: absolute;
+          right: 14px;
+          height: 3px;
+          border-radius: 2px;
+          background: $navy;
+        }
+
+        span:nth-of-type(1) {
+          top: 0; 
+          width: 100%;
+          animation: btn-bar1 .75s forwards;
+
+          @keyframes btn-bar1 {
+            0% {
+              transform: translateY(20px) rotate(45deg);
+            }
+            50% {
+              transform: translateY(20px) rotate(0);
+            }
+            100% {
+              transform: translateY(0) rotate(0);
+            }
+          }
+        }
+
         span:nth-of-type(2) {
+          top: 20px;
+          width: 70%;
+          transition: all .25s .25s;
+          opacity: 1;
+
           @include max(max-5) {
             top: 10px;
           }
         }
 
         span:nth-of-type(3) {
+          top: 40px;
+          width: 45%;
+          animation: btn-bar3 .75s forwards;
+
+          @keyframes btn-bar3 {
+            0% {
+              transform: translateY(-20px) rotate(-45deg);
+            }
+            50% {
+              transform: translateY(-20px) rotate(0);
+            }
+            100% {
+              transform: translateY(0) rotate(0);
+            }
+          }
+
           @include max(max-5) {
             top: 20px;
           }
@@ -216,21 +419,18 @@ header {
       }
 
       .drawer-nav {
-        width: 100%;
-        height: 100vh;
         margin-top: 100px;
         background: $gray;
-        padding: 25px;
 
         .drawer-menu {
           width: 100%;
 
           .drawer-dropdown {
-            position: relative;
             border-bottom: 1px solid $border;
 
             .drawer-menu-item {
               display: block;
+              position: relative;
               color: $black;
               font-size: 14px;
               padding: 1em;
@@ -238,8 +438,8 @@ header {
 
             .drawer-caret {
               display: block;
-              width: 15px;
-              height: 15px;
+              width: 20px;
+              height: 20px;
               position: absolute;
               right: 0;
               top: 50%;
@@ -252,19 +452,16 @@ header {
                 background-color: $black;
                 border-radius: 2px;
                 position: absolute;
-                width: 15px;
+                width: 20px;
                 height: 1px;
                 top: 50%;
                 transform: translateY(-50%);
                 right: 0;
               }
 
-              &:before {
-                width: 1px;
-                height: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 7px;
+              &::before {
+                transform: translateY(-50%) rotate(90deg);
+                transition: 0.25s;
               }
             }
           }
