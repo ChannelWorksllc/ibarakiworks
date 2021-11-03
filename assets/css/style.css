@@ -100,6 +100,10 @@ body {
   color: #4a4a4a;
 }
 
+*:focus {
+  outline: none;
+}
+
 .container {
   padding-bottom: 0px;
   height: 100%;
@@ -166,6 +170,7 @@ header #firstview #navigation .drawer-nav .drawer-menu {
 }
 
 header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown {
+  white-space: nowrap;
   line-height: 3em;
 }
 
@@ -536,6 +541,7 @@ main #recruit #search-box {
 
 main #recruit #search-box #search-tittle {
   margin-bottom: 105px;
+  white-space: nowrap;
   font-size: 22px;
   font-weight: 600;
 }

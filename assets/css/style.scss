@@ -88,6 +88,10 @@ body {
   color: $black;
 }
 
+*:focus {
+  outline: none;
+}
+
 .container {
   padding-bottom: 0px;
   height: 100%;
@@ -142,6 +146,7 @@ header {
           text-align: left;
 
           .drawer-dropdown {
+            white-space: nowrap;
             line-height: 3em;
 
             .drawer-dropdown-menu {
@@ -447,6 +452,7 @@ main {
 
       #search-tittle {
         margin-bottom: 105px;
+        white-space: nowrap;
         @include p;
       }
 
