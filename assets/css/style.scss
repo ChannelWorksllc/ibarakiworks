@@ -929,6 +929,11 @@ footer {
 
   li {
     padding-bottom: 15px;
+
+    @include max(max-2) {
+      font-size: 13px;
+    }
+
   }
 
   #footer-container {
@@ -949,7 +954,7 @@ footer {
         height: 101px;
 
         @include max(max-1) {
-          top: -7.8%;
+          top: -9.3%;
         }
       }
     }
@@ -962,6 +967,10 @@ footer {
       border: {
         left: 10px solid #fff;
         right: 10px solid #fff;
+      }
+
+      @include max(max-2) {
+        padding: 0 30px;
       }
 
       #flex1 {
@@ -1000,6 +1009,10 @@ footer {
         p {
           font-size: 18px;
           font-weight: 600;
+
+          @include max(max-2) {
+            font-size: 16px;
+          }      
         }
 
         #list2 {

@@ -1112,6 +1112,12 @@ footer li {
   padding-bottom: 15px;
 }
 
+@media screen and (max-width: 1280px) {
+  footer li {
+    font-size: 13px;
+  }
+}
+
 footer #footer-container {
   margin: 0 20px;
   height: 100%;
@@ -1134,7 +1140,7 @@ footer #footer-container #arrow img {
 
 @media screen and (max-width: 1024px) {
   footer #footer-container #arrow img {
-    top: -7.8%;
+    top: -9.3%;
   }
 }
 
@@ -1149,6 +1155,12 @@ footer #footer-container #footer-flex {
   padding: 0 97px;
   border-left: 10px solid #fff;
   border-right: 10px solid #fff;
+}
+
+@media screen and (max-width: 1280px) {
+  footer #footer-container #footer-flex {
+    padding: 0 30px;
+  }
 }
 
 footer #footer-container #footer-flex #flex1 {
@@ -1185,6 +1197,12 @@ footer #footer-container #footer-flex #flex1 #address {
 footer #footer-container #footer-flex .flex2 p {
   font-size: 18px;
   font-weight: 600;
+}
+
+@media screen and (max-width: 1280px) {
+  footer #footer-container #footer-flex .flex2 p {
+    font-size: 16px;
+  }
 }
 
 footer #footer-container #footer-flex .flex2 #list2 {
