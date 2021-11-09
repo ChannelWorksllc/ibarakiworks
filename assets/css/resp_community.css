@@ -133,8 +133,8 @@ input[type="submit"] {
 }
 
 .drawer-open header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .drawer-caret {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   right: 0;
   top: 38px;
@@ -215,6 +215,13 @@ header #firstview #navigation {
   }
 }
 
+@media screen and (max-width: 320px) {
+  header #firstview #navigation {
+    width: 320px;
+    height: 75px;
+  }
+}
+
 header #firstview #navigation h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -226,6 +233,18 @@ header #firstview #navigation h1 {
   position: relative;
   margin-top: 15px;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  header #firstview #navigation h1 {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header #firstview #navigation h1 {
+    margin-left: 0;
+  }
 }
 
 header #firstview #navigation h1 #header-icon {
@@ -280,6 +299,18 @@ header #firstview #navigation .toggle-btn span {
   height: 3px;
   border-radius: 2px;
   background: #003973;
+}
+
+@media screen and (max-width: 414px) {
+  header #firstview #navigation .toggle-btn span {
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header #firstview #navigation .toggle-btn span {
+    right: 5px;
+  }
 }
 
 header #firstview #navigation .toggle-btn span:nth-of-type(1) {
@@ -352,8 +383,8 @@ header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .drawer-
 }
 
 header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .drawer-caret {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   right: 0;
   top: 38px;
@@ -394,6 +425,13 @@ header #firstview #mainvisual {
   }
 }
 
+@media screen and (max-width: 320px) {
+  header #firstview #mainvisual {
+    margin-top: 65px;
+    height: 65px;
+  }
+}
+
 header #firstview #mainvisual #header-img img {
   -o-object-position: 50% 80%;
      object-position: 50% 80%;
@@ -410,8 +448,188 @@ header #firstview #mainvisual #header-img img {
   }
 }
 
+main h3 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 414px) {
+  main h3 {
+    width: 90%;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main h4 {
+    font-size: 23px;
+    padding-top: 68px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main h4 {
+    padding-top: 58px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .pickup {
+    padding: 0;
+  }
+}
+
+main .pickup .pickup-box {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+  main .pickup .pickup-box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main .pickup .pickup-box .pickup-block {
+    width: 300px;
+  }
+  main .pickup .pickup-box .pickup-block img {
+    width: 100%;
+  }
+}
+
+main .pickup .pickup-box .spanflex {
+  padding-bottom: 25px;
+}
+
+main .pickup .pickup-box .spanflex li {
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  main .pickup .pickup-box .spanflex li {
+    padding: 0 15px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main .pickup .pickup-box .pickup-text h5 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main .pickup .pickup-box .pickup-text h5 {
+    font-size: 14px;
+  }
+}
+
+main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
+    padding-top: 15px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .pickup .pickup-box .pickup-text p li, main .pickup .pickup-box .pickup-text .tagflex li {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main .category-link {
+    padding: 70px 45px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .category-link ul {
+    padding: 25px 0 0 0;
+  }
+}
+
+main .category-link ul li {
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  main .category-link ul li {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main .category-link ul li {
+    font-size: 12px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main .category-link ul li {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main .category-link1 ul {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .category-link1 ul li {
+  width: 50%;
+}
+
+@media screen and (max-width: 375px) {
+  main .category-link1 ul li {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main .category-link1 ul li {
+    width: 100%;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main .category-link2 {
+    padding: 50px 45px 20px;
+  }
+}
+
 main #consultation {
   margin: 100px 40px;
+}
+
+@media screen and (max-width: 414px) {
+  main #consultation {
+    margin: 75px 30px;
+  }
 }
 
 main #consultation #consultation-ba {
@@ -464,6 +682,18 @@ main #consultation #consultation-ba p {
   }
 }
 
+@media screen and (max-width: 414px) {
+  main #consultation #consultation-ba p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #consultation #consultation-ba p {
+    font-size: 14px;
+  }
+}
+
 main #consultation #consultation-ba a {
   margin: 0 auto;
   width: 670px;
@@ -482,28 +712,17 @@ main #consultation #consultation-ba a {
   }
 }
 
-@media screen and (max-width: 600px) {
-  main .category-link ul {
-    padding: 25px 0 0 0;
+@media screen and (max-width: 414px) {
+  main #consultation #consultation-ba a {
+    width: 240px;
+    height: 60px;
+    padding: 10px 40px;
   }
 }
 
-main .category-link ul li {
-  width: 30%;
-}
-
-@media screen and (max-width: 600px) {
-  main .category-link ul li {
-    font-size: 10px;
-    padding-bottom: 5px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  main .category-link ul li {
-    font-size: 10px;
-    width: 50%;
-  }
+main #consultation #consultation-ba a::after {
+  top: 20px;
+  margin-left: 12px;
 }
 
 main #recruit-ranking {
@@ -578,9 +797,9 @@ main #recruit-ranking #ranking-box .contents-block p {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 414px) {
   main #recruit-ranking #ranking-box .contents-block p {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -594,9 +813,9 @@ main #recruit-ranking #ranking-box .contents-block p span {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 414px) {
   main #recruit-ranking #ranking-box .contents-block p span {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
@@ -638,7 +857,7 @@ footer #footer-container #arrow img {
 
 @media screen and (max-width: 320px) {
   footer #footer-container #arrow img {
-    top: -3%;
+    top: -3.4%;
     right: 4px;
     width: 22px;
     height: 66px;
@@ -666,6 +885,18 @@ footer #footer-container #footer-flex {
   }
 }
 
+@media screen and (max-width: 375px) {
+  footer #footer-container #footer-flex {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  footer #footer-container #footer-flex {
+    padding: 0 5px;
+  }
+}
+
 footer #footer-container #footer-flex #flex1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -677,6 +908,12 @@ footer #footer-container #footer-flex #flex1 {
           justify-content: flex-start;
   width: 100%;
   padding-bottom: 40px;
+}
+
+@media screen and (max-width: 320px) {
+  footer #footer-container #footer-flex #flex1 {
+    padding: 25px 0 20px;
+  }
 }
 
 footer #footer-container #footer-flex #flex1 h1 {

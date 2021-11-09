@@ -337,6 +337,7 @@ main {
     font-size: 36px;
     font-weight: 600;
     text-align: center;
+    padding: 98px 0 49px 0;
   }
 
   h5{
@@ -561,7 +562,7 @@ main {
           content: "";
           background-color: $border;
           height: 1px;
-          width: 90%;
+          width: 80%;
         }
 
         #consultation-icon {
@@ -721,16 +722,10 @@ main {
   .pickup {
     background-color: $gray;
 
-      .swiper-container {
-
-        @include max(max-2) {
-          overflow: hidden;
-        }
+    .swiper-container {
+      @include max(max-2) {
+        overflow: hidden;
       }
-
-
-    h4 {
-      padding: 98px 0 49px 0;
     }
 
     .swiper-wrapper {
@@ -755,7 +750,6 @@ main {
         }
 
         .pickup-img {
-
           @include max(max-3) {
             width: 100%;
           }
@@ -858,7 +852,6 @@ main {
   }
 
   #knowhow {
-    margin-top: 100px;
 
     h4 {
       margin-bottom: 55px;

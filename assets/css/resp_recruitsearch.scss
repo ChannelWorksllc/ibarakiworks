@@ -506,6 +506,7 @@ main {
 
     .pickup {
         @include max(max-8) {
+            margin-bottom: 40px;
             padding: 0;
         }
 
@@ -527,6 +528,7 @@ main {
             }
 
             .spanflex {
+                padding-top: 30px;
                 padding-bottom: 25px;
 
                 li {
@@ -578,8 +580,8 @@ main {
 
     .category-link {
         @include max(max-5) {
-        padding: 70px 45px 0;
-        }
+            padding: 70px 45px 0;
+        }    
 
         ul {
             @include max(max-8) {
@@ -603,35 +605,6 @@ main {
                     font-size: 11px;
                 }    
             }
-        }
-    }
-
-    .category-link1 {
-
-        ul {
-            @include max(max-1) {
-                flex-wrap: nowrap;
-                flex-direction: column;
-            }
-
-            li {
-                width: 50%;
-
-                @include max(max-3) {
-                    font-size: 10px;
-                }
-
-                @include max(max-1) {
-                    width: 100%;
-                    font-size: 11px;
-                }
-            }
-        }
-    }
-
-    .category-link2 {
-        @include max(max-5) {
-            padding: 50px 45px 20px;
         }
     }
 

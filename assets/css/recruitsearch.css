@@ -205,8 +205,8 @@ header #firstview #mainvisual #header-img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 68%;
-     object-position: 50% 68%;
+  -o-object-position: 50% 58%;
+     object-position: 50% 58%;
 }
 
 header #firstview #mainvisual h2 {
@@ -225,6 +225,97 @@ header #firstview #mainvisual h2 span {
   color: #003973;
   font-size: 22px;
   font-weight: 600;
+}
+
+main #recruit-search {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main #recruit-search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruit-search form {
+    height: 330px;
+  }
+}
+
+main #recruit-search form select, main #recruit-search form input {
+  width: 100%;
+  height: 70px;
+  background-color: #FFFFFF;
+  color: #888888;
+  font-family: 'Klee One', cursive;
+  font-size: 20px;
+  padding-left: 30px;
+  border: 2px solid #a4a4a4;
+  border-radius: 10px;
+}
+
+main #recruit-search form .select-wrap {
+  position: relative;
+  border-radius: 10px;
+  width: 32%;
+}
+
+main #recruit-search form .select-wrap::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 35px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 13px solid #888888;
+  pointer-events: none;
+}
+
+main #recruit-search form .select-wrap select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  cursor: pointer;
+}
+
+main #recruit-search form input {
+  width: 32%;
+}
+
+main #recruit-search form input::-webkit-input-placeholder {
+  color: #888888;
+}
+
+main #recruit-search form input:-ms-input-placeholder {
+  color: #888888;
+}
+
+main #recruit-search form input::-ms-input-placeholder {
+  color: #888888;
+}
+
+main #recruit-search form input::placeholder {
+  color: #888888;
+}
+
+main #recruit-search input[type="submit"] {
+  width: 480px;
+  height: 63.51px;
+  font-weight: 600;
+  background-color: #657ccf;
+  color: #FFFFFF;
+  padding: 0;
+  cursor: pointer;
 }
 
 main h3 {
@@ -326,6 +417,7 @@ main .pickup .spanflex li a:hover {
 }
 
 main .category-link {
+  background-color: #f7f7f7;
   padding: 85px;
 }
 
@@ -350,6 +442,7 @@ main .category-link ul {
 }
 
 main .category-link ul li {
+  width: 16%;
   font-size: 16px;
   font-weight: 600;
   line-height: 30px;
@@ -357,24 +450,8 @@ main .category-link ul li {
   text-align: center;
 }
 
-main .category-link1 {
-  padding-bottom: 0;
-}
-
-main .category-link1 li {
-  width: 20%;
-}
-
-main .category-link2 {
-  background-color: #f7f7f7;
-}
-
-main .category-link2 li {
-  width: 16%;
-}
-
 @media screen and (max-width: 1024px) {
-  main .category-link2 li {
+  main .category-link ul li {
     width: 22%;
   }
 }
@@ -697,4 +774,4 @@ footer #footer-container #copyright {
   border-left: 10px solid #fff;
   border-right: 10px solid #fff;
 }
-/*# sourceMappingURL=communitysearch.css.map */
+/*# sourceMappingURL=recruitsearch.css.map */

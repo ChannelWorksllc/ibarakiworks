@@ -419,6 +419,7 @@ main h4 {
   font-size: 36px;
   font-weight: 600;
   text-align: center;
+  padding: 98px 0 49px 0;
 }
 
 main h5 {
@@ -696,7 +697,7 @@ main #recruit #consultation #consultation-ba::after {
   content: "";
   background-color: #c8c8c8;
   height: 1px;
-  width: 90%;
+  width: 80%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -871,10 +872,6 @@ main .pickup {
   }
 }
 
-main .pickup h4 {
-  padding: 98px 0 49px 0;
-}
-
 main .pickup .swiper-wrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1025,10 +1022,6 @@ main #community #community-box #community-contents p {
 
 main #community .category-link li {
   width: 20%;
-}
-
-main #knowhow {
-  margin-top: 100px;
 }
 
 main #knowhow h4 {
