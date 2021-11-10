@@ -59,7 +59,7 @@ input[type="submit"] {
 
 @media screen and (max-width: 414px) {
   body {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -433,8 +433,8 @@ header #firstview #mainvisual {
 }
 
 header #firstview #mainvisual #header-img img {
-  -o-object-position: 50% 80%;
-     object-position: 50% 80%;
+  -o-object-position: 50% 95%;
+     object-position: 50% 95%;
 }
 
 @media screen and (max-width: 414px) {
@@ -448,347 +448,51 @@ header #firstview #mainvisual #header-img img {
   }
 }
 
-main h3 {
-  font-size: 24px;
-}
-
 @media screen and (max-width: 414px) {
   main h3 {
-    width: 90%;
-    font-size: 15px;
+    font-size: 14px;
+    margin-top: 10px;
   }
 }
 
 @media screen and (max-width: 414px) {
-  main h4 {
-    font-size: 23px;
-    padding-top: 68px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main h4 {
-    padding-top: 58px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup {
-    margin-bottom: 40px;
-    padding: 0;
-  }
-}
-
-main .pickup .pickup-box {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-block {
-    width: 300px;
-  }
-  main .pickup .pickup-box .pickup-block img {
-    width: 100%;
+  main p {
+    padding-top: 5px;
   }
 }
 
 @media screen and (max-width: 414px) {
-  main .pickup .pickup-box .pickup-text h5 {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-text h5 {
+  main p:first-of-type {
     font-size: 14px;
   }
 }
 
-main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-  padding-top: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-    padding-top: 15px;
-    font-size: 14px;
+@media screen and (max-width: 414px) {
+  main #company {
+    padding: 10px 0;
   }
 }
 
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-    padding-top: 10px;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box .pickup-text p li, main .pickup .pickup-box .pickup-text .tagflex li {
+@media screen and (max-width: 414px) {
+  main #company span {
     font-size: 10px;
-  }
-}
-
-main .pickup .pickup-box .spanflex {
-  padding-top: 30px;
-  padding-bottom: 25px;
-}
-
-main .pickup .pickup-box .spanflex li {
-  padding: 0 20px;
-  font-size: 20px;
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .spanflex li {
-    padding: 0 15px;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main .category-link {
-    padding: 70px 45px 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main .category-link ul {
-    padding: 25px 0 0 0;
-  }
-}
-
-main .category-link ul li {
-  width: 30%;
-}
-
-@media screen and (max-width: 600px) {
-  main .category-link ul li {
-    font-size: 14px;
-    padding-bottom: 5px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main .category-link ul li {
-    font-size: 12px;
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .category-link ul li {
-    font-size: 11px;
-  }
-}
-
-main #consultation {
-  margin: 100px 40px;
-}
-
-@media screen and (max-width: 414px) {
-  main #consultation {
-    margin: 75px 30px;
-  }
-}
-
-main #consultation #consultation-ba {
-  padding: 50px 0 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 600px) {
-  main #consultation #consultation-ba {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-main #consultation #consultation-ba::before {
-  position: absolute;
-  right: 0;
-  top: 0;
-  content: "";
-  background-color: #c8c8c8;
-  height: 1px;
-  width: 70%;
-}
-
-main #consultation #consultation-ba::after {
-  display: none;
-}
-
-main #consultation #consultation-ba #consultation-icon {
-  padding-left: 0;
-  padding-bottom: 40px;
-}
-
-main #consultation #consultation-ba p {
-  width: 94%;
-  font-size: 18px;
-  white-space: normal;
-  padding-left: 20px;
-  padding-bottom: 40px;
-}
-
-@media screen and (max-width: 600px) {
-  main #consultation #consultation-ba p {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #consultation #consultation-ba p {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main #consultation #consultation-ba p {
-    font-size: 14px;
-  }
-}
-
-main #consultation #consultation-ba a {
-  margin: 0 auto;
-  width: 670px;
-  font-size: 24px;
-  padding: 20px 80px;
-}
-
-@media screen and (max-width: 600px) {
-  main #consultation #consultation-ba a {
-    width: 272px;
-    font-size: 14px;
-    padding: 20px 40px;
-  }
-  main #consultation #consultation-ba a br {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #consultation #consultation-ba a {
-    width: 240px;
-    height: 60px;
-    padding: 10px 40px;
-  }
-}
-
-main #consultation #consultation-ba a::after {
-  top: 20px;
-  margin-left: 12px;
-}
-
-main #recruit-ranking {
-  padding-top: 50px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking {
-    padding: 50px 0 0;
-  }
-}
-
-main #recruit-ranking #ranking-box {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box {
-    padding: 30px 0 0;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block {
-  width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 0;
-  padding-bottom: 30px;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img {
-  width: 120px;
-  height: 120px;
-  padding: 0;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block .contents-img {
-    height: auto;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img img {
-  width: 100%;
-  height: 100%;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img p {
-  padding: 15px 20.8px;
-  right: 70px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block .contents-img p {
-    right: unset;
-    padding: 2px 8px;
-    font-size: 16px;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block p {
-  font-size: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block p {
-    font-size: 18px;
-    padding-left: 10px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit-ranking #ranking-box .contents-block p {
-    font-size: 15px;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block p span {
-  font-size: 18px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block p span {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit-ranking #ranking-box .contents-block p span {
-    font-size: 13px;
   }
 }
 
 footer {
   height: 100%;
+}
+
+@media screen and (max-width: 414px) {
+  footer {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  footer {
+    margin-top: 80px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -1091,4 +795,4 @@ footer #footer-container #copyright {
     border-right: 5px solid #fff;
   }
 }
-/*# sourceMappingURL=resp_recruitsearch.css.map */
+/*# sourceMappingURL=resp_privacypolicy.css.map */

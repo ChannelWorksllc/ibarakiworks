@@ -1058,6 +1058,10 @@ main #knowhow #knowhow-box .knowhow-block .knowhow-img {
   margin-right: 25px;
 }
 
+main #knowhow #knowhow-box .knowhow-block .knowhow-img img {
+  width: 100%;
+}
+
 main #knowhow #knowhow-box .knowhow-block p {
   font-weight: 600;
   font-size: 18px;

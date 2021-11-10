@@ -124,7 +124,7 @@ $border: #c8c8c8;
 
 body {
     @include max(max-5) {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
@@ -463,7 +463,7 @@ header {
             #header-img {
 
                 img {
-                    object-position: 50% 80%;
+                    object-position: 50% 95%;
                 }
             }
 
@@ -483,292 +483,33 @@ header {
 }
 
 main {
-
     h3 {
-        font-size: 24px;
-        
         @include max(max-5) {
-            width: 90%;
-            font-size: 15px;
+            font-size: 14px;
+            margin-top: 10px;
         }
     }
-    
-    h4 {
+
+    p {
         @include max(max-5) {
-            font-size: 23px;
-            padding-top: 68px;
+            padding-top: 5px;
         }
 
-        @include max(max-1) {
-            padding-top: 58px;
-        }
-    }
-
-    .pickup {
-        @include max(max-8) {
-            margin-bottom: 40px;
-            padding: 0;
-        }
-
-        .pickup-box {
-            justify-content: space-around;
-
-            @include max(max-8) {
-                justify-content: center;
-            }
-
-            .pickup-block {
-                @include max(max-1) {
-                    width: 300px;
-                
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-
-            .pickup-text {
-
-                h5 {
-                    @include max(max-5) {
-                        font-size: 18px;
-                    }
-
-                    @include max(max-1) {
-                        font-size: 14px;
-                    }
-
-                }
-
-                p,.tagflex {
-                    padding-top: 20px;
-
-                    @include max(max-8) {
-                        padding-top: 15px;
-                        font-size: 14px;
-                    }
-
-                    @include max(max-1) {
-                        padding-top: 10px;
-                        font-size: 12px;
-                    }
-
-                    li {
-                        @include max(max-8) {
-                        font-size: 10px;
-                        }
-                    }          
-                }
-            }
-
-            .spanflex {
-                padding-top: 30px;
-                padding-bottom: 25px;
-
-                li {
-                    padding: 0 20px;
-                    font-size: 20px;
-
-                    @include max(max-1) {
-                        padding: 0 15px;
-                        font-size: 15px;
-                    }
-                }
+        &:first-of-type {
+            @include max(max-5) {
+                font-size: 14px;
             }
         }
     }
 
-    .category-link {
+    #company {
         @include max(max-5) {
-            padding: 70px 45px 0;
-        }    
-
-        ul {
-            @include max(max-8) {
-                padding: 25px 0 0 0;
-            }
-
-            li {
-                width: 30%;
-
-                @include max(max-8) {
-                    font-size: 14px;
-                    padding-bottom: 5px;
-                }
-
-                @include max(max-5) {
-                    font-size: 12px;
-                    width: 50%;
-                }
-
-                @include max(max-1) {
-                    font-size: 11px;
-                }    
-            }
-        }
-    }
-
-    #consultation {
-        margin: 100px 40px;
-
-        @include max(max-5) {
-            margin: 75px 30px;
+            padding: 10px 0;
         }
 
-        #consultation-ba {
-            padding: 50px 0 0;
-            flex-wrap: wrap;
-            align-items: center;
-
-            @include max(max-8) {
-                justify-content: space-between;
-
-            }
-
-            &::before {
-                position: absolute;
-                right: 0;
-                top: 0;
-                content: "";
-                background-color: $border;
-                height: 1px;
-                width: 70%;
-            }
-
-            &::after {
-                display: none;
-            }
-
-            #consultation-icon {
-                padding: {
-                left: 0;
-                bottom: 40px;
-                } 
-            }
-
-            p {
-                width: 94%;
-                font-size: 18px;
-                white-space: normal;
-                padding: {
-                left: 20px;
-                bottom: 40px;
-                }
-                
-                @include max(max-8) {
-                    width: 80%;
-                }
-
-                @include max(max-5) {
-                    font-size: 16px;
-                }        
-
-                @include max(max-1) {
-                    font-size: 14px;
-                }
-            }
-
-            a {
-                margin: 0 auto;
-                width: 670px;
-                font-size: 24px;
-                padding: 20px 80px;
-
-                @include max(max-8) {
-                    width: 272px;
-                    font-size: 14px;
-                    padding: 20px 40px;
-
-                    br {
-                        display: block;
-                    }
-                }
-
-                @include max(max-5) {
-                    width: 240px;
-                    height: 60px;
-                    padding: 10px 40px;
-                }
-        
-                &::after {
-                    top: 20px;
-                    margin-left: 12px;
-                }
-            }
-        }
-    }
-
-    #recruit-ranking {
-        padding-top: 50px;
-
-        @include max(max-8) {
-            padding: 50px 0 0;
-        }
-
-        #ranking-box {
-            display: block;
-    
-            @include max(max-8) {
-                padding: 30px 0 0;
-            }
-    
-            .contents-block {
-                width: 100%;
-                justify-content: space-around;
-                align-items: center;
-                margin-right: 0;
-                padding-bottom: 30px;
-                
-                .contents-img {
-                    width: 120px;
-                    height: 120px;
-                    padding: 0;
-        
-                    @include max(max-8) {
-                        height: auto;
-                    }
-        
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-        
-                    p {
-                        padding: 15px 20.8px;
-                        right: 70px;
-        
-                        @include max(max-8) {
-                        right: unset;
-                        padding: 2px 8px;
-                        font-size: 16px;
-                        }
-                    }
-                }
-    
-                p {
-                    font-size: 20px;
-        
-                    @include max(max-8) {
-                        font-size: 18px;
-                        padding-left: 10px;
-                    }
-        
-                    @include max(max-5) {
-                        font-size: 15px;
-                    }
-        
-                    span {
-                        font-size: 18px;
-        
-                        @include max(max-8) {
-                        font-size: 16px;
-                        }  
-        
-                        @include max(max-5) {
-                        font-size: 13px;
-                        }
-                    }
-                }
+        span {
+            @include max(max-5) {
+                font-size: 10px;
             }
         }
     }
@@ -776,6 +517,14 @@ main {
 
 footer {
     height: 100%;
+
+    @include max(max-5) {
+        margin-top: 100px;
+    }
+
+    @include max(max-1) {
+        margin-top: 80px;
+    }
 
     &::before {
 

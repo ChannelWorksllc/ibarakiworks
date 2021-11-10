@@ -1135,17 +1135,12 @@ main {
         width: 50%;
         padding-bottom: 25px;
 
-        @include max(max-5) {
+        @include max(max-8) {
           width: 100%;
         }
 
         .knowhow-img {
-          width: 100px;
-          height: 100px;
-
-          img {
-            height: 100%;
-          }
+          width: 50%;
         }
 
         p {
@@ -1154,7 +1149,7 @@ main {
             font-size: 16px;
             padding-bottom: 10px;
 
-            @include mix(mix-8) {
+            @include mix(mix-5) {
               font-size: 14px;
             }
           }
@@ -1162,7 +1157,7 @@ main {
           span {
             font-size: 11px;
 
-            @include mix(mix-8) {
+            @include mix(mix-5) {
               font-size: 10px;
             }
           }
