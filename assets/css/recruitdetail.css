@@ -96,7 +96,7 @@ em, b, strong {
 
 body {
   font-family: 'Klee One', cursive;
-  font-size: 14px;
+  font-size: 18px;
   color: #4a4a4a;
 }
 
@@ -225,6 +225,401 @@ header #firstview #mainvisual h2 span {
   color: #003973;
   font-size: 22px;
   font-weight: 600;
+}
+
+main h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+main h4 {
+  font-size: 36px;
+  font-weight: 600;
+  padding: 98px 0 49px 0;
+  text-align: center;
+}
+
+main .pipe {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1280px) {
+  main .swiper-container {
+    overflow: hidden;
+  }
+}
+
+main .swiper-wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main #occupation-detail {
+  width: 88%;
+  max-width: 1440px;
+  margin: 0 auto 100px;
+  position: relative;
+}
+
+main #occupation-detail #occupation-tittle {
+  width: 85%;
+  margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+main #occupation-detail #occupation-tittle .pipe {
+  font-size: 24px;
+  padding-left: 30px;
+}
+
+main #occupation-detail #occupation-tittle ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #occupation-detail #occupation-tittle ul li {
+  font-size: 14px;
+  padding-left: 30px;
+}
+
+main #occupation-detail #occupation-img {
+  width: 650px;
+  height: 400px;
+}
+
+main #occupation-detail #occupation-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main #occupation-detail #recruit-tittle {
+  width: 43%;
+  font-size: 30px;
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+
+main #occupation-detail #recruit-overview {
+  position: absolute;
+  top: 250px;
+  right: 0;
+  background-color: rgba(228, 236, 248, 0.65);
+  width: 950px;
+  height: 322px;
+}
+
+main #occupation-detail #recruit-overview p {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+main #occupation-detail #recruit-overview p span {
+  display: block;
+  padding-top: 20px;
+}
+
+main .pickup {
+  padding: 0 150px;
+  margin: 0 auto 100px;
+  max-width: 1440px;
+}
+
+@media screen and (max-width: 1280px) {
+  main .pickup {
+    padding: 0 75px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main .pickup {
+    padding: 20px;
+  }
+}
+
+main .pickup .pickup-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .pickup .pickup-box .pickup-block {
+  width: 320px;
+}
+
+main .pickup .pickup-box .pickup-block h5 {
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+main .pickup .pickup-box .pickup-block p {
+  font-size: 14px;
+  padding-top: 25px;
+}
+
+main #recruitment {
+  padding: 50px 0 80px;
+  background-color: #f7f7f7;
+}
+
+main #recruitment h3 {
+  text-align: center;
+  padding: 60px 0 13px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+main #recruitment #recruitment-conditions, main #recruitment #recruitment-company {
+  width: 88%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main #recruitment #recruitment-conditions ul, main #recruitment #recruitment-company ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main #recruitment #recruitment-conditions ul li, main #recruitment #recruitment-company ul li {
+  text-align: center;
+  padding-top: 40px;
+}
+
+main #recruitment #recruitment-conditions ul li:last-of-type, main #recruitment #recruitment-company ul li:last-of-type {
+  padding-top: 5px;
+}
+
+main #recruitment #recruitment-conditions ul li span, main #recruitment #recruitment-company ul li span {
+  color: #003973;
+  font-weight: 600;
+}
+
+main #recruitment #recruitment-conditions ul .pipe, main #recruitment #recruitment-company ul .pipe {
+  width: 1%;
+}
+
+main #recruitment #recruitment-conditions ul .full, main #recruitment #recruitment-company ul .full {
+  width: 100%;
+}
+
+main #recruitment #recruitment-conditions li {
+  width: 15%;
+}
+
+main #recruitment #recruitment-conditions .long {
+  width: 20%;
+}
+
+main #recruitment #recruitment-company li {
+  width: 20%;
+}
+
+main #recruitment #recruitment-company .long {
+  width: 24%;
+}
+
+main #recruitment a {
+  display: block;
+  margin: 70px auto 0;
+  width: 850px;
+  height: 80px;
+  font-size: 28px;
+  background-color: #9ed8a4;
+  border-radius: 15px;
+  position: relative;
+  color: #FFFFFF;
+  padding: 20px 140px;
+  white-space: nowrap;
+}
+
+main #recruitment a::after {
+  position: absolute;
+  content: "";
+  width: 39px;
+  height: 20px;
+  margin-left: 20px;
+  top: 30px;
+  border-bottom: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+  -webkit-transform: skew(35deg);
+          transform: skew(35deg);
+}
+
+main #flow {
+  margin-bottom: 135px;
+}
+
+main #flow .flow-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #flow .flow-box .flow-block {
+  width: 160px;
+  height: 140px;
+  text-align: center;
+  position: relative;
+}
+
+main #flow .flow-box .flow-block:last-of-type {
+  margin-right: 30px;
+}
+
+main #flow .flow-box .flow-block div {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  background-color: rgba(228, 236, 248, 0.65);
+  width: 160px;
+  height: 140px;
+}
+
+main #flow .flow-box .flow-block div p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  font-weight: 600;
+  line-height: 1.2;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #003973;
+  font-size: 30px;
+  text-align: left;
+}
+
+main #flow .flow-box .flow-block div p span {
+  font-size: 14px;
+}
+
+main #flow .flow-box .flow-arrow {
+  width: 1%;
+}
+
+main #recruit-ranking {
+  padding: 0 85px 85px;
+}
+
+@media screen and (max-width: 1366px) {
+  main #recruit-ranking {
+    padding: 0 40px 85px;
+  }
+}
+
+main #recruit-ranking h3 {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+main #recruit-ranking #ranking-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 30px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruit-ranking #ranking-box {
+    padding: 30px 20px 0;
+  }
+}
+
+main #recruit-ranking #ranking-box .contents-block {
+  width: calc(100% / 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img {
+  position: relative;
+  padding-right: 20px;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img p {
+  position: absolute;
+  top: 0%;
+  right: 76px;
+  border: none 1px #000000;
+  padding: 2px 8px;
+  color: #FFFFFF;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number1 {
+  background: #ac9600;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number2 {
+  background: #9d9d9d;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number3 {
+  background: #b28550;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number4 {
+  background: #000000;
+}
+
+main #recruit-ranking #ranking-box .contents-block p {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+main #recruit-ranking #ranking-box .contents-block p a {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+main #recruit-ranking #ranking-box .contents-block p span {
+  display: block;
+  font-size: 14px;
+}
+
+main #recruit-ranking #ranking-box .contents-block:last-of-type {
+  margin: 0;
 }
 
 main #search #recruit-search-tittle {
@@ -362,9 +757,6 @@ main #search #recruit-search #search-box label {
   main #search #recruit-search #search-box label {
     width: 20%;
   }
-  main #search #recruit-search #search-box label:last-of-type {
-    display: none;
-  }
 }
 
 main #search #search-button {
@@ -390,230 +782,6 @@ main #search #search-button span {
 main #search #search-button span:nth-child(2) {
   top: 60%;
   width: 30px;
-}
-
-main h3 {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 600;
-  border-bottom: 1px solid #c8c8c8;
-  padding-bottom: 13px;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-main h4 {
-  font-size: 36px;
-  font-weight: 600;
-  padding: 98px 0 49px 0;
-  text-align: center;
-}
-
-main .pickup {
-  padding: 0 150px;
-}
-
-@media screen and (max-width: 1280px) {
-  main .pickup {
-    padding: 0 75px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  main .pickup {
-    padding: 20px;
-  }
-}
-
-main .pickup .pickup-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main .pickup .pickup-box .pickup-block {
-  width: 320px;
-}
-
-main .pickup .pickup-box .pickup-block h5 {
-  font-size: 18px;
-  font-weight: 600;
-  padding-top: 10px;
-}
-
-main .pickup .pickup-box .pickup-block p {
-  padding-top: 25px;
-}
-
-main .pickup .pickup-box .pickup-block .tagflex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 25px 0 50px;
-}
-
-main .pickup .pickup-box .pickup-block .tagflex li {
-  font-size: 12px;
-  padding-right: 22px;
-}
-
-main .pickup .spanflex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: 700;
-  padding: 50px 0 90px 0;
-}
-
-main .pickup .spanflex li {
-  padding: 0 22px;
-  font-size: 30px;
-  color: #657ccf;
-}
-
-main .pickup .spanflex li:first-child a {
-  color: #4a4a4a;
-  border-bottom: solid 1px #4a4a4a;
-}
-
-main .pickup .spanflex li a:hover {
-  color: #4a4a4a;
-  border-bottom: solid 1px #4a4a4a;
-}
-
-main .category-link {
-  background-color: #f7f7f7;
-  padding: 85px;
-}
-
-@media screen and (max-width: 1366px) {
-  main .category-link {
-    padding: 85px 45px;
-  }
-}
-
-main .category-link ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 30px 30px 0 30px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main .category-link ul li {
-  width: 16%;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 30px;
-  color: #657ccf;
-  text-align: center;
-}
-
-@media screen and (max-width: 1024px) {
-  main .category-link ul li {
-    width: 22%;
-  }
-}
-
-main #recruit-ranking {
-  background-color: #f7f7f7;
-  padding: 0 85px 85px;
-}
-
-@media screen and (max-width: 1366px) {
-  main #recruit-ranking {
-    padding: 0 40px 85px;
-  }
-}
-
-main #recruit-ranking #ranking-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-  max-width: 1440px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 30px 30px 0;
-}
-
-@media screen and (max-width: 1024px) {
-  main #recruit-ranking #ranking-box {
-    padding: 30px 20px 0;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block {
-  width: calc(100% / 2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 10px;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img {
-  position: relative;
-  padding-right: 20px;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img p {
-  position: absolute;
-  top: 0%;
-  right: 76px;
-  border: none 1px #000000;
-  padding: 2px 8px;
-  color: #FFFFFF;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number1 {
-  background: #ac9600;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number2 {
-  background: #9d9d9d;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number3 {
-  background: #b28550;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number4 {
-  background: #000000;
-}
-
-main #recruit-ranking #ranking-box .contents-block p {
-  font-weight: 600;
-  font-size: 16px;
-}
-
-main #recruit-ranking #ranking-box .contents-block p a {
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
-main #recruit-ranking #ranking-box .contents-block p span {
-  display: block;
-  font-size: 14px;
-}
-
-main #recruit-ranking #ranking-box .contents-block:last-of-type {
-  margin: 0;
 }
 
 main #consultation {
@@ -841,4 +1009,4 @@ footer #footer-container #copyright {
   border-left: 10px solid #fff;
   border-right: 10px solid #fff;
 }
-/*# sourceMappingURL=recruitsearch.css.map */
+/*# sourceMappingURL=recruitdetail.css.map */

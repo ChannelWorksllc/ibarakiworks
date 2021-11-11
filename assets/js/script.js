@@ -33,3 +33,11 @@ $(function() {
 $(document).ready(function() {
     $('.drawer').drawer();
 });
+
+//検索機能//
+$(function(){
+    $("#search-button").on("click", function() {
+        $(this).toggleClass("on-click");
+        $("#recruit-search").slideToggle(1000);
+    });
+});

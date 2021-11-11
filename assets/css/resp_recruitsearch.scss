@@ -484,6 +484,38 @@ header {
 
 main {
 
+    #search {
+
+        #recruit-search {
+            width: 100%;
+
+            form {
+                flex-direction: column;
+                height: 245px;
+
+                .select-wrap,input {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+
+            #search-box {
+                padding: 30px;
+
+                label {
+                    width: 50%;
+                    text-align: center;
+                }
+            }
+
+            #search-submit {
+                input[type="submit"] {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
     h3 {
         font-size: 24px;
         

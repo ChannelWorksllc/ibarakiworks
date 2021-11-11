@@ -205,8 +205,8 @@ header #firstview #mainvisual #header-img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 68%;
-     object-position: 50% 68%;
+  -o-object-position: 50% 80%;
+     object-position: 50% 80%;
 }
 
 header #firstview #mainvisual h2 {

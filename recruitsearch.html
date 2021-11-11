@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./assets/css/recruitsearch.css" />
   <link rel="stylesheet" media="only screen and (max-width: 979px)" href="./assets/css/resp_recruitsearch.css" />
   <link rel="stylesheet" media="only screen and (max-width: 979px)" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,54 +119,59 @@
 
 <main role="main">
 
-  <p id="recruit-search-tittle">検索条件を再設定</p>
-  <div id=""></div>
-  <div id="recruit-search">
-    <form action="">
-      <div class="select-wrap">
-        <select name="area" id="area">
-          <option value="" disabled selected>就業希望地域</option>
-          <option value="sample1">sample1</option>
-          <option value="sample2">sample2</option>
-        </select>
+  <article id="search">
+    <p id="recruit-search-tittle">検索条件を再設定</p>
+    <div id="recruit-search">
+      <form action="">
+        <div class="select-wrap">
+          <select name="area" id="area">
+            <option value="" disabled selected>就業希望地域</option>
+            <option value="sample1">sample1</option>
+            <option value="sample2">sample2</option>
+          </select>
+        </div>
+        <div class="select-wrap">
+          <select name="occupation" id="occupation">
+            <option value="" disabled selected>希望・経験職種</option>
+            <option value="sample">sample1</option>
+            <option value="sample2">sample2</option>
+          </select>
+        </div>
+        <input type="text" placeholder="その他ご要望">
+      </form>
+      <p id="search-box-tittle">検索条件を再設定</p>
+      <div id="search-box">
+        <label><input type="checkbox" name="" value="">絞り込み条件1</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件2</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件3</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件4</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件5</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件6</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件7</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件8</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件9</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件10</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件11</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件12</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件13</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件14</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件15</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件16</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件17</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件18</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件19</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件20</label>
+        <label><input type="checkbox" name="" value="">絞り込み条件21</label>
       </div>
-      <div class="select-wrap">
-        <select name="occupation" id="occupation">
-          <option value="" disabled selected>希望・経験職種</option>
-          <option value="sample">sample1</option>
-          <option value="sample2">sample2</option>
-        </select>
+      <div id="search-submit">
+        <input type="submit" name="submit" value="この内容で絞り込み検索">
       </div>
-      <input type="text" placeholder="その他ご要望">
-    </form>
-    <p id="search-box-tittle">検索条件を再設定</p>
-    <div id="search-box">
-      <label><input type="checkbox" name="" value="">絞り込み条件1</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件2</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件3</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件4</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件5</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件6</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件7</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件8</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件9</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件10</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件11</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件12</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件13</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件14</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件15</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件16</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件17</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件18</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件19</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件20</label>
-      <label><input type="checkbox" name="" value="">絞り込み条件21</label>
     </div>
-    <div id="search-submit">
-      <input type="submit" name="submit" value="この内容で絞り込み検索">
+    <div id="search-button">
+      <span></span>
+      <span></span>
     </div>
-  </div>
+  </article>
 
   <article class="pickup">
     <h4>XXXの求人検索結果</h4>

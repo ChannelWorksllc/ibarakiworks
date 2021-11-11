@@ -448,6 +448,36 @@ header #firstview #mainvisual #header-img img {
   }
 }
 
+main #search #recruit-search {
+  width: 100%;
+}
+
+main #search #recruit-search form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 245px;
+}
+
+main #search #recruit-search form .select-wrap, main #search #recruit-search form input {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main #search #recruit-search #search-box {
+  padding: 30px;
+}
+
+main #search #recruit-search #search-box label {
+  width: 50%;
+  text-align: center;
+}
+
+main #search #recruit-search #search-submit input[type="submit"] {
+  width: 90%;
+}
+
 main h3 {
   font-size: 24px;
 }

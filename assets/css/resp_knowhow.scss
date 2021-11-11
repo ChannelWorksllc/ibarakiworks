@@ -463,7 +463,15 @@ header {
             #header-img {
 
                 img {
-                    object-position: 50% 95%;
+                    object-position: 50% 68%;
+
+                    @include max(max-9) {
+                        object-position: 50% 94%;
+                    }
+
+                    @include max(max-8) {
+                        object-position: 50% 100%;
+                    }
                 }
             }
 

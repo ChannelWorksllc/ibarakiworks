@@ -433,8 +433,22 @@ header #firstview #mainvisual {
 }
 
 header #firstview #mainvisual #header-img img {
-  -o-object-position: 50% 95%;
-     object-position: 50% 95%;
+  -o-object-position: 50% 68%;
+     object-position: 50% 68%;
+}
+
+@media screen and (max-width: 768px) {
+  header #firstview #mainvisual #header-img img {
+    -o-object-position: 50% 94%;
+       object-position: 50% 94%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header #firstview #mainvisual #header-img img {
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
+  }
 }
 
 @media screen and (max-width: 414px) {
