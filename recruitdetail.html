@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />    
     <link rel="icon" type="image/png" href="./fav.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./icon.png" />
-    <title>プライバシーポリシー｜イバラキ・ハケン</title>
+    <title>派遣求人検索｜イバラキ・ハケン</title>
     <link rel="stylesheet" href="./assets/css/recruitdetail.css" />
     <link rel="stylesheet" media="only screen and (max-width: 979px)" href="./assets/css/resp_recruitdetail.css" />
     <link rel="stylesheet" media="only screen and (max-width: 979px)" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,7 +122,7 @@
     <article id="occupation-detail">
         <div id="occupation-tittle">
             <h3>募集職種：XXXXXXXX</h3>
-            <p class="pipe">｜</p>
+            <p class="pipe resp_pc">｜</p>
             <ul>
                 <li>特徴タグ</li>
                 <li>特徴タグ</li>
@@ -144,7 +145,7 @@
 
     <article class="pickup">
         <h4>この求人のポイント</h4>
-        <div class="swiper-container">
+        <div class="swiper-container slide1">
             <div class="pickup-box swiper-wrapper">
                 <div class="pickup-block swiper-slide">
                     <div class="pickup-img">
@@ -182,13 +183,13 @@
             <h3>募集条件</h3>
             <ul>
                 <li><span>時給</span> ： XXXX円</li>
-                <li class="pipe">|</li>
+                <li class="pipe resp_pc">|</li>
                 <li class="long"><span>勤務曜日</span>：月・火・水・木・金</li>
-                <li class="pipe">|</li>
+                <li class="pipe resp_pc">|</li>
                 <li><span>勤務時間</span>：8時〜17時</li>
-                <li class="pipe">|</li>
+                <li class="pipe resp_pc">|</li>
                 <li><span>勤務形態</span>：派遣社員</li>
-                <li class="pipe">|</li>
+                <li class="pipe resp_pc">|</li>
                 <li><span>勤務地</span>：茨城県XX市</li>
                 <li class="full"><span>その他</span>：</li>
                 <li class="full">その他の条件テキスト。その他の条件テキスト。その他の条件テキスト。その他の条件テキスト。その他の条件テキスト。その他の条件テキスト。</li>
@@ -199,42 +200,42 @@
             <h3>募集企業情報</h3>
             <ul>
                 <li><span>会社名</span> ： 株式会社XXXX</li>
-                <li class="pipe">|</li>
+                <li class="pipe resp_pc">|</li>
                 <li class="long"><span>所在地</span>：茨城県つくば市XXXXXX</li>
-                <li class="pipe">|</li>
+                <li class="pipe resp_pc">|</li>
                 <li><span>従業員数</span>：XXXXX名</li>
-                <li class="pipe">|</li>
+                <li class="pipe resp_pc">|</li>
                 <li><span>資本金</span>： XXXX円</li>
                 <li class="full"><span>事業内容</span>：</li>
                 <li class="full">事業内容テキスト。事業内容テキスト。事業内容テキスト。事業内容テキスト。事業内容テキスト。事業内容テキスト。事業内容テキスト。</li>
             </ul>
         </article>
-        <a href="">この求人に応募・または問い合わせする</a>
+        <a href="">この求人に応募・<br>または問い合わせする</a>
     </section>
 
     <article id="flow">
         <h4>応募後のフロー</h4>
-        <div class="swiper-container">
+        <div class="swiper-container slide2">
             <div class="flow-box swiper-wrapper">
                 <div class="flow-block swiper-slide">
                     <img src="./assets/images/44740026.jpg" alt="44740026">
                     <div><p>ご応募</p></div>
                 </div>
-                <div class="flow-arrow swiper-slide">
+                <div class="flow-arrow">
                     <img src="./assets/images/arrow2811.png" alt="arrow2811">
                 </div>
                 <div class="flow-block swiper-slide">
                     <img src="./assets/images/59682465.jpg" alt="59682465">
                     <div><p>ご面談</p></div>
                 </div>
-                <div class="flow-arrow swiper-slide">
+                <div class="flow-arrow">
                     <img src="./assets/images/arrow2811.png" alt="arrow2811">
                 </div>
                 <div class="flow-block swiper-slide">
                     <img src="./assets/images/50251324.jpg" alt="50251324">
                     <div><p>現場見学</p></div>
                 </div>
-                <div class="flow-arrow swiper-slide">
+                <div class="flow-arrow">
                     <img src="./assets/images/arrow2811.png" alt="arrow2811">
                 </div>
                 <div class="flow-block swiper-slide">
@@ -243,7 +244,7 @@
                         スキル<br>
                         アップ研修</p></div>
                 </div>
-                <div class="flow-arrow swiper-slide">
+                <div class="flow-arrow">
                     <img src="./assets/images/arrow2811.png" alt="arrow2811">
                 </div>
                 <div class="flow-block swiper-slide">
@@ -357,6 +358,10 @@
             <div id="search-submit">
                 <input type="submit" name="submit" value="この内容で絞り込み検索">
             </div>
+        </div>            
+        <div id="search-button">
+            <span></span>
+            <span></span>
         </div>
     </article>
 

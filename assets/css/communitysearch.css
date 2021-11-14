@@ -424,7 +424,7 @@ main #recruit-ranking #ranking-box .contents-block .contents-img {
 main #recruit-ranking #ranking-box .contents-block .contents-img p {
   position: absolute;
   top: 0%;
-  right: 76px;
+  left: 0;
   border: none 1px #000000;
   padding: 2px 8px;
   color: #FFFFFF;

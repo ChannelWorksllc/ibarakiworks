@@ -57,6 +57,10 @@ input[type="submit"] {
   width: 100%;
 }
 
+body {
+  font-size: 14px;
+}
+
 @media screen and (max-width: 414px) {
   body {
     font-size: 10px;
@@ -448,6 +452,607 @@ header #firstview #mainvisual #header-img img {
   }
 }
 
+main h3 {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  main h3 {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main h3 {
+    font-size: 18px;
+  }
+}
+
+main h4 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  main h4 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main h4 {
+    padding-top: 30px;
+  }
+}
+
+main .swiper-container {
+  overflow: hidden;
+}
+
+main #occupation-detail {
+  width: 100%;
+}
+
+main #occupation-detail #occupation-tittle {
+  width: 90%;
+  margin: 60px auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 320px) {
+  main #occupation-detail #occupation-tittle {
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+}
+
+main #occupation-detail #occupation-tittle h3 {
+  width: 100%;
+}
+
+main #occupation-detail #occupation-tittle ul {
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 414px) {
+  main #occupation-detail #occupation-tittle ul {
+    padding: 10px 0;
+  }
+}
+
+main #occupation-detail #occupation-tittle ul li {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  main #occupation-detail #occupation-tittle ul li {
+    padding-left: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #occupation-detail #occupation-tittle ul li {
+    padding-left: 10px;
+    font-size: 10px;
+  }
+}
+
+main #occupation-detail #occupation-tittle ul li:first-child {
+  padding-left: 0;
+}
+
+main #occupation-detail #occupation-img {
+  position: absolute;
+  width: 70%;
+  height: auto;
+  top: 180px;
+}
+
+@media screen and (max-width: 600px) {
+  main #occupation-detail #occupation-img {
+    top: 210px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #occupation-detail #occupation-img {
+    top: 175px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #occupation-detail #occupation-img {
+    top: 140px;
+  }
+}
+
+main #occupation-detail #recruit-tittle {
+  width: 90%;
+  font-size: 24px;
+  margin-top: 20px;
+  left: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  main #occupation-detail #recruit-tittle {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #occupation-detail #recruit-tittle {
+    margin-top: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #occupation-detail #recruit-tittle {
+    top: 75px;
+    font-size: 16px;
+  }
+}
+
+main #occupation-detail #recruit-overview {
+  width: 85%;
+  top: 380px;
+}
+
+@media screen and (max-width: 600px) {
+  main #occupation-detail #recruit-overview {
+    top: 360px;
+    height: 205px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #occupation-detail #recruit-overview {
+    top: 290px;
+    width: 90%;
+    height: 195px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #occupation-detail #recruit-overview {
+    top: 230px;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #occupation-detail #recruit-overview p {
+    font-size: 10px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #occupation-detail #recruit-overview p {
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #occupation-detail #recruit-overview p {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #occupation-detail #recruit-overview p span {
+    padding-top: 10px;
+  }
+}
+
+main .pickup {
+  margin: 560px 0 50px;
+}
+
+@media screen and (max-width: 600px) {
+  main .pickup {
+    margin-top: 430px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main .pickup {
+    margin-top: 365px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main .pickup {
+    margin-bottom: 30px;
+  }
+}
+
+main .pickup .pickup-box .pickup-img {
+  width: 320px;
+}
+
+@media screen and (max-width: 600px) {
+  main .pickup .pickup-box .pickup-img {
+    width: 98%;
+  }
+}
+
+main .pickup .pickup-box .pickup-img img {
+  width: 100%;
+}
+
+main .pickup .pickup-box .pickup-text {
+  width: 320px;
+}
+
+@media screen and (max-width: 600px) {
+  main .pickup .pickup-box .pickup-text {
+    width: 98%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .pickup .pickup-box .pickup-text h5 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main .pickup .pickup-box .pickup-text h5 {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .pickup .pickup-box .pickup-text p {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main .pickup .pickup-box .pickup-text p {
+    padding-top: 5px;
+  }
+}
+
+main #recruitment {
+  padding: 0 0 50px;
+}
+
+main #recruitment h3 {
+  width: 100%;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruitment h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #recruitment h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #recruitment h3 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #recruitment h3 {
+    padding-top: 30px;
+  }
+}
+
+main #recruitment #recruitment-conditions ul, main #recruitment #recruitment-company ul {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruitment #recruitment-conditions ul, main #recruitment #recruitment-company ul {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #recruitment #recruitment-conditions ul, main #recruitment #recruitment-company ul {
+    width: 100%;
+  }
+}
+
+main #recruitment #recruitment-conditions ul li, main #recruitment #recruitment-conditions ul .long, main #recruitment #recruitment-company ul li, main #recruitment #recruitment-company ul .long {
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruitment #recruitment-conditions ul li, main #recruitment #recruitment-conditions ul .long, main #recruitment #recruitment-company ul li, main #recruitment #recruitment-company ul .long {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #recruitment #recruitment-conditions ul li, main #recruitment #recruitment-conditions ul .long, main #recruitment #recruitment-company ul li, main #recruitment #recruitment-company ul .long {
+    font-size: 12px;
+  }
+}
+
+main #recruitment #recruitment-conditions ul .full, main #recruitment #recruitment-company ul .full {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruitment #recruitment-conditions ul .full, main #recruitment #recruitment-company ul .full {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #recruitment #recruitment-conditions ul .full, main #recruitment #recruitment-company ul .full {
+    font-size: 10px;
+  }
+}
+
+main #recruitment a {
+  width: 90%;
+  padding: 15px 100px;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruitment a {
+    font-size: 14px;
+    padding: 25px 90px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #recruitment a {
+    height: 60px;
+    margin-top: 40px;
+    font-size: 12px;
+    padding: 20px 60px;
+  }
+  main #recruitment a::after {
+    top: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #recruitment a {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #recruitment a {
+    padding: 12px 60px;
+  }
+  main #recruitment a::after {
+    top: 20px;
+  }
+  main #recruitment a br {
+    display: block;
+  }
+}
+
+main #flow {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 414px) {
+  main #flow {
+    margin-bottom: 0;
+  }
+}
+
+main #flow h4 {
+  padding: 50px 0 20px;
+}
+
+main #flow .swiper-container {
+  height: 240px;
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block img {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block div {
+    top: 25%;
+    width: 65%;
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #flow .swiper-container .flow-block div {
+    top: 15%;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #flow .swiper-container .flow-block div {
+    height: 55%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container .flow-block div {
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block div p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #flow .swiper-container .flow-block div p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container .flow-block div p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block div p span {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-arrow {
+    margin-top: 0;
+    height: 30px;
+  }
+  main #flow .swiper-container .flow-arrow img {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #flow .swiper-container .flow-arrow {
+    height: 23px;
+    margin-top: -40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container .flow-arrow {
+    height: 18px;
+    margin-top: -55px;
+  }
+}
+
+main #recruit-ranking {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruit-ranking {
+    padding: 0 0 30px;
+  }
+}
+
+main #recruit-ranking #ranking-box {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruit-ranking #ranking-box {
+    padding: 30px 0 0;
+  }
+}
+
+main #recruit-ranking #ranking-box .contents-block {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0;
+  padding-bottom: 30px;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img {
+  width: 120px;
+  height: 120px;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruit-ranking #ranking-box .contents-block .contents-img {
+    height: auto;
+  }
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img img {
+  width: 100%;
+  height: 100%;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img p {
+  padding: 15px 20.8px;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruit-ranking #ranking-box .contents-block .contents-img p {
+    padding: 2px 8px;
+    font-size: 16px;
+  }
+}
+
+main #recruit-ranking #ranking-box .contents-block p {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruit-ranking #ranking-box .contents-block p {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #recruit-ranking #ranking-box .contents-block p {
+    font-size: 15px;
+  }
+}
+
+main #recruit-ranking #ranking-box .contents-block p span {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  main #recruit-ranking #ranking-box .contents-block p span {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #recruit-ranking #ranking-box .contents-block p span {
+    font-size: 13px;
+  }
+}
+
+main #search #recruit-search-tittle {
+  margin-top: 0;
+}
+
 @media screen and (max-width: 414px) {
   main #search #recruit-search-tittle {
     font-size: 20px;
@@ -542,148 +1147,6 @@ main #search #recruit-search #search-submit input[type="submit"] {
   }
   main #search #search-button span:nth-child(2) {
     width: 23px;
-  }
-}
-
-main h3 {
-  font-size: 24px;
-}
-
-@media screen and (max-width: 414px) {
-  main h3 {
-    width: 90%;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main h4 {
-    font-size: 23px;
-    padding-top: 68px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main h4 {
-    padding-top: 58px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup {
-    margin-bottom: 40px;
-    padding: 0;
-  }
-}
-
-main .pickup .pickup-box {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-block {
-    width: 300px;
-  }
-  main .pickup .pickup-box .pickup-block img {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main .pickup .pickup-box .pickup-text h5 {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-text h5 {
-    font-size: 14px;
-  }
-}
-
-main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-  padding-top: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-    padding-top: 15px;
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-    padding-top: 10px;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box .pickup-text p li, main .pickup .pickup-box .pickup-text .tagflex li {
-    font-size: 10px;
-  }
-}
-
-main .pickup .pickup-box .spanflex {
-  padding-top: 30px;
-  padding-bottom: 25px;
-}
-
-main .pickup .pickup-box .spanflex li {
-  padding: 0 20px;
-  font-size: 20px;
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .spanflex li {
-    padding: 0 15px;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main .category-link {
-    padding: 70px 45px 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main .category-link ul {
-    padding: 25px 0 0 0;
-  }
-}
-
-main .category-link ul li {
-  width: 30%;
-}
-
-@media screen and (max-width: 600px) {
-  main .category-link ul li {
-    font-size: 14px;
-    padding-bottom: 5px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main .category-link ul li {
-    font-size: 12px;
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .category-link ul li {
-    font-size: 11px;
   }
 }
 
@@ -816,100 +1279,14 @@ main #consultation #consultation-ba a {
   }
 }
 
-main #recruit-ranking {
-  padding-top: 50px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking {
-    padding: 50px 0 0;
-  }
-}
-
-main #recruit-ranking #ranking-box {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box {
-    padding: 30px 0 0;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block {
-  width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 0;
-  padding-bottom: 30px;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img {
-  width: 120px;
-  height: 120px;
-  padding: 0;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block .contents-img {
-    height: auto;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img img {
-  width: 100%;
-  height: 100%;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img p {
-  padding: 15px 20.8px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block .contents-img p {
-    padding: 2px 8px;
-    font-size: 16px;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block p {
-  font-size: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block p {
-    font-size: 18px;
-    padding-left: 10px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit-ranking #ranking-box .contents-block p {
-    font-size: 15px;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block p span {
-  font-size: 18px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block p span {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit-ranking #ranking-box .contents-block p span {
-    font-size: 13px;
-  }
-}
-
 footer {
   height: 100%;
+}
+
+@media screen and (max-width: 320px) {
+  footer {
+    margin-top: 140px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -1212,4 +1589,4 @@ footer #footer-container #copyright {
     border-right: 5px solid #fff;
   }
 }
-/*# sourceMappingURL=resp_recruitsearch.css.map */
+/*# sourceMappingURL=resp_recruitdetail.css.map */

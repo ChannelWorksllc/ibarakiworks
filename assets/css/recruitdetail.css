@@ -239,14 +239,14 @@ main h4 {
   text-align: center;
 }
 
-main .pipe {
-  font-weight: 600;
+@media screen and (max-width: 1024px) {
+  main h4 {
+    padding-top: 75px;
+  }
 }
 
-@media screen and (max-width: 1280px) {
-  main .swiper-container {
-    overflow: hidden;
-  }
+main .pipe {
+  font-weight: 600;
 }
 
 main .swiper-wrapper {
@@ -259,6 +259,12 @@ main #occupation-detail {
   max-width: 1440px;
   margin: 0 auto 100px;
   position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  main #occupation-detail {
+    width: 90%;
+  }
 }
 
 main #occupation-detail #occupation-tittle {
@@ -295,6 +301,13 @@ main #occupation-detail #occupation-img {
   height: 400px;
 }
 
+@media screen and (max-width: 1024px) {
+  main #occupation-detail #occupation-img {
+    width: 510px;
+    height: 325px;
+  }
+}
+
 main #occupation-detail #occupation-img img {
   width: 100%;
   height: 100%;
@@ -310,6 +323,12 @@ main #occupation-detail #recruit-tittle {
   right: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  main #occupation-detail #recruit-tittle {
+    font-size: 28px;
+  }
+}
+
 main #occupation-detail #recruit-overview {
   position: absolute;
   top: 250px;
@@ -317,6 +336,14 @@ main #occupation-detail #recruit-overview {
   background-color: rgba(228, 236, 248, 0.65);
   width: 950px;
   height: 322px;
+}
+
+@media screen and (max-width: 1024px) {
+  main #occupation-detail #recruit-overview {
+    top: 225px;
+    width: 650px;
+    height: 309px;
+  }
 }
 
 main #occupation-detail #recruit-overview p {
@@ -328,6 +355,12 @@ main #occupation-detail #recruit-overview p {
           transform: translateY(-50%) translateX(-50%);
   font-size: 16px;
   line-height: 1.8;
+}
+
+@media screen and (max-width: 1024px) {
+  main #occupation-detail #recruit-overview p {
+    font-size: 14px;
+  }
 }
 
 main #occupation-detail #recruit-overview p span {
@@ -357,8 +390,6 @@ main .pickup .pickup-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -366,6 +397,16 @@ main .pickup .pickup-box {
 
 main .pickup .pickup-box .pickup-block {
   width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .pickup .pickup-box .pickup-block h5 {
@@ -395,6 +436,12 @@ main #recruitment #recruitment-conditions, main #recruitment #recruitment-compan
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1024px) {
+  main #recruitment #recruitment-conditions, main #recruitment #recruitment-company {
+    width: 90%;
+  }
+}
+
 main #recruitment #recruitment-conditions ul, main #recruitment #recruitment-company ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,6 +451,12 @@ main #recruitment #recruitment-conditions ul, main #recruitment #recruitment-com
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruitment #recruitment-conditions ul, main #recruitment #recruitment-company ul {
+    font-size: 15px;
+  }
 }
 
 main #recruitment #recruitment-conditions ul li, main #recruitment #recruitment-company ul li {
@@ -429,11 +482,11 @@ main #recruitment #recruitment-conditions ul .full, main #recruitment #recruitme
 }
 
 main #recruitment #recruitment-conditions li {
-  width: 15%;
+  width: 17%;
 }
 
 main #recruitment #recruitment-conditions .long {
-  width: 20%;
+  width: 24%;
 }
 
 main #recruitment #recruitment-company li {
@@ -441,7 +494,7 @@ main #recruitment #recruitment-company li {
 }
 
 main #recruitment #recruitment-company .long {
-  width: 24%;
+  width: 26%;
 }
 
 main #recruitment a {
@@ -450,12 +503,22 @@ main #recruitment a {
   width: 850px;
   height: 80px;
   font-size: 28px;
+  font-weight: 600;
   background-color: #9ed8a4;
   border-radius: 15px;
   position: relative;
   color: #FFFFFF;
   padding: 20px 140px;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruitment a {
+    width: 780px;
+    height: 70px;
+    font-size: 24px;
+    padding: 15px 150px;
+  }
 }
 
 main #recruitment a::after {
@@ -471,8 +534,20 @@ main #recruitment a::after {
           transform: skew(35deg);
 }
 
+@media screen and (max-width: 1024px) {
+  main #recruitment a::after {
+    margin-left: 15px;
+    top: 23px;
+  }
+}
+
+main #recruitment a br {
+  display: none;
+}
+
 main #flow {
-  margin-bottom: 135px;
+  max-width: 1600px;
+  margin: 0 auto 135px;
 }
 
 main #flow .flow-box {
@@ -493,6 +568,23 @@ main #flow .flow-box .flow-block {
   position: relative;
 }
 
+@media screen and (max-width: 1366px) {
+  main #flow .flow-box .flow-block {
+    width: 240px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  main #flow .flow-box .flow-block {
+    width: 120px;
+    height: 100px;
+  }
+  main #flow .flow-box .flow-block img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 main #flow .flow-box .flow-block:last-of-type {
   margin-right: 30px;
 }
@@ -504,6 +596,13 @@ main #flow .flow-box .flow-block div {
   background-color: rgba(228, 236, 248, 0.65);
   width: 160px;
   height: 140px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  main #flow .flow-box .flow-block div {
+    width: 120px;
+    height: 100px;
+  }
 }
 
 main #flow .flow-box .flow-block div p {
@@ -522,12 +621,25 @@ main #flow .flow-box .flow-block div p {
   text-align: left;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  main #flow .flow-box .flow-block div p {
+    font-size: 17px;
+  }
+}
+
 main #flow .flow-box .flow-block div p span {
   font-size: 14px;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  main #flow .flow-box .flow-block div p span {
+    font-size: 10px;
+  }
+}
+
 main #flow .flow-box .flow-arrow {
-  width: 1%;
+  width: 0;
+  margin-top: 40px;
 }
 
 main #recruit-ranking {
@@ -581,8 +693,8 @@ main #recruit-ranking #ranking-box .contents-block .contents-img {
 main #recruit-ranking #ranking-box .contents-block .contents-img p {
   position: absolute;
   top: 0%;
-  right: 76px;
-  border: none 1px #000000;
+  left: 0;
+  border: none;
   padding: 2px 8px;
   color: #FFFFFF;
 }
@@ -757,6 +869,9 @@ main #search #recruit-search #search-box label {
   main #search #recruit-search #search-box label {
     width: 20%;
   }
+  main #search #recruit-search #search-box label:last-of-type {
+    display: none;
+  }
 }
 
 main #search #search-button {
@@ -857,12 +972,6 @@ main #consultation #consultation-ba a {
   white-space: nowrap;
 }
 
-@media screen and (max-width: 1024px) {
-  main #consultation #consultation-ba a {
-    margin-left: 15px;
-  }
-}
-
 main #consultation #consultation-ba a::after {
   position: absolute;
   content: "";
@@ -880,6 +989,7 @@ footer {
   position: relative;
   width: 100%;
   height: 100%;
+  font-size: 14px;
   color: #fff;
   margin-top: 180px;
 }

@@ -491,12 +491,21 @@ main #knowhow #knowhow-box .knowhow-block .knowhow-img img {
   width: 160px;
 }
 
+@media screen and (max-width: 320px) {
+  main #knowhow #knowhow-box .knowhow-block .knowhow-img {
+    width: 100px;
+  }
+  main #knowhow #knowhow-box .knowhow-block .knowhow-img img {
+    width: 100px;
+  }
+}
+
 main #knowhow #knowhow-box .knowhow-block p a {
   font-size: 16px;
   padding-bottom: 10px;
 }
 
-@media screen and (min-width: 401px) and (max-width: 414px) {
+@media screen and (max-width: 414px) {
   main #knowhow #knowhow-box .knowhow-block p a {
     font-size: 14px;
   }
@@ -506,7 +515,7 @@ main #knowhow #knowhow-box .knowhow-block p span {
   font-size: 11px;
 }
 
-@media screen and (min-width: 401px) and (max-width: 414px) {
+@media screen and (max-width: 414px) {
   main #knowhow #knowhow-box .knowhow-block p span {
     font-size: 10px;
   }
@@ -649,12 +658,19 @@ main #new .new-category .new-contents .block-right {
 }
 
 main #consultation {
-  margin: 100px 40px;
+  width: 90%;
+  margin: 100px auto;
 }
 
 @media screen and (max-width: 414px) {
   main #consultation {
-    margin: 75px 30px;
+    margin: 75px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #consultation {
+    margin: 50px auto;
   }
 }
 
@@ -721,17 +737,36 @@ main #consultation #consultation-ba p {
 }
 
 main #consultation #consultation-ba a {
+  width: 100%;
   margin: 0 auto;
-  width: 670px;
   font-size: 24px;
-  padding: 20px 80px;
+  padding: 23px 100px;
 }
 
 @media screen and (max-width: 600px) {
   main #consultation #consultation-ba a {
-    width: 272px;
+    font-size: 18px;
+    padding: 25px 48px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #consultation #consultation-ba a {
+    height: 60px;
     font-size: 14px;
-    padding: 20px 40px;
+    padding: 20px 28px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #consultation #consultation-ba a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #consultation #consultation-ba a {
+    padding: 12px 70px;
   }
   main #consultation #consultation-ba a br {
     display: block;
@@ -739,16 +774,16 @@ main #consultation #consultation-ba a {
 }
 
 @media screen and (max-width: 414px) {
-  main #consultation #consultation-ba a {
-    width: 240px;
-    height: 60px;
-    padding: 10px 40px;
+  main #consultation #consultation-ba a::after {
+    top: 18px;
+    margin-left: 15px;
   }
 }
 
-main #consultation #consultation-ba a::after {
-  top: 20px;
-  margin-left: 12px;
+@media screen and (max-width: 320px) {
+  main #consultation #consultation-ba a::after {
+    top: 20px;
+  }
 }
 
 footer {

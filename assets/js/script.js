@@ -14,8 +14,8 @@ $(function() {
             if (swiper) {
                 return;
             } else {
-                swiper = new Swiper('.swiper-container', {
-                    slidesPerView: 2.0,
+                swiper = new Swiper('.slide1', {
+                    slidesPerView: 2,
                     centeredSlides: true,
                     initialSlide: 1,
                 });
@@ -26,6 +26,29 @@ $(function() {
                 swiper = undefined;
             } 
         } 
+    });
+});
+
+//応募フロー//
+$(function() {
+    var swiper; 
+    $(window).on('load resize', function(){
+        var w = $(window).width();
+        if (w <= 979) {
+            if (swiper) {
+                return;
+            } else {
+                swiper = new Swiper('.slide2', {
+                    slidesPerView: 3,
+                    setWrapperSize: true,
+                });
+            }
+        } else {
+            if (swiper) {
+                swiper.destroy();
+                swiper = undefined;
+            } 
+        }
     });
 });
 

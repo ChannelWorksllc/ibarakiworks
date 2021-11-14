@@ -636,10 +636,15 @@ main {
     }
 
     #consultation {
-        margin: 100px 40px;
+        width: 90%;
+        margin: 100px auto;
 
         @include max(max-5) {
-            margin: 75px 30px;
+            margin: 75px auto;
+        }
+
+        @include max(max-1) {
+            margin: 50px auto;
         }
 
         #consultation-ba {
@@ -696,30 +701,44 @@ main {
             }
 
             a {
+                width: 100%;
                 margin: 0 auto;
-                width: 670px;
                 font-size: 24px;
-                padding: 20px 80px;
+                padding: 23px 100px;
 
                 @include max(max-8) {
-                    width: 272px;
+                    font-size: 18px;
+                    padding: 25px 48px;
+                }
+        
+                @include max(max-5) {
+                    height: 60px;
                     font-size: 14px;
-                    padding: 20px 40px;
-
+                    padding: 20px 28px;
+                }
+    
+                @include max(max-3) {
+                    font-size: 12px;
+                }
+    
+                @include max(max-1) {
+                    padding: 12px 70px;
+    
                     br {
                         display: block;
                     }
                 }
 
-                @include max(max-5) {
-                    width: 240px;
-                    height: 60px;
-                    padding: 10px 40px;
-                }
-        
                 &::after {
-                    top: 20px;
-                    margin-left: 12px;
+
+                    @include max(max-5) {
+                        top: 18px;
+                        margin-left: 15px;
+                    }
+
+                    @include max(max-1) {
+                        top: 20px;
+                    }
                 }
             }
         }
@@ -762,12 +781,10 @@ main {
         
                     p {
                         padding: 15px 20.8px;
-                        right: 70px;
         
                         @include max(max-8) {
-                        right: unset;
-                        padding: 2px 8px;
-                        font-size: 16px;
+                            padding: 2px 8px;
+                            font-size: 16px;
                         }
                     }
                 }

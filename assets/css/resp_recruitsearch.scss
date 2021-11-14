@@ -486,6 +486,16 @@ main {
 
     #search {
 
+        #recruit-search-tittle {
+            @include max(max-5) {
+                font-size: 20px;
+            }
+
+            @include max(max-3) {
+                font-size: 18px;
+            }    
+        }
+
         #recruit-search {
             width: 100%;
 
@@ -493,24 +503,74 @@ main {
                 flex-direction: column;
                 height: 245px;
 
+                @include max(max-5) {
+                    height: 180px;
+                    margin-top: 20px;
+                }
+
                 .select-wrap,input {
                     width: 90%;
                     margin: 0 auto;
+                }
+
+                select,input {
+                    @include max(max-5) {
+                        height: 50px;
+                        font-size: 13px;
+                        padding-left: 15px;
+                    }
+                }
+
+            }
+
+            #search-box-tittle {
+                @include max(max-5) {
+                    font-size: 16px;
+                    margin-top: 25px;
                 }
             }
 
             #search-box {
                 padding: 30px;
 
+                @include max(max-5) {
+                    padding: 20px;
+                    margin: 20px 0;
+                }
+
                 label {
                     width: 50%;
                     text-align: center;
+
+                    @include max(max-5) {
+                        font-size: 15px;
+                    }
                 }
             }
 
             #search-submit {
                 input[type="submit"] {
                     width: 90%;
+
+                    @include max(max-5) {
+                        font-size: 13px;
+                        height: 46.51px;;
+                    }
+                }
+            }
+        }
+
+        #search-button {
+            @include max(max-5) {
+                height: 40px;
+                margin-top: 20px;
+
+                span {
+                    width: 45px;
+
+                    &:nth-child(2) {
+                        width: 23px;
+                    }
                 }
             }
         }
@@ -641,10 +701,15 @@ main {
     }
 
     #consultation {
-        margin: 100px 40px;
+        width: 90%;
+        margin: 100px auto;
 
         @include max(max-5) {
-            margin: 75px 30px;
+            margin: 75px auto;
+        }
+
+        @include max(max-1) {
+            margin: 50px auto;
         }
 
         #consultation-ba {
@@ -701,30 +766,44 @@ main {
             }
 
             a {
+                width: 100%;
                 margin: 0 auto;
-                width: 670px;
                 font-size: 24px;
-                padding: 20px 80px;
+                padding: 23px 100px;
 
                 @include max(max-8) {
-                    width: 272px;
+                    font-size: 18px;
+                    padding: 25px 48px;
+                }
+        
+                @include max(max-5) {
+                    height: 60px;
                     font-size: 14px;
-                    padding: 20px 40px;
-
+                    padding: 20px 28px;
+                }
+    
+                @include max(max-3) {
+                    font-size: 12px;
+                }
+    
+                @include max(max-1) {
+                    padding: 12px 70px;
+    
                     br {
                         display: block;
                     }
                 }
 
-                @include max(max-5) {
-                    width: 240px;
-                    height: 60px;
-                    padding: 10px 40px;
-                }
-        
                 &::after {
-                    top: 20px;
-                    margin-left: 12px;
+
+                    @include max(max-5) {
+                        top: 18px;
+                        margin-left: 15px;
+                    }
+
+                    @include max(max-1) {
+                        top: 20px;
+                    }
                 }
             }
         }
@@ -767,12 +846,10 @@ main {
         
                     p {
                         padding: 15px 20.8px;
-                        right: 70px;
         
                         @include max(max-8) {
-                        right: unset;
-                        padding: 2px 8px;
-                        font-size: 16px;
+                            padding: 2px 8px;
+                            font-size: 16px;
                         }
                     }
                 }

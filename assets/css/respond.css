@@ -783,12 +783,19 @@ main #recruit #search-box #search-contents form input[type="text"] {
 }
 
 main #recruit #consultation {
-  margin: 100px 40px;
+  width: 90%;
+  margin: 100px auto;
 }
 
 @media screen and (max-width: 414px) {
   main #recruit #consultation {
-    margin: 75px 30px;
+    margin: 75px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #recruit #consultation {
+    margin: 50px auto;
   }
 }
 
@@ -855,17 +862,36 @@ main #recruit #consultation #consultation-ba p {
 }
 
 main #recruit #consultation #consultation-ba a {
+  width: 100%;
   margin: 0 auto;
-  width: 670px;
   font-size: 24px;
-  padding: 20px 80px;
+  padding: 23px 100px;
 }
 
 @media screen and (max-width: 600px) {
   main #recruit #consultation #consultation-ba a {
-    width: 272px;
+    font-size: 18px;
+    padding: 25px 48px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #recruit #consultation #consultation-ba a {
+    height: 60px;
     font-size: 14px;
-    padding: 20px 40px;
+    padding: 20px 28px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #recruit #consultation #consultation-ba a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #recruit #consultation #consultation-ba a {
+    padding: 12px 70px;
   }
   main #recruit #consultation #consultation-ba a br {
     display: block;
@@ -873,16 +899,16 @@ main #recruit #consultation #consultation-ba a {
 }
 
 @media screen and (max-width: 414px) {
-  main #recruit #consultation #consultation-ba a {
-    width: 240px;
-    height: 60px;
-    padding: 10px 40px;
+  main #recruit #consultation #consultation-ba a::after {
+    top: 18px;
+    margin-left: 15px;
   }
 }
 
-main #recruit #consultation #consultation-ba a::after {
-  top: 20px;
-  margin-left: 12px;
+@media screen and (max-width: 320px) {
+  main #recruit #consultation #consultation-ba a::after {
+    top: 20px;
+  }
 }
 
 @media screen and (max-width: 600px) {
