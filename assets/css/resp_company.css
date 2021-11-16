@@ -433,22 +433,8 @@ header #firstview #mainvisual {
 }
 
 header #firstview #mainvisual #header-img img {
-  -o-object-position: 50% 68%;
-     object-position: 50% 68%;
-}
-
-@media screen and (max-width: 768px) {
-  header #firstview #mainvisual #header-img img {
-    -o-object-position: 50% 94%;
-       object-position: 50% 94%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  header #firstview #mainvisual #header-img img {
-    -o-object-position: 50% 100%;
-       object-position: 50% 100%;
-  }
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
 }
 
 @media screen and (max-width: 414px) {
@@ -463,198 +449,208 @@ header #firstview #mainvisual #header-img img {
 }
 
 @media screen and (max-width: 414px) {
-  main #knowhow {
-    margin-top: 20px;
+  main #policy {
+    margin-top: 45px;
   }
 }
 
-main #knowhow #knowhow-box {
-  width: 90%;
-}
-
-main #knowhow #knowhow-box .knowhow-block {
-  width: 50%;
-  padding-bottom: 25px;
+main #policy #policy-box {
+  width: 95%;
 }
 
 @media screen and (max-width: 600px) {
-  main #knowhow #knowhow-box .knowhow-block {
-    width: 100%;
+  main #policy #policy-box {
+    padding: 75px 0;
   }
 }
 
-main #knowhow #knowhow-box .knowhow-block .knowhow-img {
-  width: 160px;
+@media screen and (max-width: 414px) {
+  main #policy #policy-box {
+    padding: 55px 0;
+  }
 }
 
-main #knowhow #knowhow-box .knowhow-block .knowhow-img img {
-  width: 160px;
+@media screen and (max-width: 375px) {
+  main #policy #policy-box {
+    padding: 40px 0;
+  }
+}
+
+main #policy #policy-box h3 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  main #policy #policy-box h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #policy #policy-box h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #policy #policy-box h3 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 320px) {
-  main #knowhow #knowhow-box .knowhow-block .knowhow-img {
-    width: 100px;
-  }
-  main #knowhow #knowhow-box .knowhow-block .knowhow-img img {
-    width: 100px;
+  main #policy #policy-box h3 {
+    font-size: 16px;
   }
 }
 
-main #knowhow #knowhow-box .knowhow-block p a {
+main #policy #policy-box p {
   font-size: 16px;
-  padding: 5px 0;
 }
 
 @media screen and (max-width: 414px) {
-  main #knowhow #knowhow-box .knowhow-block p a {
-    font-size: 14px;
+  main #policy #policy-box p {
+    font-size: 12px;
+    margin-bottom: 75px;
   }
 }
 
-main #knowhow #knowhow-box .knowhow-block p span {
-  font-size: 11px;
+@media screen and (max-width: 375px) {
+  main #policy #policy-box p {
+    margin-bottom: 50px;
+  }
 }
 
-@media screen and (max-width: 414px) {
-  main #knowhow #knowhow-box .knowhow-block p span {
+@media screen and (max-width: 320px) {
+  main #policy #policy-box p {
     font-size: 10px;
   }
 }
 
-main #knowhow #knowhow-box .spanflex {
-  padding-top: 30px;
-  padding-bottom: 25px;
-}
-
-main #knowhow #knowhow-box .spanflex li {
-  padding: 0 20px;
-  font-size: 20px;
-}
-
-@media screen and (max-width: 320px) {
-  main #knowhow #knowhow-box .spanflex li {
-    padding: 0 15px;
-    font-size: 15px;
-  }
-}
-
-main h3 {
-  font-size: 24px;
-}
-
-@media screen and (max-width: 414px) {
-  main h3 {
-    width: 90%;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main h4 {
-    font-size: 23px;
-    padding-top: 68px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main h4 {
-    padding-top: 58px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main .category-link {
-    padding: 70px 45px 0;
-  }
+main #catch {
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
-  main .category-link ul {
-    padding: 25px 0 0 0;
+  main #catch {
+    height: 920px;
   }
 }
 
-main .category-link ul li {
+@media screen and (max-width: 414px) {
+  main #catch {
+    height: 730px;
+    margin: 70px auto;
+  }
+}
+
+main #catch #recruit-catch #catch-ba1::before, main #catch #recruit-catch #catch-ba1::after, main #catch #recruit-catch #catch-ba2::before, main #catch #recruit-catch #catch-ba2::after, main #catch #community-catch #catch-ba1::before, main #catch #community-catch #catch-ba1::after, main #catch #community-catch #catch-ba2::before, main #catch #community-catch #catch-ba2::after {
   width: 30%;
 }
 
+main #catch #recruit-catch #catch-ba1::before, main #catch #community-catch #catch-ba1::before {
+  right: 2%;
+}
+
+main #catch #recruit-catch #catch-ba1::after, main #catch #community-catch #catch-ba1::after {
+  display: none;
+}
+
+main #catch #recruit-catch #catch-ba2::before, main #catch #community-catch #catch-ba2::before {
+  display: none;
+}
+
+main #catch #recruit-catch #catch-ba2::after, main #catch #community-catch #catch-ba2::after {
+  left: 2%;
+}
+
+@media screen and (max-width: 414px) {
+  main #catch #recruit-catch #catch-ba2::after, main #catch #community-catch #catch-ba2::after {
+    -webkit-transform: translateY(210px);
+            transform: translateY(210px);
+  }
+}
+
+main #catch #recruit-catch #catch-img1, main #catch #recruit-catch #catch-img2, main #catch #community-catch #catch-img1, main #catch #community-catch #catch-img2 {
+  width: 65%;
+}
+
 @media screen and (max-width: 600px) {
-  main .category-link ul li {
-    font-size: 14px;
-    padding-bottom: 5px;
+  main #catch #recruit-catch #catch-img1, main #catch #recruit-catch #catch-img2, main #catch #community-catch #catch-img1, main #catch #community-catch #catch-img2 {
+    height: 320px;
   }
 }
 
 @media screen and (max-width: 414px) {
-  main .category-link ul li {
-    font-size: 12px;
-    width: 50%;
+  main #catch #recruit-catch #catch-img1, main #catch #recruit-catch #catch-img2, main #catch #community-catch #catch-img1, main #catch #community-catch #catch-img2 {
+    height: 250px;
+  }
+}
+
+main #catch #recruit-catch #recruit-overview, main #catch #recruit-catch #community-overview, main #catch #community-catch #recruit-overview, main #catch #community-catch #community-overview {
+  width: 83%;
+}
+
+@media screen and (max-width: 414px) {
+  main #catch #recruit-catch #recruit-overview, main #catch #recruit-catch #community-overview, main #catch #community-catch #recruit-overview, main #catch #community-catch #community-overview {
+    height: 225px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  main .category-link ul li {
-    font-size: 11px;
+  main #catch #recruit-catch #recruit-overview, main #catch #recruit-catch #community-overview, main #catch #community-catch #recruit-overview, main #catch #community-catch #community-overview {
+    width: 90%;
   }
 }
 
-main #new {
-  display: block;
-  margin: 50px 0 80px;
-}
-
-main #new .new-category {
-  width: 95%;
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
-main #new .new-category .new-contents .contents-block {
-  width: 50%;
-  margin-right: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (max-width: 414px) {
-  main #new .new-category .new-contents .contents-block {
-    width: 100%;
-    margin-bottom: 10px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-main #new .new-category .new-contents .contents-block p {
-  font-size: 16px;
+main #catch #recruit-catch #recruit-overview p, main #catch #recruit-catch #community-overview p, main #catch #community-catch #recruit-overview p, main #catch #community-catch #community-overview p {
+  font-size: 18px;
 }
 
 @media screen and (max-width: 600px) {
-  main #new .new-category .new-contents .contents-block p {
+  main #catch #recruit-catch #recruit-overview p, main #catch #recruit-catch #community-overview p, main #catch #community-catch #recruit-overview p, main #catch #community-catch #community-overview p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #catch #recruit-catch #recruit-overview p, main #catch #recruit-catch #community-overview p, main #catch #community-catch #recruit-overview p, main #catch #community-catch #community-overview p {
+    width: 85%;
     font-size: 14px;
   }
 }
 
-main #new .new-category .new-contents .contents-block span {
+@media screen and (max-width: 320px) {
+  main #catch #recruit-catch #recruit-overview p, main #catch #recruit-catch #community-overview p, main #catch #community-catch #recruit-overview p, main #catch #community-catch #community-overview p {
+    width: 90%;
+    font-size: 12px;
+  }
+}
+
+main #catch #recruit-catch #recruit-overview p span, main #catch #recruit-catch #community-overview p span, main #catch #community-catch #recruit-overview p span, main #catch #community-catch #community-overview p span {
   font-size: 14px;
 }
 
 @media screen and (max-width: 600px) {
-  main #new .new-category .new-contents .contents-block span {
-    font-size: 11px;
+  main #catch #recruit-catch #recruit-overview p span, main #catch #recruit-catch #community-overview p span, main #catch #community-catch #recruit-overview p span, main #catch #community-catch #community-overview p span {
+    font-size: 12px;
   }
-}
-
-main #new .new-category .new-contents .block-right {
-  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 414px) {
-  main #new .new-category .new-contents .block-right {
-    margin-bottom: 0;
+  main #catch #recruit-catch #recruit-overview p span, main #catch #recruit-catch #community-overview p span, main #catch #community-catch #recruit-overview p span, main #catch #community-catch #community-overview p span {
+    font-size: 10px;
   }
+}
+
+@media screen and (max-width: 375px) {
+  main #catch #recruit-catch #recruit-overview p span, main #catch #recruit-catch #community-overview p span, main #catch #community-catch #recruit-overview p span, main #catch #community-catch #community-overview p span {
+    padding-top: 10px;
+  }
+}
+
+main #catch #recruit-catch {
+  margin-bottom: 215px;
 }
 
 main #consultation {
@@ -783,6 +779,79 @@ main #consultation #consultation-ba a {
 @media screen and (max-width: 320px) {
   main #consultation #consultation-ba a::after {
     top: 20px;
+  }
+}
+
+main #representative {
+  width: 90%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #representative #representative-img {
+  width: 100%;
+  text-align: center;
+}
+
+main #representative #representative-img img {
+  width: 500px;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  main #representative #representative-img img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #representative #representative-img img {
+    width: 75%;
+  }
+}
+
+main #representative p {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 93px;
+}
+
+@media screen and (max-width: 600px) {
+  main #representative p {
+    margin-top: 50px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #representative p {
+    font-size: 14px;
+  }
+}
+
+main #representative p span {
+  width: 100%;
+  font-size: 14px;
+  padding-left: 0;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  main #representative p span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #representative p span {
+    font-size: 10px;
   }
 }
 
@@ -1090,4 +1159,4 @@ footer #footer-container #copyright {
     border-right: 5px solid #fff;
   }
 }
-/*# sourceMappingURL=resp_knowhow.css.map */
+/*# sourceMappingURL=resp_company.css.map */
