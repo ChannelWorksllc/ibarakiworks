@@ -649,6 +649,7 @@ main {
 
     .pickup {
         margin: 560px 0 50px;
+        padding: 0;
 
         @include max(max-8) {
             margin-top: 430px;
@@ -692,6 +693,10 @@ main {
                         font-size: 14px;
                         padding-top: 5px;
                     }
+
+                    @include max(max-3) {
+                        font-size: 12px;
+                    }
                 }
         
                 p {
@@ -702,6 +707,10 @@ main {
         
                     @include max(max-5) {
                         padding-top: 5px;
+                    }
+
+                    @include max(max-3) {
+                        font-size: 10px;
                     }
                 }
             }

@@ -119,10 +119,13 @@ input[type="submit"]{
 
 $gray: #f7f7f7;
 $navy: #003973;
+$aqua: #e4ecf8;
 $black: #4a4a4a;
 $border: #c8c8c8;
 
 body {
+    font-size: 14px;
+
     @include max(max-5) {
         font-size: 10px;
     }
@@ -485,100 +488,429 @@ header {
 main {
 
     h3 {
-        font-size: 24px;
-        
+        font-size: 20px;
+
         @include max(max-5) {
             width: 100%;
-            font-size: 15px;
+            margin: 0 auto;
+        }      
+
+        @include max(max-3) {
+            font-size: 18px;
         }
     }
-    
+
     h4 {
-        @include max(max-5) {
-            font-size: 23px;
-            padding-top: 68px;
+        font-size: 24px;
+
+        @include max(max-8) {
+            font-size: 22px;
+        }
+
+        @include max(max-3) {
+            font-size: 20px;
         }
 
         @include max(max-1) {
-            padding-top: 58px;
+            padding-top: 30px;
+        }
+    }
+
+    .swiper-container {
+        overflow: hidden;
+    }
+
+    #occupation-detail {
+        width: 100%;
+
+        #occupation-tittle {
+            width: 90%;
+            margin: 60px auto;
+            flex-wrap: wrap;
+
+            @include max(max-1) {
+                padding-bottom: 0;
+                margin-top: 30px;
+            }
+
+            h3 {
+                width: 100%;
+            }
+
+            ul {
+                padding: 20px 0;
+
+                @include max(max-5) {
+                    padding: 10px 0;
+                }
+
+                li {
+                    padding-left: 20px;
+
+                    @include max(max-5) {
+                        padding-left: 15px;
+                        font-size: 12px;
+                    }
+
+                    @include max(max-1) {
+                        padding-left: 10px;
+                        font-size: 10px;
+                    }
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+
+        #occupation-img {
+            position: absolute;
+            width: 70%;
+            height: auto;
+            top: 180px;
+
+            @include max(max-8) {
+                top: 210px;
+            }
+
+            @include max(max-5) {
+                top: 175px;
+            }
+
+            @include max(max-1) {
+                top: 140px;
+            }
+        }
+
+        #recruit-tittle {
+            width: 90%;
+            font-size: 24px;
+            margin-top: 20px;
+            left: 5%;
+
+            @include max(max-8) {
+                font-size: 22px;
+            }
+
+            @include max(max-5) {
+                margin-top: 0;
+                font-size: 18px;
+            }
+
+            @include max(max-1) {
+                top: 75px;
+                font-size: 16px;
+            }
+        }
+
+        #recruit-overview {
+            width: 85%;
+            top: 380px;
+
+            @include max(max-8) {
+                top: 360px;
+                height: 205px;
+            }
+
+            @include max(max-5) {
+                top: 290px;
+                width: 90%;
+                height: 233px;
+            }
+
+            @include max(max-1) {
+                top: 230px;
+                width: 95%;
+            }
+
+            p {
+                @include max(max-8) {
+                    font-size: 10px;
+                    width: 90%;
+                }    
+
+                @include max(max-5) {
+                    line-height: normal;
+                }
+
+                @include max(max-1) {
+                    width: 95%;
+                }
+
+                span {
+                    @include max(max-1) {
+                        padding-top: 10px;
+                    }
+                }
+            }
         }
     }
 
     .pickup {
+        margin: 250px 0 50px;
+        padding: 0;
+
+        @include max(max-7) {
+            margin-top: 150px;
+        }
+
+        @include max(max-1) {
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            @include max(max-5) {
+                padding-top: 0;
+            }
+        }
+
+        .pickup-box {
+    
+            .pickup-img {
+                width: 320px;
+        
+                @include max(max-8) {
+                    width: 98%;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+    
+            .pickup-text {
+                width: 320px;
+        
+                @include max(max-8) {
+                    width: 98%;
+                }
+        
+                h5 {
+                    @include max(max-8) {
+                        font-size: 16px;
+                    }
+        
+                    @include max(max-5) {
+                        font-size: 14px;
+                        padding-top: 5px;
+                    }
+
+                    @include max(max-3) {
+                        font-size: 12px;
+                    }
+
+                }
+        
+                p {
+                    @include max(max-8) {
+                        padding-top: 10px;
+                        font-size: 12px;
+                    }
+        
+                    @include max(max-5) {
+                        padding-top: 5px;
+                    }
+
+                    @include max(max-3) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    #recruitment {
+        padding: 0 0 50px;
+
+        h3 {
+            width: 100%;
+            font-size: 24px;
+
+            @include max(max-8) {
+                font-size: 22px;
+            }
+
+            @include max(max-5) {
+                font-size: 20px;
+            }
+
+            @include max(max-3) {
+                font-size: 16px;
+            }    
+
+            @include max(max-1) {
+                padding-top: 30px;
+            }
+        }
+
+        #recruitment-text {
+
+            @include max(max-8) {
+                font-size: 14px;
+                padding: 30px 0 15px;
+            }
+
+            @include max(max-5) {
+                font-size: 10px;
+                padding: 20px 0 0;
+            }
+        }
+
+        #recruitment-company {
+            ul {
+                width: 90%;
+                margin: 0 auto;
+
+                @include max(max-8) {
+                    width: 95%;
+                }
+
+                @include max(max-5) {
+                    width: 100%;
+                }
+
+                li,.long {
+                    padding-top: 20px;
+                    font-size: 20px;
+                    text-align: left;
+                    width: 50%;
+
+                    @include max(max-8) {
+                        font-size: 16px;
+                    }
+
+                    @include max(max-5) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        a {
+            width: 90%;
+            padding: 15px 100px;
+
+            @include max(max-8) {
+                font-size: 14px;
+                padding: 25px 90px;
+            }
+    
+            @include max(max-5) {
+                height: 60px;
+                margin-top: 40px;
+                font-size: 12px;
+                padding: 20px 60px;
+
+                &::after {
+                    top: 15px;
+                }
+            }
+
+            @include max(max-3) {
+                padding: 20px 30px;
+            }
+
+            @include max(max-1) {
+                padding: 12px 60px;
+                &::after {
+                    top: 20px;
+                }
+
+                br {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    #recruit-ranking {
+        padding: 50px 40px 0;
+
         @include max(max-8) {
             padding: 0;
         }
 
-        .pickup-box {
-            justify-content: space-around;
-
-            @include max(max-8) {
-                justify-content: center;
+        h3 {
+            @include max(max-5) {
+                font-size: 15px;
             }
+        }
 
-            .pickup-block {
-                @include max(max-1) {
-                    width: 300px;
+        #ranking-box {
+            display: block;
+    
+            @include max(max-8) {
+                padding: 30px 0 0;
+            }
+    
+            .contents-block {
+                width: 100%;
+                justify-content: space-around;
+                align-items: center;
+                margin-right: 0;
+                padding-bottom: 30px;
                 
+                .contents-img {
+                    width: 120px;
+                    height: 120px;
+                    padding: 0;
+        
+                    @include max(max-8) {
+                        height: auto;
+                    }
+        
                     img {
                         width: 100%;
+                        height: 100%;
+                    }
+        
+                    p {
+                        padding: 15px 20.8px;
+        
+                        @include max(max-8) {
+                            padding: 2px 8px;
+                            font-size: 16px;
+                        }
                     }
                 }
-            }
-
-            .spanflex {
-                padding-bottom: 25px;
-
-                li {
-                    padding: 0 20px;
+    
+                p {
                     font-size: 20px;
-
-                    @include max(max-1) {
-                        padding: 0 15px;
+        
+                    @include max(max-8) {
+                        font-size: 18px;
+                        padding-left: 10px;
+                    }
+        
+                    @include max(max-5) {
                         font-size: 15px;
                     }
-                }
-            }
-
-            .pickup-text {
-
-                h5 {
-                    @include max(max-5) {
+        
+                    span {
                         font-size: 18px;
-                    }
-
-                    @include max(max-1) {
-                        font-size: 14px;
-                    }
-
-                }
-
-                p,.tagflex {
-                    padding-top: 20px;
-
-                    @include max(max-8) {
-                        padding-top: 15px;
-                        font-size: 14px;
-                    }
-
-                    @include max(max-1) {
-                        padding-top: 10px;
-                        font-size: 12px;
-                    }
-
-                    li {
+        
                         @include max(max-8) {
-                        font-size: 10px;
+                        font-size: 16px;
+                        }  
+        
+                        @include max(max-5) {
+                        font-size: 13px;
                         }
-                    }          
+                    }
                 }
             }
         }
     }
 
     .category-link {
-        @include max(max-5) {
         padding: 70px 45px 0;
+
+        h3 {
+            @include max(max-5) {
+                font-size: 15px;
+            }
         }
 
         ul {
@@ -587,7 +919,7 @@ main {
             }
 
             li {
-                width: 30%;
+                width: 50%;
 
                 @include max(max-8) {
                     font-size: 14px;
@@ -626,12 +958,6 @@ main {
                     font-size: 11px;
                 }
             }
-        }
-    }
-
-    .category-link2 {
-        @include max(max-5) {
-            padding: 50px 45px 20px;
         }
     }
 
@@ -743,83 +1069,14 @@ main {
             }
         }
     }
-
-    #recruit-ranking {
-        padding-top: 50px;
-
-        @include max(max-8) {
-            padding: 50px 0 0;
-        }
-
-        #ranking-box {
-            display: block;
-    
-            @include max(max-8) {
-                padding: 30px 0 0;
-            }
-    
-            .contents-block {
-                width: 100%;
-                justify-content: space-around;
-                align-items: center;
-                margin-right: 0;
-                padding-bottom: 30px;
-                
-                .contents-img {
-                    width: 120px;
-                    height: 120px;
-                    padding: 0;
-        
-                    @include max(max-8) {
-                        height: auto;
-                    }
-        
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-        
-                    p {
-                        padding: 15px 20.8px;
-        
-                        @include max(max-8) {
-                            padding: 2px 8px;
-                            font-size: 16px;
-                        }
-                    }
-                }
-    
-                p {
-                    font-size: 20px;
-        
-                    @include max(max-8) {
-                        font-size: 18px;
-                        padding-left: 10px;
-                    }
-        
-                    @include max(max-5) {
-                        font-size: 15px;
-                    }
-        
-                    span {
-                        font-size: 18px;
-        
-                        @include max(max-8) {
-                        font-size: 16px;
-                        }  
-        
-                        @include max(max-5) {
-                        font-size: 13px;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 footer {
     height: 100%;
+
+    @include max(max-1) {
+        margin-top: 140px;
+    }
 
     &::before {
 

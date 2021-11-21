@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />    
     <link rel="icon" type="image/png" href="./fav.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./icon.png" />
-    <title>運営会社｜イバラキ・ハケン</title>
-    <link rel="stylesheet" href="./assets/css/company.css" />
-    <link rel="stylesheet" media="only screen and (max-width: 979px)" href="./assets/css/resp_company.css" />
+    <title>茨城のコミュニティ｜イバラキ・ハケン</title>
+    <link rel="stylesheet" href="./assets/css/communitydetail.css" />
+    <link rel="stylesheet" media="only screen and (max-width: 979px)" href="./assets/css/resp_communitydetail.css" />
     <link rel="stylesheet" media="only screen and (max-width: 979px)" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +52,7 @@
             <nav class="drawer-nav" role="navigation">
                 <ul class="drawer-menu">
                     <li class="drawer-dropdown">
-                        <a class="drawer-menu-item" href="" title="派遣求人検索">
+                        <a class="drawer-menu-item" href="./recruitsearch.html" title="派遣求人検索">
                         派遣求人検索
                         </a>
                         <span class="drawer-caret" data-toggle="dropdown" role="button" aria-expanded="false"></span>
@@ -80,15 +81,15 @@
                         <a class="nav-tittle drawer-menu-item" href="" title="求人ノウハウ">求人ノウハウ</a>
                     </li>
                     <li class="drawer-dropdown">
-                        <a class="drawer-menu-item" href="./company.html" title="運営会社">
+                        <a class="drawer-menu-item" href="" title="運営会社">
                         運営会社
                         </a>
                         <span class="drawer-caret" data-toggle="dropdown" role="button" aria-expanded="false"></span>
                         <ul class="drawer-dropdown-menu">
-                            <li><a class="drawer-dropdown-menu-item" href="#policy" title="運営ポリシー">≫ 運営ポリシー</a></li>
-                            <li><a class="drawer-dropdown-menu-item" href="#catch" title="お仕事をお探しの方へ">≫ お仕事をお探しの方へ</a></li>
-                            <li><a class="drawer-dropdown-menu-item" href="#community-overview" title="コミュニティをお探しの方へ">≫ コミュニティをお探しの方へ</a></li>
-                            <li><a class="drawer-dropdown-menu-item" href="#representative" title="代表メッセージ">≫ 代表メッセージ</a></li>
+                            <li><a class="drawer-dropdown-menu-item" href="" title="運営ポリシー">≫ 運営ポリシー</a></li>
+                            <li><a class="drawer-dropdown-menu-item" href="" title="お仕事をお探しの方へ">≫ お仕事をお探しの方へ</a></li>
+                            <li><a class="drawer-dropdown-menu-item" href="" title="コミュニティをお探しの方へ">≫ コミュニティをお探しの方へ</a></li>
+                            <li><a class="drawer-dropdown-menu-item" href="" title="代表メッセージ">≫ 代表メッセージ</a></li>
                         </ul>
                     </li>
                     <li class="drawer-dropdown">
@@ -109,53 +110,106 @@
         </div>
         <div id="mainvisual">
             <div id="header-img">
-                <img src="./assets/images/pixta_76388380_XL.jpg" alt="pixta_76388380_XL">
+                <img src="./assets/images/pixta_37438003_XL.jpg" alt="pixta_37438003_XL.jpg">
             </div>
-            <h2><span>運営会社</span></h2>
+            <h2><span>茨城のコミュニティ</span></h2>
         </div>
     </div>
 </header>
 
 <main>
 
-    <article id="policy">
-        <div id="policy-box">
-            <h3>運営ポリシーのキャッチ。運営ポリシーのキャッチ。運営ポリシーのキャッチ。</h3>
-            <p>運営ポリシーに関するテキスト。運営ポリシーに関するテキスト。運営ポリシーに関するテキスト。運営ポリシーに関するテキスト。
-                運営ポリシーに関するテキスト。運営ポリシーに関するテキスト。運営ポリシーに関するテキスト。運営ポリシーに関するテキスト。
-                運営ポリシーに関するテキスト。運営ポリシーに関するテキスト。運営ポリシーに関するテキスト。運営ポリシーに関するテキスト。
-                運営ポリシーに関するテキスト。運営ポリシーに関するテキスト。</p>
-            <div id="policy-img">
-                <img src="./assets/images/D15A5569.jpg" alt="D15A5569">
+    <article id="occupation-detail">
+        <div id="occupation-tittle">
+            <h3>コミュニティ名称：XXXXXXXX</h3>
+            <p class="pipe resp_pc">｜</p>
+            <ul>
+                <li>特徴タグ</li>
+                <li>特徴タグ</li>
+                <li>特徴タグ</li>
+                <li>特徴タグ</li>
+                <li>特徴タグ</li>
+            </ul>
+        </div>
+        <div id="occupation-img">
+            <img src="./assets/images/55916382.jpg" alt="55916382">
+        </div>
+        <p id="recruit-tittle">コミュニティキャッチ。コミュニティキャッチ。コミュニティ</p>
+        <div id="recruit-overview">
+            <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。
+                コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。
+            <span>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。
+                コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</span></p>
+        </div>
+    </article>
+
+    <article class="pickup">
+        <h4>XXXXの特徴</h4>
+        <div class="swiper-container slide1">
+            <div class="pickup-box swiper-wrapper">
+                <div class="pickup-block swiper-slide">
+                    <div class="pickup-img">
+                        <img src="./assets/images/28321392.jpg" alt="28321392">
+                    </div>
+                    <div class="pickup-text">
+                        <h5>特徴タイトル。特徴タイトル。特徴タイトル。特徴タイトル。</h5>
+                        <p>特徴テキスト。特徴テキスト。特徴テキスト。特徴テキスト。特徴テキスト。特徴テキスト。特徴。</p>
+                    </div>
+                </div>
+                <div class="pickup-block swiper-slide">
+                    <div class="pickup-img">
+                        <img src="./assets/images/28321392.jpg" alt="28321392">
+                    </div>
+                    <div class="pickup-text">
+                        <h5>特徴タイトル。特徴タイトル。特徴タイトル。特徴タイトル。</h5>
+                        <p>特徴テキスト。特徴テキスト。特徴テキスト。特徴テキスト。特徴テキスト。特徴テキスト。特徴。</p>
+                    </div>
+                </div>
+                <div class="pickup-block swiper-slide">
+                    <div class="pickup-img">
+                        <img src="./assets/images/28321392.jpg" alt="28321392">
+                    </div>
+                    <div class="pickup-text">
+                        <h5>特徴タイトル。特徴タイトル。特徴タイトル。特徴タイトル。</h5>
+                        <p>特徴テキスト。特徴テキスト。特徴テキスト。特徴テキスト。特徴テキスト。特徴テキスト。特徴。</p>
+                    </div>
+                </div>
             </div>
         </div>
     </article>
 
-    <section id="catch">
-        <article id="recruit-catch">
-            <div id="catch-ba1">
-                <div id="catch-img1">
-                    <img src="./assets/images/D15A5431.jpg" alt="D15A5431">
-                </div>
-            </div>
-            <div id="recruit-overview">
-                <p>お仕事探しの方へのキャッチ。お仕事探しの方へのキャッチ。お仕事探しの方へのキャッチ。
-                <span>お仕事をお探しの方に関するテキスト。お仕事をお探しの方に関するテキスト。お仕事をお探しの方に関するテキスト。お仕事をお探しの方に関するテキスト。お仕事をお探しの方に関するテキスト。お仕事をお探しの方に関するテキスト。お仕事をお探しの方に関するテキスト。お仕事をお探しの方に関するテキスト。お仕事をお探しの</span></p>
-            </div>   
+    <section id="recruitment">
+        <article id="recruitment-conditions">
+            <h3>活動内容</h3>
+                <p id="recruitment-text">その他の条件テキスト。その他の条件テキスト。その他の条件テキスト。その他の条件テキスト。その他の条件テキスト。その他の条件テキスト。</p>
         </article>
 
-        <article id="community-catch">
-            <div id="catch-ba2">
-                <div id="catch-img2">
-                    <img src="./assets/images/D15A5291.jpg" alt="D15A5291">
-                </div>
-            </div>
-            <div id="community-overview">
-                <p>コミュニティ探しへキャッチコミュニティ探しへキャッチ。コミュニティ探しへキャッチ
-                <span>コミュニティ探したの方に関するテキスト。コミュニティ探したの方に関するテキスト。コミュニティ探したの方に関するテキスト。コミュニティ探したの方に関するテキスト。コミュニティ探したの方に関するテキスト。コミュニティ探したの方に関するテキスト。コミュニティ探したの方に関するテキスト。コミュニティ探したの方に</span></p>
-            </div>    
+        <article id="recruitment-company">
+            <h3>コミュニティ情報</h3>
+            <ul>
+                <li><span>会社名</span> ： NPO法人XXXX</li>
+                <li class="pipe resp_pc">|</li>
+                <li class="long"><span>所在地</span>：茨城県つくば市XXXXXX</li>
+                <li class="pipe resp_pc">|</li>
+                <li><span>スタッフ数</span>：XXXXX名</li>
+                <li class="pipe resp_pc">|</li>
+                <li><span>代表者</span>： XXXX</li>
+            </ul>
         </article>
+        <a href="">この求人に応募・<br>または問い合わせする</a>
     </section>
+
+    <article class="category-link category-link1">
+        <h3>コミュニティカテゴリ</h3>
+        <ul>
+            <li><a href="">コミュニティカテゴリリンク</a></li>
+            <li><a href="">コミュニティカテゴリリンク</a></li>
+            <li><a href="">コミュニティカテゴリリンク</a></li>
+            <li><a href="">コミュニティカテゴリリンク</a></li>
+            <li><a href="">コミュニティカテゴリリンク</a></li>
+            <li class="resp_sp"><a href="">コミュニティカテゴリリンク</a></li>
+        </ul>
+    </article>
 
     <article id="consultation">
         <div id="consultation-ba">
@@ -169,16 +223,79 @@
                 人材サポートに相談</a>
         </div>
     </article>
-
-    <article id="representative">
-        <div id="representative-img">
-            <img src="./assets/images/photo.jpg" alt="photo">
+    
+    <article id="recruit-ranking">
+        <h3>人気求人ランキング</h3>
+        <div id="ranking-box">
+            <div class="contents-block">
+                <div class="contents-img">
+                    <a href="">
+                        <img src="./assets/images/78043530.jpg" alt="78043530">
+                        <p id="ranking-number1">1</p>
+                    </a>
+                </div>
+                <p>
+                    <a href="">求人タイトル。求人タイ求人タイトル。求人タイ</a>
+                    <span>求人概要抜粋。求人概要抜…</span>
+                </p>
+            </div>
+            <div class="contents-block">
+                <div class="contents-img">
+                    <a href="">
+                        <img src="./assets/images/78043530.jpg" alt="78043530">
+                        <p id="ranking-number2">2</p>
+                    </a>
+                </div>
+                <p>
+                    <a href="">求人タイトル。求人タイ求人タイトル。求人タイ</a>
+                    <span>求人概要抜粋。求人概要抜…</span>
+                </p>
+            </div>
+            <div class="contents-block">
+                <div class="contents-img">
+                    <a href="">
+                        <img src="./assets/images/78043530.jpg" alt="78043530">
+                        <p id="ranking-number3">3</p>
+                    </a>
+                </div>
+                <p>
+                    <a href="">求人タイトル。求人タイ求人タイトル。求人タイ</a>
+                    <span>求人概要抜粋。求人概要抜…</span>
+                </p>
+            </div>
+            <div class="contents-block">
+                <div class="contents-img">
+                    <a href="">
+                        <img src="./assets/images/78043530.jpg" alt="78043530">
+                        <p id="ranking-number4">4</p>
+                    </a>
+                </div>
+                <p>
+                    <a href="">求人タイトル。求人タイ求人タイトル。求人タイ</a>
+                    <span>求人概要抜粋。求人概要抜…</span>
+                </p>
+            </div>
         </div>
-        <p>
-            代表メッセージキャッチ。代表メッセージキャッチ。<br>
-            <span>代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセージテキスト。代表メッセー</span>
-        </p>
     </article>
+
+    <article class="category-link category-link2">
+        <h3>求人カテゴリ</h3>
+        <ul>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        <li><a href="">求人カテゴリリンク</a></li>
+        </ul>
+    </article>
+    
 </main>
 
 <footer>
@@ -221,11 +338,11 @@
                 </ul>
             </div>
             <div class="flex2">
-                <p><a href="./company.html" title="運営会社情報">運営会社情報</a></p>
+                <p><a href="" title="運営会社情報">運営会社情報</a></p>
                 <ul id="list4">
-                    <li><a href="#policy" title="運営ポリシー">≫ 運営ポリシー</a></li>
-                    <li><a href="#catch" title="お仕事をお探しの方へ">≫ お仕事をお探しの方へ</a></li>
-                    <li><a href="#representative" title="代表メッセージ">≫ 代表メッセージ</a></li>
+                    <li><a href="" title="運営ポリシー">≫ 運営ポリシー</a></li>
+                    <li><a href="" title="お仕事をお探しの方へ">≫ お仕事をお探しの方へ</a></li>
+                    <li><a href="" title="代表メッセージ">≫ 代表メッセージ</a></li>
                 </ul>
             </div>
             <div class="flex2">
@@ -246,6 +363,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>

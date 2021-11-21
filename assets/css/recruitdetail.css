@@ -318,6 +318,7 @@ main #occupation-detail #occupation-img img {
 main #occupation-detail #recruit-tittle {
   width: 43%;
   font-size: 30px;
+  font-weight: 600;
   position: absolute;
   top: 100px;
   right: 0;

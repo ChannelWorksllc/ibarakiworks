@@ -544,7 +544,7 @@ main h3 {
 
 @media screen and (max-width: 414px) {
   main h3 {
-    width: 90%;
+    width: 100%;
     font-size: 15px;
   }
 }

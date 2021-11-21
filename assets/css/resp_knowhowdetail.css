@@ -433,8 +433,22 @@ header #firstview #mainvisual {
 }
 
 header #firstview #mainvisual #header-img img {
-  -o-object-position: 50% 80%;
-     object-position: 50% 80%;
+  -o-object-position: 50% 68%;
+     object-position: 50% 68%;
+}
+
+@media screen and (max-width: 768px) {
+  header #firstview #mainvisual #header-img img {
+    -o-object-position: 50% 94%;
+       object-position: 50% 94%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header #firstview #mainvisual #header-img img {
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -448,113 +462,309 @@ header #firstview #mainvisual #header-img img {
   }
 }
 
-main h3 {
+main #knowhow-detail {
+  width: 100%;
+}
+
+main #knowhow-detail #post-tittle {
+  width: 95%;
+  margin: 45px auto 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 375px) {
+  main #knowhow-detail #post-tittle {
+    margin-bottom: 20px;
+  }
+}
+
+main #knowhow-detail #post-tittle h3 {
+  font-size: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  main #knowhow-detail #post-tittle h3 {
+    font-size: 18px;
+  }
+}
+
+main #knowhow-detail #post-tittle h3 span {
+  padding-right: 15px;
+}
+
+main #knowhow-detail #post-tittle ul {
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 414px) {
+  main #knowhow-detail #post-tittle ul {
+    padding: 10px 0;
+  }
+}
+
+main #knowhow-detail #post-tittle ul li {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  main #knowhow-detail #post-tittle ul li {
+    padding-left: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #knowhow-detail #post-tittle ul li {
+    padding-left: 10px;
+    font-size: 10px;
+  }
+}
+
+main #knowhow-detail #post-tittle ul li:first-child {
+  padding-left: 0;
+}
+
+main #knowhow-detail #knowhow-tittle, main #knowhow-detail #hedding {
+  margin: 0 auto;
+}
+
+main #knowhow-detail #knowhow-tittle {
+  width: 95%;
   font-size: 24px;
 }
 
-@media screen and (max-width: 414px) {
-  main h3 {
-    width: 100%;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main h4 {
-    font-size: 23px;
-    padding-top: 68px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main h4 {
-    padding-top: 58px;
-  }
-}
-
 @media screen and (max-width: 600px) {
-  main .pickup {
-    padding: 0;
-  }
-}
-
-main .pickup .pickup-box {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-block {
-    width: 300px;
-  }
-  main .pickup .pickup-box .pickup-block img {
-    width: 100%;
-  }
-}
-
-main .pickup .pickup-box .spanflex {
-  padding-bottom: 25px;
-}
-
-main .pickup .pickup-box .spanflex li {
-  padding: 0 20px;
-  font-size: 20px;
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .spanflex li {
-    padding: 0 15px;
-    font-size: 15px;
+  main #knowhow-detail #knowhow-tittle {
+    font-size: 22px;
   }
 }
 
 @media screen and (max-width: 414px) {
-  main .pickup .pickup-box .pickup-text h5 {
+  main #knowhow-detail #knowhow-tittle {
     font-size: 18px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-text h5 {
-    font-size: 14px;
+  main #knowhow-detail #knowhow-tittle {
+    font-size: 16px;
   }
 }
 
-main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-  padding-top: 20px;
+main #knowhow-detail #hedding {
+  width: 75%;
+  margin-top: 45px;
+  font-size: 14px;
 }
 
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-    padding-top: 15px;
-    font-size: 14px;
+@media screen and (max-width: 414px) {
+  main #knowhow-detail #hedding {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #knowhow-detail #hedding {
+    margin-top: 30px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-    padding-top: 10px;
+  main #knowhow-detail #hedding {
+    margin-top: 20px;
+  }
+}
+
+main #knowhow-detail #hedding li {
+  width: 33%;
+  text-align: center;
+  padding-right: 0;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 414px) {
+  main #knowhow-detail #hedding li {
     font-size: 12px;
   }
 }
 
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box .pickup-text p li, main .pickup .pickup-box .pickup-text .tagflex li {
+@media screen and (max-width: 375px) {
+  main #knowhow-detail #hedding li {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #knowhow-detail #hedding li {
     font-size: 10px;
+    padding-bottom: 15px;
+  }
+}
+
+main .post {
+  width: 95%;
+}
+
+main .post h4 {
+  font-size: 20px;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 600px) {
+  main .post h4 {
+    margin: 60px 0 30px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main .post h4 {
+    font-size: 18px;
+    margin: 50px 0 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main .post h4 {
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main .post h4 {
+    font-size: 16px;
+  }
+}
+
+main .post p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 414px) {
+  main .post p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main .post p {
+    font-size: 12px;
+  }
+}
+
+main .post p span {
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 414px) {
+  main .post p span {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main .post p span {
+    padding-top: 10px;
+  }
+}
+
+main #post-1 #post-img1 {
+  height: 201.69px;
+}
+
+@media screen and (max-width: 600px) {
+  main #post-1 #post-img1 {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #post-1 p {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #post-1 p {
+    margin-top: 20px;
+  }
+}
+
+main #post-3 #post-img2, main #post-3 #post-img3, main #post-4 #post-img2, main #post-4 #post-img3 {
+  width: 100%;
+  height: 485.3px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media screen and (max-width: 600px) {
+  main #post-3 #post-img2, main #post-3 #post-img3, main #post-4 #post-img2, main #post-4 #post-img3 {
+    height: auto;
+  }
+}
+
+main #post-3 p, main #post-4 p {
+  width: 100%;
+  margin-top: 45px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+@media screen and (max-width: 600px) {
+  main #post-3 p, main #post-4 p {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #post-3 p, main #post-4 p {
+    margin-top: 20px;
+  }
+}
+
+main #spanflex {
+  width: 95%;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  main #spanflex {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #spanflex {
+    margin-top: 50px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #spanflex {
+    margin-top: 40px;
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 414px) {
   main .category-link {
     padding: 70px 45px 0;
+  }
+}
+
+main .category-link h3 {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 414px) {
+  main .category-link h3 {
+    width: 100%;
+    font-size: 15px;
+    margin: 0 auto;
   }
 }
 
@@ -588,37 +798,73 @@ main .category-link ul li {
   }
 }
 
-@media screen and (max-width: 320px) {
-  main .category-link1 ul {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+main #new {
+  display: block;
+  margin: 50px 0 80px;
+}
+
+main #new .new-category {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+main #new .new-category h3 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 414px) {
+  main #new .new-category h3 {
+    width: 90%;
+    font-size: 15px;
   }
 }
 
-main .category-link1 ul li {
+main #new .new-category .new-contents .contents-block {
   width: 50%;
+  margin-right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-@media screen and (max-width: 375px) {
-  main .category-link1 ul li {
-    font-size: 10px;
+@media screen and (max-width: 414px) {
+  main #new .new-category .new-contents .contents-block {
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
-@media screen and (max-width: 320px) {
-  main .category-link1 ul li {
-    width: 100%;
+main #new .new-category .new-contents .contents-block p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  main #new .new-category .new-contents .contents-block p {
+    font-size: 14px;
+  }
+}
+
+main #new .new-category .new-contents .contents-block span {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  main #new .new-category .new-contents .contents-block span {
     font-size: 11px;
   }
 }
 
+main #new .new-category .new-contents .block-right {
+  margin-bottom: 30px;
+}
+
 @media screen and (max-width: 414px) {
-  main .category-link2 {
-    padding: 50px 45px 20px;
+  main #new .new-category .new-contents .block-right {
+    margin-bottom: 0;
   }
 }
 
@@ -748,98 +994,6 @@ main #consultation #consultation-ba a {
 @media screen and (max-width: 320px) {
   main #consultation #consultation-ba a::after {
     top: 20px;
-  }
-}
-
-main #recruit-ranking {
-  padding-top: 50px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking {
-    padding: 50px 0 0;
-  }
-}
-
-main #recruit-ranking #ranking-box {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box {
-    padding: 30px 0 0;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block {
-  width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 0;
-  padding-bottom: 30px;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img {
-  width: 120px;
-  height: 120px;
-  padding: 0;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block .contents-img {
-    height: auto;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img img {
-  width: 100%;
-  height: 100%;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img p {
-  padding: 15px 20.8px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block .contents-img p {
-    padding: 2px 8px;
-    font-size: 16px;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block p {
-  font-size: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block p {
-    font-size: 18px;
-    padding-left: 10px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit-ranking #ranking-box .contents-block p {
-    font-size: 15px;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block p span {
-  font-size: 18px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block p span {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit-ranking #ranking-box .contents-block p span {
-    font-size: 13px;
   }
 }
 
@@ -1147,4 +1301,4 @@ footer #footer-container #copyright {
     border-right: 5px solid #fff;
   }
 }
-/*# sourceMappingURL=resp_community.css.map */
+/*# sourceMappingURL=resp_knowhowdetail.css.map */

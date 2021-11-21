@@ -119,10 +119,13 @@ input[type="submit"]{
 
 $gray: #f7f7f7;
 $navy: #003973;
+$aqua: #e4ecf8;
 $black: #4a4a4a;
 $border: #c8c8c8;
 
 body {
+    font-size: 14px;
+
     @include max(max-5) {
         font-size: 10px;
     }
@@ -486,152 +489,133 @@ main {
 
     h3 {
         font-size: 24px;
-        
-        @include max(max-5) {
-            width: 100%;
-            font-size: 15px;
+
+        @include max(max-8) {
+            font-size: 22px;
         }
-    }
-    
-    h4 {
+
         @include max(max-5) {
-            font-size: 23px;
-            padding-top: 68px;
+            font-size: 20px;
+        }
+
+        @include max(max-3) {
+            font-size: 18px;
         }
 
         @include max(max-1) {
-            padding-top: 58px;
+            font-size: 15px;
+            padding: 30px 10px 0;
         }
     }
 
-    .pickup {
+    h4 {
+        font-size: 24px;
+
         @include max(max-8) {
-            padding: 0;
+            font-size: 22px;
         }
 
-        .pickup-box {
-            justify-content: space-around;
+        @include max(max-3) {
+            font-size: 20px;
+        }
 
-            @include max(max-8) {
-                justify-content: center;
-            }
-
-            .pickup-block {
-                @include max(max-1) {
-                    width: 300px;
-                
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-
-            .spanflex {
-                padding-bottom: 25px;
-
-                li {
-                    padding: 0 20px;
-                    font-size: 20px;
-
-                    @include max(max-1) {
-                        padding: 0 15px;
-                        font-size: 15px;
-                    }
-                }
-            }
-
-            .pickup-text {
-
-                h5 {
-                    @include max(max-5) {
-                        font-size: 18px;
-                    }
-
-                    @include max(max-1) {
-                        font-size: 14px;
-                    }
-
-                }
-
-                p,.tagflex {
-                    padding-top: 20px;
-
-                    @include max(max-8) {
-                        padding-top: 15px;
-                        font-size: 14px;
-                    }
-
-                    @include max(max-1) {
-                        padding-top: 10px;
-                        font-size: 12px;
-                    }
-
-                    li {
-                        @include max(max-8) {
-                        font-size: 10px;
-                        }
-                    }          
-                }
-            }
+        @include max(max-1) {
+            padding: 30px 10px 0;
         }
     }
 
-    .category-link {
+    .swiper-container {
+        overflow: hidden;
+    }
+
+    #flow {
+        margin-bottom: 50px;
+
         @include max(max-5) {
-        padding: 70px 45px 0;
+            margin-bottom: 0;
         }
 
-        ul {
-            @include max(max-8) {
-                padding: 25px 0 0 0;
+        h4 {
+            padding: 50px 0 20px;
+        }
+
+        .swiper-container {
+            height: 240px;
+
+            @include max(max-1) {
+                height: 180px;
             }
 
-            li {
-                width: 30%;
+            .flow-block {
 
                 @include max(max-8) {
-                    font-size: 14px;
-                    padding-bottom: 5px;
+                    img {
+                        width: 65%;
+                    }
+                }
+
+                div {
+                    @include max(max-8) {
+                        top: 25%;
+                        width: 65%;
+                        height: 75%;
+                    }        
+
+                    @include max(max-5) {
+                        top: 15%;
+                        height: 60%;
+                    }
+
+                    @include max(max-3) {
+                        height: 55%;
+                    }
+
+                    @include max(max-1) {
+                        height: 45%;
+                    }
+
+                    p {
+                        @include max(max-8) {
+                            font-size: 20px;
+                        }
+
+                        @include max(max-5) {
+                            font-size: 14px;
+                        }
+
+                        @include max(max-1) {
+                            font-size: 12px;
+                        }
+
+                        span {
+                            @include max(max-8) {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .flow-arrow {
+                @include max(max-8) {
+                    margin-top: 0;
+                    height: 30px;
+
+                    img {
+                        height: 100%;
+                    }
                 }
 
                 @include max(max-5) {
-                    font-size: 12px;
-                    width: 50%;
+                    height: 23px;
+                    margin-top: -40px;
                 }
 
                 @include max(max-1) {
-                    font-size: 11px;
-                }    
-            }
-        }
-    }
-
-    .category-link1 {
-
-        ul {
-            @include max(max-1) {
-                flex-wrap: nowrap;
-                flex-direction: column;
-            }
-
-            li {
-                width: 50%;
-
-                @include max(max-3) {
-                    font-size: 10px;
-                }
-
-                @include max(max-1) {
-                    width: 100%;
-                    font-size: 11px;
+                    height: 18px;
+                    margin-top: -55px;
                 }
             }
-        }
-    }
-
-    .category-link2 {
-        @include max(max-5) {
-            padding: 50px 45px 20px;
         }
     }
 
@@ -743,83 +727,14 @@ main {
             }
         }
     }
-
-    #recruit-ranking {
-        padding-top: 50px;
-
-        @include max(max-8) {
-            padding: 50px 0 0;
-        }
-
-        #ranking-box {
-            display: block;
-    
-            @include max(max-8) {
-                padding: 30px 0 0;
-            }
-    
-            .contents-block {
-                width: 100%;
-                justify-content: space-around;
-                align-items: center;
-                margin-right: 0;
-                padding-bottom: 30px;
-                
-                .contents-img {
-                    width: 120px;
-                    height: 120px;
-                    padding: 0;
-        
-                    @include max(max-8) {
-                        height: auto;
-                    }
-        
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-        
-                    p {
-                        padding: 15px 20.8px;
-        
-                        @include max(max-8) {
-                            padding: 2px 8px;
-                            font-size: 16px;
-                        }
-                    }
-                }
-    
-                p {
-                    font-size: 20px;
-        
-                    @include max(max-8) {
-                        font-size: 18px;
-                        padding-left: 10px;
-                    }
-        
-                    @include max(max-5) {
-                        font-size: 15px;
-                    }
-        
-                    span {
-                        font-size: 18px;
-        
-                        @include max(max-8) {
-                        font-size: 16px;
-                        }  
-        
-                        @include max(max-5) {
-                        font-size: 13px;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 footer {
     height: 100%;
+
+    @include max(max-1) {
+        margin-top: 140px;
+    }
 
     &::before {
 

@@ -205,8 +205,8 @@ header #firstview #mainvisual #header-img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 56%;
-     object-position: 50% 56%;
+  -o-object-position: 50% 58%;
+     object-position: 50% 58%;
 }
 
 header #firstview #mainvisual h2 {
@@ -227,170 +227,403 @@ header #firstview #mainvisual h2 span {
   font-weight: 600;
 }
 
-main #policy {
-  background-color: #f7f7f7;
-  margin-top: 90px;
+main h3 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
-main #policy #policy-box {
-  width: 90%;
-  margin: 0 auto;
-  padding: 90px 0 100px;
+@media screen and (max-width: 1024px) {
+  main h3 {
+    font-size: 21px;
+  }
 }
 
-main #policy #policy-box h3 {
-  font-size: 30px;
-  width: 70%;
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 43px;
-}
-
-main #policy #policy-box p {
-  width: 90%;
-  margin: 0 auto 90px;
+main h4 {
+  font-size: 36px;
+  font-weight: 600;
+  padding: 98px 0 49px 0;
   text-align: center;
 }
 
-main #policy #policy-box #policy-img {
-  width: 100%;
+@media screen and (max-width: 1024px) {
+  main h4 {
+    padding-top: 75px;
+  }
 }
 
-main #policy #policy-box #policy-img img {
-  width: 100%;
+main .pipe {
+  font-weight: 600;
 }
 
-main #catch {
-  width: 83%;
+main .swiper-wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main #occupation-detail {
+  width: 88%;
   max-width: 1440px;
-  height: 1070px;
-  margin: 97px auto;
-}
-
-main #catch #recruit-catch, main #catch #community-catch {
+  margin: 0 auto 100px;
   position: relative;
-}
-
-main #catch #recruit-catch #catch-ba1::before, main #catch #recruit-catch #catch-ba1::after, main #catch #recruit-catch #catch-ba2::before, main #catch #recruit-catch #catch-ba2::after, main #catch #community-catch #catch-ba1::before, main #catch #community-catch #catch-ba1::after, main #catch #community-catch #catch-ba2::before, main #catch #community-catch #catch-ba2::after {
-  position: absolute;
-  content: "";
-  background-color: #c8c8c8;
-  height: 2px;
-  width: 23%;
-}
-
-@media screen and (max-width: 1366px) {
-  main #catch #recruit-catch #catch-ba1::before, main #catch #recruit-catch #catch-ba1::after, main #catch #recruit-catch #catch-ba2::before, main #catch #recruit-catch #catch-ba2::after, main #catch #community-catch #catch-ba1::before, main #catch #community-catch #catch-ba1::after, main #catch #community-catch #catch-ba2::before, main #catch #community-catch #catch-ba2::after {
-    width: 19%;
-  }
+  height: 460px;
 }
 
 @media screen and (max-width: 1024px) {
-  main #catch #recruit-catch #catch-ba1::before, main #catch #recruit-catch #catch-ba1::after, main #catch #recruit-catch #catch-ba2::before, main #catch #recruit-catch #catch-ba2::after, main #catch #community-catch #catch-ba1::before, main #catch #community-catch #catch-ba1::after, main #catch #community-catch #catch-ba2::before, main #catch #community-catch #catch-ba2::after {
-    width: 21%;
+  main #occupation-detail {
+    width: 90%;
   }
 }
 
-main #catch #recruit-catch #catch-ba1::before, main #catch #recruit-catch #catch-ba2::before, main #catch #community-catch #catch-ba1::before, main #catch #community-catch #catch-ba2::before {
-  right: 0;
-  top: 25%;
+main #occupation-detail #occupation-tittle {
+  width: 85%;
+  margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #c8c8c8;
 }
 
-main #catch #recruit-catch #catch-ba1::after, main #catch #recruit-catch #catch-ba2::after, main #catch #community-catch #catch-ba1::after, main #catch #community-catch #catch-ba2::after {
-  left: 0;
-  bottom: -15%;
+main #occupation-detail #occupation-tittle .pipe {
+  font-size: 24px;
+  padding-left: 30px;
 }
 
-main #catch #recruit-catch #catch-ba2::before, main #catch #community-catch #catch-ba2::before {
-  -webkit-transform: translateY(-60px);
-          transform: translateY(-60px);
+main #occupation-detail #occupation-tittle ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-@media screen and (max-width: 1024px) {
-  main #catch #recruit-catch #catch-ba2::before, main #catch #community-catch #catch-ba2::before {
-    -webkit-transform: translateY(-55px);
-            transform: translateY(-55px);
-  }
+main #occupation-detail #occupation-tittle ul li {
+  font-size: 14px;
+  padding-left: 30px;
 }
 
-main #catch #recruit-catch #catch-ba2::after, main #catch #community-catch #catch-ba2::after {
-  -webkit-transform: translateY(260px);
-          transform: translateY(260px);
-}
-
-main #catch #recruit-catch #catch-img1, main #catch #recruit-catch #catch-img2, main #catch #community-catch #catch-img1, main #catch #community-catch #catch-img2 {
-  width: 850px;
+main #occupation-detail #occupation-img {
+  width: 650px;
   height: 400px;
+  text-align: right;
+  position: absolute;
+  right: 0;
 }
 
 @media screen and (max-width: 1024px) {
-  main #catch #recruit-catch #catch-img1, main #catch #recruit-catch #catch-img2, main #catch #community-catch #catch-img1, main #catch #community-catch #catch-img2 {
-    width: 76%;
+  main #occupation-detail #occupation-img {
+    width: 510px;
+    height: 325px;
   }
 }
 
-main #catch #recruit-catch #catch-img1 img, main #catch #recruit-catch #catch-img2 img, main #catch #community-catch #catch-img1 img, main #catch #community-catch #catch-img2 img {
+main #occupation-detail #occupation-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 0%;
-     object-position: 50% 0%;
 }
 
-main #catch #recruit-catch #catch-img2, main #catch #community-catch #catch-img2 {
+main #occupation-detail #recruit-tittle {
+  width: 43%;
+  font-size: 30px;
+  font-weight: 600;
   position: absolute;
-  right: 0;
+  top: 100px;
 }
 
-main #catch #recruit-catch #recruit-overview, main #catch #recruit-catch #community-overview, main #catch #community-catch #recruit-overview, main #catch #community-catch #community-overview {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  background-color: rgba(228, 236, 248, 0.65);
-  width: 850px;
-  height: 300px;
-}
-
-@media screen and (max-width: 1024px) {
-  main #catch #recruit-catch #recruit-overview, main #catch #recruit-catch #community-overview, main #catch #community-catch #recruit-overview, main #catch #community-catch #community-overview {
-    width: 650px;
-    height: 280px;
+@media screen and (max-width: 1280px) {
+  main #occupation-detail #recruit-tittle {
+    width: 39%;
+    font-size: 29px;
   }
 }
 
-main #catch #recruit-catch #recruit-overview p, main #catch #recruit-catch #community-overview p, main #catch #community-catch #recruit-overview p, main #catch #community-catch #community-overview p {
+@media screen and (max-width: 1024px) {
+  main #occupation-detail #recruit-tittle {
+    font-size: 28px;
+  }
+}
+
+main #occupation-detail #recruit-overview {
   position: absolute;
-  width: 80%;
+  top: 250px;
+  background-color: rgba(228, 236, 248, 0.65);
+  width: 950px;
+  height: 322px;
+}
+
+@media screen and (max-width: 1024px) {
+  main #occupation-detail #recruit-overview {
+    top: 225px;
+    width: 650px;
+    height: 309px;
+  }
+}
+
+main #occupation-detail #recruit-overview p {
+  position: absolute;
+  width: 89%;
   top: 50%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%);
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
-main #catch #recruit-catch #recruit-overview p span, main #catch #recruit-catch #community-overview p span, main #catch #community-catch #recruit-overview p span, main #catch #community-catch #community-overview p span {
-  display: block;
-  padding-top: 20px;
-  font-size: 16px;
-}
-
-main #catch #recruit-catch #community-overview, main #catch #community-catch #community-overview {
-  -webkit-transform: translateY(-35%);
-          transform: translateY(-35%);
-  left: 0;
-}
-
 @media screen and (max-width: 1024px) {
-  main #catch #recruit-catch #community-overview, main #catch #community-catch #community-overview {
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
+  main #occupation-detail #recruit-overview p {
+    font-size: 14px;
   }
 }
 
-main #catch #community-catch {
-  margin-top: 270px;
+main #occupation-detail #recruit-overview p span {
+  display: block;
+  padding-top: 20px;
+}
+
+main .pickup {
+  padding: 0 150px;
+  margin: 0 auto 100px;
+  max-width: 1440px;
+}
+
+@media screen and (max-width: 1280px) {
+  main .pickup {
+    padding: 0 75px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main .pickup {
+    padding: 20px;
+  }
+}
+
+main .pickup .pickup-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .pickup .pickup-box .pickup-block {
+  width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .pickup .pickup-box .pickup-block h5 {
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+main .pickup .pickup-box .pickup-block p {
+  font-size: 14px;
+  padding-top: 25px;
+}
+
+main #recruitment {
+  padding: 50px 0 80px;
+  background-color: #f7f7f7;
+}
+
+main #recruitment h3 {
+  padding: 60px 0 13px;
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+main #recruitment #recruitment-text {
+  text-align: center;
+  padding: 40px 0 40px;
+}
+
+@media screen and (max-width: 1280px) {
+  main #recruitment #recruitment-text {
+    font-size: 16px;
+  }
+}
+
+main #recruitment #recruitment-conditions, main #recruitment #recruitment-company {
+  width: 88%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruitment #recruitment-conditions, main #recruitment #recruitment-company {
+    width: 90%;
+  }
+}
+
+main #recruitment #recruitment-conditions ul, main #recruitment #recruitment-company ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruitment #recruitment-conditions ul, main #recruitment #recruitment-company ul {
+    font-size: 15px;
+  }
+}
+
+main #recruitment #recruitment-conditions ul li, main #recruitment #recruitment-company ul li {
+  text-align: center;
+  padding-top: 40px;
+}
+
+main #recruitment #recruitment-conditions ul li span, main #recruitment #recruitment-company ul li span {
+  color: #003973;
+  font-weight: 600;
+}
+
+main #recruitment #recruitment-conditions ul .pipe, main #recruitment #recruitment-company ul .pipe {
+  width: 1%;
+}
+
+main #recruitment #recruitment-conditions ul .full, main #recruitment #recruitment-company ul .full {
+  width: 100%;
+}
+
+main #recruitment #recruitment-conditions li {
+  width: 17%;
+}
+
+main #recruitment #recruitment-conditions .long {
+  width: 24%;
+}
+
+main #recruitment #recruitment-company li {
+  width: 20%;
+}
+
+main #recruitment #recruitment-company .long {
+  width: 26%;
+}
+
+main #recruitment a {
+  display: block;
+  margin: 70px auto 0;
+  width: 850px;
+  height: 80px;
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #9ed8a4;
+  border-radius: 15px;
+  position: relative;
+  color: #FFFFFF;
+  padding: 20px 140px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruitment a {
+    width: 780px;
+    height: 70px;
+    font-size: 24px;
+    padding: 15px 150px;
+  }
+}
+
+main #recruitment a::after {
+  position: absolute;
+  content: "";
+  width: 39px;
+  height: 20px;
+  margin-left: 20px;
+  top: 30px;
+  border-bottom: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+  -webkit-transform: skew(35deg);
+          transform: skew(35deg);
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruitment a::after {
+    margin-left: 15px;
+    top: 23px;
+  }
+}
+
+main #recruitment a br {
+  display: none;
+}
+
+main .category-link {
+  padding: 85px 85px;
+}
+
+@media screen and (max-width: 1366px) {
+  main .category-link {
+    padding: 85px 45px;
+  }
+}
+
+main .category-link h3 {
+  font-size: 20px;
+  padding-bottom: 13px;
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+main .category-link ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 30px 0 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .category-link ul li {
+  width: 19%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #657ccf;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  main .category-link ul li {
+    width: 20%;
+  }
+}
+
+main .category-link2 {
+  padding-top: 0;
+}
+
+main .category-link2 ul li {
+  width: 15%;
 }
 
 main #consultation {
@@ -400,8 +633,8 @@ main #consultation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 96px 0 100px;
   font-weight: 600;
+  margin-bottom: 100px;
 }
 
 main #consultation #consultation-ba {
@@ -466,12 +699,6 @@ main #consultation #consultation-ba a {
   white-space: nowrap;
 }
 
-@media screen and (max-width: 1024px) {
-  main #consultation #consultation-ba a {
-    margin-left: 15px;
-  }
-}
-
 main #consultation #consultation-ba a::after {
   position: absolute;
   content: "";
@@ -485,41 +712,98 @@ main #consultation #consultation-ba a::after {
           transform: skew(35deg);
 }
 
-main #representative {
-  width: 83%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 1440px;
-  margin: 0 auto;
+main #recruit-ranking {
+  padding: 0 85px 85px;
 }
 
-main #representative #representative-img {
-  width: 30%;
-}
-
-main #representative p {
-  width: 65%;
-  font-size: 24px;
-}
-
-@media screen and (max-width: 1024px) {
-  main #representative p {
-    width: 53%;
+@media screen and (max-width: 1366px) {
+  main #recruit-ranking {
+    padding: 0 40px 85px;
   }
 }
 
-main #representative p span {
-  display: block;
+main #recruit-ranking h3 {
+  font-size: 20px;
+  padding-bottom: 13px;
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+main #recruit-ranking #ranking-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 30px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  main #recruit-ranking #ranking-box {
+    padding: 30px 20px 0;
+  }
+}
+
+main #recruit-ranking #ranking-box .contents-block {
+  width: calc(100% / 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img {
+  position: relative;
+  padding-right: 20px;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img p {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  border: none;
+  padding: 2px 8px;
+  color: #FFFFFF;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number1 {
+  background: #ac9600;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number2 {
+  background: #9d9d9d;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number3 {
+  background: #b28550;
+}
+
+main #recruit-ranking #ranking-box .contents-block .contents-img #ranking-number4 {
+  background: #000000;
+}
+
+main #recruit-ranking #ranking-box .contents-block p {
+  font-weight: 600;
   font-size: 16px;
-  padding-top: 40px;
-  padding-left: 60px;
+}
+
+main #recruit-ranking #ranking-box .contents-block p a {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+main #recruit-ranking #ranking-box .contents-block p span {
+  display: block;
+  font-size: 14px;
+}
+
+main #recruit-ranking #ranking-box .contents-block:last-of-type {
+  margin: 0;
 }
 
 footer {
@@ -656,4 +940,4 @@ footer #footer-container #copyright {
   border-left: 10px solid #fff;
   border-right: 10px solid #fff;
 }
-/*# sourceMappingURL=company.css.map */
+/*# sourceMappingURL=communitydetail.css.map */

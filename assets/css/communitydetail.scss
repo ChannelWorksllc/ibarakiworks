@@ -209,6 +209,10 @@ main{
     h3 {
         font-size: 24px;
         font-weight: 600;
+        
+        @include max(max-1) {
+            font-size: 21px;
+        }
     }
     
     h4 {
@@ -235,6 +239,7 @@ main{
         max-width: 1440px;
         margin: 0 auto 100px;
         position: relative;
+        height: 460px;
 
         @include max(max-1) {
             width: 90%;
@@ -246,7 +251,7 @@ main{
             display: flex;
             align-items: baseline;
             padding-bottom: 13px;
-            border-bottom: 1px solid #c8c8c8;
+            border-bottom: 1px solid $border;
 
             .pipe {
                 font-size: 24px;
@@ -266,6 +271,9 @@ main{
         #occupation-img {
             width: 650px;
             height: 400px;
+            text-align: right;
+            position: absolute;
+            right: 0;
 
             @include max(max-1) {
                 width: 510px;
@@ -285,7 +293,11 @@ main{
             font-weight: 600;
             position: absolute;
             top: 100px;
-            right: 0;
+
+            @include max(max-2) {
+                width: 39%;
+                font-size: 29px;
+            }
 
             @include max(max-1) {
                 font-size: 28px;
@@ -295,7 +307,6 @@ main{
         #recruit-overview {
             position: absolute;
             top: 250px;
-            right: 0;
             background-color: rgba($color: $aqua, $alpha: 0.65);
             width: 950px;
             height: 322px;
@@ -308,7 +319,7 @@ main{
 
             p {
                 position: absolute;
-                width: 80%;
+                width: 89%;
                 top: 50%;
                 left: 50%;
                 transform: translateY(-50%) translateX(-50%);
@@ -368,11 +379,21 @@ main{
         background-color: $gray;
 
         h3 {
-            text-align: center;
             padding: 60px 0 13px;
-            border-bottom: 1px solid #c8c8c8;;
+            max-width: 1440px;
+            margin: 0 auto;
+            text-align: center;
+            border-bottom: 1px solid $border;    
         }
         
+        #recruitment-text {
+            text-align: center;
+            padding: 40px 0 40px;
+
+            @include max(max-2) {
+                font-size: 16px;
+            }
+        }
 
         #recruitment-conditions,#recruitment-company {
             width: 88%;
@@ -396,10 +417,6 @@ main{
                     text-align: center;
                     padding-top: 40px;
 
-                    &:last-of-type {
-                        padding-top: 5px;
-                    }
-                    
                     span {
                         color: $navy;
                         font-weight: 600;
@@ -480,316 +497,60 @@ main{
         }
     }
 
-    #flow {
-        max-width: 1600px;
-        margin: 0 auto 135px;
-
-        .flow-box {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-            .flow-block {
-                width: 160px;
-                height: 140px;
-                text-align: center;
-                position: relative;
-
-                @include max(max-3) {
-                    width: 240px;
-                }
-
-                @include mix(mix-2) {
-                    width: 120px;
-                    height: 100px;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-
-                &:last-of-type {
-                    margin-right: 30px;
-                }
-
-                div {
-                    position: absolute;
-                    top: 30%;
-                    left: 25%;
-                    background-color: rgba($color: $aqua, $alpha: 0.65);
-                    width: 160px;
-                    height: 140px;
-
-                    @include mix(mix-2) {
-                        width: 120px;
-                        height: 100px;
-                    }
-
-                    p {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translateX(-50%) translateY(-50%);
-                        font-weight: 600;
-                        line-height: 1.2;
-                        width: fit-content;
-                        color: $navy;
-                        font-size: 30px;
-                        text-align: left;
-
-                        @include mix(mix-2) {
-                            font-size: 17px;
-                        }
-
-                        span {
-                            font-size: 14px;
-
-                            @include mix(mix-2) {
-                                font-size: 10px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .flow-arrow {
-                width: 0;
-                margin-top: 40px;
-            }
-        }
-    }
-
-    #recruit-ranking {
-        padding: 0 85px 85px;
+    .category-link {
+        padding: 85px 85px;
     
         @include max(max-3) {
-            padding: 0 40px 85px;
+            padding: 85px 45px;
         }
-        
+
         h3 {
             font-size: 20px;
-            text-align: center;
             padding-bottom: 13px;
-            border-bottom: 1px solid #c8c8c8;;
-        }
-        
-        #ranking-box {
-            display: flex;
-            margin: 0 auto;
             max-width: 1440px;
+            margin: 0 auto;
+            text-align: center;
+            border-bottom: 1px solid $border;
+        }
+    
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 30px 30px 0 30px;
             justify-content: space-between;
-            padding: 30px 30px 0;
         
-            @include max(max-1) {
-                padding: 30px 20px 0;
+            li {
+                width: 19%;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 30px;
+                color: #657ccf;
+                text-align: center;
+                @include max(max-1) {
+                    width: 20%;
+                }  
             }
-        
-            .contents-block {
-                width: calc(100% / 2);
-                display: flex;
-                padding: 0 10px;    
-        
-                .contents-img {
-                    position: relative;      
-                    padding-right: 20px;
-            
-                    p {
-                        position: absolute;
-                        top: 0%;
-                        left: 0;
-                        border: none;
-                        padding: 2px 8px;
-                        color: #FFFFFF;
-                    }
-            
-                    #ranking-number1 {
-                        background: #ac9600;
-                    }
-            
-                    #ranking-number2 {
-                        background: #9d9d9d;
-                    }
-            
-                    #ranking-number3 {
-                        background: #b28550;
-                    }
-            
-                    #ranking-number4 {
-                        background: #000000;
-                    }
-                }
-        
-                p {
-                    font-weight: 600;
-                    font-size: 16px;
-            
-                    a {
-                        display: inline-block;
-                        padding-bottom: 10px;
-                    }
-            
-                    span {      
-                        display: block;
-                        font-size: 14px;
-                    }
-                }
-        
-                &:last-of-type {
-                    margin: 0;
-                }
-            }    
+        }
+    }
+    
+    .category-link2 {
+        padding-top: 0;
+
+        ul {
+
+            li {
+                width: 15%;
+            }
         }
     }
 
-    #search {
-
-        #recruit-search-tittle {
-            width: 100%;
-            margin-top: 40px;
-            text-align: center;
-            font-size: 24px;
-        }
-    
-        #recruit-search {
-            display: none;
-            width: 90%;
-            max-width: 1440px;
-            margin: 0 auto;
-        
-        
-            form {
-                display: flex;
-                margin-top: 30px;
-                justify-content: space-between;
-                
-                select,input {
-                    width: 100%;
-                    height: 70px;
-                    background-color: #FFFFFF;
-                    color: #888888;
-                    font-family: 'Klee One', cursive;
-                    font-size: 20px;
-                    padding-left: 30px;
-                    border: 2px solid #a4a4a4;
-                    border-radius: 10px;
-                }
-        
-                .select-wrap  {
-                    position: relative;
-                    border-radius: 10px;
-                    width: 32%;
-        
-                    &::after {
-                        content: "";
-                        width: 0;
-                        height: 0;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        right: 35px;
-                        border-left: 9px solid transparent;
-                        border-right: 9px solid transparent;
-                        border-top: 13px solid #888888;
-                        pointer-events: none;       
-                    }
-            
-                    select {
-                        appearance: none;
-                        position: relative;
-                        cursor : pointer;
-                    }
-                }
-        
-                input {
-                    width: 32%;
-            
-                    &::placeholder {
-                        color: #888888;
-                    }
-                }
-            }
-        
-            #search-submit {
-                width: 100%;
-                text-align: center;
-        
-                input[type="submit"] {
-                    width: 32%;
-                    height: 63.51px;
-                    font-weight: 600;
-                    background-color: #657ccf;
-                    color: #FFFFFF;
-                    font-family: 'Klee One', cursive;
-                    font-size: 20px;
-                    padding-left: 30px;
-                    border: 2px solid #a4a4a4;
-                    border-radius: 10px;
-                    padding: 0;
-                    cursor : pointer;
-                }
-            }
-        
-            #search-box-tittle {
-                width: 100%;
-                margin-top: 40px;
-                font-size: 20px;
-                text-align: center;
-            }
-        
-            #search-box {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                background-color: $gray;
-                margin: 30px 0;
-        
-                label {
-                    width: 14%;
-                    font-size: 18px;
-                    padding: 10px 0;
-
-                    @include max(max-1) {
-                        width: 20%;
-
-                        &:last-of-type {
-                            display: none;
-                        }              
-                    }
-                }
-            }
-        }
-        
-        #search-button {
-            position: relative;
-            width: 100%;
-            height: 60px;
-            margin-top: 40px;
-            background-color: $gray;
-            cursor: pointer;
-        
-            span {
-                position: absolute;
-                top: 45%;
-                left: 50%;
-                transform:translateX(-50%);
-                width: 60px;
-                height: 1px;
-                background-color: $black;
-        
-                &:nth-child(2) {
-                    top: 60%;
-                    width: 30px;
-                }
-            }
-        }
-    }    
-    
     #consultation {
         display: flex;
         justify-content: center;
-        margin: 96px 0 100px;
         font-weight: 600;
+        margin-bottom: 100px;
     
         #consultation-ba{
             position: relative;
@@ -862,8 +623,91 @@ main{
             }
         }
     }
-}
 
+    #recruit-ranking {
+        padding: 0 85px 85px;
+    
+        @include max(max-3) {
+            padding: 0 40px 85px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            padding-bottom: 13px;
+            max-width: 1440px;
+            margin: 0 auto;
+            text-align: center;
+            border-bottom: 1px solid $border;    
+        }
+        
+        #ranking-box {
+            display: flex;
+            margin: 0 auto;
+            max-width: 1440px;
+            justify-content: space-between;
+            padding: 30px 30px 0;
+        
+            @include max(max-1) {
+                padding: 30px 20px 0;
+            }
+        
+            .contents-block {
+                width: calc(100% / 2);
+                display: flex;
+                padding: 0 10px;    
+        
+                .contents-img {
+                    position: relative;      
+                    padding-right: 20px;
+            
+                    p {
+                        position: absolute;
+                        top: 0%;
+                        left: 0;
+                        border: none;
+                        padding: 2px 8px;
+                        color: #FFFFFF;
+                    }
+            
+                    #ranking-number1 {
+                        background: #ac9600;
+                    }
+            
+                    #ranking-number2 {
+                        background: #9d9d9d;
+                    }
+            
+                    #ranking-number3 {
+                        background: #b28550;
+                    }
+            
+                    #ranking-number4 {
+                        background: #000000;
+                    }
+                }
+        
+                p {
+                    font-weight: 600;
+                    font-size: 16px;
+            
+                    a {
+                        display: inline-block;
+                        padding-bottom: 10px;
+                    }
+            
+                    span {      
+                        display: block;
+                        font-size: 14px;
+                    }
+                }
+        
+                &:last-of-type {
+                    margin: 0;
+                }
+            }    
+        }
+    }
+}
 
 footer {
     position: relative;

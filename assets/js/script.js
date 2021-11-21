@@ -64,3 +64,27 @@ $(function(){
         $("#recruit-search").slideToggle(1000);
     });
 });
+
+//ページリンクずれ調整//
+$(window).on('load', function() {
+    var url = $(location).attr('href');
+    if(url.indexOf("#") != -1){
+        var anchor = url.split("#");
+        var target = $('#' + anchor[anchor.length - 1]);
+        if(target.length){
+            var pos = Math.floor(target.offset().top) - 110;
+            $("html, body").animate({scrollTop:pos}, 500);
+        }
+    }
+});
+
+$(function() {
+    var headerHeight = 110;
+    $('[href^="#"]').click(function(){
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-headerHeight; 
+        $("html, body").animate({scrollTop:position}, 500, "swing");
+        return false;
+    });
+});

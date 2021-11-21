@@ -57,6 +57,10 @@ input[type="submit"] {
   width: 100%;
 }
 
+body {
+  font-size: 14px;
+}
+
 @media screen and (max-width: 414px) {
   body {
     font-size: 10px;
@@ -452,173 +456,159 @@ main h3 {
   font-size: 24px;
 }
 
+@media screen and (max-width: 600px) {
+  main h3 {
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width: 414px) {
   main h3 {
-    width: 100%;
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 
-@media screen and (max-width: 414px) {
-  main h4 {
-    font-size: 23px;
-    padding-top: 68px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main h4 {
-    padding-top: 58px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup {
-    padding: 0;
-  }
-}
-
-main .pickup .pickup-box {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-block {
-    width: 300px;
-  }
-  main .pickup .pickup-box .pickup-block img {
-    width: 100%;
-  }
-}
-
-main .pickup .pickup-box .spanflex {
-  padding-bottom: 25px;
-}
-
-main .pickup .pickup-box .spanflex li {
-  padding: 0 20px;
-  font-size: 20px;
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .spanflex li {
-    padding: 0 15px;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main .pickup .pickup-box .pickup-text h5 {
+@media screen and (max-width: 375px) {
+  main h3 {
     font-size: 18px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-text h5 {
-    font-size: 14px;
+  main h3 {
+    font-size: 15px;
+    padding: 30px 10px 0;
   }
 }
 
-main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-  padding-top: 20px;
+main h4 {
+  font-size: 24px;
 }
 
 @media screen and (max-width: 600px) {
-  main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-    padding-top: 15px;
-    font-size: 14px;
+  main h4 {
+    font-size: 22px;
   }
-}
-
-@media screen and (max-width: 320px) {
-  main .pickup .pickup-box .pickup-text p, main .pickup .pickup-box .pickup-text .tagflex {
-    padding-top: 10px;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main .pickup .pickup-box .pickup-text p li, main .pickup .pickup-box .pickup-text .tagflex li {
-    font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main .category-link {
-    padding: 70px 45px 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main .category-link ul {
-    padding: 25px 0 0 0;
-  }
-}
-
-main .category-link ul li {
-  width: 30%;
-}
-
-@media screen and (max-width: 600px) {
-  main .category-link ul li {
-    font-size: 14px;
-    padding-bottom: 5px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main .category-link ul li {
-    font-size: 12px;
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .category-link ul li {
-    font-size: 11px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .category-link1 ul {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-main .category-link1 ul li {
-  width: 50%;
 }
 
 @media screen and (max-width: 375px) {
-  main .category-link1 ul li {
-    font-size: 10px;
+  main h4 {
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  main .category-link1 ul li {
-    width: 100%;
-    font-size: 11px;
+  main h4 {
+    padding: 30px 10px 0;
+  }
+}
+
+main .swiper-container {
+  overflow: hidden;
+}
+
+main #flow {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 414px) {
+  main #flow {
+    margin-bottom: 0;
+  }
+}
+
+main #flow h4 {
+  padding: 50px 0 20px;
+}
+
+main #flow .swiper-container {
+  height: 240px;
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block img {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block div {
+    top: 25%;
+    width: 65%;
+    height: 75%;
   }
 }
 
 @media screen and (max-width: 414px) {
-  main .category-link2 {
-    padding: 50px 45px 20px;
+  main #flow .swiper-container .flow-block div {
+    top: 15%;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #flow .swiper-container .flow-block div {
+    height: 55%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container .flow-block div {
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block div p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #flow .swiper-container .flow-block div p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container .flow-block div p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block div p span {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-arrow {
+    margin-top: 0;
+    height: 30px;
+  }
+  main #flow .swiper-container .flow-arrow img {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #flow .swiper-container .flow-arrow {
+    height: 23px;
+    margin-top: -40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container .flow-arrow {
+    height: 18px;
+    margin-top: -55px;
   }
 }
 
@@ -751,100 +741,14 @@ main #consultation #consultation-ba a {
   }
 }
 
-main #recruit-ranking {
-  padding-top: 50px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking {
-    padding: 50px 0 0;
-  }
-}
-
-main #recruit-ranking #ranking-box {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box {
-    padding: 30px 0 0;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block {
-  width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 0;
-  padding-bottom: 30px;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img {
-  width: 120px;
-  height: 120px;
-  padding: 0;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block .contents-img {
-    height: auto;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img img {
-  width: 100%;
-  height: 100%;
-}
-
-main #recruit-ranking #ranking-box .contents-block .contents-img p {
-  padding: 15px 20.8px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block .contents-img p {
-    padding: 2px 8px;
-    font-size: 16px;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block p {
-  font-size: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block p {
-    font-size: 18px;
-    padding-left: 10px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit-ranking #ranking-box .contents-block p {
-    font-size: 15px;
-  }
-}
-
-main #recruit-ranking #ranking-box .contents-block p span {
-  font-size: 18px;
-}
-
-@media screen and (max-width: 600px) {
-  main #recruit-ranking #ranking-box .contents-block p span {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit-ranking #ranking-box .contents-block p span {
-    font-size: 13px;
-  }
-}
-
 footer {
   height: 100%;
+}
+
+@media screen and (max-width: 320px) {
+  footer {
+    margin-top: 140px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -1147,4 +1051,4 @@ footer #footer-container #copyright {
     border-right: 5px solid #fff;
   }
 }
-/*# sourceMappingURL=resp_community.css.map */
+/*# sourceMappingURL=resp_application.css.map */

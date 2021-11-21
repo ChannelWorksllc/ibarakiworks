@@ -80,6 +80,7 @@ $breakpoint-mix: (
 $gray: #f7f7f7;
 $navy: #003973;
 $blue: #408cff;
+$aqua: #e4ecf8;
 $black: #4a4a4a;
 $border: #c8c8c8;
 
@@ -150,7 +151,7 @@ header {
                         padding-right: 40px;
 
                         @include max(max-1) {
-                            padding-right: 20px;
+                        padding-right: 20px;
                         }
 
                         &:last-child {
@@ -164,7 +165,7 @@ header {
                 }
             }
         }
-        
+    
         #mainvisual {
             background-color: rgba($color: $blue, $alpha: 0.1);
             height: 170px;
@@ -179,7 +180,7 @@ header {
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
-                    object-position: 50% 52%;
+                    object-position: 50% 58%;
                 }
             }
 
@@ -204,31 +205,173 @@ header {
 }
 
 main{
-    margin: 50px auto 0;
-    width: 90%;
-    max-width: 1440px;
 
-    h3 {
-        font-size: 20px;
+    h3,h4 {
+        font-size: 36px;
         font-weight: 600;
-        margin-top: 20px;
+        padding: 98px 0 49px 0;
+        text-align: center;
     }
 
-    p {
-        padding-top: 10px;
+    #flow {
+        max-width: 1600px;
+        margin: 0 auto 260px;
 
-        &:first-of-type {
-            font-size: 20px;
+        .flow-box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .flow-block {
+                width: 160px;
+                height: 140px;
+                text-align: center;
+                position: relative;
+
+                @include max(max-3) {
+                    width: 240px;
+                }
+
+                @include mix(mix-2) {
+                    width: 120px;
+                    height: 100px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &:last-of-type {
+                    margin-right: 30px;
+                }
+
+                div {
+                    position: absolute;
+                    top: 30%;
+                    left: 25%;
+                    background-color: rgba($color: $aqua, $alpha: 0.65);
+                    width: 160px;
+                    height: 140px;
+
+                    @include mix(mix-2) {
+                        width: 120px;
+                        height: 100px;
+                    }
+
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        font-weight: 600;
+                        line-height: 1.2;
+                        width: fit-content;
+                        color: $navy;
+                        font-size: 30px;
+                        text-align: left;
+
+                        @include mix(mix-2) {
+                            font-size: 17px;
+                        }
+
+                        span {
+                            font-size: 14px;
+
+                            @include mix(mix-2) {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .flow-arrow {
+                width: 0;
+                margin-top: 40px;
+            }
         }
     }
-    #company {
-        padding: 20px 0;
-
-        span {
-            font-size: 12px;
+    
+    #consultation {
+        display: flex;
+        justify-content: center;
+        margin: 96px 0 100px;
+        font-weight: 600;
+    
+        #consultation-ba{
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 42px;
+        
+            &::after {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                content: "";
+                background-color: $border;
+                height: 1px;
+                width: 80%;
+            }
+        
+            #consultation-icon {
+                @include max(max-1) {
+                    padding-left: 15px;
+                }
+            }
+        
+            p {
+                font-size: 20px;
+                white-space: nowrap;
+                padding: {
+                left: 30px;
+                bottom: 5px;
+                }
+        
+                @include max(max-1) {
+                    white-space: normal;
+                    width: 555px;
+                    
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        
+            a {
+                width: 274px;
+                height: 80px;
+                margin: {
+                bottom: 5px;
+                left: 53px;
+                }
+                background-color: #9ed8a4;
+                border-radius: 15px;  
+                position: relative;
+                display: inline-block;
+                color: #FFFFFF;
+                font-size: 16px;
+                padding: 15px 30px;
+                white-space: nowrap;
+                
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 39px;
+                    height: 20px;
+                    margin-left: 20px;
+                    top: 30px;
+                    border-bottom: 2px solid #FFFFFF;
+                    border-right: 2px solid #FFFFFF;
+                    transform: skew(35deg);
+                }
+            }
         }
     }
 }
+
 
 footer {
     position: relative;
@@ -237,7 +380,7 @@ footer {
     font-size: 14px;
     color: #fff;
     margin-top: 180px;
-    
+
     &::before {
         content: "";
         position: absolute;
@@ -248,7 +391,7 @@ footer {
         transform: translateX(-50%);
         background-color: $navy;
     }
-    
+
     p {
         padding:85px 0 25px;
     }
@@ -330,7 +473,7 @@ footer {
             }
     
             .flex2 {
-                
+            
                 p {
                     font-size: 18px;
                     font-weight: 600;
