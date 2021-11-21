@@ -481,137 +481,6 @@ main h3 {
   }
 }
 
-main h4 {
-  font-size: 24px;
-}
-
-@media screen and (max-width: 600px) {
-  main h4 {
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  main h4 {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main h4 {
-    padding: 30px 10px 0;
-  }
-}
-
-main .swiper-container {
-  overflow: hidden;
-}
-
-main #flow {
-  margin-bottom: 50px;
-}
-
-@media screen and (max-width: 414px) {
-  main #flow {
-    margin-bottom: 0;
-  }
-}
-
-main #flow h4 {
-  padding: 50px 0 20px;
-}
-
-main #flow .swiper-container {
-  height: 240px;
-}
-
-@media screen and (max-width: 320px) {
-  main #flow .swiper-container {
-    height: 180px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main #flow .swiper-container .flow-block img {
-    width: 65%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main #flow .swiper-container .flow-block div {
-    top: 25%;
-    width: 65%;
-    height: 75%;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #flow .swiper-container .flow-block div {
-    top: 15%;
-    height: 60%;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  main #flow .swiper-container .flow-block div {
-    height: 55%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main #flow .swiper-container .flow-block div {
-    height: 45%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main #flow .swiper-container .flow-block div p {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #flow .swiper-container .flow-block div p {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main #flow .swiper-container .flow-block div p {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main #flow .swiper-container .flow-block div p span {
-    font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main #flow .swiper-container .flow-arrow {
-    margin-top: 0;
-    height: 30px;
-  }
-  main #flow .swiper-container .flow-arrow img {
-    height: 100%;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #flow .swiper-container .flow-arrow {
-    height: 23px;
-    margin-top: -40px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main #flow .swiper-container .flow-arrow {
-    height: 18px;
-    margin-top: -55px;
-  }
-}
-
 main #consultation {
   width: 90%;
   margin: 100px auto;
@@ -695,13 +564,13 @@ main #consultation #consultation-ba a {
   width: 100%;
   margin: 0 auto;
   font-size: 24px;
-  padding: 23px 100px;
+  padding: 23px 135px;
 }
 
 @media screen and (max-width: 600px) {
   main #consultation #consultation-ba a {
     font-size: 18px;
-    padding: 25px 48px;
+    padding: 27px 70px;
   }
 }
 
@@ -709,7 +578,7 @@ main #consultation #consultation-ba a {
   main #consultation #consultation-ba a {
     height: 60px;
     font-size: 14px;
-    padding: 20px 28px;
+    padding: 20px 55px;
   }
 }
 
@@ -721,7 +590,7 @@ main #consultation #consultation-ba a {
 
 @media screen and (max-width: 320px) {
   main #consultation #consultation-ba a {
-    padding: 12px 70px;
+    padding: 12px 75px;
   }
   main #consultation #consultation-ba a br {
     display: block;
@@ -738,6 +607,7 @@ main #consultation #consultation-ba a {
 @media screen and (max-width: 320px) {
   main #consultation #consultation-ba a::after {
     top: 20px;
+    margin-left: 35px;
   }
 }
 
@@ -1051,4 +921,4 @@ footer #footer-container #copyright {
     border-right: 5px solid #fff;
   }
 }
-/*# sourceMappingURL=resp_application.css.map */
+/*# sourceMappingURL=resp_communitypublished.css.map */

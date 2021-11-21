@@ -524,6 +524,116 @@ main {
         }
     }
 
+    #consultation {
+        width: 90%;
+        margin: 100px auto;
+
+        @include max(max-5) {
+            margin: 75px auto;
+        }
+
+        @include max(max-1) {
+            margin: 50px auto;
+        }
+
+        #consultation-ba {
+            padding: 50px 0 0;
+            flex-wrap: wrap;
+            align-items: center;
+
+            @include max(max-8) {
+                justify-content: space-between;
+
+            }
+
+            &::before {
+                position: absolute;
+                right: 0;
+                top: 0;
+                content: "";
+                background-color: $border;
+                height: 1px;
+                width: 70%;
+            }
+
+            &::after {
+                display: none;
+            }
+
+            #consultation-icon {
+                padding: {
+                left: 0;
+                bottom: 40px;
+                } 
+            }
+
+            p {
+                width: 94%;
+                font-size: 18px;
+                white-space: normal;
+                padding: {
+                left: 20px;
+                bottom: 40px;
+                }
+                
+                @include max(max-8) {
+                    width: 80%;
+                }
+
+                @include max(max-5) {
+                    font-size: 16px;
+                }        
+
+                @include max(max-1) {
+                    font-size: 14px;
+                }
+            }
+
+            a {
+                width: 100%;
+                margin: 0 auto;
+                font-size: 24px;
+                padding: 23px 135px;
+
+                @include max(max-8) {
+                    font-size: 18px;
+                    padding: 27px 70px;
+                }
+        
+                @include max(max-5) {
+                    height: 60px;
+                    font-size: 14px;
+                    padding: 20px 55px;
+                }
+    
+                @include max(max-3) {
+                    font-size: 12px;
+                }
+    
+                @include max(max-1) {
+                    padding: 12px 75px;
+    
+                    br {
+                        display: block;
+                    }
+                }
+
+                &::after {
+
+                    @include max(max-5) {
+                        top: 18px;
+                        margin-left: 15px;
+                    }
+
+                    @include max(max-1) {
+                        top: 20px;
+                        margin-left: 35px;
+                    }
+                }
+            }
+        }
+    }
+
     .swiper-container {
         overflow: hidden;
     }
@@ -614,115 +724,6 @@ main {
                 @include max(max-1) {
                     height: 18px;
                     margin-top: -55px;
-                }
-            }
-        }
-    }
-
-    #consultation {
-        width: 90%;
-        margin: 100px auto;
-
-        @include max(max-5) {
-            margin: 75px auto;
-        }
-
-        @include max(max-1) {
-            margin: 50px auto;
-        }
-
-        #consultation-ba {
-            padding: 50px 0 0;
-            flex-wrap: wrap;
-            align-items: center;
-
-            @include max(max-8) {
-                justify-content: space-between;
-
-            }
-
-            &::before {
-                position: absolute;
-                right: 0;
-                top: 0;
-                content: "";
-                background-color: $border;
-                height: 1px;
-                width: 70%;
-            }
-
-            &::after {
-                display: none;
-            }
-
-            #consultation-icon {
-                padding: {
-                left: 0;
-                bottom: 40px;
-                } 
-            }
-
-            p {
-                width: 94%;
-                font-size: 18px;
-                white-space: normal;
-                padding: {
-                left: 20px;
-                bottom: 40px;
-                }
-                
-                @include max(max-8) {
-                    width: 80%;
-                }
-
-                @include max(max-5) {
-                    font-size: 16px;
-                }        
-
-                @include max(max-1) {
-                    font-size: 14px;
-                }
-            }
-
-            a {
-                width: 100%;
-                margin: 0 auto;
-                font-size: 24px;
-                padding: 23px 100px;
-
-                @include max(max-8) {
-                    font-size: 18px;
-                    padding: 25px 48px;
-                }
-        
-                @include max(max-5) {
-                    height: 60px;
-                    font-size: 14px;
-                    padding: 20px 28px;
-                }
-    
-                @include max(max-3) {
-                    font-size: 12px;
-                }
-    
-                @include max(max-1) {
-                    padding: 12px 70px;
-    
-                    br {
-                        display: block;
-                    }
-                }
-
-                &::after {
-
-                    @include max(max-5) {
-                        top: 18px;
-                        margin-left: 15px;
-                    }
-
-                    @include max(max-1) {
-                        top: 20px;
-                    }
                 }
             }
         }

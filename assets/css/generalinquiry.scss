@@ -180,7 +180,7 @@ header {
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
-                    object-position: 50% 58%;
+                    object-position: 50% 56%;
                 }
             }
 
@@ -213,91 +213,60 @@ main{
         text-align: center;
     }
 
-    #flow {
-        max-width: 1600px;
-        margin: 0 auto 260px;
+    .category-link {
+        padding: 85px 85px;
+    
+        @include max(max-3) {
+            padding: 85px 45px;
+        }
 
-        .flow-box {
+        h3 {
+            font-size: 20px;
+            padding-bottom: 13px;
+            max-width: 1440px;
+            margin: 0 auto;
+            text-align: center;
+            border-bottom: 1px solid $border;
+        }
+    
+        ul {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-            .flow-block {
-                width: 160px;
-                height: 140px;
+            flex-wrap: wrap;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 30px 30px 0 30px;
+            justify-content: space-between;
+        
+            li {
+                width: 19%;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 30px;
+                color: #657ccf;
                 text-align: center;
-                position: relative;
-
-                @include max(max-3) {
-                    width: 240px;
-                }
-
-                @include mix(mix-2) {
-                    width: 120px;
-                    height: 100px;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-
-                &:last-of-type {
-                    margin-right: 30px;
-                }
-
-                div {
-                    position: absolute;
-                    top: 30%;
-                    left: 25%;
-                    background-color: rgba($color: $aqua, $alpha: 0.65);
-                    width: 160px;
-                    height: 140px;
-
-                    @include mix(mix-2) {
-                        width: 120px;
-                        height: 100px;
-                    }
-
-                    p {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translateX(-50%) translateY(-50%);
-                        font-weight: 600;
-                        line-height: 1.2;
-                        width: fit-content;
-                        color: $navy;
-                        font-size: 30px;
-                        text-align: left;
-
-                        @include mix(mix-2) {
-                            font-size: 17px;
-                        }
-
-                        span {
-                            font-size: 14px;
-
-                            @include mix(mix-2) {
-                                font-size: 10px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .flow-arrow {
-                width: 0;
-                margin-top: 40px;
+                @include max(max-1) {
+                    width: 20%;
+                }  
             }
         }
     }
     
+    .category-link2 {
+        padding-top: 0;
+
+        ul {
+
+            li {
+                width: 15%;
+            }
+        }
+    }
+
     #consultation {
         display: flex;
         justify-content: center;
-        margin: 96px 0 100px;
         font-weight: 600;
+        margin-bottom: 100px;
     
         #consultation-ba{
             position: relative;
@@ -370,8 +339,91 @@ main{
             }
         }
     }
-}
 
+    #recruit-ranking {
+        padding: 0 85px 85px;
+    
+        @include max(max-3) {
+            padding: 0 40px 85px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            padding-bottom: 13px;
+            max-width: 1440px;
+            margin: 0 auto;
+            text-align: center;
+            border-bottom: 1px solid $border;    
+        }
+        
+        #ranking-box {
+            display: flex;
+            margin: 0 auto;
+            max-width: 1440px;
+            justify-content: space-between;
+            padding: 30px 30px 0;
+        
+            @include max(max-1) {
+                padding: 30px 20px 0;
+            }
+        
+            .contents-block {
+                width: calc(100% / 2);
+                display: flex;
+                padding: 0 10px;    
+        
+                .contents-img {
+                    position: relative;      
+                    padding-right: 20px;
+            
+                    p {
+                        position: absolute;
+                        top: 0%;
+                        left: 0;
+                        border: none;
+                        padding: 2px 8px;
+                        color: #FFFFFF;
+                    }
+            
+                    #ranking-number1 {
+                        background: #ac9600;
+                    }
+            
+                    #ranking-number2 {
+                        background: #9d9d9d;
+                    }
+            
+                    #ranking-number3 {
+                        background: #b28550;
+                    }
+            
+                    #ranking-number4 {
+                        background: #000000;
+                    }
+                }
+        
+                p {
+                    font-weight: 600;
+                    font-size: 16px;
+            
+                    a {
+                        display: inline-block;
+                        padding-bottom: 10px;
+                    }
+            
+                    span {      
+                        display: block;
+                        font-size: 14px;
+                    }
+                }
+        
+                &:last-of-type {
+                    margin: 0;
+                }
+            }    
+        }
+    }
+}
 
 footer {
     position: relative;
