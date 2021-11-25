@@ -503,115 +503,6 @@ main h4 {
   }
 }
 
-main .swiper-container {
-  overflow: hidden;
-}
-
-main #flow {
-  margin-bottom: 50px;
-}
-
-@media screen and (max-width: 414px) {
-  main #flow {
-    margin-bottom: 0;
-  }
-}
-
-main #flow h4 {
-  padding: 50px 0 20px;
-}
-
-main #flow .swiper-container {
-  height: 240px;
-}
-
-@media screen and (max-width: 320px) {
-  main #flow .swiper-container {
-    height: 180px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main #flow .swiper-container .flow-block img {
-    width: 65%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main #flow .swiper-container .flow-block div {
-    top: 25%;
-    width: 65%;
-    height: 75%;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #flow .swiper-container .flow-block div {
-    top: 15%;
-    height: 60%;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  main #flow .swiper-container .flow-block div {
-    height: 55%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main #flow .swiper-container .flow-block div {
-    height: 45%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main #flow .swiper-container .flow-block div p {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #flow .swiper-container .flow-block div p {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main #flow .swiper-container .flow-block div p {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main #flow .swiper-container .flow-block div p span {
-    font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main #flow .swiper-container .flow-arrow {
-    margin-top: 0;
-    height: 30px;
-  }
-  main #flow .swiper-container .flow-arrow img {
-    height: 100%;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  main #flow .swiper-container .flow-arrow {
-    height: 23px;
-    margin-top: -40px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main #flow .swiper-container .flow-arrow {
-    height: 18px;
-    margin-top: -55px;
-  }
-}
-
 main #consultation {
   width: 90%;
   margin: 100px auto;
@@ -739,6 +630,115 @@ main #consultation #consultation-ba a {
   main #consultation #consultation-ba a::after {
     top: 20px;
     margin-left: 35px;
+  }
+}
+
+main .swiper-container {
+  overflow: hidden;
+}
+
+main #flow {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 414px) {
+  main #flow {
+    margin-bottom: 0;
+  }
+}
+
+main #flow h4 {
+  padding: 50px 0 20px;
+}
+
+main #flow .swiper-container {
+  height: 240px;
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block img {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block div {
+    top: 25%;
+    width: 65%;
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #flow .swiper-container .flow-block div {
+    top: 15%;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main #flow .swiper-container .flow-block div {
+    height: 55%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container .flow-block div {
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block div p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #flow .swiper-container .flow-block div p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container .flow-block div p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-block div p span {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #flow .swiper-container .flow-arrow {
+    margin-top: 0;
+    height: 30px;
+  }
+  main #flow .swiper-container .flow-arrow img {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #flow .swiper-container .flow-arrow {
+    height: 23px;
+    margin-top: -40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #flow .swiper-container .flow-arrow {
+    height: 18px;
+    margin-top: -55px;
   }
 }
 

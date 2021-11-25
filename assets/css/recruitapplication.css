@@ -234,6 +234,92 @@ main h3, main h4 {
   text-align: center;
 }
 
+main #consultation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 96px 0 100px;
+  font-weight: 600;
+}
+
+main #consultation #consultation-ba {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 42px;
+}
+
+main #consultation #consultation-ba::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-color: #c8c8c8;
+  height: 1px;
+  width: 80%;
+}
+
+@media screen and (max-width: 1024px) {
+  main #consultation #consultation-ba #consultation-icon {
+    padding-left: 15px;
+  }
+}
+
+main #consultation #consultation-ba p {
+  font-size: 20px;
+  white-space: nowrap;
+  padding-left: 30px;
+  padding-bottom: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  main #consultation #consultation-ba p {
+    white-space: normal;
+    width: 555px;
+  }
+  main #consultation #consultation-ba p br {
+    display: none;
+  }
+}
+
+main #consultation #consultation-ba a {
+  width: 274px;
+  height: 80px;
+  margin-bottom: 5px;
+  margin-left: 53px;
+  background-color: #9ed8a4;
+  border-radius: 15px;
+  position: relative;
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 15px 50px;
+  white-space: nowrap;
+}
+
+main #consultation #consultation-ba a::after {
+  position: absolute;
+  content: "";
+  width: 39px;
+  height: 20px;
+  margin-left: 50px;
+  top: 30px;
+  border-bottom: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+  -webkit-transform: skew(35deg);
+          transform: skew(35deg);
+}
+
 main #flow {
   max-width: 1600px;
   margin: 0 auto 260px;
@@ -329,92 +415,6 @@ main #flow .flow-box .flow-block div p span {
 main #flow .flow-box .flow-arrow {
   width: 0;
   margin-top: 40px;
-}
-
-main #consultation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 96px 0 100px;
-  font-weight: 600;
-}
-
-main #consultation #consultation-ba {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  padding-bottom: 42px;
-}
-
-main #consultation #consultation-ba::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  content: "";
-  background-color: #c8c8c8;
-  height: 1px;
-  width: 80%;
-}
-
-@media screen and (max-width: 1024px) {
-  main #consultation #consultation-ba #consultation-icon {
-    padding-left: 15px;
-  }
-}
-
-main #consultation #consultation-ba p {
-  font-size: 20px;
-  white-space: nowrap;
-  padding-left: 30px;
-  padding-bottom: 5px;
-}
-
-@media screen and (max-width: 1024px) {
-  main #consultation #consultation-ba p {
-    white-space: normal;
-    width: 555px;
-  }
-  main #consultation #consultation-ba p br {
-    display: none;
-  }
-}
-
-main #consultation #consultation-ba a {
-  width: 274px;
-  height: 80px;
-  margin-bottom: 5px;
-  margin-left: 53px;
-  background-color: #9ed8a4;
-  border-radius: 15px;
-  position: relative;
-  display: inline-block;
-  color: #FFFFFF;
-  font-size: 16px;
-  padding: 15px 50px;
-  white-space: nowrap;
-}
-
-main #consultation #consultation-ba a::after {
-  position: absolute;
-  content: "";
-  width: 39px;
-  height: 20px;
-  margin-left: 50px;
-  top: 30px;
-  border-bottom: 2px solid #FFFFFF;
-  border-right: 2px solid #FFFFFF;
-  -webkit-transform: skew(35deg);
-          transform: skew(35deg);
 }
 
 footer {
