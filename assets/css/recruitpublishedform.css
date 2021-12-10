@@ -1,0 +1,686 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/****** Elad Shechter's RESET *******/
+/*** box sizing border-box for all elements ***/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol, dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+cite {
+  font-style: normal;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 1px;
+  /*for using REM units*/
+}
+
+body {
+  direction: ltr;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-weight: 500;
+}
+
+em, b, strong {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic" ,sans-serif;
+}
+
+.resp_pc {
+  display: block;
+}
+
+.resp_sp {
+  display: none;
+}
+
+.cf {
+  clear: both;
+}
+
+body {
+  font-family: 'Klee One', cursive;
+  font-size: 18px;
+  color: #4a4a4a;
+}
+
+header #firstview {
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
+header #firstview #navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f7f7f7;
+  height: 130px;
+}
+
+header #firstview #navigation h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+header #firstview #navigation h1 #header-logo {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header #firstview #navigation h1 #header-logo img {
+  width: 100%;
+}
+
+header #firstview #navigation h1 #header-copy {
+  color: #003973;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+header #firstview #navigation .drawer-nav {
+  font-size: 16px;
+  margin-right: 40px;
+  font-weight: 600;
+}
+
+header #firstview #navigation .drawer-nav .drawer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-top: 20px;
+}
+
+header #firstview #navigation .drawer-nav .drawer-menu::before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  background-color: #4a4a4a;
+  height: 1px;
+  width: 85%;
+}
+
+header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown {
+  white-space: nowrap;
+  padding-right: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown {
+    padding-right: 20px;
+  }
+}
+
+header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown:last-child {
+  padding-right: 0;
+}
+
+header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .drawer-dropdown-menu {
+  display: none;
+}
+
+header #firstview #mainvisual {
+  background-color: rgba(64, 140, 255, 0.1);
+  height: 170px;
+  position: relative;
+}
+
+header #firstview #mainvisual #header-img {
+  height: 100%;
+  width: 87%;
+  float: right;
+}
+
+header #firstview #mainvisual #header-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 58%;
+     object-position: 50% 58%;
+}
+
+header #firstview #mainvisual h2 {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 60px;
+  width: 280px;
+  padding: 12px 20px;
+}
+
+header #firstview #mainvisual h2 span {
+  color: #003973;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+main h3 {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 80px;
+}
+
+main form {
+  background-color: #f7f7f7;
+  margin-top: 40px;
+  padding: 80px 50px;
+}
+
+main form .form-item {
+  background-color: #FFFFFF;
+  max-width: 1440px;
+  margin: 0 auto 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px 50px;
+}
+
+main form .form-item h4 {
+  font-size: 24px;
+  width: 20%;
+}
+
+@media screen and (max-width: 1366px) {
+  main form .form-item h4 {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main form .form-item h4 {
+    font-size: 20px;
+  }
+}
+
+main form .form-item .mandatory {
+  color: #c80000;
+}
+
+main form .form-item .mandatory, main form .form-item .option {
+  width: 8%;
+}
+
+@media screen and (max-width: 1024px) {
+  main form .form-item .mandatory, main form .form-item .option {
+    width: 10%;
+  }
+}
+
+main form .form-item .check {
+  width: 100%;
+  color: #c80000;
+  padding-top: 15px;
+  padding-left: 28%;
+}
+
+@media screen and (max-width: 1366px) {
+  main form .form-item .check {
+    padding-left: 23%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main form .form-item .check {
+    padding-left: 25%;
+  }
+}
+
+main form .form-item label {
+  font-size: 18px;
+}
+
+main form .form-item input, main form .form-item select, main form .form-item textarea {
+  border: 2px solid #a4a4a4;
+  border-radius: 10px;
+  font-family: 'Klee One', cursive;
+  font-size: 20px;
+  color: #888888;
+  padding-left: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+  main form .form-item input, main form .form-item select, main form .form-item textarea {
+    font-size: 18px;
+  }
+}
+
+main form .form-item textarea {
+  width: 789.13px;
+  height: 197.67px;
+  padding-top: 15px;
+  resize: none;
+}
+
+@media screen and (max-width: 1024px) {
+  main form .form-item textarea {
+    width: 600px;
+  }
+}
+
+main form .item1 input, main form .item2 input, main form .item4 input, main form .item5 input {
+  width: 789.48px;
+  height: 57.15px;
+}
+
+@media screen and (max-width: 1024px) {
+  main form .item1 input, main form .item2 input, main form .item4 input, main form .item5 input {
+    width: 600px;
+  }
+}
+
+main form .item3 .mandatory {
+  margin-bottom: 165px;
+}
+
+main form .item3 #adress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main form .item3 #adress input, main form .item3 #adress select {
+  width: 240.39px;
+  height: 57.12px;
+  margin-left: 12px;
+  margin-bottom: 25px;
+}
+
+main form .item3 #adress #prefectures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+main form .item3 #adress #prefectures label {
+  width: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+  main form .item3 #adress #prefectures label {
+    width: 13%;
+  }
+}
+
+main form .item3 #adress #prefectures .select-wrap {
+  position: relative;
+  border-radius: 10px;
+}
+
+main form .item3 #adress #prefectures .select-wrap::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 28.56px;
+  -webkit-transform: translateY(-35%);
+          transform: translateY(-35%);
+  right: 17px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 13px solid #888888;
+  pointer-events: none;
+}
+
+main form .item3 #adress #prefectures .select-wrap select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+main form .item3 #adress #housenumber {
+  margin-bottom: 0;
+  width: 699.03px;
+}
+
+@media screen and (max-width: 1024px) {
+  main form .item3 #adress #housenumber {
+    width: 510.03px;
+  }
+}
+
+main form .item6 h4, main form .item6 .mandatory {
+  margin-bottom: 171px;
+}
+
+main form .item7 .select-wrap {
+  position: relative;
+  border-radius: 10px;
+}
+
+main form .item7 .select-wrap::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 35px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 13px solid #888888;
+  pointer-events: none;
+}
+
+main form .item7 .select-wrap select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  height: 57.15px;
+  width: 240.39px;
+  margin-right: 18px;
+}
+
+main form .item8 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main form .item8 h4, main form .item8 .option {
+  margin-bottom: 85px;
+}
+
+main form .item8 #checkbox {
+  width: 72%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main form .item8 #checkbox label {
+  width: 25%;
+}
+
+main form .item8 #checkbox label input {
+  display: none;
+}
+
+main form .item8 #checkbox label span {
+  display: block;
+  width: 180px;
+  height: 50px;
+  color: #003973;
+  font-size: 16px;
+  border: 2px solid #003973;
+  border-radius: 25px;
+  padding: 10px 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  main form .item8 #checkbox label span {
+    width: 140px;
+    font-size: 15px;
+    padding: 12px 23px;
+  }
+}
+
+main form .item8 #checkbox label .under {
+  margin-bottom: 0;
+}
+
+main form .item8 #checkbox label input:checked + span {
+  color: #FFF;
+  background: #003973;
+  border: 2px solid #003973;
+}
+
+main #applybutton {
+  text-align: center;
+  width: 850px;
+  margin: 100px auto 0;
+  position: relative;
+}
+
+main #applybutton::after {
+  position: absolute;
+  content: "";
+  width: 39px;
+  height: 20px;
+  top: 32px;
+  right: 230px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: skew(35deg);
+          transform: skew(35deg);
+}
+
+main #applybutton input {
+  background-color: #003973;
+  color: #fff;
+  border-radius: 15px;
+  border: none;
+  width: 850px;
+  height: 80px;
+  font-size: 28px;
+  font-family: 'Klee One', cursive;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 180px;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  height: 2px;
+  width: 70%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #003973;
+}
+
+footer p {
+  padding: 85px 0 25px;
+}
+
+footer li {
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 1280px) {
+  footer li {
+    font-size: 13px;
+  }
+}
+
+footer #footer-container {
+  margin: 0 20px;
+  height: 100%;
+  background-color: #003973;
+  position: relative;
+}
+
+footer #footer-container #arrow {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+footer #footer-container #arrow img {
+  position: absolute;
+  top: -9%;
+  right: 21px;
+  width: 35px;
+  height: 101px;
+}
+
+@media screen and (max-width: 1024px) {
+  footer #footer-container #arrow img {
+    top: -9.3%;
+  }
+}
+
+footer #footer-container #footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 20px;
+  padding: 0 97px;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+}
+
+@media screen and (max-width: 1280px) {
+  footer #footer-container #footer-flex {
+    padding: 0 30px;
+  }
+}
+
+footer #footer-container #footer-flex #flex1 {
+  padding-top: 50px;
+}
+
+footer #footer-container #footer-flex #flex1 #footer-icon {
+  display: block;
+  width: 37px;
+  height: 21px;
+  margin-bottom: 15px;
+  padding-left: 70.5px;
+}
+
+footer #footer-container #footer-flex #flex1 #footer-logo {
+  display: block;
+  width: 177px;
+  height: 20px;
+}
+
+footer #footer-container #footer-flex #flex1 p {
+  padding: 45px 0 0;
+}
+
+footer #footer-container #footer-flex #flex1 #corporation {
+  font-weight: 600;
+}
+
+footer #footer-container #footer-flex #flex1 #address {
+  font-size: 12px;
+  padding-top: 13px;
+}
+
+footer #footer-container #footer-flex .flex2 p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1280px) {
+  footer #footer-container #footer-flex .flex2 p {
+    font-size: 16px;
+  }
+}
+
+footer #footer-container #footer-flex .flex2 #list2 {
+  padding: 15px 0;
+}
+
+footer #footer-container #copyright {
+  text-align: center;
+  font-weight: 600;
+  margin: 0 20px;
+  padding: 73px 0 28px;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+}
+/*# sourceMappingURL=recruitpublishedform.css.map */

@@ -174,7 +174,7 @@ header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown {
   line-height: 3em;
 }
 
-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .drawer-dropdown-menu {
+header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu {
   display: none;
 }
 
@@ -483,13 +483,13 @@ main .decoration {
   overflow: hidden;
 }
 
-main .decoration .decoration1, main .decoration .dacoration2 {
+main .decoration .decoration1, main .decoration .decoration2 {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-main .decoration .decoration1 img, main .decoration .dacoration2 img {
+main .decoration .decoration1 img, main .decoration .decoration2 img {
   width: 100%;
   height: 100%;
 }
@@ -514,7 +514,7 @@ main #recruit #search-background .decoration {
           transform: translateX(-50%);
 }
 
-main #recruit #search-background .decoration .dacoration2 {
+main #recruit #search-background .decoration .decoration2 {
   height: 740px;
 }
 

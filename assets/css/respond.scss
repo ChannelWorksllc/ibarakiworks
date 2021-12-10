@@ -179,73 +179,20 @@ body {
               border-bottom: 1px solid $border;
               position: relative;
 
-              .drawer-menu-item {
-                display: block;
-                color: $black;
-                font-size: 14px;
-                padding: 1em;
-
-                &:hover {
-                  text-decoration: none;
-                }
-              }
-
-              .drawer-caret {
-                width: 50px;
-                height: 50px;
-                position: absolute;
-                right: 0;
-                top: 38px;
-                border: none;
-
-                &::before,&::after {
-                  content: '';
-                  background-color: $black;
-                  border-radius: 2px;
-                  width: 20px;
-                  height: 1px;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  right: 0;
-                }
-
-                &::before {
-                  transform: translateY(-50%) rotate(90deg);
-                  transition: 0.25s;
-                }
-
-                &::after {
-                  transform: scale(1, 1);
-                  transition: 0.25s;
-                  transition-delay: 0.25s;
-                }
-              }
-            }
-            
-            .open {
-                
-              .drawer-caret {
-
-                &::before {
-                  transform: rotate(0);
-                  transition-delay: 0.25s;
-                }
-
-                &::after {
-                  transform: scale(0);
-                  transition: 0.25s;
-                }
-              }
-
-              .drawer-dropdown-menu {
+              .dropdown-menu {
                 display: block;
                 background: $gray;
                 padding:  0 1em 25px;
 
-                &-item {
-                  display: unset;
+                .menu-item {
+                  display: block;
                   color: $black;
-                  font-size: 12px;
+                  font-size: 14px;
+                  padding: 1em;
+
+                  &:hover {
+                    text-decoration: none;
+                  }
                 }
               }
             }
@@ -394,37 +341,16 @@ header {
             border-bottom: 1px solid $border;
             position: relative;
 
-            .drawer-menu-item {
+            .dropdown-menu {
               display: block;
-              color: $black;
-              font-size: 14px;
-              padding: 1em;
-            }
+              background: $gray;
+              padding:  0 1em 25px;
 
-            .drawer-caret {
-              width: 50px;
-              height: 50px;
-              position: absolute;
-              right: 0;
-              top: 38px;
-              transform: translateY(-50%);
-              border: none;
-
-              &::before,&::after {
-                content: '';
-                background-color: $black;
-                border-radius: 2px;
-                position: absolute;
-                width: 20px;
-                height: 1px;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 0;
-              }
-
-              &::before {
-                transform: translateY(-50%) rotate(90deg);
-                transition: 0.25s;
+              .menu-item {
+                display: block;
+                color: $black;
+                font-size: 14px;
+                padding: 1em;
               }
             }
           }
@@ -510,6 +436,7 @@ header {
     #readcopy {
       height: 19%;
       font-size: 18px;
+      text-align: center;
 
       @include max(max-8) {
         font-size: 13px;
@@ -520,6 +447,7 @@ header {
       }
 
       span {
+        width: 85%;
         top: 10%;
         left: 50%;
         transform: translateX(-50%);
@@ -700,6 +628,7 @@ main {
               width: 240px;
               height: 50px;
               &::after {
+                right: 23px;
                 border-left: 6px solid transparent;
                 border-right: 6px solid transparent;
                 border-top: 10px solid #888888;
@@ -791,12 +720,17 @@ main {
               }
               
               @include max(max-8) {
-                  width: 80%;
+                  width: 85%;
+                  padding-left: 0;
               }
 
               @include max(max-5) {
                   font-size: 16px;
               }        
+
+              @include max(max-3) {
+                width: 80%;
+              }
 
               @include max(max-1) {
                   font-size: 14px;
@@ -1019,11 +953,30 @@ main {
       height: 546px;
 
       @include max(max-8) {
-        height: 360px;
+        height: 390px;
+      }
+
+      @include max(max-5) {
+        height: 310px;
+      }
+
+      @include max(max-4) {
+        height: 270px;
+      }
+
+      .background-img {
+
+        @include max(max-4) {
+          height: 270px;
+        }
       }
 
       .decoration {
         right: 10%;
+
+        @include max(max-4) {
+          right: 16%;
+        }  
       }
     }
 
@@ -1047,8 +1000,9 @@ main {
           margin-bottom: 26px;
         }
 
-        @include max(max-1) {
+        @include max(max-4) {
           font-size: 10px;
+          margin-left: -21px;
         }
 
         span {
@@ -1058,8 +1012,8 @@ main {
             font-size: 20px;
           }
 
-          @include max(max-1) {
-            font-size: 16px;
+          @include max(max-4) {
+            font-size: 15px;
             padding-bottom: 5px;
           }
         }
@@ -1077,8 +1031,25 @@ main {
 
           @include max(max-8) {
             left: -93px;
+            width: 305px;
+            height: 155px;
+          }
+
+          @include max(max-5) {
             width: 270px;
-            height: 140px;
+            height: 130px;
+          }
+
+          @include max(max-4) {
+            width: 228px;
+            height: 110px;
+            left: -81px;
+          }
+
+          @include max(max-1) {
+            width: 167px;
+            height: 93px;
+            left: -70px;
           }
 
           img {
@@ -1094,12 +1065,20 @@ main {
 
           @include max(max-8) {
             font-size: 13px;
-            padding-left: 205px;
+            padding-left: 235px;
           }
 
           @include max(max-5) {
             font-size: 10px;
             padding-left: 190px;
+          }
+
+          @include max(max-4) {
+            padding-left: 155px;
+          }
+
+          @include max(max-1) {
+            padding-left: 104px;
           }
         }
       }
@@ -1195,6 +1174,7 @@ main {
 
     @include max(max-5) {
       font-size: 16px;
+      padding: 80px 0;
     }
 
     @include max(max-1) {
