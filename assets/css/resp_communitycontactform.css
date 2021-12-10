@@ -641,6 +641,18 @@ main form .item4 #adress #prefectures .select-wrap select {
   margin-left: 5px;
 }
 
+@media screen and (max-width: 414px) {
+  main form .item4 #adress #prefectures .select-wrap select {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main form .item4 #adress #prefectures .select-wrap select {
+    margin-left: 9px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   main form .item4 #adress #prefectures .select-wrap select {
     margin-left: 16px;

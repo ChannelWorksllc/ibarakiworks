@@ -663,6 +663,14 @@ main {
                         select {
                             margin-left: 5px;
 
+                            @include max(max-5) {
+                                margin-left: 0;
+                            }
+
+                            @include max(max-3) {
+                                margin-left: 9px;
+                            }
+
                             @include max(max-1) {
                                 margin-left: 16px;
                             }                    
