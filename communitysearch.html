@@ -8,8 +8,8 @@
   <link rel="icon" type="image/png" href="./fav.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="./icon.png" />
   <title>コミュニティ検索結果一覧｜イバラキ・ワークス</title>
-  <link rel="stylesheet" href="./assets/css/communitysearch.css" />
-  <link rel="stylesheet" media="only screen and (max-width: 979px)" href="./assets/css/resp_community.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" media="only screen and (max-width: 979px)" href="./assets/css/respond.css" />
   <link rel="stylesheet" media="only screen and (max-width: 979px)" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,9 +33,9 @@
   <meta property="og:image:height" content="画像の高さ（数値指定）" />
 </head>
 
-<body class="drawer drawer--left">
+<body class="drawer drawer--left communitysearch">
 
-<header>
+<header class="underpage-header">
   <div id="firstview">
     <div id="navigation">
       <h1>
@@ -51,65 +51,61 @@
       <nav class="drawer-nav" role="navigation">
         <ul class="drawer-menu">
           <li class="drawer-dropdown">
-            <a class="drawer-menu-item" href="./recruitsearch.html" title="派遣求人検索">
+            <a class="menu-item" href="./recruitsearch.html" title="派遣求人検索">
               派遣求人検索
             </a>
-            <span class="drawer-caret" data-toggle="dropdown" role="button" aria-expanded="false"></span>
-            <ul class="drawer-dropdown-menu">
-              <li><a class="drawer-dropdown-menu-item" href="" title="地域分類A">≫ 地域分類A</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="地域分類B">≫ 地域分類B</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="地域分類C">≫ 地域分類C</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="職種カテゴリA">≫ 職種カテゴリA</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="職種カテゴリB">≫ 職種カテゴリB</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="職種カテゴリC">≫ 職種カテゴリC</a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-menu-item" href="" title="地域分類A">≫ 地域分類A</a></li>
+              <li><a class="dropdown-menu-item" href="" title="地域分類B">≫ 地域分類B</a></li>
+              <li><a class="dropdown-menu-item" href="" title="地域分類C">≫ 地域分類C</a></li>
+              <li><a class="dropdown-menu-item" href="" title="職種カテゴリA">≫ 職種カテゴリA</a></li>
+              <li><a class="dropdown-menu-item" href="" title="職種カテゴリB">≫ 職種カテゴリB</a></li>
+              <li><a class="dropdown-menu-item" href="" title="職種カテゴリC">≫ 職種カテゴリC</a></li>
             </ul>
           </li>
           <li class="drawer-dropdown">
-            <a class="drawer-menu-item" href="./communitysearch.html" title="茨城のコミュニティ">
+            <a class="menu-item" href="./communitysearch.html" title="茨城のコミュニティ">
               茨城のコミュニティ
             </a>
-            <span class="drawer-caret" data-toggle="dropdown" role="button" aria-expanded="false"></span>
-            <ul class="drawer-dropdown-menu">
-              <li><a class="drawer-dropdown-menu-item" href="" title="コミュニティカテゴリA">≫ コミュニティカテゴリA</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="コミュニティカテゴリB">≫ コミュニティカテゴリB</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="コミュニティカテゴリC">≫ コミュニティカテゴリC</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="コミュニティカテゴリD">≫ コミュニティカテゴリD</a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-menu-item" href="" title="コミュニティカテゴリA">≫ コミュニティカテゴリA</a></li>
+              <li><a class="dropdown-menu-item" href="" title="コミュニティカテゴリB">≫ コミュニティカテゴリB</a></li>
+              <li><a class="dropdown-menu-item" href="" title="コミュニティカテゴリC">≫ コミュニティカテゴリC</a></li>
+              <li><a class="dropdown-menu-item" href="" title="コミュニティカテゴリD">≫ コミュニティカテゴリD</a></li>
             </ul>
           </li>
           <li class="drawer-dropdown">
-            <a class="nav-tittle drawer-menu-item" href="./knowhow.html" title="求人ノウハウ">求人ノウハウ</a>
+            <a class="menu-item" href="./knowhow.html" title="求人ノウハウ">求人ノウハウ</a>
           </li>
           <li class="drawer-dropdown">
-            <a class="drawer-menu-item" href="./company.html" title="運営会社">
-            運営会社
+            <a class="menu-item" href="./company.html" title="運営会社">
+              運営会社
             </a>
-            <span class="drawer-caret" data-toggle="dropdown" role="button" aria-expanded="false"></span>
-            <ul class="drawer-dropdown-menu">
-              <li><a class="drawer-dropdown-menu-item" href="./company.html#policy" title="運営ポリシー">≫ 運営ポリシー</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="./company.html#catch" title="お仕事をお探しの方へ">≫ お仕事をお探しの方へ</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="./company.html#community-overview" title="コミュニティをお探しの方へ">≫ コミュニティをお探しの方へ</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="./company.html#representative" title="代表メッセージ">≫ 代表メッセージ</a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-menu-item" href="./company.html#policy" title="運営ポリシー">≫ 運営ポリシー</a></li>
+              <li><a class="dropdown-menu-item" href="./company.html#catch" title="お仕事をお探しの方へ">≫ お仕事をお探しの方へ</a></li>
+              <li><a class="dropdown-menu-item" href="./company.html#community-overview" title="コミュニティをお探しの方へ">≫ コミュニティをお探しの方へ</a></li>
+              <li><a class="dropdown-menu-item" href="./company.html#representative" title="代表メッセージ">≫ 代表メッセージ</a></li>
             </ul>
           </li>
           <li class="drawer-dropdown">
-            <a class="drawer-menu-item" href="" title="求人応募・お問い合わせ">
+            <a class="menu-item" href="" title="求人応募・お問い合わせ">
               求人応募・お問い合わせ
             </a>
-            <span class="drawer-caret" data-toggle="dropdown" role="button" aria-expanded="false"></span>
-            <ul class="drawer-dropdown-menu">
-              <li><a class="drawer-dropdown-menu-item" href="" title="求人応募">≫ 求人応募</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="求人掲載依頼">≫ 求人掲載依頼</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="コミュニティ問い合わせ">≫ コミュニティ問い合わせ</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="コミュニティ掲載依頼">≫ コミュニティ掲載依頼</a></li>
-              <li><a class="drawer-dropdown-menu-item" href="" title="総合問い合わせ">≫ 総合問い合わせ</a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-menu-item" href="" title="求人応募">≫ 求人応募</a></li>
+              <li><a class="dropdown-menu-item" href="" title="求人掲載依頼">≫ 求人掲載依頼</a></li>
+              <li><a class="dropdown-menu-item" href="" title="コミュニティ問い合わせ">≫ コミュニティ問い合わせ</a></li>
+              <li><a class="dropdown-menu-item" href="" title="コミュニティ掲載依頼">≫ コミュニティ掲載依頼</a></li>
+              <li><a class="dropdown-menu-item" href="" title="総合問い合わせ">≫ 総合問い合わせ</a></li>
             </ul>
           </li>
         </ul>
       </nav>
-    </div>
+  </div>
     <div id="mainvisual">
       <div id="header-img">
-        <img src="./assets/images/pixta_55069062_XL.jpg" alt="pixta_55069062_XL">
+        <img id="img-community" src="./assets/images/pixta_55069062_XL.jpg" alt="pixta_55069062_XL">
       </div>
       <h2><span>茨城のコミュニティ</span></h2>
     </div>
@@ -117,14 +113,14 @@
 </header>
 
 <main role="main">
-  <article class="pickup">
+  <article class="searchresults">
     <h4>コミュニティ一覧</h4>
-    <div class="pickup-box">
-      <div class="pickup-block">
-        <div class="pickup-img">
+    <div class="searchresults-box">
+      <div class="searchresults-block">
+        <div class="searchresults-img">
           <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
         </div>
-        <div class="pickup-text">
+        <div class="searchresults-text">
           <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
           <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
           <ul class="tagflex">
@@ -135,11 +131,11 @@
           </ul>
         </div>
       </div>
-      <div class="pickup-block">
-        <div class="pickup-img">
+      <div class="searchresults-block">
+        <div class="searchresults-img">
           <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
         </div>
-        <div class="pickup-text">
+        <div class="searchresults-text">
           <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
           <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
           <ul class="tagflex">
@@ -150,11 +146,11 @@
           </ul>
         </div>
       </div>
-      <div class="pickup-block">
-        <div class="pickup-img">
+      <div class="searchresults-block">
+        <div class="searchresults-img">
           <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
         </div>
-        <div class="pickup-text">
+        <div class="searchresults-text">
           <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
           <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
           <ul class="tagflex">
@@ -165,11 +161,11 @@
           </ul>
         </div>
       </div>
-      <div class="pickup-block">
-        <div class="pickup-img">
+      <div class="searchresults-block">
+        <div class="searchresults-img">
           <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
         </div>
-        <div class="pickup-text">
+        <div class="searchresults-text">
           <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
           <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
           <ul class="tagflex">
@@ -180,11 +176,11 @@
           </ul>
         </div>
       </div>
-      <div class="pickup-block">
-        <div class="pickup-img">
+      <div class="searchresults-block">
+        <div class="searchresults-img">
           <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
         </div>
-        <div class="pickup-text">
+        <div class="searchresults-text">
           <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
           <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
           <ul class="tagflex">
@@ -195,11 +191,11 @@
           </ul>
         </div>
       </div>
-      <div class="pickup-block">
-        <div class="pickup-img">
+      <div class="searchresults-block">
+        <div class="searchresults-img">
           <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
         </div>
-        <div class="pickup-text">
+        <div class="searchresults-text">
           <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
           <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
           <ul class="tagflex">
@@ -210,11 +206,11 @@
           </ul>
         </div>
       </div>
-      <div class="pickup-block">
-        <div class="pickup-img">
+      <div class="searchresults-block">
+        <div class="searchresults-img">
           <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
         </div>
-        <div class="pickup-text">
+        <div class="searchresults-text">
           <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
           <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
           <ul class="tagflex">
@@ -225,11 +221,11 @@
           </ul>
         </div>
       </div>
-      <div class="pickup-block">
-        <div class="pickup-img">
+      <div class="searchresults-block">
+        <div class="searchresults-img">
           <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
         </div>
-        <div class="pickup-text">
+        <div class="searchresults-text">
           <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
           <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
           <ul class="tagflex">
@@ -240,11 +236,11 @@
           </ul>
         </div>
       </div>
-      <div class="pickup-block">
-        <div class="pickup-img">
+      <div class="searchresults-block">
+        <div class="searchresults-img">
           <a href=""><img src="./assets/images/48728554.jpg" alt="48728554"></a>
         </div>
-        <div class="pickup-text">
+        <div class="searchresults-text">
           <h5><a href="">コミュニティタイトル。コミュニティタイトル。コミュニティタイトル。</a></h5>
           <p>コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。コミュニティ概要テキスト。</p>
           <ul class="tagflex">
