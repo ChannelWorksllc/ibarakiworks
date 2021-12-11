@@ -17,7 +17,8 @@ $(function() {
                 swiper = new Swiper('.slide1', {
                     slidesPerView: 2,
                     centeredSlides: true,
-                    initialSlide: 1,
+                    loop: true,
+                    initialSlide: 0
                 });
             }
         } else {

@@ -1690,11 +1690,15 @@ main {
       .pickup-box {
         padding: 0;
 
-        .pickup-img {
-          width: 320px;
+        .pickup-block{
+          margin: 0 3%;
 
-          @include max(max-8) {
-            width: 98%;
+          .pickup-img {
+            width: 320px;
+
+            @include max(max-8) {
+              width: 98%;
+            }
           }
         }
 
