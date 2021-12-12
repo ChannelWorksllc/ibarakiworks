@@ -2254,7 +2254,11 @@ main {
               }
           }
 
-          .check {
+          label {
+              font-size: 18px;
+          }
+
+          label.error {
               width: 100%;
               color: $red;
               padding: {
@@ -2269,10 +2273,6 @@ main {
               @include max(max-1) {
                   padding-left: 25%;
               }
-          }
-
-          label {
-              font-size: 18px;
           }
 
           input,select,textarea {

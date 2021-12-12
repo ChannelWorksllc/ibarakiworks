@@ -234,7 +234,6 @@ input[type="submit"] {
 }
 
 .toppage-header #firstview #navigation h1 #header-logo img, .underpage-header #firstview #navigation h1 #header-logo img {
-  width: 100%;
   height: 100%;
 }
 
@@ -1151,12 +1150,6 @@ input[type="submit"] {
   }
 }
 
-@media screen and (max-width: 414px) {
-  .searchresults .searchresults-box .searchresults-text h5 {
-    font-size: 18px;
-  }
-}
-
 @media screen and (max-width: 320px) {
   .searchresults .searchresults-box .searchresults-text h5 {
     font-size: 14px;
@@ -1889,10 +1882,6 @@ main .pickup .swiper-container .pickup-box .pickup-block .pickup-img {
   }
 }
 
-main .pickup .swiper-container .pickup-box .pickup-text {
-  width: 320px;
-}
-
 @media screen and (max-width: 600px) {
   main .pickup .swiper-container .pickup-box .pickup-text {
     width: 98%;
@@ -2128,7 +2117,6 @@ main #knowhow #knowhow-box .knowhow-block .knowhow-img {
 
 main #knowhow #knowhow-box .knowhow-block p a {
   font-size: 16px;
-  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 401px) and (max-width: 414px) {
@@ -2148,8 +2136,7 @@ main #knowhow #knowhow-box .knowhow-block p span {
 }
 
 main #knowhow .viewmore {
-  padding: 50px;
-  padding-bottom: 0;
+  padding: 50px 50px 0;
 }
 
 main .viewmore {
@@ -2226,12 +2213,7 @@ main .viewmore {
   }
 }
 
-.knowhowpage main #knowhow-list #knowhow-list-box {
-  width: 90%;
-}
-
 .knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block {
-  width: 50%;
   padding-bottom: 25px;
 }
 
@@ -3822,10 +3804,6 @@ main .viewmore {
 }
 
 /*フッター*/
-footer {
-  height: 100%;
-}
-
 @media screen and (max-width: 320px) {
   footer::before {
     top: -21px;

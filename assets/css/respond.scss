@@ -296,7 +296,6 @@ body {
           padding-left: 10px;
 
           img {
-            width: 100%;
             height: 100%;
           }
         }
@@ -1070,9 +1069,6 @@ body {
       .searchresults-text {
 
           h5 {
-              @include max(max-5) {
-                  font-size: 18px;
-              }
 
               @include max(max-1) {
                   font-size: 14px;
@@ -1703,7 +1699,6 @@ main {
         }
 
         .pickup-text {
-          width: 320px;
 
           @include max(max-8) {
             width: 98%;
@@ -1901,7 +1896,6 @@ main {
 
           a {
             font-size: 16px;
-            padding-bottom: 10px;
 
             @include mix(mix-5) {
               font-size: 14px;
@@ -1920,8 +1914,7 @@ main {
     }
 
     .viewmore {
-      padding: 50px;
-      padding-bottom: 0;
+      padding: 50px 50px 0;
     }
   }
 
@@ -2005,10 +1998,8 @@ main {
         }
     
         #knowhow-list-box {
-            width: 90%;
         
             .knowhow-list-block {
-                width: 50%;
                 padding-bottom: 25px;
         
                 @include max(max-8) {
@@ -2104,6 +2095,7 @@ main {
 
 /*運営会社*/
 .company {
+
   main {
 
     #policy {
@@ -3401,7 +3393,6 @@ main {
 
 /*フッター*/
 footer {
-  height: 100%;
 
   &::before {
     @include max(max-1) {

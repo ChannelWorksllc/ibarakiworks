@@ -116,18 +116,17 @@
 <main>
     <h3>求人掲載のお申し込み</h3>
 
-    <form method="post" action="">
+    <form class="postform" method="post" action="">
         <div class="form-item item1">
             <h4>御社名</h4>
             <p class="mandatory">（必須）</p>
-            <input type="text" placeholder="御社名をご入力ください">
-            <p class="check">※ 御社名は必須入力項目です。</p>
+            <input name="companyname" type="text" placeholder="御社名をご入力ください">
         </div>
 
         <div class="form-item item2">
             <h4>ご担当者</h4>
             <p class="mandatory">（必須）</p>
-            <input type="text" placeholder="ご担当者様のお名前をご入力ください">
+            <input name="manager" type="text" placeholder="ご担当者様のお名前をご入力ください">
         </div>
 
         <div class="form-item item5">
@@ -156,19 +155,19 @@
         <div class="form-item item6">
             <h4>電話番号</h4>
             <p class="mandatory">（必須）</p>
-            <input type="text" placeholder="電話番号をご入力ください">
+            <input name="phone" type="text" placeholder="電話番号をご入力ください">
         </div>
 
         <div class="form-item item7">
             <h4>E-mail</h4>
             <p class="mandatory">（必須）</p>
-            <input type="text" placeholder="メールアドレスをご入力ください">
+            <input name="email" type="text" placeholder="メールアドレスをご入力ください">
         </div>
 
         <div class="form-item item8">
             <h4>ご要望</h4>
             <p class="mandatory">（必須）</p>
-            <textarea placeholder="募集に人材に関しましてのご要望・ご希望・条件などをご記載ください"></textarea>
+            <textarea name="request" placeholder="募集に人材に関しましてのご要望・ご希望・条件などをご記載ください"></textarea>
         </div>
 
         <div class="form-item item11">
@@ -301,6 +300,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
 <script src="./assets/js/script.js" defer></script>
 </body>
 </html>

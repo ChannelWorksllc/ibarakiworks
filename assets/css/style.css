@@ -2579,7 +2579,11 @@ main #knowhow .viewmore {
   }
 }
 
-.contactform main form .form-item .check {
+.contactform main form .form-item label {
+  font-size: 18px;
+}
+
+.contactform main form .form-item label.error {
   width: 100%;
   color: #c80000;
   padding-top: 15px;
@@ -2587,19 +2591,15 @@ main #knowhow .viewmore {
 }
 
 @media screen and (max-width: 1366px) {
-  .contactform main form .form-item .check {
+  .contactform main form .form-item label.error {
     padding-left: 23%;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .contactform main form .form-item .check {
+  .contactform main form .form-item label.error {
     padding-left: 25%;
   }
-}
-
-.contactform main form .form-item label {
-  font-size: 18px;
 }
 
 .contactform main form .form-item input, .contactform main form .form-item select, .contactform main form .form-item textarea {

@@ -116,18 +116,17 @@
 <main>
     <h3>コミュニティ掲載のお申し込み</h3>
 
-    <form method="post" action="">
+    <form class="postform" method="post" action="">
         <div class="form-item item1">
             <h4>コミュニティ名</h4>
             <p class="mandatory">（必須）</p>
-            <input type="text" placeholder="コミュニティ名をご入力ください">
-            <p class="check">※ コミュニティ名は必須入力項目です。</p>
+            <input name="communityname" type="text" placeholder="コミュニティ名をご入力ください">
         </div>
 
         <div class="form-item item2">
             <h4>ご担当者</h4>
             <p class="mandatory">（必須）</p>
-            <input type="text" placeholder="ご担当者様のお名前をご入力ください">
+            <input name="manager" type="text" placeholder="ご担当者様のお名前をご入力ください">
         </div>
 
         <div class="form-item item5">
@@ -135,12 +134,12 @@
             <p class="mandatory">（必須）</p>
             <div id="adress">
                 <label>郵便番号
-                    <input type="text" placeholder="例）160 - 0023">
+                    <input name="" type="text" placeholder="例）160 - 0023">
                 </label>
                 <div id="prefectures">
                     <label>都道府県</label>
                     <div class="select-wrap">
-                        <select name="area" id="area">
+                        <select name="">
                             <option value="" disabled selected>選択してください</option>
                             <option value="sample1">sample1</option>
                             <option value="sample2">sample2</option>
@@ -148,7 +147,7 @@
                     </div>
                 </div>
                 <label>地名番地
-                    <input id="housenumber" type="text" placeholder="例）古河市 旭町 2-23-17 グランパレスA">
+                    <input id="housenumber" name="" type="text" placeholder="例）古河市 旭町 2-23-17 グランパレスA">
                 </label>
             </div>
         </div>
@@ -156,19 +155,19 @@
         <div class="form-item item6">
             <h4>電話番号</h4>
             <p class="mandatory">（必須）</p>
-            <input type="text" placeholder="電話番号をご入力ください">
+            <input name="phone" type="text" placeholder="電話番号をご入力ください">
         </div>
 
         <div class="form-item item7">
             <h4>E-mail</h4>
             <p class="mandatory">（必須）</p>
-            <input type="text" placeholder="メールアドレスをご入力ください">
+            <input name="email" type="text" placeholder="メールアドレスをご入力ください">
         </div>
 
         <div class="form-item item8">
             <h4>活動内容</h4>
             <p class="mandatory">（必須）</p>
-            <textarea placeholder="活動内容をご記載ください"></textarea>
+            <textarea name="active" placeholder="活動内容をご記載ください"></textarea>
         </div>
 
         <div class="form-item item11">
@@ -258,6 +257,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
 <script src="./assets/js/script.js" defer></script>
 </body>
 </html>

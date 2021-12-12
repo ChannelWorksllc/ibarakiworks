@@ -89,3 +89,82 @@ $(function() {
         return false;
     });
 });
+
+//バリデーション//
+$(function(){
+    $(".postform").validate({
+        rules : {
+            name: {
+                required: true
+            },
+            kana: {
+                required: true
+            },
+            phone: {
+                required: true
+            },
+            email: {
+                required: true
+            },
+            communityname: {
+                required: true
+            },
+            manager: {
+                required: true
+            },
+            CheckboxGroup1: {
+                required: true
+            },
+            active: {
+                required: true
+            },
+            work: {
+                required: true
+            },
+            request: {
+                required: true
+            },
+            companyname: {
+                required: true
+            }
+        },
+        messages: {
+            name: {
+                required: "※ お名前は必須入力項目です。"
+            },
+            kana: {
+                required: "※ ふりがなは必須入力項目です。"
+            },
+            phone: {
+                required: "※ 電話番号は必須入力項目です。"
+            },
+            email: {
+                required: "※ メールアドレスは必須入力項目です。"
+            },
+            communityname: {
+                required: "※ コミュニティ名は必須入力項目です。"
+            },
+            manager: {
+                required: "※ ご担当者様のお名前は必須入力項目です。"
+            },
+            CheckboxGroup1: {
+                required: "※ ご住所は必須入力項目です。"
+            },
+            active: {
+                required: "※ 活動内容は必須入力項目です。"
+            },
+            work: {
+                required: "※ 職歴は必須入力項目です。"
+            },
+            request: {
+                required: "※ ご要望は必須入力項目です。"
+            },
+            companyname: {
+                required: "※ 御社名は必須入力項目です。"
+            }
+        },
+        //表示位置設定
+        //住所
+
+    });
+});
