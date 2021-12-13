@@ -2275,6 +2275,10 @@ main {
               }
           }
 
+          label#housenumber-error.error {
+            display: none!important;
+          }
+
           input,select,textarea {
               border: 2px solid #a4a4a4;
               border-radius: 10px;

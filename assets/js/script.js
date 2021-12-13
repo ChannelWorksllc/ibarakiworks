@@ -107,10 +107,12 @@ $(function(){
                 required: true
             },
             phone: {
-                required: true
+                required: true,
+                number: true
             },
             email: {
-                required: true
+                required: true,
+                email: true
             },
             communityname: {
                 required: true

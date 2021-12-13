@@ -2602,6 +2602,10 @@ main #knowhow .viewmore {
   }
 }
 
+.contactform main form .form-item label#housenumber-error.error {
+  display: none !important;
+}
+
 .contactform main form .form-item input, .contactform main form .form-item select, .contactform main form .form-item textarea {
   border: 2px solid #a4a4a4;
   border-radius: 10px;
