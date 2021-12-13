@@ -100,6 +100,12 @@ $(function(){
             kana: {
                 required: true
             },
+            sex: {
+                required: true
+            },
+            birthday: {
+                required: true
+            },
             phone: {
                 required: true
             },
@@ -112,13 +118,16 @@ $(function(){
             manager: {
                 required: true
             },
-            CheckboxGroup1: {
+            checkadress: {
                 required: true
             },
             active: {
                 required: true
             },
             work: {
+                required: true
+            },
+            scale: {
                 required: true
             },
             request: {
@@ -135,6 +144,12 @@ $(function(){
             kana: {
                 required: "※ ふりがなは必須入力項目です。"
             },
+            sex: {
+                required: "※ 性別は必須入力項目です。"
+            },
+            birthday: {
+                required: "※ 生年月日は必須入力項目です。"
+            },
             phone: {
                 required: "※ 電話番号は必須入力項目です。"
             },
@@ -147,7 +162,7 @@ $(function(){
             manager: {
                 required: "※ ご担当者様のお名前は必須入力項目です。"
             },
-            CheckboxGroup1: {
+            checkadress: {
                 required: "※ ご住所は必須入力項目です。"
             },
             active: {
@@ -155,6 +170,9 @@ $(function(){
             },
             work: {
                 required: "※ 職歴は必須入力項目です。"
+            },
+            scale: {
+                required: "※ 人数規模は必須入力項目です。"
             },
             request: {
                 required: "※ ご要望は必須入力項目です。"
@@ -164,7 +182,31 @@ $(function(){
             }
         },
         //表示位置設定
-        //住所
-
+        
+        errorPlacement: function(error, element) {
+            //住所
+            if(element.attr("name")=="checkadress")
+            {
+                error.insertAfter("#checkadress_error");	
+            }
+            //人数規模
+            else if (element.attr("name")=="scale")
+            {
+                error.insertAfter("#scale_error");
+            }
+            //性別
+            else if (element.attr("name")=="sex")
+            {
+                error.insertAfter("#sex_error");
+            }
+            //生年月日
+            else if (element.attr("name")=="birthday")
+            {
+                error.insertAfter("#birthday_error");
+            }
+            else{
+                error.insertAfter(element);	
+            }
+        }
     });
 });

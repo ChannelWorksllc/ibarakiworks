@@ -137,32 +137,34 @@
             <label><input type="radio" name="sex" value="男性"><span>男性</span></label>
             <label><input type="radio" name="sex" value="女性"><span>女性</span></label>
             <label><input type="radio" name="sex" value="その他"><span>その他</span></label>
+            <div id="sex_error"></div>
         </div>
 
         <div class="form-item item4">
             <h4>生年月日</h4>
             <p class="mandatory">（必須）</p>
             <div class="select-wrap">
-                <select name="" id="year">
+                <select name="birthday" id="year">
                     <option value="" disabled selected>西暦</option>
                     <option value="sample1">sample1</option>
                     <option value="sample2">sample2</option>
                 </select>
             </div>
             <div class="select-wrap">
-                <select name="" id="month">
+                <select name="birthday" id="month">
                     <option value="" disabled selected>月</option>
                     <option value="sample1">sample1</option>
                     <option value="sample2">sample2</option>
                 </select>
             </div>
             <div class="select-wrap">
-                <select name="" id="day">
+                <select name="birthday" id="day">
                     <option value="" disabled selected>日</option>
                     <option value="sample1">sample1</option>
                     <option value="sample2">sample2</option>
                 </select>  
             </div>  
+            <div id="birthday_error"></div>
         </div>        
 
         <div class="form-item item5">
@@ -170,12 +172,12 @@
             <p class="mandatory">（必須）</p>
             <div id="adress">
                 <label>郵便番号
-                    <input type="text" placeholder="例）160 - 0023">
+                    <input name="checkadress" type="text" placeholder="例）160 - 0023">
                 </label>
                 <div id="prefectures">
                     <label>都道府県</label>
                     <div class="select-wrap">
-                        <select name="">
+                        <select name="checkadress">
                             <option value="" disabled selected>選択してください</option>
                             <option value="sample1">sample1</option>
                             <option value="sample2">sample2</option>
@@ -183,9 +185,10 @@
                     </div>
                 </div>
                 <label>地名番地
-                    <input id="housenumber" type="text" placeholder="例）古河市 旭町 2-23-17 グランパレスA">
+                    <input id="housenumber" name="checkadress" type="text" placeholder="例）古河市 旭町 2-23-17 グランパレスA">
                 </label>
             </div>
+            <div id="checkadress_error"></div>
         </div>
 
         <div class="form-item item6">
