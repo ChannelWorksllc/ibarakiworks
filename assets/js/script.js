@@ -15,8 +15,7 @@ $(function() {
                 return;
             } else {
                 swiper = new Swiper('.slide1', {
-                    slidesPerView: 2,
-                    centeredSlides: true,
+                    slidesPerView: 1.3,
                     loop: true,
                     initialSlide: 0
                 });
