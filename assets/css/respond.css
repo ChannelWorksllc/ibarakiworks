@@ -1868,18 +1868,18 @@ main .pickup .swiper-container .pickup-box {
   padding: 0;
 }
 
-main .pickup .swiper-container .pickup-box .pickup-block {
-  margin: 0 3%;
-}
-
-main .pickup .swiper-container .pickup-box .pickup-block .pickup-img {
+main .pickup .swiper-container .pickup-box .pickup-img {
   width: 320px;
 }
 
 @media screen and (max-width: 600px) {
-  main .pickup .swiper-container .pickup-box .pickup-block .pickup-img {
+  main .pickup .swiper-container .pickup-box .pickup-img {
     width: 98%;
   }
+}
+
+main .pickup .swiper-container .pickup-box .pickup-text {
+  width: 320px;
 }
 
 @media screen and (max-width: 600px) {

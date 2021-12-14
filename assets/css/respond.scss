@@ -1686,19 +1686,16 @@ main {
       .pickup-box {
         padding: 0;
 
-        .pickup-block{
-          margin: 0 3%;
+        .pickup-img {
+          width: 320px;
 
-          .pickup-img {
-            width: 320px;
-
-            @include max(max-8) {
-              width: 98%;
-            }
+          @include max(max-8) {
+            width: 98%;
           }
         }
 
         .pickup-text {
+          width: 320px;
 
           @include max(max-8) {
             width: 98%;
