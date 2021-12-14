@@ -7,10 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />    
   <link rel="icon" type="image/png" href="./fav.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="./icon.png" />
-  <title>茨城の派遣お仕事探しなら｜イバラキ・ハケン</title>
+  <title>茨城の派遣お仕事探しなら｜イバラキ・ワークス</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" media="only screen and (max-width: 979px)" href="./assets/css/respond.css">
+  <link rel="stylesheet" media="only screen and (max-width: 979px)" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,74 +33,75 @@
   <meta property="og:image:width" content="画像の横幅（数値指定）" /> 
   <meta property="og:image:height" content="画像の高さ（数値指定）" />
 </head>
-<body>
-<header>
+<body class="drawer drawer--left">
+
+<header role="banner" class="toppage-header">
   <div class="container">
     <div id="firstview">
       <div id="navigation">
         <h1>
           <span id="header-icon"><img src="./assets/images/icon1.png" alt="icon1"></span>
           <span id="header-copy">茨城の派遣お仕事探しなら</span>
-          <span id="header-logo"><img src="./assets/images/ibarakiworks.png" alt="ibarakiworks"></span>
+          <a id="header-logo" href="" title="トップページ"><img src="./assets/images/ibarakiworks.png" alt="ibarakiworks"></a>
         </h1>
         <p id="ibaraki">求人情報とコミュニティで<br class="resp_pc">
           「イバラキ」を盛り上げます</p>
-        <button class="resp_sp">
+        <button class="toggle-btn drawer-toggle resp_sp">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav>
-          <ul id="nav-menu">
-            <li class="nav-list">
-              <a class="nev-tittle" href="">派遣求人検索</a>
-              <div class="drop-display">
-                <ul class="drop-down">
-                  <li><a href="" title="地域分類A">≫ 地域分類A</a></li>
-                  <li><a href="" title="地域分類B">≫ 地域分類B</a></li>
-                  <li><a href="" title="地域分類C">≫ 地域分類C</a></li>
-                  <li><a href="" title="職種カテゴリA">≫ 職種カテゴリA</a></li>
-                  <li><a href="" title="職種カテゴリB">≫ 職種カテゴリB</a></li>
-                  <li><a href="" title="職種カテゴリC">≫ 職種カテゴリC</a></li>
-                </ul>
-              </div>
+        <nav class="drawer-nav" role="navigation">
+          <ul class="drawer-menu">
+            <li class="drawer-dropdown">
+              <a class="menu-item" href="./recruitsearch.html" title="派遣求人検索">
+                派遣求人検索
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-menu-item" href="" title="地域分類A">≫ 地域分類A</a></li>
+                <li><a class="dropdown-menu-item" href="" title="地域分類B">≫ 地域分類B</a></li>
+                <li><a class="dropdown-menu-item" href="" title="地域分類C">≫ 地域分類C</a></li>
+                <li><a class="dropdown-menu-item" href="" title="職種カテゴリA">≫ 職種カテゴリA</a></li>
+                <li><a class="dropdown-menu-item" href="" title="職種カテゴリB">≫ 職種カテゴリB</a></li>
+                <li><a class="dropdown-menu-item" href="" title="職種カテゴリC">≫ 職種カテゴリC</a></li>
+              </ul>
             </li>
-            <li class="nav-list">
-              <a class="nev-tittle" href="">茨城のコミュニティ</a>
-              <div class="drop-display">
-                <ul class="drop-down">
-                  <li><a href="" title="コミュニティカテゴリA">≫ コミュニティカテゴリA</a></li>
-                  <li><a href="" title="コミュニティカテゴリB">≫ コミュニティカテゴリB</a></li>
-                  <li><a href="" title="コミュニティカテゴリC">≫ コミュニティカテゴリC</a></li>
-                  <li><a href="" title="コミュニティカテゴリD">≫ コミュニティカテゴリD</a></li>
-                </ul>
-              </div>
+            <li class="drawer-dropdown">
+              <a class="menu-item" href="./communitysearch.html" title="茨城のコミュニティ">
+                茨城のコミュニティ
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-menu-item" href="" title="コミュニティカテゴリA">≫ コミュニティカテゴリA</a></li>
+                <li><a class="dropdown-menu-item" href="" title="コミュニティカテゴリB">≫ コミュニティカテゴリB</a></li>
+                <li><a class="dropdown-menu-item" href="" title="コミュニティカテゴリC">≫ コミュニティカテゴリC</a></li>
+                <li><a class="dropdown-menu-item" href="" title="コミュニティカテゴリD">≫ コミュニティカテゴリD</a></li>
+              </ul>
             </li>
-            <li class="nav-list">
-              <a class="nev-tittle" href="" title="求人ノウハウ">求人ノウハウ</a>
+            <li class="drawer-dropdown">
+              <a class="menu-item" href="./knowhow.html" title="求人ノウハウ">求人ノウハウ</a>
             </li>
-            <li class="nav-list">
-              <a class="nev-tittle" href="" title="運営会社">運営会社</a>
-              <div class="drop-display">
-                <ul class="drop-down">
-                  <li><a href="" title="運営ポリシー">≫ 運営ポリシー</a></li>
-                  <li><a href="" title="お仕事をお探しの方へ">≫ お仕事をお探しの方へ</a></li>
-                  <li><a href="" title="コミュニティをお探しの方へ">≫ コミュニティをお探しの方へ</a></li>
-                  <li><a href="" title="代表メッセージ">≫ 代表メッセージ</a></li>
-                </ul>
-              </div>
+            <li class="drawer-dropdown">
+              <a class="menu-item" href="./company.html" title="運営会社">
+                運営会社
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-menu-item" href="./company.html#policy" title="運営ポリシー">≫ 運営ポリシー</a></li>
+                <li><a class="dropdown-menu-item" href="./company.html#catch" title="お仕事をお探しの方へ">≫ お仕事をお探しの方へ</a></li>
+                <li><a class="dropdown-menu-item" href="./company.html#community-overview" title="コミュニティをお探しの方へ">≫ コミュニティをお探しの方へ</a></li>
+                <li><a class="dropdown-menu-item" href="./company.html#representative" title="代表メッセージ">≫ 代表メッセージ</a></li>
+              </ul>
             </li>
-            <li class="nav-list">
-              <a class="nev-tittle" href="" title="求人応募・お問い合わせ">求人応募・お問い合わせ</a>
-              <div class="drop-display">
-                <ul class="drop-down">
-                  <li><a href="" title="求人応募">≫ 求人応募</a></li>
-                  <li><a href="" title="求人掲載依頼">≫ 求人掲載依頼</a></li>
-                  <li><a href="" title="コミュニティ問い合わせ">≫ コミュニティ問い合わせ</a></li>
-                  <li><a href="" title="コミュニティ掲載依頼">≫ コミュニティ掲載依頼</a></li>
-                  <li><a href="" title="総合問い合わせ">≫ 総合問い合わせ</a></li>
-                </ul>
-              </div>
+            <li class="drawer-dropdown">
+              <a class="menu-item" href="" title="求人応募・お問い合わせ">
+                求人応募・お問い合わせ
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-menu-item" href="" title="求人応募">≫ 求人応募</a></li>
+                <li><a class="dropdown-menu-item" href="" title="求人掲載依頼">≫ 求人掲載依頼</a></li>
+                <li><a class="dropdown-menu-item" href="" title="コミュニティ問い合わせ">≫ コミュニティ問い合わせ</a></li>
+                <li><a class="dropdown-menu-item" href="" title="コミュニティ掲載依頼">≫ コミュニティ掲載依頼</a></li>
+                <li><a class="dropdown-menu-item" href="" title="総合問い合わせ">≫ 総合問い合わせ</a></li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -128,7 +130,7 @@
   </div>
 </header>
 
-<main>
+<main role="main">
   <div class="container">
 
     <section id="new">
@@ -232,7 +234,7 @@
           <div class="decoration1">
             <img src="./assets/images/D15A5142.jpg" alt="D15A5142">
           </div>
-          <div class="dacoration2">
+          <div class="decoration2">
             <img src="./assets/images/D15A5143.png" alt="D15A5143">
           </div>
         </div>
@@ -241,7 +243,7 @@
       <article id="search-box">
         <p id="search-tittle">
           <span>未経験もベテランも、<br class="resp_sp">
-            生産業ならイバラキ・ハケン！</span><br>
+            生産業ならイバラキ・ワークス！</span><br>
             人材サポート力は茨城No1！まずはご相談ください。
         </p>
         <div id="search-contents">
@@ -275,15 +277,15 @@
           <div id="consultation-icon">
             <img src="./assets/images/icon4.png" alt="icon4">
           </div>
-          <p>イバラキ・ハケンは未経験者のフォローに自信があります！<br>
+          <p>イバラキ・ワークスは未経験者のフォローに自信があります！<br>
             無料のスキルアップ支援や、手厚い業務サポート体制で、高い業務継続率を実現！<br class="resp_pc">
             就業に不安のある方も、キャリアを活かして高収入を目指したい方も、まずご相談ください！</p>
-          <a href="">イバラキ・ハケンの<br class="resp_pc">
+          <a href="">イバラキ・ワークスの<br class="resp_pc">
             人材サポートに相談</a>
         </div>
       </article>
 
-      <article class="category-link">
+      <article class="category-link category-link2">
           <h3>求人カテゴリ</h3>
           <ul>
               <li><a href="">求人カテゴリリンク</a></li>
@@ -357,7 +359,7 @@
 
       <article class="pickup">
           <h4>ピックアップ求人</h4>
-          <div class="swiper-container">
+          <div class="swiper-container slide1">
             <div class="pickup-box swiper-wrapper">
               <div class="pickup-block swiper-slide">
                 <div class="pickup-img">
@@ -422,7 +424,7 @@
             </div>
           </div>
           <div class="viewmore">
-            <a href="">≫ 求人一覧を見る</a>
+            <a href="./recruitsearch.html">≫ 求人一覧を見る</a>
           </div>
       </article>
     </section>
@@ -436,7 +438,7 @@
           <div class="decoration1">
             <img src="./assets/images/D15A5142.jpg" alt="D15A5142">
           </div>
-          <div class="dacoration2">
+          <div class="decoration2">
             <img src="./assets/images/D15A5143.png" alt="D15A5143">
           </div>
         </div>
@@ -461,7 +463,7 @@
         </div>
       </article>
 
-      <article class="category-link">
+      <article class="category-link category-link1">
           <h3>コミュニティカテゴリ</h3>
           <ul>
               <li><a href="">コミュニティカテゴリリンク</a></li>
@@ -475,7 +477,7 @@
 
       <article class="pickup">
           <h4>ピックアップコミュニティ</h4>
-          <div class="swiper-container">
+          <div class="swiper-container slide1">
             <div class="pickup-box  swiper-wrapper">
               <div class="pickup-block swiper-slide">
                 <div class="pickup-img">
@@ -540,7 +542,7 @@
             </div>
           </div>
           <div class="viewmore">
-            <a href="">≫ コミュニティ一覧をみる</a>
+            <a href="./communitysearch.html">≫ コミュニティ一覧をみる</a>
           </div>
       </article>
     </section>
@@ -604,7 +606,7 @@
         </div>
       </article>  
       <div class="viewmore">
-        <a href="">≫ 求人ノウハウ一覧をみる</a>
+        <a href="./knowhow.html">≫ 求人ノウハウ一覧をみる</a>
       </div>
     </section>
   </div>
@@ -619,63 +621,66 @@
       <div id="flex1">
         <h1>
           <span id="footer-icon"><img src="./assets/images/icon5.png" alt="icon5"></span>
-          <span id="footer-logo"><img src="./assets/images/ibarakiworks2.png" alt="ibarakiworks2"></span>
+          <a id="footer-logo" href="" title="トップページ"><img src="./assets/images/ibarakiworks2.png" alt="ibarakiworks2"></a>
         </h1>
-        <p><a href="">≫ プライバシーポリシー</a></p>
+        <p><a href="./privacypolicy.html" title="プライバシーポリシー">≫ プライバシーポリシー</a></p>
         <p id="corporation">株式会社ライフ</p>
         <p id="address">〒160 - 0023<br class="resp_pc">  
           茨城県古河市旭町2-23-17 グランパレスA<br>
           TEL：0280-33-7480</p>
       </div>
       <div class="flex2">
-        <p><a href="">派遣求人一覧</a></p>
+        <p><a href="./recruitsearch.html" title="派遣求人一覧">派遣求人一覧</a></p>
         <ul id="list1">
-          <li><a href="">≫ 地域分類A</a></li>
-          <li><a href="">≫ 地域分類B</a></li>
-          <li><a href="">≫ 地域分類C</a></li>
+          <li><a href="" title="地域分類A">≫ 地域分類A</a></li>
+          <li><a href="" title="地域分類B">≫ 地域分類B</a></li>
+          <li><a href="" title="地域分類C">≫ 地域分類C</a></li>
         </ul>
         <ul id="list2">
-          <li><a href="">≫ 職種カテゴリA</a></li>
-          <li><a href="">≫ 職種カテゴリA</a></li>
-          <li><a href="">≫ 職種カテゴリA</a></li>
+          <li><a href="" title="職種カテゴリA">≫ 職種カテゴリA</a></li>
+          <li><a href="" title="職種カテゴリA">≫ 職種カテゴリA</a></li>
+          <li><a href="" title="職種カテゴリA">≫ 職種カテゴリA</a></li>
         </ul>
       </div>
       <div class="flex2">
-        <p><a href="">茨城のコミュニティ一覧</a></p>
+        <p><a href="./communitysearch.html" title="茨城のコミュニティ一覧">茨城のコミュニティ一覧</a></p>
         <ul id="list3">
-          <li><a href="">≫ コミュニティカテゴリA</a></li>
-          <li><a href="">≫ コミュニティカテゴリB</a></li>
-          <li><a href="">≫ コミュニティカテゴリC</a></li>
-          <li><a href="">≫ コミュニティカテゴリD</a></li>
+          <li><a href="" title="コミュニティカテゴリA">≫ コミュニティカテゴリA</a></li>
+          <li><a href="" title="コミュニティカテゴリB">≫ コミュニティカテゴリB</a></li>
+          <li><a href="" title="コミュニティカテゴリC">≫ コミュニティカテゴリC</a></li>
+          <li><a href="" title="コミュニティカテゴリD">≫ コミュニティカテゴリD</a></li>
         </ul>
       </div>
       <div class="flex2">
-        <p><a href="">運営会社情報</a></p>
+        <p><a href="./company.html" title="運営会社情報">運営会社情報</a></p>
         <ul id="list4">
-          <li><a href="">≫ 運営ポリシー</a></li>
-          <li><a href="">≫ お仕事をお探しの方へ</a></li>
-          <li><a href="">≫ 代表メッセージ</a></li>
+          <li><a href="./company.html#policy" title="運営ポリシー">≫ 運営ポリシー</a></li>
+          <li><a href="./company.html#catch" title="お仕事をお探しの方へ">≫ お仕事をお探しの方へ</a></li>
+          <li><a href="./company.html#representative" title="代表メッセージ">≫ 代表メッセージ</a></li>
         </ul>
       </div>
       <div class="flex2">
-        <p><a href="">応募・お問い合わせ</a></p>
+        <p><a href="" title="応募・お問い合わせ">応募・お問い合わせ</a></p>
         <ul id="list5">
-          <li><a href="">≫ 求人応募</a></li>
-          <li><a href="">≫ 求人掲載依頼</a></li>
-          <li><a href="">≫ コミュニティ問い合わせ</a></li>
-          <li><a href="">≫ コミュニティ掲載依頼</a></li>
-          <li><a href="">≫ 総合問い合わせ</a></li>
+          <li><a href="" title="求人応募">≫ 求人応募</a></li>
+          <li><a href="" title="求人掲載依頼">≫ 求人掲載依頼</a></li>
+          <li><a href="" title="コミュニティ問い合わせ">≫ コミュニティ問い合わせ</a></li>
+          <li><a href="" title="コミュニティ掲載依頼">≫ コミュニティ掲載依頼</a></li>
+          <li><a href="" title="総合問い合わせ">≫ 総合問い合わせ</a></li>
         </ul>
       </div>
     </div>
     <div id="copyright">
-      <span>Copyright 2021 イバラキ・ハケン</span>
+      <span>Copyright 2021 イバラキ・ワークス</span>
     </div>
   </div>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="./assets/js/script.js" defer></script>
 </body>
 </html>

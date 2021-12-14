@@ -119,6 +119,9 @@ input[type="submit"]{
 
 $gray: #f7f7f7;
 $navy: #003973;
+$blue: #408cff;
+$red: #c80000;
+$aqua: #e4ecf8;
 $black: #4a4a4a;
 $border: #c8c8c8;
 
@@ -129,7 +132,115 @@ body {
   }
 }
 
-header {
+/*共通ヘッダー*/
+
+/*ハンバーガーメニュー開いた時*/
+.drawer-open {
+
+  .toppage-header,.underpage-header {
+
+    #firstview {
+
+      #navigation {
+
+        .toggle-btn {
+
+          span:nth-of-type(1) {
+            transition: 0.5s;
+            transform: translateY(20px) rotate(-45deg);
+
+            @include max(max-5) {
+              transform: translateY(10px) rotate(-45deg);
+            }
+          }
+  
+          span:nth-of-type(2) {
+            transition: 0.25s;
+            width: 0;
+          }
+  
+          span:nth-of-type(3) {
+            width: 100%;
+            transition: 0.5s;
+            transform: translateY(-20px) rotate(45deg);
+
+            @include max(max-5) {
+              transform: translateY(-10px) rotate(45deg);
+            }
+          }
+        }
+
+        .drawer-nav {
+          width: 100%;
+          height: 100vh;
+          margin-top: 100px;
+          background: $gray;
+          padding: 25px;
+
+          .drawer-menu {
+            width: 100%;
+
+            .drawer-dropdown {
+              border-bottom: 1px solid $border;
+              position: relative;
+
+              .dropdown-menu {
+                display: block;
+                background: $gray;
+                padding:  0 1em 25px;
+
+                .menu-item {
+                  display: block;
+                  color: $black;
+                  font-size: 14px;
+                  padding: 1em;
+
+                  &:hover {
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .underpage-header {
+
+    #firstview {
+
+      #navigation {
+
+        .drawer-nav {
+          margin-top: 90px;
+
+          @include max(max-5) {
+              margin-top: 75px;
+          }    
+
+          .drawer-menu {
+              width: 100%;
+              line-height: 3em;
+              flex-direction: column;
+
+              &::before {
+                  display: none;
+              }
+          }
+        }
+      }
+    }
+  }
+
+  .drawer-overlay {
+    background-color: transparent;
+  }
+}
+
+/*ハンバーガーメニュー閉じてる時*/
+.toppage-header,.underpage-header {
   
   #firstview {
     display: block;
@@ -139,7 +250,8 @@ header {
       height: 105px;
       display: flex;
       justify-content: space-between;
-      position: relative;
+      position: fixed;
+      z-index: 3;
 
       h1 {
         align-items: center;
@@ -149,6 +261,14 @@ header {
           left: 20px;
         }
         position: relative;
+
+        @include max(max-5) {
+          margin-left: 15px;
+        }
+
+        @include max(max-1) {
+          margin-left: 5px;
+        }
 
         #header-icon {
           width: 42px;
@@ -176,52 +296,112 @@ header {
           padding-left: 10px;
 
           img {
-            width: 100%;
             height: 100%;
           }
         }
       }
 
-      #ibaraki {
-        position: absolute;
-        top: 60px;
-        margin-left: 20px;
-
-        @include max(max-5) {
-          font-size: 13px;
-        }
-
-        @include max(max-1) {
-          font-size: 11px;
-        }
-      }
-
-      button {
+      .toggle-btn {
+        position: relative;
+        top: 30px;
+        width: 60px;
 
         @include max(max-5) {
           top: 40px;
           width: 30px;          
         }
 
+        span {
+          position: absolute;
+          right: 14px;
+          height: 3px;
+          border-radius: 2px;
+          background: $navy;
+        }
+
+        span:nth-of-type(1) {
+          top: 0; 
+          width: 100%;
+          transition: 0.5s;
+        }
+
         span:nth-of-type(2) {
-          top: 10px;
+          top: 20px;
+          width: 70%;
+          transition: 0.5s;
+
+          @include max(max-5) {
+            top: 10px;
+          }
         }
 
         span:nth-of-type(3) {
-          top: 20px;
-        }
+          top: 40px;
+          width: 45%;
+          transition: 0.5s;
 
+          @include max(max-5) {
+            top: 20px;
+          }
+        }
       }
 
-      nav {
-        display: none;
+      .drawer-nav {
+        margin-top: 100px;
+        background: $gray;
+
+        .drawer-menu {
+          width: 100%;
+
+          .drawer-dropdown {
+            border-bottom: 1px solid $border;
+            position: relative;
+
+            .dropdown-menu {
+              display: block;
+              background: $gray;
+              padding:  0 1em 25px;
+
+              .menu-item {
+                display: block;
+                color: $black;
+                font-size: 14px;
+                padding: 1em;
+              }
+            }
+          }
+        }
       }
     }
+  }
+}
 
+/*トップページヘッダー*/
+.toppage-header {
+
+  #firstview {
+
+    #ibaraki {
+      position: absolute;
+      top: 60px;
+      margin-left: 20px;
+
+      @include max(max-5) {
+        margin-left: 15px;
+        font-size: 12px;
+      }
+
+      @include max(max-1) {
+        margin-left: 5px;
+        font-size: 11px;
+      }
+    }    
+    
     #mainvisual {
       flex-direction: column;
       width: 100%;
       height: 100vh;
+      padding-top: 105px;
 
       #header-img1,#header-img2,#header-img3 {
         width: 100%;
@@ -267,64 +447,1036 @@ header {
         }
       }
     }
+  }
 
-    h2 {
-      width: 20%;
-      height: 100%;
-      font-size: 34px;
-      line-height: 1.1;
-      top: 105px;
-      left: 70%;
+  h2 {
+    width: 20%;
+    height: 100vh;
+    font-size: 34px;
+    line-height: 1.1;
+    top: 105px;
+    left: 70%;
 
-      @include max(max-5) {
-        font-size: 25px;
-      }
-
-      @include max(max-1) {
-        font-size: 17px;
-      }
-
-      span {
-        width: 30%;
-        top: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+    @include max(max-8) {
+      font-size: 25px;
     }
 
-    #readcopy {
-      height: 19%;
-      font-size: 18px;
+    @include max(max-1) {
+      font-size: 17px;
+    }
 
-      @include max(max-5) {
-        font-size: 13px;
+    span {
+      width: 30%;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  #readcopy {
+    height: 19%;
+    font-size: 18px;
+    text-align: center;
+
+    @include max(max-8) {
+      font-size: 13px;
+    }
+
+    @include max(max-1) {
+      font-size: 10px;
+    }
+
+    span {
+      width: 85%;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include max(max-8) {
+        width: 90%;
+        top: 15%;
       }
+    }
+  }
 
-      @include max(max-1) {
-        font-size: 10px;
+  #scroll-nav {
+    left: 50%;
+
+    @include max(max-8) {
+      padding-bottom: 50px;
+    }
+
+    @include max(max-1) {
+      padding-bottom: 30px;
+    }
+  }  
+}
+
+/*下層ページヘッダー*/
+.underpage-header {
+
+  #firstview {
+
+      #navigation {
+          height: 110px;
+          margin: -10px;
+          padding: 10px;
+          position: fixed;
+          z-index: 3;
+
+          @include max(max-5) {
+              height: 85px;
+          }
+
+          @include max(max-1) {
+              width: 320px;
+              height: 75px;
+          }
+
+          h1 {
+              position: relative;
+              margin: {
+                  top: 15px;
+                  left: 20px;
+              }
+
+              @include max(max-5) {
+                  margin-left: 5px;
+              }
+
+              @include max(max-1) {
+                  margin-left: 0;
+              }
+      
+              #header-copy {
+                  top: -15px;
+                  left: 50px;
+              }
+          }
+
+          .toggle-btn {
+            top: -20px;
+
+            @include max(max-5) {
+                top: -10px;
+            }
+
+            span {
+                @include max(max-5) {
+                    right: 10px;
+                }
+
+                @include max(max-1) {
+                    right: 5px;
+                }
+            }
+        }
+    }
+
+      #mainvisual {
+          margin-top: 100px;
+          height: 140px;
+
+          @include max(max-5) {
+              margin-top: 75px;
+              height: 90px;
+          }
+
+          @include max(max-1) {
+              margin-top: 65px;
+              height: 65px;
+          }
+
+          #header-img {
+
+              #img-recruit {
+                object-position: 50% 80%;
+              }
+
+              #img-community {
+                object-position: 50% 80%;
+              }
+
+              #img-knowhow {
+                object-position: 50% 68%;
+
+                @include max(max-9) {
+                    object-position: 50% 94%;
+                }
+
+                @include max(max-8) {
+                    object-position: 50% 100%;
+                }
+              }
+
+              #img-company {
+                object-position: 50% 60%;
+              }
+
+              #img-privacypolicy {
+                object-position: 50% 95%;
+              }
+          }
+
+          h2 {
+              @include max(max-5) {
+                  height: 30px;
+                  width: 170px;
+                  padding: 5px;
+
+                  span {
+                      font-size: 14px;
+                  }
+              }
+          }
       }
+  }
+}
 
-      span {
-        top: 25%;
+/*共通部分*/
+
+/*新着求人コミュニティ*/
+#new {
+  display: block;
+  margin: 50px 0 80px;
+
+  .new-category {
+    width: 95%;
+    margin:0 auto;
+    margin-top: 50px;
+
+    .new-contents {
+
+      .contents-block {
+        width: 50%;
+        margin-right: 0;
+        justify-content: center;
 
         @include max(max-5) {
-          width: 90%;
-          top: 15%;
-          left: 50%;
-          transform: translateX(-50%);
+          width: 100%;
+          margin-bottom: 10px;
+          align-items: center;
+        }
+
+        p {
+          font-size: 16px;
+
+          @include max(max-8) {
+            font-size: 14px;
+          }
+        }
+
+        span {
+          font-size: 14px;
+
+          @include max(max-8) {
+            font-size: 11px;
+          }
+        }
+      }
+
+      .block-right {
+        margin-bottom: 30px;
+
+        @include max(max-5) {
+          margin-bottom: 0;
         }
       }
     }
+  }
+}
 
-    #scroll-nav {
-      left: 50%;
+/*人気求人ランキング*/
+#recruit-ranking {
+  padding-top: 50px;
+
+  @include max(max-8) {
+    padding: 50px 0 0;
+  }
+
+  #ranking-box {
+    display: block;
+
+    @include max(max-8) {
+      padding: 30px 0 0;
+    }
+
+    .contents-block {
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 0;
+      padding-bottom: 30px;
+      
+      .contents-img {
+        width: 120px;
+        height: 120px;
+        padding: 0;
+
+        @include max(max-8) {
+          height: auto;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        p {
+          padding: 15px 20.8px;
+          right: 70px;
+
+          @include max(max-8) {
+            right: unset;
+            padding: 2px 8px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      p {
+        font-size: 20px;
+
+        @include max(max-8) {
+          font-size: 18px;
+          padding-left: 10px;
+        }
+
+        @include max(max-5) {
+          font-size: 15px;
+        }
+
+        span {
+          font-size: 18px;
+
+          @include max(max-8) {
+            font-size: 16px;
+          }  
+
+          @include max(max-5) {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*求人コミュニティカテゴリリンク*/
+/*共通*/
+.category-link {
+  padding-top: 45px;
+
+  li {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+
+/*コミュニティカテゴリリンク*/
+.category-link1 {
+
+  ul {
+    @include max(max-8) {
+      padding: 25px 0 0 0;
+    }
+
+    @include max(max-1) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+
+    li {
+      width: 50%;
+
+      @include max(max-8) {
+        font-size: 14px;
+        padding-bottom: 5px;
+      }
 
       @include max(max-5) {
-        padding-bottom: 50px;
+        font-size: 12px;
+      }
+
+      @include max(max-3) {
+        font-size: 10px;
+      }
+      
+      @include max(max-1) {
+        font-size: 11px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*求人カテゴリリンク*/
+.category-link2 {
+
+  ul {
+
+    @include max(max-8) {
+      padding: 25px 0 0 0;
+    }
+
+    li {
+      width: 30%;
+
+      @include max(max-8) {
+        font-size: 14px;
+        padding-bottom: 5px;
+      }
+
+      @include max(max-5) {
+        font-size: 12px;
+        width: 50%;
       }
 
       @include max(max-1) {
-        padding-bottom: 30px;
+        font-size: 11px;
+      }    
+    }
+  }
+}
+
+/*インフォメーション*/
+#consultation {
+  width: 90%;
+  margin: 100px auto;
+
+  @include max(max-5) {
+      margin: 75px auto;
+  }
+
+  @include max(max-1) {
+      margin: 50px auto;
+  }
+
+  #consultation-ba {
+      padding: 50px 0 0;
+      flex-wrap: wrap;
+      align-items: center;
+
+      @include max(max-8) {
+          justify-content: space-between;
+
+      }
+
+      &::before {
+          position: absolute;
+          right: 0;
+          top: 0;
+          content: "";
+          background-color: $border;
+          height: 1px;
+          width: 70%;
+      }
+
+      &::after {
+          display: none;
+      }
+
+      #consultation-icon {
+          padding: {
+          left: 0;
+          bottom: 40px;
+          } 
+      }
+
+      p {
+          width: 94%;
+          font-size: 18px;
+          white-space: normal;
+          padding: {
+          left: 20px;
+          bottom: 40px;
+          }
+          
+          @include max(max-8) {
+              width: 80%;
+          }
+
+          @include max(max-5) {
+              font-size: 16px;
+          }        
+
+          @include max(max-1) {
+              font-size: 14px;
+          }
+      }
+
+      a {
+          width: 100%;
+          margin: 0 auto;
+          font-size: 24px;
+          padding: 23px 100px;
+
+          @include max(max-8) {
+              font-size: 18px;
+              padding: 25px 48px;
+          }
+  
+          @include max(max-5) {
+              height: 60px;
+              font-size: 14px;
+              padding: 20px 28px;
+          }
+
+          @include max(max-3) {
+              font-size: 12px;
+          }
+
+          @include max(max-1) {
+              padding: 12px 70px;
+
+              br {
+                  display: block;
+              }
+          }
+
+          &::after {
+
+              @include max(max-5) {
+                  top: 18px;
+                  margin-left: 15px;
+              }
+
+              @include max(max-1) {
+                  top: 20px;
+              }
+          }
+      }
+  }
+}
+
+/*検索条件絞り込み*/
+#search {
+
+  #recruit-search-tittle {
+      @include max(max-5) {
+          font-size: 20px;
+      }
+
+      @include max(max-3) {
+          font-size: 18px;
+      }    
+  }
+
+  #recruit-search {
+      width: 100%;
+
+      form {
+          flex-direction: column;
+          height: 245px;
+
+          @include max(max-5) {
+              height: 180px;
+              margin-top: 20px;
+          }
+
+          .select-wrap,input {
+              width: 90%;
+              margin: 0 auto;
+          }
+
+          select,input {
+              @include max(max-5) {
+                  height: 50px;
+                  font-size: 13px;
+                  padding-left: 15px;
+              }
+          }
+
+      }
+
+      #search-box-tittle {
+          @include max(max-5) {
+              font-size: 16px;
+              margin-top: 25px;
+          }
+      }
+
+      #search-box {
+          padding: 30px;
+
+          @include max(max-5) {
+              padding: 20px;
+              margin: 20px 0;
+          }
+
+          label {
+              width: 50%;
+              text-align: center;
+
+              @include max(max-5) {
+                  font-size: 15px;
+              }
+          }
+      }
+
+      #search-submit {
+          input[type="submit"] {
+              width: 90%;
+
+              @include max(max-5) {
+                  font-size: 13px;
+                  height: 46.51px;;
+              }
+          }
+      }
+  }
+
+  #search-button {
+      @include max(max-5) {
+          height: 40px;
+          margin-top: 20px;
+
+          span {
+              width: 45px;
+
+              &:nth-child(2) {
+                  width: 23px;
+              }
+          }
+      }
+  }
+}
+
+/*求人コミュニティ検索結果一覧*/
+.searchresults {
+  @include max(max-8) {
+      margin-bottom: 40px;
+      padding: 0;
+  }
+
+  .searchresults-box {
+      justify-content: space-around;
+
+      @include max(max-8) {
+          justify-content: center;
+      }
+
+      .searchresults-block {
+          @include max(max-1) {
+              width: 300px;
+          
+              img {
+                  width: 100%;
+              }
+          }
+      }
+
+      .searchresults-text {
+
+          h5 {
+
+              @include max(max-1) {
+                  font-size: 14px;
+              }
+
+          }
+
+          p,.tagflex {
+              padding-top: 20px;
+
+              @include max(max-8) {
+                  padding-top: 15px;
+                  font-size: 14px;
+              }
+
+              @include max(max-1) {
+                  padding-top: 10px;
+                  font-size: 12px;
+              }
+
+              li {
+                  @include max(max-8) {
+                  font-size: 10px;
+                  }
+              }          
+          }
+      }
+
+      .spanflex {
+          padding-top: 30px;
+          padding-bottom: 25px;
+
+          li {
+              padding: 0 20px;
+              font-size: 20px;
+
+              @include max(max-1) {
+                  padding: 0 15px;
+                  font-size: 15px;
+              }
+          }
+      }
+  }
+}
+
+/*応募フロー*/
+#flow {
+  margin-bottom: 50px;
+  overflow: hidden;
+
+  @include max(max-5) {
+      margin-bottom: 0;
+  }
+
+  h4 {
+      padding: 50px 0 20px;
+  }
+
+  .swiper-container {
+      height: 240px;
+
+      @include max(max-1) {
+          height: 180px;
+      }
+
+      .flow-block {
+
+          @include max(max-8) {
+              img {
+                  width: 65%;
+              }
+          }
+
+          div {
+              @include max(max-8) {
+                  top: 25%;
+                  width: 65%;
+                  height: 75%;
+              }        
+
+              @include max(max-5) {
+                  top: 15%;
+                  height: 60%;
+              }
+
+              @include max(max-3) {
+                  height: 55%;
+              }
+
+              @include max(max-1) {
+                  height: 45%;
+              }
+
+              p {
+                  @include max(max-8) {
+                      font-size: 20px;
+                  }
+
+                  @include max(max-5) {
+                      font-size: 14px;
+                  }
+
+                  @include max(max-1) {
+                      font-size: 12px;
+                  }
+
+                  span {
+                      @include max(max-8) {
+                          font-size: 10px;
+                      }
+                  }
+              }
+          }
+      }
+
+      .flow-arrow {
+          @include max(max-8) {
+              margin-top: 0;
+              height: 30px;
+
+              img {
+                  height: 100%;
+              }
+          }
+
+          @include max(max-5) {
+              height: 23px;
+              margin-top: -40px;
+          }
+
+          @include max(max-1) {
+              height: 18px;
+              margin-top: -55px;
+          }
+      }
+  }
+}
+
+/*詳細画面共通スタイル*/
+.detail {
+
+  h4 {
+    font-size: 24px;
+
+    @include max(max-8) {
+        font-size: 22px;
+    }
+
+    @include max(max-3) {
+        font-size: 20px;
+    }
+
+    @include max(max-1) {
+        padding-top: 30px;
+    }
+  }
+
+  .swiper-container {
+    overflow: hidden;
+  }
+
+  #occupation-detail {
+    width: 100%;
+
+    #occupation-tittle {
+        width: 90%;
+        margin: 60px auto;
+        flex-wrap: wrap;
+
+        @include max(max-1) {
+            padding-bottom: 0;
+            margin-top: 30px;
+        }
+
+        h3 {
+            width: 100%;
+            font-size: 20px;
+        
+            @include max(max-5) {
+                margin: 0 auto;
+            }      
+        
+            @include max(max-3) {
+                font-size: 18px;
+            }
+        }
+
+        ul {
+            padding: 20px 0;
+
+            @include max(max-5) {
+                padding: 10px 0;
+            }
+
+            li {
+                padding-left: 20px;
+
+                @include max(max-5) {
+                    padding-left: 15px;
+                    font-size: 12px;
+                }
+
+                @include max(max-1) {
+                    padding-left: 10px;
+                    font-size: 10px;
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    #occupation-img {
+        position: absolute;
+        width: 70%;
+        height: auto;
+        top: 180px;
+
+        @include max(max-8) {
+            top: 210px;
+        }
+
+        @include max(max-5) {
+            top: 175px;
+        }
+
+        @include max(max-1) {
+            top: 140px;
+        }
+    }
+
+    #recruit-tittle {
+        width: 90%;
+        font-size: 24px;
+        margin-top: 20px;
+        left: 5%;
+
+        @include max(max-8) {
+            font-size: 22px;
+        }
+
+        @include max(max-5) {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        @include max(max-1) {
+            top: 75px;
+            font-size: 16px;
+        }
+    }
+
+    #recruit-overview {
+        width: 85%;
+        top: 380px;
+
+        @include max(max-8) {
+            top: 360px;
+            height: 205px;
+        }
+
+        @include max(max-5) {
+            top: 290px;
+            width: 90%;
+        }
+
+        @include max(max-1) {
+          top: 230px;
+          width: 95%;
+      }
+
+      p {
+          @include max(max-8) {
+              font-size: 10px;
+              width: 90%;
+          }    
+
+          @include max(max-5) {
+              line-height: normal;
+          }
+
+          @include max(max-1) {
+              width: 95%;
+          }
+
+          span {
+              @include max(max-1) {
+                  padding-top: 10px;
+              }
+          }
+      }
+    }
+  }
+
+  .point {
+    .point-box {
+    
+      .point-img {
+          width: 320px;
+  
+          @include max(max-8) {
+              width: 98%;
+          }
+
+          img {
+              width: 100%;
+          }
+      }
+
+      .point-text {
+          width: 320px;
+  
+          @include max(max-8) {
+              width: 98%;
+          }
+  
+          h5 {
+              @include max(max-8) {
+                  font-size: 16px;
+              }
+  
+              @include max(max-5) {
+                  font-size: 14px;
+                  padding-top: 5px;
+              }
+
+              @include max(max-3) {
+                  font-size: 12px;
+              }
+          }
+  
+          p {
+              @include max(max-8) {
+                  padding-top: 10px;
+                  font-size: 12px;
+              }
+  
+              @include max(max-5) {
+                  padding-top: 5px;
+              }
+
+              @include max(max-3) {
+                  font-size: 10px;
+              }
+          }
+      }
+    }
+  }
+
+  #recruitment {
+    padding: 0 0 50px;
+
+    h3 {
+        width: 100%;
+        font-size: 24px;
+
+        @include max(max-8) {
+            font-size: 22px;
+        }
+
+        @include max(max-5) {
+            font-size: 20px;
+        }
+
+        @include max(max-3) {
+            font-size: 16px;
+        }    
+
+        @include max(max-1) {
+            padding-top: 30px;
+        }
+    }
+
+    a {
+      width: 90%;
+      padding: 15px 100px;
+
+      @include max(max-8) {
+          font-size: 14px;
+          padding: 25px 90px;
+      }
+
+      @include max(max-5) {
+          height: 60px;
+          margin-top: 40px;
+          font-size: 12px;
+          padding: 20px 60px;
+
+          &::after {
+              top: 15px;
+          }
+      }
+
+      @include max(max-3) {
+          padding: 20px 30px;
+      }
+
+      @include max(max-1) {
+          padding: 12px 60px;
+          &::after {
+              top: 20px;
+          }
+
+          br {
+              display: block;
+          }
       }
     }
   }
@@ -337,12 +1489,14 @@ main {
     
     @include max(max-5) {
       width: 90%;
+      font-size: 15px;
     }
   }
 
   h4 {
     @include max(max-5) {
-      font-size: 26px;
+      padding-top: 65px;
+      font-size: 23px;
     }
   }
 
@@ -371,7 +1525,7 @@ main {
           p {
             font-size: 16px;
 
-            @include max(max-5) {
+            @include max(max-8) {
               font-size: 14px;
             }
           }
@@ -379,8 +1533,8 @@ main {
           span {
             font-size: 14px;
 
-            @include max(max-5) {
-              font-size: 12px;
+            @include max(max-8) {
+              font-size: 11px;
             }
           }
         }
@@ -397,7 +1551,11 @@ main {
   }
 
   .decoration {
-    width: 15%;
+    width: 132px;
+
+    @include max(max-8) {
+      width: 20%;
+    }
   }
 
   #recruit {
@@ -415,6 +1573,7 @@ main {
       top: 1.5%;
       left: 0;
       width: 100%;
+      overflow: hidden;
 
       #search-tittle {
         margin-bottom: 42px;
@@ -427,11 +1586,20 @@ main {
           font-size: 12px;
         }
 
+        @include max(max-1) {
+          font-size: 10px;
+        }
+
         span {
           font-size: 28px;
 
           @include max(max-5) {
             font-size: 20px;
+          }
+
+          @include max(max-1) {
+            font-size: 16px;
+            padding-bottom: 5px;
           }
         }
       }
@@ -459,7 +1627,7 @@ main {
           z-index: 2;
 
           @include max(max-5) {
-            height: 270px;
+            height: 260px;
           }
 
           .select-wrap {
@@ -470,6 +1638,7 @@ main {
               width: 240px;
               height: 50px;
               &::after {
+                right: 23px;
                 border-left: 6px solid transparent;
                 border-right: 6px solid transparent;
                 border-top: 10px solid #888888;
@@ -507,144 +1676,6 @@ main {
         }
       }
     }
-
-    #consultation {
-      margin: 100px 40px;
-
-      #consultation-ba {
-        padding: 50px 0 0;
-        flex-wrap: wrap;
-        align-items: center;
-
-        @include max(max-5) {
-          justify-content: space-between;
-
-        }
-
-        &::before {
-          position: absolute;
-          right: 0;
-          top: 0;
-          content: "";
-          background-color: $border;
-          height: 1px;
-          width: 70%;
-        }
-
-        &::after {
-          display: none;
-        }
-
-        #consultation-icon {
-          padding-bottom: 40px;
-        }
-
-        p {
-          width: 94%;
-          font-size: 18px;
-          white-space: normal;
-          padding: {
-            left: 20px;
-            bottom: 40px;
-          }
-          
-          @include max(max-5) {
-            width: 80%;
-          }
-        }
-
-        a {
-          margin: 0 auto;
-          width: 670px;
-          font-size: 24px;
-          padding: 20px 80px;
-
-          @include max(max-5) {
-            width: 272px;
-            font-size: 14px;
-            padding: 20px 40px;
-
-            br {
-              display: block;
-            }
-          }
-        }
-      }
-    }
-
-    .category-link {
-
-      li {
-        width: 30%;
-      }
-    }
-
-    #recruit-ranking {
-      padding-top: 50px;
-
-      @include max(max-5) {
-        padding: 0;
-      }
-
-      #ranking-box {
-        display: block;
-
-        @include max(max-5) {
-          padding: 30px 0 0;
-        }
-
-        .contents-block {
-          width: 100%;
-          justify-content: space-around;
-          align-items: center;
-          margin-right: 0;
-          padding-bottom: 30px;
-          
-          .contents-img {
-            width: 120px;
-            height: 120px;
-            padding: 0;
-
-            @include max(max-5) {
-              height: auto;
-            }
-
-            img {
-              width: 100%;
-              height: 100%;
-            }
-
-            p {
-              padding: 15px 20.8px;
-              right: 70px;
-
-              @include max(max-5) {
-                right: unset;
-                padding: 2px 8px;
-                font-size: 16px;
-              }
-            }
-          }
-
-          p {
-            font-size: 20px;
-
-            @include max(max-5) {
-              font-size: 18px;
-              padding-left: 10px;
-            }
-
-            span {
-              font-size: 18px;
-
-              @include max(max-5) {
-                font-size: 16px;
-              }  
-            }
-          }
-        }
-      }
-    }
   }
 
   .pickup {
@@ -658,7 +1689,7 @@ main {
         .pickup-img {
           width: 320px;
 
-          @include max(max-5) {
+          @include max(max-8) {
             width: 98%;
           }
         }
@@ -666,32 +1697,37 @@ main {
         .pickup-text {
           width: 320px;
 
-          @include max(max-5) {
+          @include max(max-8) {
             width: 98%;
           }
 
           h5 {
-            @include max(max-5) {
+            @include max(max-8) {
               font-size: 16px;
+            }
+
+            @include max(max-5) {
+                font-size: 14px;
             }
           }
 
           p,.tagflex {
-            @include max(max-5) {
-              padding-top: 15px;
+            @include max(max-8) {
+              padding-top: 10px;
+            }
+  
+            @include max(max-1) {
+              padding-top: 5px;
+            }
+
+            li {
+              @include max(max-8) {
+              font-size: 10px;
+              }
             }
           }
         }
       }
-    }
-  }
-
-  .category-link {
-    padding-top: 45px;
-
-    li {
-      padding-bottom: 20px;
-      text-align: center;
     }
   }
 
@@ -700,12 +1736,31 @@ main {
     #community-background {
       height: 546px;
 
+      @include max(max-8) {
+        height: 390px;
+      }
+
       @include max(max-5) {
-        height: 360px;
+        height: 310px;
+      }
+
+      @include max(max-4) {
+        height: 270px;
+      }
+
+      .background-img {
+
+        @include max(max-4) {
+          height: 270px;
+        }
       }
 
       .decoration {
         right: 10%;
+
+        @include max(max-4) {
+          right: 16%;
+        }  
       }
     }
 
@@ -713,16 +1768,25 @@ main {
       top: 70px;
       left: 35px;
 
-      @include max(max-5) {
+      @include max(max-8) {
         top: 40px;
       }
 
       #community-tittle {
         font-size: 18px;
 
+        @include max(max-8) {
+          margin-bottom: 43px;
+        }
+
         @include max(max-5) {
           font-size: 12px;
           margin-bottom: 26px;
+        }
+
+        @include max(max-4) {
+          font-size: 10px;
+          margin-left: -21px;
         }
 
         span {
@@ -730,6 +1794,11 @@ main {
 
           @include max(max-5) {
             font-size: 20px;
+          }
+
+          @include max(max-4) {
+            font-size: 15px;
+            padding-bottom: 5px;
           }
         }
       }
@@ -744,10 +1813,27 @@ main {
           width: 510px;
           height: 245px;
 
-          @include max(max-5) {
+          @include max(max-8) {
             left: -93px;
+            width: 305px;
+            height: 155px;
+          }
+
+          @include max(max-5) {
             width: 270px;
-            height: 140px;
+            height: 130px;
+          }
+
+          @include max(max-4) {
+            width: 228px;
+            height: 110px;
+            left: -81px;
+          }
+
+          @include max(max-1) {
+            width: 167px;
+            height: 93px;
+            left: -70px;
           }
 
           img {
@@ -761,23 +1847,32 @@ main {
           padding-left: 420px;
           line-height: 1.5;
 
+          @include max(max-8) {
+            font-size: 13px;
+            padding-left: 235px;
+          }
+
           @include max(max-5) {
             font-size: 10px;
             padding-left: 190px;
           }
+
+          @include max(max-4) {
+            padding-left: 155px;
+          }
+
+          @include max(max-1) {
+            padding-left: 104px;
+          }
         }
-      }
-    }
-
-    .category-link {
-
-      li {
-        width: 50%;
       }
     }
   }
 
   #knowhow {
+    @include max(max-5) {
+      margin-top: 20px;
+    }
 
     #knowhow-box {
       width: 90%;
@@ -786,36 +1881,37 @@ main {
         width: 50%;
         padding-bottom: 25px;
 
-        @include max(max-5) {
+        @include max(max-8) {
           width: 100%;
         }
 
         .knowhow-img {
-          width: 100px;
-          height: 100px;
-
-          img {
-            height: 100%;
-          }
+          width: 50%;
         }
 
         p {
 
           a {
             font-size: 16px;
-            padding-bottom: 10px;
+
+            @include mix(mix-5) {
+              font-size: 14px;
+            }
           }
 
           span {
             font-size: 11px;
+
+            @include mix(mix-5) {
+              font-size: 10px;
+            }
           }
         }
       }
     }
 
     .viewmore {
-      padding: 50px;
-      padding-bottom: 0;
+      padding: 50px 50px 0;
     }
   }
 
@@ -824,12 +1920,1482 @@ main {
 
     @include max(max-5) {
       font-size: 16px;
+      padding: 80px 0;
+    }
+
+    @include max(max-1) {
+      font-size: 14px;
+      padding: 50px 0;
     }
   }
 }
 
+/*求人検索結果一覧*/
+.recruitsearch {
+
+  main {
+          
+    h4 {
+        @include max(max-5) {
+            font-size: 23px;
+            padding-top: 68px;
+        }
+
+        @include max(max-1) {
+            padding-top: 58px;
+        }
+    }
+
+    #recruit-ranking {
+      padding-bottom: 50px;
+    }
+
+    .category-link2 {
+        @include max(max-5) {
+            padding: 70px 45px 0;
+        }    
+    }
+  }
+}
+
+/*コミュニティ検索結果一覧*/
+.communitysearch {
+  main {
+    h4 {
+        @include max(max-5) {
+            padding-top: 68px;
+        }
+
+        @include max(max-1) {
+            padding-top: 58px;
+        }
+    }
+
+    .category-link {
+        @include max(max-5) {
+        padding: 70px 45px 0;
+        }
+    }
+
+    .category-link2 {
+        @include max(max-5) {
+            padding: 50px 45px 20px;
+        }
+    }
+  }
+}
+
+/*ノウハウ記事一覧*/
+.knowhowpage {
+  main {
+
+    #knowhow-list {
+        @include max(max-5) {
+            margin-top: 20px;
+        }
+    
+        #knowhow-list-box {
+        
+            .knowhow-list-block {
+                padding-bottom: 25px;
+        
+                @include max(max-8) {
+                    width: 100%;
+                }
+        
+                .knowhow-list-img {
+                    width: 160px;
+
+                    img {
+                        width: 160px;
+                    }
+
+                    @include max(max-1) {
+                        width: 100px;
+
+                        img {
+                            width: 100px;
+                        }
+                    }
+                }
+        
+                p {
+            
+                    a {
+                        font-size: 16px;
+                        padding: 5px 0;
+            
+                        @include max(max-5) {
+                            font-size: 14px;
+                        }
+                        
+                    }
+            
+                    span {
+                        font-size: 11px;
+            
+                        @include max(max-5) {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+
+            .spanflex {
+                padding-top: 30px;
+                padding-bottom: 25px;
+
+                li {
+                    padding: 0 20px;
+                    font-size: 20px;
+
+                    @include max(max-1) {
+                        padding: 0 15px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+        
+    h4 {
+        @include max(max-5) {
+            font-size: 23px;
+            padding-top: 68px;
+        }
+
+        @include max(max-1) {
+            padding-top: 58px;
+        }
+    }
+
+    .category-link1 {
+        @include max(max-5) {
+            padding: 70px 45px 0;
+        }    
+
+        ul {
+          flex-wrap: wrap;
+          flex-direction: row;
+
+            li {
+                width: 30%;
+
+                @include max(max-5) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+  }
+}
+
+/*運営会社*/
+.company {
+
+  main {
+
+    #policy {
+        @include max(max-5) {
+            margin-top: 45px;
+        }
+
+        #policy-box {
+            width: 95%;
+
+            @include max(max-8) {
+                padding: 75px 0;
+            }
+
+            @include max(max-5) {
+                padding: 55px 0;
+            }
+
+            @include max(max-3) {
+                padding: 40px 0;
+            }
+
+            h3 {
+                font-size: 24px;
+
+                @include max(max-8) {
+                    font-size: 22px;
+                }
+
+                @include max(max-5) {
+                    font-size: 20px;
+                }
+
+                @include max(max-3) {
+                    font-size: 18px;
+                }
+
+                @include max(max-1) {
+                    font-size: 16px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+
+                @include max(max-5) {
+                    font-size: 12px;
+                    margin-bottom: 75px;
+                }
+
+                @include max(max-3) {
+                    margin-bottom: 50px;
+                }
+
+                @include max(max-1) {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    #catch {
+        width: 100%;
+
+        @include max(max-8) {
+            height: 920px;
+        }
+
+        @include max(max-5) {
+            height: 730px;
+            margin: 70px auto;
+        }
+
+        #recruit-catch,#community-catch {
+
+            #catch-ba1,#catch-ba2 {
+
+                &::before,&::after {
+                    width: 30%;
+                }
+            }
+
+            #catch-ba1 {
+
+                &::before {
+                    right: 2%;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            #catch-ba2 {
+
+                &::before {
+                    display: none;
+                }
+
+                &::after {
+                    left: 2%;
+
+                    @include max(max-5) {
+                        transform: translateY(210px);
+                    }    
+                }
+            }
+
+            #catch-img1,#catch-img2 {
+                width: 65%;
+                
+                @include max(max-8) {
+                    height: 320px;
+                }
+
+                @include max(max-5) {
+                    height: 250px;
+                }
+            }
+
+            #recruit-overview,#community-overview {
+                width: 83%;
+
+                @include max(max-5) {
+                    height: 225px;
+                }
+
+                @include max(max-1) {
+                    width: 90%;
+                }
+
+                p {
+                    font-size: 18px;
+
+                    @include max(max-8) {
+                        font-size: 16px;
+                    }
+
+                    @include max(max-5) {
+                        width: 85%;
+                        font-size: 14px;
+                    }
+
+                    @include max(max-1) {
+                        width: 90%;
+                        font-size: 12px;
+                    }
+
+                    span {
+                        font-size: 14px;
+
+                        @include max(max-8) {
+                            font-size: 12px;
+                        }        
+
+                        @include max(max-5) {
+                            font-size: 10px;
+                        }        
+
+                        @include max(max-3) {
+                            padding-top: 10px;
+                        }        
+                    }
+                }
+            }
+        }
+
+        #community-catch {
+            margin-top: 215px;
+        }
+    }
+
+    #representative {
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        #representative-img {
+            width: 100%;
+            text-align: center;
+
+            img {
+                width: 500px;
+                height: 550px;
+                object-fit: cover;
+
+                @include max(max-8) {
+                    width: 80%;
+                    height: auto;
+                }
+
+                @include max(max-5) {
+                    width: 75%;
+                }
+            }
+        }
+
+        p {
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 93px;
+
+            @include max(max-8) {
+                margin-top: 50px;
+                font-size: 16px;
+            }
+
+            @include max(max-5) {
+                font-size: 14px;
+            }
+
+            span {
+                width: 100%;
+                font-size: 14px;
+                padding-left: 0;
+                text-align: left;
+
+                @include max(max-8) {
+                    font-size: 12px;
+                }
+
+                @include max(max-5) {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+  }
+}
+
+/*プライバシーポリシー*/
+.privacypolicy {
+  main {
+    h3 {
+        @include max(max-5) {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+
+    p {
+        @include max(max-5) {
+            padding-top: 5px;
+        }
+
+        &:first-of-type {
+            @include max(max-5) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    #company {
+        @include max(max-5) {
+            padding: 10px 0;
+        }
+
+        span {
+            @include max(max-5) {
+                font-size: 10px;
+            }
+        }
+    }
+  }
+}
+
+/*求人詳細*/
+.recruitdetail {
+  main {
+    #recruit-overview {
+      @include max(max-5) {
+          height: 195px;
+      }
+    }
+
+    .point {
+        margin: 560px 0 50px;
+        padding: 0;
+
+        @include max(max-8) {
+            margin-top: 430px;
+        }
+
+        @include max(max-5) {
+            margin-top: 365px;
+        }
+
+        @include max(max-1) {
+            margin-bottom: 30px;
+        }
+    }
+
+    #recruitment {
+
+        #recruitment-conditions,#recruitment-company {
+            ul {
+                width: 90%;
+                margin: 0 auto;
+
+                @include max(max-8) {
+                    width: 95%;
+                }
+
+                @include max(max-5) {
+                    width: 100%;
+                }
+
+                li,.long {
+                    padding-top: 20px;
+                    font-size: 20px;
+                    text-align: left;
+                    width: 50%;
+
+                    @include max(max-8) {
+                        font-size: 16px;
+                    }
+
+                    @include max(max-5) {
+                        font-size: 12px;
+                    }
+                }
+
+                .full {
+                    font-size: 18px;
+
+                    @include max(max-8) {
+                        font-size: 14px;
+                    }
+
+                    @include max(max-5) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        a {
+            width: 90%;
+            padding: 15px 100px;
+
+            @include max(max-8) {
+                font-size: 14px;
+                padding: 25px 90px;
+            }
+    
+            @include max(max-5) {
+                height: 60px;
+                margin-top: 40px;
+                font-size: 12px;
+                padding: 20px 60px;
+
+                &::after {
+                    top: 15px;
+                }
+            }
+
+            @include max(max-3) {
+                padding: 20px 30px;
+            }
+
+            @include max(max-1) {
+                padding: 12px 60px;
+                &::after {
+                    top: 20px;
+                }
+
+                br {
+                    display: block;
+                }
+            }
+        }
+    }
+  }
+}
+
+/*コミュニティ詳細*/
+.communitydetail {
+  main {
+
+    #occupation-detail {    
+
+      #recruit-tittle {
+        width: 90%;
+        font-size: 24px;
+        margin-top: 20px;
+        left: 5%;
+
+        @include max(max-8) {
+            font-size: 22px;
+        }
+
+        @include max(max-5) {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        @include max(max-1) {
+            top: 75px;
+            font-size: 16px;
+        }
+      }
+
+      #recruit-overview {
+        width: 85%;
+        top: 380px;
+
+        @include max(max-8) {
+            top: 360px;
+            height: 205px;
+        }
+
+        @include max(max-5) {
+            top: 290px;
+            width: 90%;
+            height: 233px;
+        }
+
+        @include max(max-1) {
+          top: 230px;
+          width: 95%;
+        }
+
+        p {
+            @include max(max-8) {
+                font-size: 10px;
+                width: 90%;
+            }    
+
+            @include max(max-5) {
+                line-height: normal;
+            }
+
+            @include max(max-1) {
+                width: 95%;
+            }
+
+            span {
+                @include max(max-1) {
+                    padding-top: 10px;
+                }
+            }
+        }
+      }
+    }
+
+    .point {
+        margin: 250px 0 50px;
+
+        @include max(max-7) {
+            margin-top: 150px;
+        }
+
+        @include max(max-1) {
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            @include max(max-5) {
+                padding-top: 0;
+            }
+        }
+    }
+
+    #recruitment {
+
+        #recruitment-text {
+
+            @include max(max-8) {
+                font-size: 14px;
+                padding: 30px 0 15px;
+            }
+
+            @include max(max-5) {
+                font-size: 10px;
+                padding: 20px 0 0;
+            }
+        }
+
+        #recruitment-company {
+            ul {
+                width: 90%;
+                margin: 0 auto;
+
+                @include max(max-8) {
+                    width: 95%;
+                }
+
+                @include max(max-5) {
+                    width: 100%;
+                }
+
+                li,.long {
+                    padding-top: 20px;
+                    font-size: 20px;
+                    text-align: left;
+                    width: 50%;
+
+                    @include max(max-8) {
+                        font-size: 16px;
+                    }
+
+                    @include max(max-5) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+  }
+
+  .category-link {
+    padding-bottom: 50px;
+  }
+}
+
+/*ノウハウ記事詳細*/
+.knowhowdetail {
+  main {
+
+    #knowhow-detail {       
+        width: 100%;
+        
+        #post-tittle {
+            width: 95%;
+            margin: 45px auto 30px;
+            flex-wrap: wrap;
+
+            @include max(max-3) {
+                margin-bottom: 20px;
+            }    
+        
+            h3 {
+                font-size: 20px;
+                width: 100%;
+
+                @include max(max-3) {
+                    font-size: 18px;
+                }    
+
+                span {
+                    padding-right: 15px;
+                }
+            }
+
+            ul {
+                padding: 20px 0;
+
+                @include max(max-5) {
+                    padding: 10px 0;
+                }
+
+                li {
+                    padding-left: 20px;
+
+                    @include max(max-5) {
+                        padding-left: 15px;
+                        font-size: 12px;
+                    }
+
+                    @include max(max-1) {
+                        padding-left: 10px;
+                        font-size: 10px;
+                    }
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+
+        #knowhow-tittle,#hedding {
+            margin: 0 auto;
+        }
+
+        #knowhow-tittle {
+            width: 95%;
+            font-size: 24px;
+
+            @include max(max-8) {
+                font-size: 22px;
+            }
+
+            @include max(max-5) {
+                font-size: 18px;
+            }
+
+            @include max(max-1) {
+                font-size: 16px;
+            }
+        }
+
+        #hedding {
+            width: 75%;
+            margin-top: 45px;
+            font-size: 14px;
+
+            @include max(max-5) {
+                width: 95%;
+            }
+
+            @include max(max-3) {
+                margin-top: 30px;
+            }    
+
+            @include max(max-1) {
+                margin-top: 20px;
+            }
+
+
+            li {
+                width: 33%;
+                text-align: center;
+                padding: {
+                    right: 0;
+                    bottom: 30px;
+                };
+
+                @include max(max-5) {
+                    font-size: 12px;
+                }    
+
+                @include max(max-3) {
+                    padding-bottom: 20px;
+                }    
+
+                @include max(max-1) {
+                    font-size: 10px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    .post {
+        width: 95%;
+
+        h4 {
+            font-size: 20px;
+            margin-top: 70px;
+
+            @include max(max-8) {
+                margin: 60px 0 30px;
+            }
+
+            @include max(max-5) {
+                font-size: 18px;
+                margin: 50px 0 20px;
+            }
+
+            @include max(max-3) {
+                margin-top: 35px;
+            }    
+
+            @include max(max-1) {
+                font-size: 16px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+
+            @include max(max-5) {
+                font-size: 14px;
+            }
+
+            @include max(max-3) {
+                font-size: 12px;
+            }    
+
+            span {
+                padding-top: 30px;
+
+                @include max(max-5) {
+                    padding-top: 15px;
+                }    
+
+                @include max(max-3) {
+                    padding-top: 10px;
+                }    
+            }
+        }
+    }
+
+    #post-1 {
+
+        #post-img1 {
+            height: 201.69px;
+
+            @include max(max-8) {
+                height: auto;
+            }
+        }
+
+        p {
+            @include max(max-8) {
+                margin-top: 30px;
+            }
+
+            @include max(max-3) {
+                margin-top: 20px;
+            }    
+        }
+    }
+
+    #post-3,#post-4 {
+
+        #post-img2,#post-img3 {
+            width: 100%;
+            height: 485.3px;
+            order: 1;
+
+            @include max(max-8) {
+                height: auto;
+            }
+        }
+
+        p {
+            width: 100%;
+            margin-top: 45px;
+            order: 2;
+
+            @include max(max-8) {
+                margin-top: 30px;
+            }
+
+            @include max(max-3) {
+                margin-top: 20px;
+            }    
+        }
+    }
+
+    #spanflex {
+        width: 95%;
+        font-size: 16px;
+
+        @include max(max-8) {
+            margin-top: 60px;
+        }
+
+        @include max(max-5) {
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        @include max(max-3) {
+            margin-top: 40px;
+            font-size: 12px;
+        }    
+    }
+  }
+
+  .category-link1 {
+    @include max(max-5) {
+        padding: 70px 45px 0;
+    }    
+
+    ul {
+      flex-wrap: wrap;
+      flex-direction: row;
+
+        li {
+            width: 30%;
+
+            @include max(max-5) {
+                width: 50%;
+            }
+        }
+    }
+  }
+}
+
+/*応募フォーム*/
+.contactform {
+
+  main {
+    h3 {
+      font-size: 24px;
+
+      @include max(max-5) {
+          font-size: 22px;
+          margin-top: 55px;
+      }
+    }
+
+    form {
+      padding: 30px;
+
+      @include max(max-5) {
+          padding: 15px;
+      }
+
+      @include max(max-1) {
+          padding: 10px;
+      }
+
+      .form-item {
+          padding: 30px;
+
+          @include max(max-5) {
+              padding: 15px;
+          }
+
+          @include max(max-1) {
+              padding: 10px;
+          }
+
+          h4 {
+              width: 50%;
+
+              @include max(max-5) {
+                  font-size: 18px;
+              }
+          }
+
+          .mandatory,.option {
+              width: 50%;
+              text-align: right;
+          }
+
+          .check {
+              padding-left: 0;
+              font-size: 20px;
+
+              @include max(max-8) {
+                font-size: 16px;
+              }
+
+              @include max(max-5) {
+                font-size: 12px;
+              }
+
+              @include max(max-1) {
+                font-size: 10px;
+              }
+          }
+
+          label {
+              @include max(max-5) {
+                  font-size: 14px;
+              }
+          }
+
+          input,select,textarea {
+              width: 100%;
+              margin-top: 30px;
+
+              @include max(max-8) {
+                  margin-top: 15px;
+                  font-size: 14px;
+                  padding-left: 20px;
+              }
+
+              @include max(max-5) {
+                  font-size: 10px;
+                  padding-left: 5px;
+              }
+          }
+
+          textarea {
+              @include max(max-5) {
+                  height: 155px;
+                  padding-top: 5px;
+              }
+          }
+      }
+
+      .item1,.item2,.item6,.item7 {
+          input {
+              @include max(max-5) {
+                  height: 43px;
+              }
+          }
+      }
+
+      .item3 {
+          label {
+              margin-top: 30px;
+
+              @include max(max-8) {
+                  margin-top: 15px;
+                  padding: 0 25px;
+              }
+
+              @include max(max-5) {
+                  padding: 0 15px;
+              }
+
+              input {
+                  width: auto;
+                  margin-top: 0;
+              }
+
+              span {
+                  @include max(max-8) {
+                      &::before {
+                          width: 35px;
+                          height: 35px;
+                      }
+
+                      &::after {
+                          width: 23px;
+                          height: 23px;
+                      }
+                  }
+                  
+                  @include max(max-5) {
+                      &::before {
+                          width: 28px;
+                          height: 28px;
+                      }
+
+                      &::after {
+                          width: 16px;
+                          height: 16px;
+                      }
+                  }
+              }
+          }
+      }
+
+      .item4 {
+          .select-wrap {
+              &::after {
+                  top: 70%;
+
+                  @include max(max-8) {
+                      top: 60%;
+                  }    
+
+                  @include max(max-5) {
+                      top: 65%;
+                      right: 20px;
+                      border-left: 7px solid transparent;
+                      border-right: 7px solid transparent;
+                      border-top: 11px solid #888888;
+                  }
+              }
+
+              select {
+                  @include max(max-5) {
+                      height: 43px;
+                      margin-right: 10px;
+                  }
+              }
+
+              #year {
+                  width: 165px;
+
+                  @include max(max-5) {
+                      width: 100px;
+                  }
+              }
+
+              #month,#day {
+                  width: 95px;
+
+                  @include max(max-5) {
+                      width: 75px;
+                  }
+              }
+
+          }
+      }
+
+      .item5 {
+          .mandatory {
+              margin-bottom: 0;
+          }
+
+          #adress {
+              width: 100%;
+
+              input,select {
+                  margin: 11px;
+
+                  @include max(max-5) {
+                      height: 43px;
+                      width: 170px;
+                  }
+              }
+
+              #prefectures {
+
+                  label {
+                      @include max(max-8) {
+                          width: 20%;
+                      }
+                  }
+
+                  .select-wrap {
+                      &::after {
+                          top: 40.56px;
+                          right: 25px;
+
+                          @include max(max-5) {
+                              top: 32.56px;
+                              right: 20px;
+                              border-left: 7px solid transparent;
+                              border-right: 7px solid transparent;
+                              border-top: 11px solid #888888;
+                          }
+                      }
+
+                      select {
+                          margin-left: 5px;
+
+                          @include max(max-5) {
+                              margin-left: 0;
+                          }
+
+                          @include max(max-3) {
+                              margin-left: 9px;
+                          }
+
+                          @include max(max-1) {
+                              margin-left: 16px;
+                          }                    
+                      }
+                  }
+              }
+
+              #housenumber {
+                  margin-left: 0;
+                  width: 100%;
+              }
+          }
+      }
+
+      .item8,.item10 {
+          h4,.mandatory,.option {
+              margin-bottom: 0;
+          }
+      }
+
+      .item9 {
+          h4,.option {
+              margin-bottom: 30px;
+
+              @include max(max-8) {
+                  margin-bottom: 15px;
+              }
+          }
+
+          #checkbox {
+              width: 100%;
+              justify-content: space-between;
+
+              label {
+                  width: 30%;
+
+                  span {
+                      @include max(max-8) {
+                          width: 130px;
+                          font-size: 14px;
+                          padding: 12px 24px;
+                          margin-bottom: 10px;
+                      }
+
+                      @include max(max-5) {
+                          width: 95px;
+                          height: 35px;
+                          font-size: 10px;
+                          padding: 7px 17px;    
+                      }
+
+                      @include max(max-1) {
+                          width: 85px;
+                          height: 30px;
+                          padding: 5px 10px;
+                      }
+                  }
+              }
+          }
+      }
+
+      .item11 {
+        .select-wrap {
+            &::after {
+                top: 70%;
+
+                @include max(max-8) {
+                    top: 60%;
+                }    
+
+                @include max(max-5) {
+                    top: 65%;
+                    right: 20px;
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    border-top: 11px solid #888888;
+                }
+            }
+
+            select {
+                @include max(max-5) {
+                    height: 43px;
+                    margin-right: 10px;
+                }
+            }
+        }
+      }
+
+      .applybutton {
+        width: 100%;
+
+        @include max(max-3) {
+            margin-top: 70px;
+        }
+
+        input {
+            width: 100%;
+            font-size: 24px;
+
+            @include max(max-5) {
+                font-size: 20px;
+            }
+
+            @include max(max-3) {
+                height: 60px;
+            }    
+
+            @include max(max-1) {
+                font-size: 16px;
+            }        
+        }
+      }
+
+      .applybutton1 {
+        &::after{
+          right: 200px;
+
+          @include max(max-8) {
+              right: 85px;
+          }
+
+          @include max(max-5) {
+              right: 60px;
+              top: 29px;
+          }
+
+          @include max(max-3) {
+              right: 45px;
+              top: 20px;
+          }    
+
+          @include max(max-1) {
+              right: 38px;
+          }        
+        }
+      }
+
+      .applybutton2 {
+        &::after{
+          right: 185px;
+
+          @include max(max-8) {
+              right: 65px;
+          }
+
+          @include max(max-5) {
+              right: 45px;
+              top: 29px;
+          }
+
+          @include max(max-3) {
+              right: 25px;
+              top: 20px;
+          }    
+        }
+      }
+    }
+  }
+}
+
+/*応募完了画面*/
+.thankyou {
+  h3 {
+    font-size: 24px;
+
+    @include max(max-8) {
+        font-size: 22px;
+    }
+
+    @include max(max-5) {
+        font-size: 20px;
+    }
+
+    @include max(max-3) {
+        font-size: 18px;
+    }
+
+    @include max(max-1) {
+        font-size: 15px;
+        padding: 30px 10px 0;
+    }
+  }
+
+  h4 {
+      font-size: 24px;
+
+      @include max(max-8) {
+          font-size: 22px;
+      }
+
+      @include max(max-3) {
+          font-size: 20px;
+      }
+
+      @include max(max-1) {
+          padding: 30px 10px 0;
+      }
+  }
+
+  #consultation {
+    #consultation-ba{
+      a {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 24px;
+        padding: 23px 135px;
+
+        @include max(max-8) {
+            font-size: 18px;
+            padding: 27px 70px;
+        }
+
+        @include max(max-5) {
+            height: 60px;
+            font-size: 14px;
+            padding: 20px 55px;
+        }
+
+        @include max(max-3) {
+            font-size: 12px;
+        }
+
+        @include max(max-1) {
+            padding: 12px 75px;
+
+            br {
+                display: block;
+            }
+        }
+
+        &::after {
+          margin-left: 10px;
+
+            @include max(max-5) {
+                top: 18px;
+                margin-left: 15px;
+            }
+
+            @include max(max-1) {
+                top: 20px;
+                margin-left: 35px;
+            }
+        }
+      }
+    }
+  }
+
+  #recruit-ranking {
+    padding: 50px 40px 0;
+
+    @include max(max-8) {
+        padding: 0;
+    }
+
+    h3 {
+        @include max(max-5) {
+            font-size: 15px;
+        }
+    }
+  }
+
+  .category-link {
+    padding: 0 40px 50px;
+
+    h3 {
+        @include max(max-5) {
+            font-size: 15px;
+        }
+    }
+  }
+
+  .category-link1 {
+    h3 {
+      padding-top: 35px;
+    }
+  }
+}
+
+/*フッター*/
 footer {
-  height: 100%;
+
+  &::before {
+    @include max(max-1) {
+      top: -21px;
+    }
+  }
 
   p {
     padding-top: 30px;
@@ -841,14 +3407,50 @@ footer {
     #arrow {
 
       img {
-        top: -4.5%;
+        top: -5%;
+        right: 11px;
+
+        @include max(max-8) {
+          top: -4.7%;
+        }
+
+        @include max(max-5) {
+          top: -5.2%;
+          right: 4px;
+        }
+
+        @include max(max-1) {
+          top: -3.4%;
+          right: 4px;
+          width: 22px;
+          height: 66px;
+        }
       }
     }
 
     #footer-flex {
       display: block;
       margin: 0 10px;
-      padding: 0 10px;
+      padding: 0 88px;
+
+      @include max(max-8) {
+        padding: 0 23px;
+      }
+
+      @include max(max-5) {
+      margin: 0 5px;  
+      padding: 0 19px;
+      border-left: 5px solid #fff;
+      border-right: 5px solid #fff;
+      }
+
+      @include max(max-3) {
+        padding: 0 10px;
+      }
+
+      @include max(max-1) {
+        padding: 0 5px;
+      }
 
       #flex1 {
         display: flex;
@@ -857,32 +3459,110 @@ footer {
         width: 100%;
         padding-bottom: 40px;
 
+        @include max(max-1) {
+          padding: 25px 0 20px;
+        }
+
         h1 {
           width: 50%;
+
+          @include max(max-8) {
+            padding-top: 15px;
+          }
+
+          @include max(max-1) {
+            padding-top: 25px;
+          }
+  
+          #footer-icon {
+          @include max(max-8) {
+            width: 27px;
+            height: 15px;
+            margin: 0 60px;
+            padding: 0;
+          }
+
+          @include max(max-1) {
+            width: 20px;
+            height: 10px;
+            margin: 0 50px;          
+          }
+
+            img {
+              @include max(max-8) {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+
+          #footer-logo {
+            @include max(max-8) {
+              width: 150px;
+              padding-top: 10px;
+            }
+
+            @include max(max-1) {
+              width: 112px;
+              padding-top: 7px;
+            }
+
+            img {
+              @include max(max-8) {
+                width: 100%;
+              }
+            }
+          }
         }
 
         p {
           padding-top: 40px;
           width: 50%;
+
+          @include max(max-5) {
+            font-size: 11px;
+
+            br {
+              display: block;
+            }
+          }
         }
 
         #corporation {
           width: 30%;
+
+          @include max(max-5) {
+            font-size: 10px;
+          }
         }
       
         #address {
           padding-top: 42px;
           width: 70%;
+
+          @include max(max-5) {
+            font-size: 10px;
+          }
         }
       }
 
       .flex2 {
+
+        p {
+          @include max(max-5) {
+            font-size: 12px;
+          }          
+        }
 
         #list1 {
           display: flex;
 
           li {
             width: 25%;
+
+            @include max(max-5) {
+              font-size: 10px;
+            }          
           }
         }
 
@@ -892,6 +3572,10 @@ footer {
 
           li {
             width: 30%;
+
+            @include max(max-5) {
+              font-size: 10px;
+            }          
           }
         }
 
@@ -901,16 +3585,27 @@ footer {
 
           li {
             width: 50%;
+
+            @include max(max-5) {
+              font-size: 10px;
+            }          
           }
         }
+
         #list4 {
           display: flex;
+          flex-wrap: wrap;
 
           li {
             padding-right: 50px;
             &:last-child {
               padding-right: 0;
             }
+
+            @include max(max-5) {
+              font-size: 10px;
+              padding-right: 20px;
+            }          
 
           }
         }
@@ -920,6 +3615,11 @@ footer {
 
           li {
             padding-right: 60px;
+
+            @include max(max-5) {
+              font-size: 10px;
+              padding-right: 20px;
+            }
           }
         }
       }
@@ -928,6 +3628,13 @@ footer {
     #copyright {
       margin: 0 10px;
       padding: 60px 0 28px;
+      
+      @include max(max-5) {
+        font-size: 10px;
+        margin: 0 5px;
+        border-left: 5px solid #fff;
+        border-right: 5px solid #fff;
+      }
     }
   }
 }

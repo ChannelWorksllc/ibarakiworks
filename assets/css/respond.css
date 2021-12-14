@@ -1,3 +1,4 @@
+@charset "UTF-8";
 ::-webkit-scrollbar {
   display: none;
   -webkit-appearance: none;
@@ -63,11 +64,110 @@ input[type="submit"] {
   }
 }
 
-header #firstview {
+/*共通ヘッダー*/
+/*ハンバーガーメニュー開いた時*/
+.drawer-open .toppage-header #firstview #navigation .toggle-btn span:nth-of-type(1), .drawer-open .underpage-header #firstview #navigation .toggle-btn span:nth-of-type(1) {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(20px) rotate(-45deg);
+          transform: translateY(20px) rotate(-45deg);
+}
+
+@media screen and (max-width: 414px) {
+  .drawer-open .toppage-header #firstview #navigation .toggle-btn span:nth-of-type(1), .drawer-open .underpage-header #firstview #navigation .toggle-btn span:nth-of-type(1) {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+            transform: translateY(10px) rotate(-45deg);
+  }
+}
+
+.drawer-open .toppage-header #firstview #navigation .toggle-btn span:nth-of-type(2), .drawer-open .underpage-header #firstview #navigation .toggle-btn span:nth-of-type(2) {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  width: 0;
+}
+
+.drawer-open .toppage-header #firstview #navigation .toggle-btn span:nth-of-type(3), .drawer-open .underpage-header #firstview #navigation .toggle-btn span:nth-of-type(3) {
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(-20px) rotate(45deg);
+          transform: translateY(-20px) rotate(45deg);
+}
+
+@media screen and (max-width: 414px) {
+  .drawer-open .toppage-header #firstview #navigation .toggle-btn span:nth-of-type(3), .drawer-open .underpage-header #firstview #navigation .toggle-btn span:nth-of-type(3) {
+    -webkit-transform: translateY(-10px) rotate(45deg);
+            transform: translateY(-10px) rotate(45deg);
+  }
+}
+
+.drawer-open .toppage-header #firstview #navigation .drawer-nav, .drawer-open .underpage-header #firstview #navigation .drawer-nav {
+  width: 100%;
+  height: 100vh;
+  margin-top: 100px;
+  background: #f7f7f7;
+  padding: 25px;
+}
+
+.drawer-open .toppage-header #firstview #navigation .drawer-nav .drawer-menu, .drawer-open .underpage-header #firstview #navigation .drawer-nav .drawer-menu {
+  width: 100%;
+}
+
+.drawer-open .toppage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown, .drawer-open .underpage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown {
+  border-bottom: 1px solid #c8c8c8;
+  position: relative;
+}
+
+.drawer-open .toppage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu, .drawer-open .underpage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu {
+  display: block;
+  background: #f7f7f7;
+  padding: 0 1em 25px;
+}
+
+.drawer-open .toppage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu .menu-item, .drawer-open .underpage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu .menu-item {
+  display: block;
+  color: #4a4a4a;
+  font-size: 14px;
+  padding: 1em;
+}
+
+.drawer-open .toppage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu .menu-item:hover, .drawer-open .underpage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu .menu-item:hover {
+  text-decoration: none;
+}
+
+.drawer-open .underpage-header #firstview #navigation .drawer-nav {
+  margin-top: 90px;
+}
+
+@media screen and (max-width: 414px) {
+  .drawer-open .underpage-header #firstview #navigation .drawer-nav {
+    margin-top: 75px;
+  }
+}
+
+.drawer-open .underpage-header #firstview #navigation .drawer-nav .drawer-menu {
+  width: 100%;
+  line-height: 3em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.drawer-open .underpage-header #firstview #navigation .drawer-nav .drawer-menu::before {
+  display: none;
+}
+
+.drawer-open .drawer-overlay {
+  background-color: transparent;
+}
+
+/*ハンバーガーメニュー閉じてる時*/
+.toppage-header #firstview, .underpage-header #firstview {
   display: block;
 }
 
-header #firstview #navigation {
+.toppage-header #firstview #navigation, .underpage-header #firstview #navigation {
   width: 100%;
   height: 105px;
   display: -webkit-box;
@@ -76,10 +176,11 @@ header #firstview #navigation {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
+  position: fixed;
+  z-index: 3;
 }
 
-header #firstview #navigation h1 {
+.toppage-header #firstview #navigation h1, .underpage-header #firstview #navigation h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -92,86 +193,163 @@ header #firstview #navigation h1 {
   position: relative;
 }
 
-header #firstview #navigation h1 #header-icon {
+@media screen and (max-width: 414px) {
+  .toppage-header #firstview #navigation h1, .underpage-header #firstview #navigation h1 {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .toppage-header #firstview #navigation h1, .underpage-header #firstview #navigation h1 {
+    margin-left: 5px;
+  }
+}
+
+.toppage-header #firstview #navigation h1 #header-icon, .underpage-header #firstview #navigation h1 #header-icon {
   width: 42px;
   height: 27px;
 }
 
-header #firstview #navigation h1 #header-icon img {
+.toppage-header #firstview #navigation h1 #header-icon img, .underpage-header #firstview #navigation h1 #header-icon img {
   width: 100%;
   height: 100%;
 }
 
-header #firstview #navigation h1 #header-copy {
+.toppage-header #firstview #navigation h1 #header-copy, .underpage-header #firstview #navigation h1 #header-copy {
   position: absolute;
   top: 20px;
   left: 42px;
 }
 
 @media screen and (max-width: 414px) {
-  header #firstview #navigation h1 #header-copy {
+  .toppage-header #firstview #navigation h1 #header-copy, .underpage-header #firstview #navigation h1 #header-copy {
     font-size: 10px;
   }
 }
 
-header #firstview #navigation h1 #header-logo {
+.toppage-header #firstview #navigation h1 #header-logo, .underpage-header #firstview #navigation h1 #header-logo {
   width: 176px;
   height: 19px;
   padding-left: 10px;
 }
 
-header #firstview #navigation h1 #header-logo img {
-  width: 100%;
+.toppage-header #firstview #navigation h1 #header-logo img, .underpage-header #firstview #navigation h1 #header-logo img {
   height: 100%;
 }
 
-header #firstview #navigation #ibaraki {
+.toppage-header #firstview #navigation .toggle-btn, .underpage-header #firstview #navigation .toggle-btn {
+  position: relative;
+  top: 30px;
+  width: 60px;
+}
+
+@media screen and (max-width: 414px) {
+  .toppage-header #firstview #navigation .toggle-btn, .underpage-header #firstview #navigation .toggle-btn {
+    top: 40px;
+    width: 30px;
+  }
+}
+
+.toppage-header #firstview #navigation .toggle-btn span, .underpage-header #firstview #navigation .toggle-btn span {
+  position: absolute;
+  right: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #003973;
+}
+
+.toppage-header #firstview #navigation .toggle-btn span:nth-of-type(1), .underpage-header #firstview #navigation .toggle-btn span:nth-of-type(1) {
+  top: 0;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.toppage-header #firstview #navigation .toggle-btn span:nth-of-type(2), .underpage-header #firstview #navigation .toggle-btn span:nth-of-type(2) {
+  top: 20px;
+  width: 70%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 414px) {
+  .toppage-header #firstview #navigation .toggle-btn span:nth-of-type(2), .underpage-header #firstview #navigation .toggle-btn span:nth-of-type(2) {
+    top: 10px;
+  }
+}
+
+.toppage-header #firstview #navigation .toggle-btn span:nth-of-type(3), .underpage-header #firstview #navigation .toggle-btn span:nth-of-type(3) {
+  top: 40px;
+  width: 45%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 414px) {
+  .toppage-header #firstview #navigation .toggle-btn span:nth-of-type(3), .underpage-header #firstview #navigation .toggle-btn span:nth-of-type(3) {
+    top: 20px;
+  }
+}
+
+.toppage-header #firstview #navigation .drawer-nav, .underpage-header #firstview #navigation .drawer-nav {
+  margin-top: 100px;
+  background: #f7f7f7;
+}
+
+.toppage-header #firstview #navigation .drawer-nav .drawer-menu, .underpage-header #firstview #navigation .drawer-nav .drawer-menu {
+  width: 100%;
+}
+
+.toppage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown, .underpage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown {
+  border-bottom: 1px solid #c8c8c8;
+  position: relative;
+}
+
+.toppage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu, .underpage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu {
+  display: block;
+  background: #f7f7f7;
+  padding: 0 1em 25px;
+}
+
+.toppage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu .menu-item, .underpage-header #firstview #navigation .drawer-nav .drawer-menu .drawer-dropdown .dropdown-menu .menu-item {
+  display: block;
+  color: #4a4a4a;
+  font-size: 14px;
+  padding: 1em;
+}
+
+/*トップページヘッダー*/
+.toppage-header #firstview #ibaraki {
   position: absolute;
   top: 60px;
   margin-left: 20px;
 }
 
 @media screen and (max-width: 414px) {
-  header #firstview #navigation #ibaraki {
-    font-size: 13px;
+  .toppage-header #firstview #ibaraki {
+    margin-left: 15px;
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  header #firstview #navigation #ibaraki {
+  .toppage-header #firstview #ibaraki {
+    margin-left: 5px;
     font-size: 11px;
   }
 }
 
-@media screen and (max-width: 414px) {
-  header #firstview #navigation button {
-    top: 40px;
-    width: 30px;
-  }
-}
-
-header #firstview #navigation button span:nth-of-type(2) {
-  top: 10px;
-}
-
-header #firstview #navigation button span:nth-of-type(3) {
-  top: 20px;
-}
-
-header #firstview #navigation nav {
-  display: none;
-}
-
-header #firstview #mainvisual {
+.toppage-header #firstview #mainvisual {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
   height: 100vh;
+  padding-top: 105px;
 }
 
-header #firstview #mainvisual #header-img1, header #firstview #mainvisual #header-img2, header #firstview #mainvisual #header-img3 {
+.toppage-header #firstview #mainvisual #header-img1, .toppage-header #firstview #mainvisual #header-img2, .toppage-header #firstview #mainvisual #header-img3 {
   width: 100%;
   height: 33.3%;
 }
@@ -254,28 +432,28 @@ header #firstview #mainvisual #header-img1, header #firstview #mainvisual #heade
   }
 }
 
-header #firstview h2 {
+.toppage-header h2 {
   width: 20%;
-  height: 100%;
+  height: 100vh;
   font-size: 34px;
   line-height: 1.1;
   top: 105px;
   left: 70%;
 }
 
-@media screen and (max-width: 414px) {
-  header #firstview h2 {
+@media screen and (max-width: 600px) {
+  .toppage-header h2 {
     font-size: 25px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  header #firstview h2 {
+  .toppage-header h2 {
     font-size: 17px;
   }
 }
 
-header #firstview h2 span {
+.toppage-header h2 span {
   width: 30%;
   top: 5%;
   left: 50%;
@@ -283,50 +461,1180 @@ header #firstview h2 span {
           transform: translateX(-50%);
 }
 
-header #firstview #readcopy {
+.toppage-header #readcopy {
   height: 19%;
   font-size: 18px;
+  text-align: center;
 }
 
-@media screen and (max-width: 414px) {
-  header #firstview #readcopy {
+@media screen and (max-width: 600px) {
+  .toppage-header #readcopy {
     font-size: 13px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  header #firstview #readcopy {
+  .toppage-header #readcopy {
     font-size: 10px;
   }
 }
 
-header #firstview #readcopy span {
-  top: 25%;
+.toppage-header #readcopy span {
+  width: 85%;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
-@media screen and (max-width: 414px) {
-  header #firstview #readcopy span {
+@media screen and (max-width: 600px) {
+  .toppage-header #readcopy span {
     width: 90%;
     top: 15%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 
-header #firstview #scroll-nav {
+.toppage-header #scroll-nav {
   left: 50%;
 }
 
-@media screen and (max-width: 414px) {
-  header #firstview #scroll-nav {
+@media screen and (max-width: 600px) {
+  .toppage-header #scroll-nav {
     padding-bottom: 50px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  header #firstview #scroll-nav {
+  .toppage-header #scroll-nav {
     padding-bottom: 30px;
+  }
+}
+
+/*下層ページヘッダー*/
+.underpage-header #firstview #navigation {
+  height: 110px;
+  margin: -10px;
+  padding: 10px;
+  position: fixed;
+  z-index: 3;
+}
+
+@media screen and (max-width: 414px) {
+  .underpage-header #firstview #navigation {
+    height: 85px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .underpage-header #firstview #navigation {
+    width: 320px;
+    height: 75px;
+  }
+}
+
+.underpage-header #firstview #navigation h1 {
+  position: relative;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  .underpage-header #firstview #navigation h1 {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .underpage-header #firstview #navigation h1 {
+    margin-left: 0;
+  }
+}
+
+.underpage-header #firstview #navigation h1 #header-copy {
+  top: -15px;
+  left: 50px;
+}
+
+.underpage-header #firstview #navigation .toggle-btn {
+  top: -20px;
+}
+
+@media screen and (max-width: 414px) {
+  .underpage-header #firstview #navigation .toggle-btn {
+    top: -10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .underpage-header #firstview #navigation .toggle-btn span {
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .underpage-header #firstview #navigation .toggle-btn span {
+    right: 5px;
+  }
+}
+
+.underpage-header #firstview #mainvisual {
+  margin-top: 100px;
+  height: 140px;
+}
+
+@media screen and (max-width: 414px) {
+  .underpage-header #firstview #mainvisual {
+    margin-top: 75px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .underpage-header #firstview #mainvisual {
+    margin-top: 65px;
+    height: 65px;
+  }
+}
+
+.underpage-header #firstview #mainvisual #header-img #img-recruit {
+  -o-object-position: 50% 80%;
+     object-position: 50% 80%;
+}
+
+.underpage-header #firstview #mainvisual #header-img #img-community {
+  -o-object-position: 50% 80%;
+     object-position: 50% 80%;
+}
+
+.underpage-header #firstview #mainvisual #header-img #img-knowhow {
+  -o-object-position: 50% 68%;
+     object-position: 50% 68%;
+}
+
+@media screen and (max-width: 768px) {
+  .underpage-header #firstview #mainvisual #header-img #img-knowhow {
+    -o-object-position: 50% 94%;
+       object-position: 50% 94%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .underpage-header #firstview #mainvisual #header-img #img-knowhow {
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
+  }
+}
+
+.underpage-header #firstview #mainvisual #header-img #img-company {
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
+
+.underpage-header #firstview #mainvisual #header-img #img-privacypolicy {
+  -o-object-position: 50% 95%;
+     object-position: 50% 95%;
+}
+
+@media screen and (max-width: 414px) {
+  .underpage-header #firstview #mainvisual h2 {
+    height: 30px;
+    width: 170px;
+    padding: 5px;
+  }
+  .underpage-header #firstview #mainvisual h2 span {
+    font-size: 14px;
+  }
+}
+
+/*共通部分*/
+/*新着求人コミュニティ*/
+#new {
+  display: block;
+  margin: 50px 0 80px;
+}
+
+#new .new-category {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#new .new-category .new-contents .contents-block {
+  width: 50%;
+  margin-right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 414px) {
+  #new .new-category .new-contents .contents-block {
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+#new .new-category .new-contents .contents-block p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  #new .new-category .new-contents .contents-block p {
+    font-size: 14px;
+  }
+}
+
+#new .new-category .new-contents .contents-block span {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  #new .new-category .new-contents .contents-block span {
+    font-size: 11px;
+  }
+}
+
+#new .new-category .new-contents .block-right {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 414px) {
+  #new .new-category .new-contents .block-right {
+    margin-bottom: 0;
+  }
+}
+
+/*人気求人ランキング*/
+#recruit-ranking {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  #recruit-ranking {
+    padding: 50px 0 0;
+  }
+}
+
+#recruit-ranking #ranking-box {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  #recruit-ranking #ranking-box {
+    padding: 30px 0 0;
+  }
+}
+
+#recruit-ranking #ranking-box .contents-block {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0;
+  padding-bottom: 30px;
+}
+
+#recruit-ranking #ranking-box .contents-block .contents-img {
+  width: 120px;
+  height: 120px;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  #recruit-ranking #ranking-box .contents-block .contents-img {
+    height: auto;
+  }
+}
+
+#recruit-ranking #ranking-box .contents-block .contents-img img {
+  width: 100%;
+  height: 100%;
+}
+
+#recruit-ranking #ranking-box .contents-block .contents-img p {
+  padding: 15px 20.8px;
+  right: 70px;
+}
+
+@media screen and (max-width: 600px) {
+  #recruit-ranking #ranking-box .contents-block .contents-img p {
+    right: unset;
+    padding: 2px 8px;
+    font-size: 16px;
+  }
+}
+
+#recruit-ranking #ranking-box .contents-block p {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  #recruit-ranking #ranking-box .contents-block p {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #recruit-ranking #ranking-box .contents-block p {
+    font-size: 15px;
+  }
+}
+
+#recruit-ranking #ranking-box .contents-block p span {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  #recruit-ranking #ranking-box .contents-block p span {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #recruit-ranking #ranking-box .contents-block p span {
+    font-size: 13px;
+  }
+}
+
+/*求人コミュニティカテゴリリンク*/
+/*共通*/
+.category-link {
+  padding-top: 45px;
+}
+
+.category-link li {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+/*コミュニティカテゴリリンク*/
+@media screen and (max-width: 600px) {
+  .category-link1 ul {
+    padding: 25px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .category-link1 ul {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.category-link1 ul li {
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .category-link1 ul li {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .category-link1 ul li {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .category-link1 ul li {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .category-link1 ul li {
+    font-size: 11px;
+    width: 100%;
+  }
+}
+
+/*求人カテゴリリンク*/
+@media screen and (max-width: 600px) {
+  .category-link2 ul {
+    padding: 25px 0 0 0;
+  }
+}
+
+.category-link2 ul li {
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  .category-link2 ul li {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .category-link2 ul li {
+    font-size: 12px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .category-link2 ul li {
+    font-size: 11px;
+  }
+}
+
+/*インフォメーション*/
+#consultation {
+  width: 90%;
+  margin: 100px auto;
+}
+
+@media screen and (max-width: 414px) {
+  #consultation {
+    margin: 75px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #consultation {
+    margin: 50px auto;
+  }
+}
+
+#consultation #consultation-ba {
+  padding: 50px 0 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  #consultation #consultation-ba {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+#consultation #consultation-ba::before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  background-color: #c8c8c8;
+  height: 1px;
+  width: 70%;
+}
+
+#consultation #consultation-ba::after {
+  display: none;
+}
+
+#consultation #consultation-ba #consultation-icon {
+  padding-left: 0;
+  padding-bottom: 40px;
+}
+
+#consultation #consultation-ba p {
+  width: 94%;
+  font-size: 18px;
+  white-space: normal;
+  padding-left: 20px;
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  #consultation #consultation-ba p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #consultation #consultation-ba p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #consultation #consultation-ba p {
+    font-size: 14px;
+  }
+}
+
+#consultation #consultation-ba a {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 24px;
+  padding: 23px 100px;
+}
+
+@media screen and (max-width: 600px) {
+  #consultation #consultation-ba a {
+    font-size: 18px;
+    padding: 25px 48px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #consultation #consultation-ba a {
+    height: 60px;
+    font-size: 14px;
+    padding: 20px 28px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #consultation #consultation-ba a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #consultation #consultation-ba a {
+    padding: 12px 70px;
+  }
+  #consultation #consultation-ba a br {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #consultation #consultation-ba a::after {
+    top: 18px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #consultation #consultation-ba a::after {
+    top: 20px;
+  }
+}
+
+/*検索条件絞り込み*/
+@media screen and (max-width: 414px) {
+  #search #recruit-search-tittle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #search #recruit-search-tittle {
+    font-size: 18px;
+  }
+}
+
+#search #recruit-search {
+  width: 100%;
+}
+
+#search #recruit-search form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 245px;
+}
+
+@media screen and (max-width: 414px) {
+  #search #recruit-search form {
+    height: 180px;
+    margin-top: 20px;
+  }
+}
+
+#search #recruit-search form .select-wrap, #search #recruit-search form input {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 414px) {
+  #search #recruit-search form select, #search #recruit-search form input {
+    height: 50px;
+    font-size: 13px;
+    padding-left: 15px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #search #recruit-search #search-box-tittle {
+    font-size: 16px;
+    margin-top: 25px;
+  }
+}
+
+#search #recruit-search #search-box {
+  padding: 30px;
+}
+
+@media screen and (max-width: 414px) {
+  #search #recruit-search #search-box {
+    padding: 20px;
+    margin: 20px 0;
+  }
+}
+
+#search #recruit-search #search-box label {
+  width: 50%;
+  text-align: center;
+}
+
+@media screen and (max-width: 414px) {
+  #search #recruit-search #search-box label {
+    font-size: 15px;
+  }
+}
+
+#search #recruit-search #search-submit input[type="submit"] {
+  width: 90%;
+}
+
+@media screen and (max-width: 414px) {
+  #search #recruit-search #search-submit input[type="submit"] {
+    font-size: 13px;
+    height: 46.51px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #search #search-button {
+    height: 40px;
+    margin-top: 20px;
+  }
+  #search #search-button span {
+    width: 45px;
+  }
+  #search #search-button span:nth-child(2) {
+    width: 23px;
+  }
+}
+
+/*求人コミュニティ検索結果一覧*/
+@media screen and (max-width: 600px) {
+  .searchresults {
+    margin-bottom: 40px;
+    padding: 0;
+  }
+}
+
+.searchresults .searchresults-box {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+  .searchresults .searchresults-box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .searchresults .searchresults-box .searchresults-block {
+    width: 300px;
+  }
+  .searchresults .searchresults-box .searchresults-block img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .searchresults .searchresults-box .searchresults-text h5 {
+    font-size: 14px;
+  }
+}
+
+.searchresults .searchresults-box .searchresults-text p, .searchresults .searchresults-box .searchresults-text .tagflex {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .searchresults .searchresults-box .searchresults-text p, .searchresults .searchresults-box .searchresults-text .tagflex {
+    padding-top: 15px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .searchresults .searchresults-box .searchresults-text p, .searchresults .searchresults-box .searchresults-text .tagflex {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .searchresults .searchresults-box .searchresults-text p li, .searchresults .searchresults-box .searchresults-text .tagflex li {
+    font-size: 10px;
+  }
+}
+
+.searchresults .searchresults-box .spanflex {
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+.searchresults .searchresults-box .spanflex li {
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  .searchresults .searchresults-box .spanflex li {
+    padding: 0 15px;
+    font-size: 15px;
+  }
+}
+
+/*応募フロー*/
+#flow {
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 414px) {
+  #flow {
+    margin-bottom: 0;
+  }
+}
+
+#flow h4 {
+  padding: 50px 0 20px;
+}
+
+#flow .swiper-container {
+  height: 240px;
+}
+
+@media screen and (max-width: 320px) {
+  #flow .swiper-container {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #flow .swiper-container .flow-block img {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #flow .swiper-container .flow-block div {
+    top: 25%;
+    width: 65%;
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #flow .swiper-container .flow-block div {
+    top: 15%;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #flow .swiper-container .flow-block div {
+    height: 55%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #flow .swiper-container .flow-block div {
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #flow .swiper-container .flow-block div p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #flow .swiper-container .flow-block div p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #flow .swiper-container .flow-block div p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #flow .swiper-container .flow-block div p span {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #flow .swiper-container .flow-arrow {
+    margin-top: 0;
+    height: 30px;
+  }
+  #flow .swiper-container .flow-arrow img {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #flow .swiper-container .flow-arrow {
+    height: 23px;
+    margin-top: -40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #flow .swiper-container .flow-arrow {
+    height: 18px;
+    margin-top: -55px;
+  }
+}
+
+/*詳細画面共通スタイル*/
+.detail h4 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .detail h4 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .detail h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .detail h4 {
+    padding-top: 30px;
+  }
+}
+
+.detail .swiper-container {
+  overflow: hidden;
+}
+
+.detail #occupation-detail {
+  width: 100%;
+}
+
+.detail #occupation-detail #occupation-tittle {
+  width: 90%;
+  margin: 60px auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 320px) {
+  .detail #occupation-detail #occupation-tittle {
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+}
+
+.detail #occupation-detail #occupation-tittle h3 {
+  width: 100%;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  .detail #occupation-detail #occupation-tittle h3 {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .detail #occupation-detail #occupation-tittle h3 {
+    font-size: 18px;
+  }
+}
+
+.detail #occupation-detail #occupation-tittle ul {
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 414px) {
+  .detail #occupation-detail #occupation-tittle ul {
+    padding: 10px 0;
+  }
+}
+
+.detail #occupation-detail #occupation-tittle ul li {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  .detail #occupation-detail #occupation-tittle ul li {
+    padding-left: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .detail #occupation-detail #occupation-tittle ul li {
+    padding-left: 10px;
+    font-size: 10px;
+  }
+}
+
+.detail #occupation-detail #occupation-tittle ul li:first-child {
+  padding-left: 0;
+}
+
+.detail #occupation-detail #occupation-img {
+  position: absolute;
+  width: 70%;
+  height: auto;
+  top: 180px;
+}
+
+@media screen and (max-width: 600px) {
+  .detail #occupation-detail #occupation-img {
+    top: 210px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .detail #occupation-detail #occupation-img {
+    top: 175px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .detail #occupation-detail #occupation-img {
+    top: 140px;
+  }
+}
+
+.detail #occupation-detail #recruit-tittle {
+  width: 90%;
+  font-size: 24px;
+  margin-top: 20px;
+  left: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .detail #occupation-detail #recruit-tittle {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .detail #occupation-detail #recruit-tittle {
+    margin-top: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .detail #occupation-detail #recruit-tittle {
+    top: 75px;
+    font-size: 16px;
+  }
+}
+
+.detail #occupation-detail #recruit-overview {
+  width: 85%;
+  top: 380px;
+}
+
+@media screen and (max-width: 600px) {
+  .detail #occupation-detail #recruit-overview {
+    top: 360px;
+    height: 205px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .detail #occupation-detail #recruit-overview {
+    top: 290px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .detail #occupation-detail #recruit-overview {
+    top: 230px;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .detail #occupation-detail #recruit-overview p {
+    font-size: 10px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .detail #occupation-detail #recruit-overview p {
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .detail #occupation-detail #recruit-overview p {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .detail #occupation-detail #recruit-overview p span {
+    padding-top: 10px;
+  }
+}
+
+.detail .point .point-box .point-img {
+  width: 320px;
+}
+
+@media screen and (max-width: 600px) {
+  .detail .point .point-box .point-img {
+    width: 98%;
+  }
+}
+
+.detail .point .point-box .point-img img {
+  width: 100%;
+}
+
+.detail .point .point-box .point-text {
+  width: 320px;
+}
+
+@media screen and (max-width: 600px) {
+  .detail .point .point-box .point-text {
+    width: 98%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .detail .point .point-box .point-text h5 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .detail .point .point-box .point-text h5 {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .detail .point .point-box .point-text h5 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .detail .point .point-box .point-text p {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .detail .point .point-box .point-text p {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .detail .point .point-box .point-text p {
+    font-size: 10px;
+  }
+}
+
+.detail #recruitment {
+  padding: 0 0 50px;
+}
+
+.detail #recruitment h3 {
+  width: 100%;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .detail #recruitment h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .detail #recruitment h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .detail #recruitment h3 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .detail #recruitment h3 {
+    padding-top: 30px;
+  }
+}
+
+.detail #recruitment a {
+  width: 90%;
+  padding: 15px 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .detail #recruitment a {
+    font-size: 14px;
+    padding: 25px 90px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .detail #recruitment a {
+    height: 60px;
+    margin-top: 40px;
+    font-size: 12px;
+    padding: 20px 60px;
+  }
+  .detail #recruitment a::after {
+    top: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .detail #recruitment a {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .detail #recruitment a {
+    padding: 12px 60px;
+  }
+  .detail #recruitment a::after {
+    top: 20px;
+  }
+  .detail #recruitment a br {
+    display: block;
   }
 }
 
@@ -337,12 +1645,14 @@ main h3 {
 @media screen and (max-width: 414px) {
   main h3 {
     width: 90%;
+    font-size: 15px;
   }
 }
 
 @media screen and (max-width: 414px) {
   main h4 {
-    font-size: 26px;
+    padding-top: 65px;
+    font-size: 23px;
   }
 }
 
@@ -379,7 +1689,7 @@ main #new .new-category .new-contents .contents-block p {
   font-size: 16px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
   main #new .new-category .new-contents .contents-block p {
     font-size: 14px;
   }
@@ -389,9 +1699,9 @@ main #new .new-category .new-contents .contents-block span {
   font-size: 14px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
   main #new .new-category .new-contents .contents-block span {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
@@ -406,7 +1716,13 @@ main #new .new-category .new-contents .block-right {
 }
 
 main .decoration {
-  width: 15%;
+  width: 132px;
+}
+
+@media screen and (max-width: 600px) {
+  main .decoration {
+    width: 20%;
+  }
 }
 
 main #recruit {
@@ -427,6 +1743,7 @@ main #recruit #search-box {
   top: 1.5%;
   left: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 main #recruit #search-box #search-tittle {
@@ -443,6 +1760,12 @@ main #recruit #search-box #search-tittle {
   }
 }
 
+@media screen and (max-width: 320px) {
+  main #recruit #search-box #search-tittle {
+    font-size: 10px;
+  }
+}
+
 main #recruit #search-box #search-tittle span {
   font-size: 28px;
 }
@@ -450,6 +1773,13 @@ main #recruit #search-box #search-tittle span {
 @media screen and (max-width: 414px) {
   main #recruit #search-box #search-tittle span {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #recruit #search-box #search-tittle span {
+    font-size: 16px;
+    padding-bottom: 5px;
   }
 }
 
@@ -481,7 +1811,7 @@ main #recruit #search-box #search-contents form {
 
 @media screen and (max-width: 414px) {
   main #recruit #search-box #search-contents form {
-    height: 270px;
+    height: 260px;
   }
 }
 
@@ -496,6 +1826,7 @@ main #recruit #search-box #search-contents form .select-wrap {
     height: 50px;
   }
   main #recruit #search-box #search-contents form .select-wrap::after {
+    right: 23px;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 10px solid #888888;
@@ -529,163 +1860,6 @@ main #recruit #search-box #search-contents form input[type="text"] {
   }
 }
 
-main #recruit #consultation {
-  margin: 100px 40px;
-}
-
-main #recruit #consultation #consultation-ba {
-  padding: 50px 0 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit #consultation #consultation-ba {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-main #recruit #consultation #consultation-ba::before {
-  position: absolute;
-  right: 0;
-  top: 0;
-  content: "";
-  background-color: #c8c8c8;
-  height: 1px;
-  width: 70%;
-}
-
-main #recruit #consultation #consultation-ba::after {
-  display: none;
-}
-
-main #recruit #consultation #consultation-ba #consultation-icon {
-  padding-bottom: 40px;
-}
-
-main #recruit #consultation #consultation-ba p {
-  width: 94%;
-  font-size: 18px;
-  white-space: normal;
-  padding-left: 20px;
-  padding-bottom: 40px;
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit #consultation #consultation-ba p {
-    width: 80%;
-  }
-}
-
-main #recruit #consultation #consultation-ba a {
-  margin: 0 auto;
-  width: 670px;
-  font-size: 24px;
-  padding: 20px 80px;
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit #consultation #consultation-ba a {
-    width: 272px;
-    font-size: 14px;
-    padding: 20px 40px;
-  }
-  main #recruit #consultation #consultation-ba a br {
-    display: block;
-  }
-}
-
-main #recruit .category-link li {
-  width: 30%;
-}
-
-main #recruit #recruit-ranking {
-  padding-top: 50px;
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit #recruit-ranking {
-    padding: 0;
-  }
-}
-
-main #recruit #recruit-ranking #ranking-box {
-  display: block;
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit #recruit-ranking #ranking-box {
-    padding: 30px 0 0;
-  }
-}
-
-main #recruit #recruit-ranking #ranking-box .contents-block {
-  width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 0;
-  padding-bottom: 30px;
-}
-
-main #recruit #recruit-ranking #ranking-box .contents-block .contents-img {
-  width: 120px;
-  height: 120px;
-  padding: 0;
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit #recruit-ranking #ranking-box .contents-block .contents-img {
-    height: auto;
-  }
-}
-
-main #recruit #recruit-ranking #ranking-box .contents-block .contents-img img {
-  width: 100%;
-  height: 100%;
-}
-
-main #recruit #recruit-ranking #ranking-box .contents-block .contents-img p {
-  padding: 15px 20.8px;
-  right: 70px;
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit #recruit-ranking #ranking-box .contents-block .contents-img p {
-    right: unset;
-    padding: 2px 8px;
-    font-size: 16px;
-  }
-}
-
-main #recruit #recruit-ranking #ranking-box .contents-block p {
-  font-size: 20px;
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit #recruit-ranking #ranking-box .contents-block p {
-    font-size: 18px;
-    padding-left: 10px;
-  }
-}
-
-main #recruit #recruit-ranking #ranking-box .contents-block p span {
-  font-size: 18px;
-}
-
-@media screen and (max-width: 414px) {
-  main #recruit #recruit-ranking #ranking-box .contents-block p span {
-    font-size: 16px;
-  }
-}
-
 main .pickup .swiper-container {
   overflow: hidden;
 }
@@ -698,7 +1872,7 @@ main .pickup .swiper-container .pickup-box .pickup-img {
   width: 320px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
   main .pickup .swiper-container .pickup-box .pickup-img {
     width: 98%;
   }
@@ -708,40 +1882,67 @@ main .pickup .swiper-container .pickup-box .pickup-text {
   width: 320px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
   main .pickup .swiper-container .pickup-box .pickup-text {
     width: 98%;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
   main .pickup .swiper-container .pickup-box .pickup-text h5 {
     font-size: 16px;
   }
 }
 
 @media screen and (max-width: 414px) {
-  main .pickup .swiper-container .pickup-box .pickup-text p, main .pickup .swiper-container .pickup-box .pickup-text .tagflex {
-    padding-top: 15px;
+  main .pickup .swiper-container .pickup-box .pickup-text h5 {
+    font-size: 14px;
   }
 }
 
-main .category-link {
-  padding-top: 45px;
+@media screen and (max-width: 600px) {
+  main .pickup .swiper-container .pickup-box .pickup-text p, main .pickup .swiper-container .pickup-box .pickup-text .tagflex {
+    padding-top: 10px;
+  }
 }
 
-main .category-link li {
-  padding-bottom: 20px;
-  text-align: center;
+@media screen and (max-width: 320px) {
+  main .pickup .swiper-container .pickup-box .pickup-text p, main .pickup .swiper-container .pickup-box .pickup-text .tagflex {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .pickup .swiper-container .pickup-box .pickup-text p li, main .pickup .swiper-container .pickup-box .pickup-text .tagflex li {
+    font-size: 10px;
+  }
 }
 
 main #community #community-background {
   height: 546px;
 }
 
+@media screen and (max-width: 600px) {
+  main #community #community-background {
+    height: 390px;
+  }
+}
+
 @media screen and (max-width: 414px) {
   main #community #community-background {
-    height: 360px;
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main #community #community-background {
+    height: 270px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main #community #community-background .background-img {
+    height: 270px;
   }
 }
 
@@ -749,12 +1950,18 @@ main #community #community-background .decoration {
   right: 10%;
 }
 
+@media screen and (max-width: 400px) {
+  main #community #community-background .decoration {
+    right: 16%;
+  }
+}
+
 main #community #community-box {
   top: 70px;
   left: 35px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
   main #community #community-box {
     top: 40px;
   }
@@ -764,10 +1971,23 @@ main #community #community-box #community-tittle {
   font-size: 18px;
 }
 
+@media screen and (max-width: 600px) {
+  main #community #community-box #community-tittle {
+    margin-bottom: 43px;
+  }
+}
+
 @media screen and (max-width: 414px) {
   main #community #community-box #community-tittle {
     font-size: 12px;
     margin-bottom: 26px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main #community #community-box #community-tittle {
+    font-size: 10px;
+    margin-left: -21px;
   }
 }
 
@@ -778,6 +1998,13 @@ main #community #community-box #community-tittle span {
 @media screen and (max-width: 414px) {
   main #community #community-box #community-tittle span {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main #community #community-box #community-tittle span {
+    font-size: 15px;
+    padding-bottom: 5px;
   }
 }
 
@@ -795,11 +2022,34 @@ main #community #community-box #community-contents #contents-img2 {
   height: 245px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
   main #community #community-box #community-contents #contents-img2 {
     left: -93px;
+    width: 305px;
+    height: 155px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #community #community-box #community-contents #contents-img2 {
     width: 270px;
-    height: 140px;
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main #community #community-box #community-contents #contents-img2 {
+    width: 228px;
+    height: 110px;
+    left: -81px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #community #community-box #community-contents #contents-img2 {
+    width: 167px;
+    height: 93px;
+    left: -70px;
   }
 }
 
@@ -814,6 +2064,13 @@ main #community #community-box #community-contents p {
   line-height: 1.5;
 }
 
+@media screen and (max-width: 600px) {
+  main #community #community-box #community-contents p {
+    font-size: 13px;
+    padding-left: 235px;
+  }
+}
+
 @media screen and (max-width: 414px) {
   main #community #community-box #community-contents p {
     font-size: 10px;
@@ -821,8 +2078,22 @@ main #community #community-box #community-contents p {
   }
 }
 
-main #community .category-link li {
-  width: 50%;
+@media screen and (max-width: 400px) {
+  main #community #community-box #community-contents p {
+    padding-left: 155px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main #community #community-box #community-contents p {
+    padding-left: 104px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main #knowhow {
+    margin-top: 20px;
+  }
 }
 
 main #knowhow #knowhow-box {
@@ -834,33 +2105,38 @@ main #knowhow #knowhow-box .knowhow-block {
   padding-bottom: 25px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
   main #knowhow #knowhow-box .knowhow-block {
     width: 100%;
   }
 }
 
 main #knowhow #knowhow-box .knowhow-block .knowhow-img {
-  width: 100px;
-  height: 100px;
-}
-
-main #knowhow #knowhow-box .knowhow-block .knowhow-img img {
-  height: 100%;
+  width: 50%;
 }
 
 main #knowhow #knowhow-box .knowhow-block p a {
   font-size: 16px;
-  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 401px) and (max-width: 414px) {
+  main #knowhow #knowhow-box .knowhow-block p a {
+    font-size: 14px;
+  }
 }
 
 main #knowhow #knowhow-box .knowhow-block p span {
   font-size: 11px;
 }
 
+@media screen and (min-width: 401px) and (max-width: 414px) {
+  main #knowhow #knowhow-box .knowhow-block p span {
+    font-size: 10px;
+  }
+}
+
 main #knowhow .viewmore {
-  padding: 50px;
-  padding-bottom: 0;
+  padding: 50px 50px 0;
 }
 
 main .viewmore {
@@ -870,11 +2146,1668 @@ main .viewmore {
 @media screen and (max-width: 414px) {
   main .viewmore {
     font-size: 16px;
+    padding: 80px 0;
   }
 }
 
-footer {
-  height: 100%;
+@media screen and (max-width: 320px) {
+  main .viewmore {
+    font-size: 14px;
+    padding: 50px 0;
+  }
+}
+
+/*求人検索結果一覧*/
+@media screen and (max-width: 414px) {
+  .recruitsearch main h4 {
+    font-size: 23px;
+    padding-top: 68px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .recruitsearch main h4 {
+    padding-top: 58px;
+  }
+}
+
+.recruitsearch main #recruit-ranking {
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 414px) {
+  .recruitsearch main .category-link2 {
+    padding: 70px 45px 0;
+  }
+}
+
+/*コミュニティ検索結果一覧*/
+@media screen and (max-width: 414px) {
+  .communitysearch main h4 {
+    padding-top: 68px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .communitysearch main h4 {
+    padding-top: 58px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .communitysearch main .category-link {
+    padding: 70px 45px 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .communitysearch main .category-link2 {
+    padding: 50px 45px 20px;
+  }
+}
+
+/*ノウハウ記事一覧*/
+@media screen and (max-width: 414px) {
+  .knowhowpage main #knowhow-list {
+    margin-top: 20px;
+  }
+}
+
+.knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block {
+  padding-bottom: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block {
+    width: 100%;
+  }
+}
+
+.knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block .knowhow-list-img {
+  width: 160px;
+}
+
+.knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block .knowhow-list-img img {
+  width: 160px;
+}
+
+@media screen and (max-width: 320px) {
+  .knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block .knowhow-list-img {
+    width: 100px;
+  }
+  .knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block .knowhow-list-img img {
+    width: 100px;
+  }
+}
+
+.knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block p a {
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block p a {
+    font-size: 14px;
+  }
+}
+
+.knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block p span {
+  font-size: 11px;
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowpage main #knowhow-list #knowhow-list-box .knowhow-list-block p span {
+    font-size: 10px;
+  }
+}
+
+.knowhowpage main #knowhow-list #knowhow-list-box .spanflex {
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+.knowhowpage main #knowhow-list #knowhow-list-box .spanflex li {
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  .knowhowpage main #knowhow-list #knowhow-list-box .spanflex li {
+    padding: 0 15px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowpage main h4 {
+    font-size: 23px;
+    padding-top: 68px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .knowhowpage main h4 {
+    padding-top: 58px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowpage main .category-link1 {
+    padding: 70px 45px 0;
+  }
+}
+
+.knowhowpage main .category-link1 ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.knowhowpage main .category-link1 ul li {
+  width: 30%;
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowpage main .category-link1 ul li {
+    width: 50%;
+  }
+}
+
+/*運営会社*/
+@media screen and (max-width: 414px) {
+  .company main #policy {
+    margin-top: 45px;
+  }
+}
+
+.company main #policy #policy-box {
+  width: 95%;
+}
+
+@media screen and (max-width: 600px) {
+  .company main #policy #policy-box {
+    padding: 75px 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .company main #policy #policy-box {
+    padding: 55px 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .company main #policy #policy-box {
+    padding: 40px 0;
+  }
+}
+
+.company main #policy #policy-box h3 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .company main #policy #policy-box h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .company main #policy #policy-box h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .company main #policy #policy-box h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .company main #policy #policy-box h3 {
+    font-size: 16px;
+  }
+}
+
+.company main #policy #policy-box p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 414px) {
+  .company main #policy #policy-box p {
+    font-size: 12px;
+    margin-bottom: 75px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .company main #policy #policy-box p {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .company main #policy #policy-box p {
+    font-size: 10px;
+  }
+}
+
+.company main #catch {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .company main #catch {
+    height: 920px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .company main #catch {
+    height: 730px;
+    margin: 70px auto;
+  }
+}
+
+.company main #catch #recruit-catch #catch-ba1::before, .company main #catch #recruit-catch #catch-ba1::after, .company main #catch #recruit-catch #catch-ba2::before, .company main #catch #recruit-catch #catch-ba2::after, .company main #catch #community-catch #catch-ba1::before, .company main #catch #community-catch #catch-ba1::after, .company main #catch #community-catch #catch-ba2::before, .company main #catch #community-catch #catch-ba2::after {
+  width: 30%;
+}
+
+.company main #catch #recruit-catch #catch-ba1::before, .company main #catch #community-catch #catch-ba1::before {
+  right: 2%;
+}
+
+.company main #catch #recruit-catch #catch-ba1::after, .company main #catch #community-catch #catch-ba1::after {
+  display: none;
+}
+
+.company main #catch #recruit-catch #catch-ba2::before, .company main #catch #community-catch #catch-ba2::before {
+  display: none;
+}
+
+.company main #catch #recruit-catch #catch-ba2::after, .company main #catch #community-catch #catch-ba2::after {
+  left: 2%;
+}
+
+@media screen and (max-width: 414px) {
+  .company main #catch #recruit-catch #catch-ba2::after, .company main #catch #community-catch #catch-ba2::after {
+    -webkit-transform: translateY(210px);
+            transform: translateY(210px);
+  }
+}
+
+.company main #catch #recruit-catch #catch-img1, .company main #catch #recruit-catch #catch-img2, .company main #catch #community-catch #catch-img1, .company main #catch #community-catch #catch-img2 {
+  width: 65%;
+}
+
+@media screen and (max-width: 600px) {
+  .company main #catch #recruit-catch #catch-img1, .company main #catch #recruit-catch #catch-img2, .company main #catch #community-catch #catch-img1, .company main #catch #community-catch #catch-img2 {
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .company main #catch #recruit-catch #catch-img1, .company main #catch #recruit-catch #catch-img2, .company main #catch #community-catch #catch-img1, .company main #catch #community-catch #catch-img2 {
+    height: 250px;
+  }
+}
+
+.company main #catch #recruit-catch #recruit-overview, .company main #catch #recruit-catch #community-overview, .company main #catch #community-catch #recruit-overview, .company main #catch #community-catch #community-overview {
+  width: 83%;
+}
+
+@media screen and (max-width: 414px) {
+  .company main #catch #recruit-catch #recruit-overview, .company main #catch #recruit-catch #community-overview, .company main #catch #community-catch #recruit-overview, .company main #catch #community-catch #community-overview {
+    height: 225px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .company main #catch #recruit-catch #recruit-overview, .company main #catch #recruit-catch #community-overview, .company main #catch #community-catch #recruit-overview, .company main #catch #community-catch #community-overview {
+    width: 90%;
+  }
+}
+
+.company main #catch #recruit-catch #recruit-overview p, .company main #catch #recruit-catch #community-overview p, .company main #catch #community-catch #recruit-overview p, .company main #catch #community-catch #community-overview p {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .company main #catch #recruit-catch #recruit-overview p, .company main #catch #recruit-catch #community-overview p, .company main #catch #community-catch #recruit-overview p, .company main #catch #community-catch #community-overview p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .company main #catch #recruit-catch #recruit-overview p, .company main #catch #recruit-catch #community-overview p, .company main #catch #community-catch #recruit-overview p, .company main #catch #community-catch #community-overview p {
+    width: 85%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .company main #catch #recruit-catch #recruit-overview p, .company main #catch #recruit-catch #community-overview p, .company main #catch #community-catch #recruit-overview p, .company main #catch #community-catch #community-overview p {
+    width: 90%;
+    font-size: 12px;
+  }
+}
+
+.company main #catch #recruit-catch #recruit-overview p span, .company main #catch #recruit-catch #community-overview p span, .company main #catch #community-catch #recruit-overview p span, .company main #catch #community-catch #community-overview p span {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .company main #catch #recruit-catch #recruit-overview p span, .company main #catch #recruit-catch #community-overview p span, .company main #catch #community-catch #recruit-overview p span, .company main #catch #community-catch #community-overview p span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .company main #catch #recruit-catch #recruit-overview p span, .company main #catch #recruit-catch #community-overview p span, .company main #catch #community-catch #recruit-overview p span, .company main #catch #community-catch #community-overview p span {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .company main #catch #recruit-catch #recruit-overview p span, .company main #catch #recruit-catch #community-overview p span, .company main #catch #community-catch #recruit-overview p span, .company main #catch #community-catch #community-overview p span {
+    padding-top: 10px;
+  }
+}
+
+.company main #catch #community-catch {
+  margin-top: 215px;
+}
+
+.company main #representative {
+  width: 90%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.company main #representative #representative-img {
+  width: 100%;
+  text-align: center;
+}
+
+.company main #representative #representative-img img {
+  width: 500px;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .company main #representative #representative-img img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .company main #representative #representative-img img {
+    width: 75%;
+  }
+}
+
+.company main #representative p {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 93px;
+}
+
+@media screen and (max-width: 600px) {
+  .company main #representative p {
+    margin-top: 50px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .company main #representative p {
+    font-size: 14px;
+  }
+}
+
+.company main #representative p span {
+  width: 100%;
+  font-size: 14px;
+  padding-left: 0;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .company main #representative p span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .company main #representative p span {
+    font-size: 10px;
+  }
+}
+
+/*プライバシーポリシー*/
+@media screen and (max-width: 414px) {
+  .privacypolicy main h3 {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .privacypolicy main p {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .privacypolicy main p:first-of-type {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .privacypolicy main #company {
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .privacypolicy main #company span {
+    font-size: 10px;
+  }
+}
+
+/*求人詳細*/
+@media screen and (max-width: 414px) {
+  .recruitdetail main #recruit-overview {
+    height: 195px;
+  }
+}
+
+.recruitdetail main .point {
+  margin: 560px 0 50px;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .recruitdetail main .point {
+    margin-top: 430px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .recruitdetail main .point {
+    margin-top: 365px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .recruitdetail main .point {
+    margin-bottom: 30px;
+  }
+}
+
+.recruitdetail main #recruitment #recruitment-conditions ul, .recruitdetail main #recruitment #recruitment-company ul {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .recruitdetail main #recruitment #recruitment-conditions ul, .recruitdetail main #recruitment #recruitment-company ul {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .recruitdetail main #recruitment #recruitment-conditions ul, .recruitdetail main #recruitment #recruitment-company ul {
+    width: 100%;
+  }
+}
+
+.recruitdetail main #recruitment #recruitment-conditions ul li, .recruitdetail main #recruitment #recruitment-conditions ul .long, .recruitdetail main #recruitment #recruitment-company ul li, .recruitdetail main #recruitment #recruitment-company ul .long {
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .recruitdetail main #recruitment #recruitment-conditions ul li, .recruitdetail main #recruitment #recruitment-conditions ul .long, .recruitdetail main #recruitment #recruitment-company ul li, .recruitdetail main #recruitment #recruitment-company ul .long {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .recruitdetail main #recruitment #recruitment-conditions ul li, .recruitdetail main #recruitment #recruitment-conditions ul .long, .recruitdetail main #recruitment #recruitment-company ul li, .recruitdetail main #recruitment #recruitment-company ul .long {
+    font-size: 12px;
+  }
+}
+
+.recruitdetail main #recruitment #recruitment-conditions ul .full, .recruitdetail main #recruitment #recruitment-company ul .full {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .recruitdetail main #recruitment #recruitment-conditions ul .full, .recruitdetail main #recruitment #recruitment-company ul .full {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .recruitdetail main #recruitment #recruitment-conditions ul .full, .recruitdetail main #recruitment #recruitment-company ul .full {
+    font-size: 10px;
+  }
+}
+
+.recruitdetail main #recruitment a {
+  width: 90%;
+  padding: 15px 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .recruitdetail main #recruitment a {
+    font-size: 14px;
+    padding: 25px 90px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .recruitdetail main #recruitment a {
+    height: 60px;
+    margin-top: 40px;
+    font-size: 12px;
+    padding: 20px 60px;
+  }
+  .recruitdetail main #recruitment a::after {
+    top: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .recruitdetail main #recruitment a {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .recruitdetail main #recruitment a {
+    padding: 12px 60px;
+  }
+  .recruitdetail main #recruitment a::after {
+    top: 20px;
+  }
+  .recruitdetail main #recruitment a br {
+    display: block;
+  }
+}
+
+/*コミュニティ詳細*/
+.communitydetail main #occupation-detail #recruit-tittle {
+  width: 90%;
+  font-size: 24px;
+  margin-top: 20px;
+  left: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .communitydetail main #occupation-detail #recruit-tittle {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .communitydetail main #occupation-detail #recruit-tittle {
+    margin-top: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .communitydetail main #occupation-detail #recruit-tittle {
+    top: 75px;
+    font-size: 16px;
+  }
+}
+
+.communitydetail main #occupation-detail #recruit-overview {
+  width: 85%;
+  top: 380px;
+}
+
+@media screen and (max-width: 600px) {
+  .communitydetail main #occupation-detail #recruit-overview {
+    top: 360px;
+    height: 205px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .communitydetail main #occupation-detail #recruit-overview {
+    top: 290px;
+    width: 90%;
+    height: 233px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .communitydetail main #occupation-detail #recruit-overview {
+    top: 230px;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .communitydetail main #occupation-detail #recruit-overview p {
+    font-size: 10px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .communitydetail main #occupation-detail #recruit-overview p {
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .communitydetail main #occupation-detail #recruit-overview p {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .communitydetail main #occupation-detail #recruit-overview p span {
+    padding-top: 10px;
+  }
+}
+
+.communitydetail main .point {
+  margin: 250px 0 50px;
+}
+
+@media screen and (max-width: 540px) {
+  .communitydetail main .point {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .communitydetail main .point {
+    margin-top: 100px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .communitydetail main .point h4 {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .communitydetail main #recruitment #recruitment-text {
+    font-size: 14px;
+    padding: 30px 0 15px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .communitydetail main #recruitment #recruitment-text {
+    font-size: 10px;
+    padding: 20px 0 0;
+  }
+}
+
+.communitydetail main #recruitment #recruitment-company ul {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .communitydetail main #recruitment #recruitment-company ul {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .communitydetail main #recruitment #recruitment-company ul {
+    width: 100%;
+  }
+}
+
+.communitydetail main #recruitment #recruitment-company ul li, .communitydetail main #recruitment #recruitment-company ul .long {
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .communitydetail main #recruitment #recruitment-company ul li, .communitydetail main #recruitment #recruitment-company ul .long {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .communitydetail main #recruitment #recruitment-company ul li, .communitydetail main #recruitment #recruitment-company ul .long {
+    font-size: 12px;
+  }
+}
+
+.communitydetail .category-link {
+  padding-bottom: 50px;
+}
+
+/*ノウハウ記事詳細*/
+.knowhowdetail main #knowhow-detail {
+  width: 100%;
+}
+
+.knowhowdetail main #knowhow-detail #post-tittle {
+  width: 95%;
+  margin: 45px auto 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 375px) {
+  .knowhowdetail main #knowhow-detail #post-tittle {
+    margin-bottom: 20px;
+  }
+}
+
+.knowhowdetail main #knowhow-detail #post-tittle h3 {
+  font-size: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .knowhowdetail main #knowhow-detail #post-tittle h3 {
+    font-size: 18px;
+  }
+}
+
+.knowhowdetail main #knowhow-detail #post-tittle h3 span {
+  padding-right: 15px;
+}
+
+.knowhowdetail main #knowhow-detail #post-tittle ul {
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail main #knowhow-detail #post-tittle ul {
+    padding: 10px 0;
+  }
+}
+
+.knowhowdetail main #knowhow-detail #post-tittle ul li {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail main #knowhow-detail #post-tittle ul li {
+    padding-left: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .knowhowdetail main #knowhow-detail #post-tittle ul li {
+    padding-left: 10px;
+    font-size: 10px;
+  }
+}
+
+.knowhowdetail main #knowhow-detail #post-tittle ul li:first-child {
+  padding-left: 0;
+}
+
+.knowhowdetail main #knowhow-detail #knowhow-tittle, .knowhowdetail main #knowhow-detail #hedding {
+  margin: 0 auto;
+}
+
+.knowhowdetail main #knowhow-detail #knowhow-tittle {
+  width: 95%;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .knowhowdetail main #knowhow-detail #knowhow-tittle {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail main #knowhow-detail #knowhow-tittle {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .knowhowdetail main #knowhow-detail #knowhow-tittle {
+    font-size: 16px;
+  }
+}
+
+.knowhowdetail main #knowhow-detail #hedding {
+  width: 75%;
+  margin-top: 45px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail main #knowhow-detail #hedding {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .knowhowdetail main #knowhow-detail #hedding {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .knowhowdetail main #knowhow-detail #hedding {
+    margin-top: 20px;
+  }
+}
+
+.knowhowdetail main #knowhow-detail #hedding li {
+  width: 33%;
+  text-align: center;
+  padding-right: 0;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail main #knowhow-detail #hedding li {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .knowhowdetail main #knowhow-detail #hedding li {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .knowhowdetail main #knowhow-detail #hedding li {
+    font-size: 10px;
+    padding-bottom: 15px;
+  }
+}
+
+.knowhowdetail main .post {
+  width: 95%;
+}
+
+.knowhowdetail main .post h4 {
+  font-size: 20px;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 600px) {
+  .knowhowdetail main .post h4 {
+    margin: 60px 0 30px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail main .post h4 {
+    font-size: 18px;
+    margin: 50px 0 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .knowhowdetail main .post h4 {
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .knowhowdetail main .post h4 {
+    font-size: 16px;
+  }
+}
+
+.knowhowdetail main .post p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail main .post p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .knowhowdetail main .post p {
+    font-size: 12px;
+  }
+}
+
+.knowhowdetail main .post p span {
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail main .post p span {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .knowhowdetail main .post p span {
+    padding-top: 10px;
+  }
+}
+
+.knowhowdetail main #post-1 #post-img1 {
+  height: 201.69px;
+}
+
+@media screen and (max-width: 600px) {
+  .knowhowdetail main #post-1 #post-img1 {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .knowhowdetail main #post-1 p {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .knowhowdetail main #post-1 p {
+    margin-top: 20px;
+  }
+}
+
+.knowhowdetail main #post-3 #post-img2, .knowhowdetail main #post-3 #post-img3, .knowhowdetail main #post-4 #post-img2, .knowhowdetail main #post-4 #post-img3 {
+  width: 100%;
+  height: 485.3px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .knowhowdetail main #post-3 #post-img2, .knowhowdetail main #post-3 #post-img3, .knowhowdetail main #post-4 #post-img2, .knowhowdetail main #post-4 #post-img3 {
+    height: auto;
+  }
+}
+
+.knowhowdetail main #post-3 p, .knowhowdetail main #post-4 p {
+  width: 100%;
+  margin-top: 45px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .knowhowdetail main #post-3 p, .knowhowdetail main #post-4 p {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .knowhowdetail main #post-3 p, .knowhowdetail main #post-4 p {
+    margin-top: 20px;
+  }
+}
+
+.knowhowdetail main #spanflex {
+  width: 95%;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .knowhowdetail main #spanflex {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail main #spanflex {
+    margin-top: 50px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .knowhowdetail main #spanflex {
+    margin-top: 40px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail .category-link1 {
+    padding: 70px 45px 0;
+  }
+}
+
+.knowhowdetail .category-link1 ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.knowhowdetail .category-link1 ul li {
+  width: 30%;
+}
+
+@media screen and (max-width: 414px) {
+  .knowhowdetail .category-link1 ul li {
+    width: 50%;
+  }
+}
+
+/*応募フォーム*/
+.contactform main h3 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main h3 {
+    font-size: 22px;
+    margin-top: 55px;
+  }
+}
+
+.contactform main form {
+  padding: 30px;
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contactform main form {
+    padding: 10px;
+  }
+}
+
+.contactform main form .form-item {
+  padding: 30px;
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .form-item {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contactform main form .form-item {
+    padding: 10px;
+  }
+}
+
+.contactform main form .form-item h4 {
+  width: 50%;
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .form-item h4 {
+    font-size: 18px;
+  }
+}
+
+.contactform main form .form-item .mandatory, .contactform main form .form-item .option {
+  width: 50%;
+  text-align: right;
+}
+
+.contactform main form .form-item .check {
+  padding-left: 0;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .form-item .check {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .form-item .check {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contactform main form .form-item .check {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .form-item label {
+    font-size: 14px;
+  }
+}
+
+.contactform main form .form-item input, .contactform main form .form-item select, .contactform main form .form-item textarea {
+  width: 100%;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .form-item input, .contactform main form .form-item select, .contactform main form .form-item textarea {
+    margin-top: 15px;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .form-item input, .contactform main form .form-item select, .contactform main form .form-item textarea {
+    font-size: 10px;
+    padding-left: 5px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .form-item textarea {
+    height: 155px;
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item1 input, .contactform main form .item2 input, .contactform main form .item6 input, .contactform main form .item7 input {
+    height: 43px;
+  }
+}
+
+.contactform main form .item3 label {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .item3 label {
+    margin-top: 15px;
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item3 label {
+    padding: 0 15px;
+  }
+}
+
+.contactform main form .item3 label input {
+  width: auto;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .item3 label span::before {
+    width: 35px;
+    height: 35px;
+  }
+  .contactform main form .item3 label span::after {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item3 label span::before {
+    width: 28px;
+    height: 28px;
+  }
+  .contactform main form .item3 label span::after {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.contactform main form .item4 .select-wrap::after {
+  top: 70%;
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .item4 .select-wrap::after {
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item4 .select-wrap::after {
+    top: 65%;
+    right: 20px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 11px solid #888888;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item4 .select-wrap select {
+    height: 43px;
+    margin-right: 10px;
+  }
+}
+
+.contactform main form .item4 .select-wrap #year {
+  width: 165px;
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item4 .select-wrap #year {
+    width: 100px;
+  }
+}
+
+.contactform main form .item4 .select-wrap #month, .contactform main form .item4 .select-wrap #day {
+  width: 95px;
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item4 .select-wrap #month, .contactform main form .item4 .select-wrap #day {
+    width: 75px;
+  }
+}
+
+.contactform main form .item5 .mandatory {
+  margin-bottom: 0;
+}
+
+.contactform main form .item5 #adress {
+  width: 100%;
+}
+
+.contactform main form .item5 #adress input, .contactform main form .item5 #adress select {
+  margin: 11px;
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item5 #adress input, .contactform main form .item5 #adress select {
+    height: 43px;
+    width: 170px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .item5 #adress #prefectures label {
+    width: 20%;
+  }
+}
+
+.contactform main form .item5 #adress #prefectures .select-wrap::after {
+  top: 40.56px;
+  right: 25px;
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item5 #adress #prefectures .select-wrap::after {
+    top: 32.56px;
+    right: 20px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 11px solid #888888;
+  }
+}
+
+.contactform main form .item5 #adress #prefectures .select-wrap select {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item5 #adress #prefectures .select-wrap select {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contactform main form .item5 #adress #prefectures .select-wrap select {
+    margin-left: 9px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contactform main form .item5 #adress #prefectures .select-wrap select {
+    margin-left: 16px;
+  }
+}
+
+.contactform main form .item5 #adress #housenumber {
+  margin-left: 0;
+  width: 100%;
+}
+
+.contactform main form .item8 h4, .contactform main form .item8 .mandatory, .contactform main form .item8 .option, .contactform main form .item10 h4, .contactform main form .item10 .mandatory, .contactform main form .item10 .option {
+  margin-bottom: 0;
+}
+
+.contactform main form .item9 h4, .contactform main form .item9 .option {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .item9 h4, .contactform main form .item9 .option {
+    margin-bottom: 15px;
+  }
+}
+
+.contactform main form .item9 #checkbox {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactform main form .item9 #checkbox label {
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .item9 #checkbox label span {
+    width: 130px;
+    font-size: 14px;
+    padding: 12px 24px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item9 #checkbox label span {
+    width: 95px;
+    height: 35px;
+    font-size: 10px;
+    padding: 7px 17px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contactform main form .item9 #checkbox label span {
+    width: 85px;
+    height: 30px;
+    padding: 5px 10px;
+  }
+}
+
+.contactform main form .item11 .select-wrap::after {
+  top: 70%;
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .item11 .select-wrap::after {
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item11 .select-wrap::after {
+    top: 65%;
+    right: 20px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 11px solid #888888;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .item11 .select-wrap select {
+    height: 43px;
+    margin-right: 10px;
+  }
+}
+
+.contactform main form .applybutton {
+  width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .contactform main form .applybutton {
+    margin-top: 70px;
+  }
+}
+
+.contactform main form .applybutton input {
+  width: 100%;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .applybutton input {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contactform main form .applybutton input {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contactform main form .applybutton input {
+    font-size: 16px;
+  }
+}
+
+.contactform main form .applybutton1::after {
+  right: 200px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .applybutton1::after {
+    right: 85px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .applybutton1::after {
+    right: 60px;
+    top: 29px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contactform main form .applybutton1::after {
+    right: 45px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contactform main form .applybutton1::after {
+    right: 38px;
+  }
+}
+
+.contactform main form .applybutton2::after {
+  right: 185px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactform main form .applybutton2::after {
+    right: 65px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contactform main form .applybutton2::after {
+    right: 45px;
+    top: 29px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contactform main form .applybutton2::after {
+    right: 25px;
+    top: 20px;
+  }
+}
+
+/*応募完了画面*/
+.thankyou h3 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .thankyou h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .thankyou h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .thankyou h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .thankyou h3 {
+    font-size: 15px;
+    padding: 30px 10px 0;
+  }
+}
+
+.thankyou h4 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .thankyou h4 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .thankyou h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .thankyou h4 {
+    padding: 30px 10px 0;
+  }
+}
+
+.thankyou #consultation #consultation-ba a {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 24px;
+  padding: 23px 135px;
+}
+
+@media screen and (max-width: 600px) {
+  .thankyou #consultation #consultation-ba a {
+    font-size: 18px;
+    padding: 27px 70px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .thankyou #consultation #consultation-ba a {
+    height: 60px;
+    font-size: 14px;
+    padding: 20px 55px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .thankyou #consultation #consultation-ba a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .thankyou #consultation #consultation-ba a {
+    padding: 12px 75px;
+  }
+  .thankyou #consultation #consultation-ba a br {
+    display: block;
+  }
+}
+
+.thankyou #consultation #consultation-ba a::after {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 414px) {
+  .thankyou #consultation #consultation-ba a::after {
+    top: 18px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .thankyou #consultation #consultation-ba a::after {
+    top: 20px;
+    margin-left: 35px;
+  }
+}
+
+.thankyou #recruit-ranking {
+  padding: 50px 40px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .thankyou #recruit-ranking {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .thankyou #recruit-ranking h3 {
+    font-size: 15px;
+  }
+}
+
+.thankyou .category-link {
+  padding: 0 40px 50px;
+}
+
+@media screen and (max-width: 414px) {
+  .thankyou .category-link h3 {
+    font-size: 15px;
+  }
+}
+
+.thankyou .category-link1 h3 {
+  padding-top: 35px;
+}
+
+/*フッター*/
+@media screen and (max-width: 320px) {
+  footer::before {
+    top: -21px;
+  }
 }
 
 footer p {
@@ -886,13 +3819,63 @@ footer #footer-container {
 }
 
 footer #footer-container #arrow img {
-  top: -4.5%;
+  top: -5%;
+  right: 11px;
+}
+
+@media screen and (max-width: 600px) {
+  footer #footer-container #arrow img {
+    top: -4.7%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  footer #footer-container #arrow img {
+    top: -5.2%;
+    right: 4px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  footer #footer-container #arrow img {
+    top: -3.4%;
+    right: 4px;
+    width: 22px;
+    height: 66px;
+  }
 }
 
 footer #footer-container #footer-flex {
   display: block;
   margin: 0 10px;
-  padding: 0 10px;
+  padding: 0 88px;
+}
+
+@media screen and (max-width: 600px) {
+  footer #footer-container #footer-flex {
+    padding: 0 23px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  footer #footer-container #footer-flex {
+    margin: 0 5px;
+    padding: 0 19px;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer #footer-container #footer-flex {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  footer #footer-container #footer-flex {
+    padding: 0 5px;
+  }
 }
 
 footer #footer-container #footer-flex #flex1 {
@@ -908,8 +3891,70 @@ footer #footer-container #footer-flex #flex1 {
   padding-bottom: 40px;
 }
 
+@media screen and (max-width: 320px) {
+  footer #footer-container #footer-flex #flex1 {
+    padding: 25px 0 20px;
+  }
+}
+
 footer #footer-container #footer-flex #flex1 h1 {
   width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  footer #footer-container #footer-flex #flex1 h1 {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  footer #footer-container #footer-flex #flex1 h1 {
+    padding-top: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer #footer-container #footer-flex #flex1 h1 #footer-icon {
+    width: 27px;
+    height: 15px;
+    margin: 0 60px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  footer #footer-container #footer-flex #flex1 h1 #footer-icon {
+    width: 20px;
+    height: 10px;
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer #footer-container #footer-flex #flex1 h1 #footer-icon img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer #footer-container #footer-flex #flex1 h1 #footer-logo {
+    width: 150px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  footer #footer-container #footer-flex #flex1 h1 #footer-logo {
+    width: 112px;
+    padding-top: 7px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer #footer-container #footer-flex #flex1 h1 #footer-logo img {
+    width: 100%;
+  }
 }
 
 footer #footer-container #footer-flex #flex1 p {
@@ -917,13 +3962,40 @@ footer #footer-container #footer-flex #flex1 p {
   width: 50%;
 }
 
+@media screen and (max-width: 414px) {
+  footer #footer-container #footer-flex #flex1 p {
+    font-size: 11px;
+  }
+  footer #footer-container #footer-flex #flex1 p br {
+    display: block;
+  }
+}
+
 footer #footer-container #footer-flex #flex1 #corporation {
   width: 30%;
+}
+
+@media screen and (max-width: 414px) {
+  footer #footer-container #footer-flex #flex1 #corporation {
+    font-size: 10px;
+  }
 }
 
 footer #footer-container #footer-flex #flex1 #address {
   padding-top: 42px;
   width: 70%;
+}
+
+@media screen and (max-width: 414px) {
+  footer #footer-container #footer-flex #flex1 #address {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  footer #footer-container #footer-flex .flex2 p {
+    font-size: 12px;
+  }
 }
 
 footer #footer-container #footer-flex .flex2 #list1 {
@@ -936,6 +4008,12 @@ footer #footer-container #footer-flex .flex2 #list1 li {
   width: 25%;
 }
 
+@media screen and (max-width: 414px) {
+  footer #footer-container #footer-flex .flex2 #list1 li {
+    font-size: 10px;
+  }
+}
+
 footer #footer-container #footer-flex .flex2 #list2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -945,6 +4023,12 @@ footer #footer-container #footer-flex .flex2 #list2 {
 
 footer #footer-container #footer-flex .flex2 #list2 li {
   width: 30%;
+}
+
+@media screen and (max-width: 414px) {
+  footer #footer-container #footer-flex .flex2 #list2 li {
+    font-size: 10px;
+  }
 }
 
 footer #footer-container #footer-flex .flex2 #list3 {
@@ -959,10 +4043,18 @@ footer #footer-container #footer-flex .flex2 #list3 li {
   width: 50%;
 }
 
+@media screen and (max-width: 414px) {
+  footer #footer-container #footer-flex .flex2 #list3 li {
+    font-size: 10px;
+  }
+}
+
 footer #footer-container #footer-flex .flex2 #list4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer #footer-container #footer-flex .flex2 #list4 li {
@@ -971,6 +4063,13 @@ footer #footer-container #footer-flex .flex2 #list4 li {
 
 footer #footer-container #footer-flex .flex2 #list4 li:last-child {
   padding-right: 0;
+}
+
+@media screen and (max-width: 414px) {
+  footer #footer-container #footer-flex .flex2 #list4 li {
+    font-size: 10px;
+    padding-right: 20px;
+  }
 }
 
 footer #footer-container #footer-flex .flex2 #list5 {
@@ -985,8 +4084,24 @@ footer #footer-container #footer-flex .flex2 #list5 li {
   padding-right: 60px;
 }
 
+@media screen and (max-width: 414px) {
+  footer #footer-container #footer-flex .flex2 #list5 li {
+    font-size: 10px;
+    padding-right: 20px;
+  }
+}
+
 footer #footer-container #copyright {
   margin: 0 10px;
   padding: 60px 0 28px;
+}
+
+@media screen and (max-width: 414px) {
+  footer #footer-container #copyright {
+    font-size: 10px;
+    margin: 0 5px;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+  }
 }
 /*# sourceMappingURL=respond.css.map */
