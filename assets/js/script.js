@@ -16,9 +16,9 @@ $(function() {
             } else {
                 swiper = new Swiper('.slide1', {
                     slidesPerView: 2,
+                    spaceBetween: 20,
                     centeredSlides: true,
                     loop: true,
-                    initialSlide: 0
                 });
             }
         } else {
